@@ -1,0 +1,1114 @@
+/* Header */
+.wrap {
+  background-color: var(--wrap-color);
+}
+
+.header {
+  max-width: 100%;
+  line-height: 1.3rem;
+
+}
+
+.nav {
+
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: var(--background-color);
+}
+
+
+.header__nav-item {
+  padding: 0 1.3rem;
+}
+
+/*Page activing*/
+.header__mainPage {
+  position: relative;
+}
+
+.header__mainPage::after {
+  position: absolute;
+  width: 5rem;
+  height: 0.3rem;
+  font-weight: 300;
+  content: "";
+  display: block;
+  bottom: -1.3rem;
+  left: calc(100%- 3rem);
+  right: 27%;
+  background-color: var(--active-color);
+}
+
+
+.header__nav-item .header__nav-logo {
+  margin-left: -2.6rem;
+  width: 100%;
+}
+
+.header__nav-item>a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 1.3rem;
+  margin: 0px -1rem;
+}
+
+.header__nav-item i {
+  color: var(--icon-color);
+  font-size: 1.2rem;
+  padding-left: 0.3rem;
+
+}
+
+/* Form search */
+.header__nav-form,
+.header__form-icon {
+  display: inline-block;
+  padding-left: 3.5rem;
+  
+}
+
+.header__nav-form input {
+  padding: 1.1rem 1.7rem;
+  background-color: var(--wrap-color);
+  border: none;
+  border-radius: 3px;
+  color: var(--text-color);
+  outline: none;
+}
+
+.header__nav-form {
+  position: relative;
+  border-radius: 2rem;
+}
+
+.header__nav-form i {
+  position: absolute;
+  top: calc(100% - 2.5rem);
+  padding-right: 1.4rem;
+  right: 0;
+  color: #fff;
+  
+  
+}
+.header__nav-form input::placeholder {
+  color: var(--placeholder-text);
+  transition: color 0.3s ease; /* Hiệu ứng mượt mà */
+}
+.header__nav-form input:focus::placeholder {
+  color: var(--text-color);
+}
+
+/*Login*/
+.header__nav-login, .btn {
+  position: relative;
+  align-items: center;
+  margin-left: 0rem;
+  background-color: var(--btn-color);
+  padding: 0 1.2rem;
+  border-radius: 3px;
+  padding: 1.2rem 1.3rem;
+}
+
+.header__nav-login a {
+  font-size: 1.3rem;
+}
+
+.header__nav-login a:hover {
+  color: var(--text-color-light);
+}
+
+
+/* Sub menu */
+.header__nav-subMenu {
+  position: relative;
+  max-height: 20rem;
+  
+}
+/* Thanh angle và cầu */
+.header__nav-subMenu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 6px solid ;
+  border-color : transparent transparent var(--active-color) transparent; 
+  margin-left: 3rem;
+  margin-bottom: -1.5rem;
+  display: none;
+
+}
+.header__nav-subMenu:hover::after {
+  display: block;
+  animation: shapeTranslate ease-in 0.2s;
+}
+.header__nav-subMenu::before {
+  content: "";
+  left : 0;
+  top : 0;
+  width: 12rem;
+  height: 2rem;
+  max-height: 15rem;
+  margin-top : 2rem;
+  background-color: transparent;
+  position: absolute;
+}
+
+/* Cầu nối */
+/* .header__subMenu::before {
+  content: "";
+  left : 0;
+  top : 0;
+  width: 12rem;
+  height: 12rem;
+  max-height: 15rem;
+  margin-top : -5rem;
+  background-color: transparent;
+  position: absolute;
+} */
+
+
+.header__subMenu-list {
+  position: relative;
+}
+
+
+/* Thanh ngang */
+.header__subMenu::before {
+  /*element no fixed
+    position fixed no set left, right ,..
+  */
+  /* content: "";
+  position: absolute;
+  width: 45rem;
+  height: 0.5rem;
+  background-color: var(--active-color);
+  left: 0;
+  top :0;
+  margin-bottom: -1.5rem;
+  max-width: 45rem; */
+  content: "";
+  position: fixed;
+  width: 34.7rem;
+  max-width: 43rem;
+  height: 0.3rem;
+  background-color: var(--active-color);
+  margin-bottom: -1.5rem;
+  z-index: 1;
+  border-radius: 2px;
+  display: none;
+} 
+
+/* content submenu*/
+.header__subMenu {
+  max-width: 43rem;
+  width: 35rem;
+  max-height: calc(100% + 17rem);
+  height: auto;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0 0 0.3rem 0.3rem;
+  left: 0;
+  top: calc(100% + 1.5rem);
+  margin-left: 1.5rem;
+  transition: right linear 0.2s;
+  overflow: hidden;
+  /*  box-shadow: h-offset(shadow ngang) v-offset(dọc) blur(mờ) spread(phân tán) color optional; */
+  box-shadow: 0 2px 2px #b8b7b7;
+}
+.header__nav-subMenu .header__subMenu::before {
+  display: block;
+}
+.header__nav-subMenu:hover .header__subMenu {
+  display: block;
+  /* Oy */
+  overflow-y: scroll; 
+  z-index: 200;
+  animation: shapeTranslate ease-in 0.2s;
+}
+
+.header__subMenu-item:hover a {
+  color : var(--btn-color);
+}
+
+
+
+.header__subMenu-list .header__subMenu-item {
+  /* Float là khi tràn nó sang left + width */
+  float: left; 
+  width: 33.3333333%;
+  padding: 0.8rem 1.6rem;
+  list-style: none;
+  margin-top: 1rem;
+  max-width: 20rem;
+}
+
+.header__subMenu-item a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-size: 1.3rem;
+  padding: 0.8rem 0;
+  width: 33.33333333%;
+  font-weight: 400;
+
+}
+/* Custom scroll : https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+/* Custom Scroll */
+/* Width */
+.header__subMenu::-webkit-scrollbar {
+  scrollbar-width: thin;
+  width: 0.5rem;  
+}
+
+/* Track */
+.header__subMenu::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+/* Handle */
+.header__subMenu::-webkit-scrollbar-thumb {
+  background-color: var(--btn-color);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover */
+/* .header__subMenu::-webkit-scrollbar-thumb:hover {
+  background-color: var(--btn-color); 
+} */
+
+@keyframes shapeTranslate{
+  from {
+    opacity: 0;
+      transform: translateX(0);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0.5);
+  }
+}
+
+@keyframes growUp{
+  from {
+      opacity: 0;
+      transform : scale(0); /* tỉ lệ */
+  }
+  to {
+      opacity: 1;
+      transform : scale(1);
+  }
+}
+
+/* Body */
+.body__container {
+  background-color: var(--background-color);
+  width: 1070px;
+  max-width: 100%;
+  height: 4600px;
+  max-height: 320rem;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
+
+}
+/* Slider */
+#slider {
+  display: block;
+  position: relative;
+}
+
+/*  Trailer  */
+.slider__video {
+  width: 64rem;
+  height: 34rem;
+  max-width: 64rem;
+}
+
+.slider__video video {
+  margin-left : -2rem;
+  display: inline;
+}
+
+
+/* Infomation slider */
+.slider__textContent {
+  position: absolute;
+  right : 0; 
+  top : 0;
+  width: calc(100% - 60rem);
+  height: 30rem;
+  background-color: var(--background-color);
+}
+.slider__textContent-heading .slider__textContent-img {
+  right : 0;
+  top : 4rem;
+  position: absolute;
+  width: 45rem;
+  padding-left: 8.3rem;
+}
+
+/* Li */
+.slider__information-list {
+  display: block;
+}
+
+.slider__information-items {
+  position: absolute;
+  bottom : 0;
+  left : 0;
+  color : var(--text-color-light);
+  list-style: none;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  width: 45rem;
+  height: 1rem;
+  margin-bottom: 15rem;
+  padding-left : 3.3rem;
+}
+
+.slider__information-items li {
+  display: inline-block;
+  padding : 2rem;
+  margin-bottom: 6rem;
+  margin-left: -3rem;
+  left : 0;
+}
+/* para */
+.slider__infomation-paragraph {
+  position: absolute;
+  right : 0;
+  bottom: 0;
+  margin-bottom: 7.4rem;
+  padding: 1rem;
+  margin-left: 1.4rem;
+  color : var(--text-color-light);
+}
+
+/* Button */
+.slider__info-common {
+  position: absolute;
+  display: inline-block;
+  left : 0;
+  bottom: 0;
+  width: 11rem;
+  max-width: 20rem;
+  height: 3.5rem;
+  padding : 1rem 0 0 1.4rem ;
+  margin: 0 0 3rem 2.4rem;
+  background-color: var(--text-color-light);
+  border-radius: 3px;
+}
+
+.slider__info-common a:hover {
+  color : var(--placeholder-text);
+}
+.slider__info-common a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color : var(--background-color);
+  font-weight: 300;
+}
+
+.slider__info-common i {
+  font-size: 1.4rem;
+  padding-right: 0.7rem;
+  background-color: var(--text-color-light);
+}
+/* trên là common code button */
+
+.slider__info-detail {
+  padding : 1rem 0 0 1.3rem ;
+  margin: 0 0 3rem 14.5rem;
+}
+
+/* Chuyển tab slider */
+.slider__button {
+  position: absolute;
+  right : 0;
+  bottom : 0;
+  margin-bottom: 10rem;
+  padding: 0 0 0 2rem;
+}
+
+.slider__button-tap {
+  outline: none;
+  background-color: var(--text-color-light);
+}
+
+.slider__button .slider__button-tap:hover i {
+  color : var(--placeholder-text);
+  opacity: 1;
+}
+
+.slider__button .slider__button-tap {
+  width: 3rem;
+  height: 3rem;
+  max-width: 5rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.slider__button .slider__button-tap i {
+  font-weight: 700;
+  color: var(--background-color);
+}
+
+/* .slider__switch-tab .slider__switch-lists{
+  color : red;
+  list-style: none;
+  position: absolute;
+}
+
+.slider__switch-list .slider_switch-item li {
+  width: 3rem;
+  height: 3rem;
+  right: 0;
+  display: inline-block;
+} */
+/* Carousel */
+.carousel {
+  display: block;
+}
+
+.wrap__content {
+  width: 100%;
+}
+.carousel {
+  width: 70%;
+}
+.carousel__film-update, 
+.carousel__film-anime, 
+.carousel__film-longChap {
+  /* padding-top: 2rem; */
+  margin-bottom: 2.5rem;
+}
+
+
+
+.carousel__film-update .carousel__tvHome-heading {
+  width: 100%;
+  height: 5rem;
+  display: inline-block;
+}
+/* Heading carousel */
+.carousel__tvHome-heading h2 {
+  color : var(--text-color);
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 4rem;
+  background-color: var(--btn-color);
+  border-radius: 3px;
+  padding: 0 1.4rem;
+  margin-right: 1rem;
+}
+
+.carousel__tvHome-heading h2 i {
+  padding-left: 0.5rem;
+}
+.carousel__tvHome-heading .carousel__tvHome-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color : var(--text-color-light);
+  line-height: 3rem;
+  padding: 0.5rem 1rem ;
+  margin: 0 0.5rem;
+  background-color: var(--wrap-color);
+  border-radius: 3px;
+}
+
+.carousel__tvHome-heading .carousel__tvHome-btn:hover {
+  color: var(--btn-color);
+}
+
+/* list films */
+.carousel__tvHome-listFilms {
+  width: 100%;
+}
+.carousel__listFilms {
+  list-style: none;
+}
+.carousel__listFilms-item {
+  /* list-style: none;
+  width: 21%;
+  padding-right: 1rem;
+  min-width: 17rem; */
+  /* display: inline-block; */
+  list-style: none;
+  width: 18%;
+  margin-right: 1.2rem;
+  min-width: 13rem;
+  position: relative;
+  display: inline-block;
+}
+
+.carousel__listFilms-item .carousel__item-infomation {
+  text-decoration: none;
+  display: block;
+}
+/* info films */
+.carousel__item-infomation {
+  width: 100%;
+  display: inline-block;
+  margin-right: 1rem;
+
+}
+
+.carousel__listFilms-img img{
+  border-radius: 3px;
+  /* margin-right: 0.5rem; */
+  width: 100%;
+  margin: 1rem 0;
+  min-width: 13rem;
+}
+
+.carousel__img-fixed {
+  width: 100%;
+  position: relative;
+  margin-right: 1rem;
+}
+.carousel__img-fixed .carousel__listFilms-ratePoint {
+  position: absolute;
+  right: 0;
+  color: var(--rate-text);
+  background-color: var(--bg-rate);
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  min-height: 1.5rem;
+  min-width: 1.8rem;
+  font-size: 0.8rem;
+  bottom: 0;
+  margin: 0 0.5rem 1.8rem 0;
+}
+.carousel__listFilms-img .carousel__listFilms-title{
+  color: var(--text-color-light);
+  font-weight: 300;
+  margin-left: 30%;
+  margin-top: -7%;
+}
+.carousel__listFilms-img .carousel__listFilms-view {
+  color: var(--placeholder-text);
+  font-weight: 300;
+  margin-left: 25%;
+  margin-top: -7%;
+}
+
+.carousel__listFilms-item::before {
+  position: absolute;
+  content: "";
+
+}
+
+/* Short description */
+.carousel__listFilms-shortDescription {
+  position: absolute;
+  width: 23rem;
+  max-width: 25rem;
+  height: 20rem;
+  max-height: 20rem;
+  background-color: red;
+  top : 0;
+  margin-left: 10rem;
+  background-color: var(--text-color-light);
+  border-radius: 3px;
+  padding: 2rem;
+  display: none;
+  z-index: 1;
+}
+
+.carousel__listFilms-shortDescription::before {
+  content : " ";
+  position: absolute;
+  border: 10px solid;
+  border-color: transparent var(--text-color-light) transparent transparent;
+  left: 0;
+  margin-left: -1.9rem;
+  top: 45%;
+}
+
+.carousel__listFilms-shortDescription .carousel__shortDescription-heading {
+  font-weight: 300;
+  /* margin: 1rem; */
+  margin-bottom: 0.5rem;
+}
+
+.carousel__shortDescription-lists{
+  /* padding-left: 0.rem; */
+}
+.carousel__shortDescription-item {
+  display: inline-block;
+  padding: 0 0.5rem 0.5rem ;
+  list-style: none;
+}
+.carousel__shortDescription-item i {
+  font-size: 1rem;
+  padding: 0.1rem;
+}
+.carousel__shortDescription-item span {
+  color: var(--placeholder-text);
+}
+
+.carousel__shortDescription-item .carousel__shortDescription-star {
+  color : var(--icon-color);
+}
+.carousel__shortDescription-para {
+  font-size: 1rem;
+  color: var(--placeholder-text);
+  padding-left: 0.7rem;
+}
+
+.carousel__shortDecription-type {
+  display: inline-block;
+  padding-left: 0.7rem;
+  padding-top: 1rem;
+}
+
+.carousel__shortDecription-type i {
+  color: var(--icon-color);
+  padding-right: 0.3rem;
+}
+
+.carousel__shortDecription-type span {
+  color: var(--wrap-color);
+}
+
+.carousel__shortDecription-type .carousel__shortDecription-text {
+  display: inline-block;
+  color: var(--placeholder-text);
+}
+
+.carouse__listFilms-buttonPlay i {
+  position: absolute;
+  display: none;
+  /* height: 6rem;
+  width : 7rem; */
+  left : 0;
+  top: 35%;
+  font-size: 4.5rem;
+  /* max-height: 6rem; */
+  margin-left: 4.2rem;
+  color: var(--rate-text);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.carousel__list-subMenu:hover .carousel__listFilms-shortDescription,
+.carousel__list-subMenu:hover .carouse__listFilms-buttonPlay i
+{
+  display: block;
+  animation: growUp ease-in 0.25s;
+}
+
+/* .carouse__listFilms-buttonPlay i {
+  height: 3rem;
+  width : 3rem;
+} */
+
+/* Aside */
+
+
+/*set position for aside */
+#aside{
+  width: 300px;
+  float: right;
+  display: none;
+}
+
+
+.aside__outstanding-heading {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+.aside__outstanding-heading ul li {
+  display: inline-block;
+  padding: 0 3px
+}
+.aside__outstanding-heading ul li a{
+  text-decoration: none;
+  color: white;
+}
+.aside__outstanding-heading ul li:hover a{
+  color: red;
+}
+.aside__outstanding-heading ul li h2{
+  color: white;
+}
+
+.aside__trailerFilms-heading{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+
+.aside__trailerFilms-heading ul li{
+  display: inline-block;
+  padding: 3px;
+}
+.aside__trailerFilms-heading ul li a{
+  text-decoration: none;
+  color: white;
+}
+.aside__trailerFilms-heading ul li h2{
+  color: white;
+}
+
+.outstanding__listFilms-img{
+  height: 90px;
+  width: 80px;
+  display: inline-block;
+  padding-right: 5px;
+  position: relative;
+
+}
+.outstanding__listFilms-rank{
+  position: absolute;
+  top: -3px;
+  left: 0;
+  background-color: yellow;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  color: black;
+  
+}
+.triangle_left {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top:5px;
+  left: 0;
+  border: solid 10px;
+  border-color: transparent transparent transparent yellow;
+}
+.triangle_right {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top:5px;
+  right: 60px;
+  border: solid 10px;
+  border-color: transparent yellow transparent transparent ;
+}
+.triangle_top{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -5.5px;
+  right: 57.5px;
+  border: solid 3px;
+  border-color: transparent transparent yellow transparent;
+}
+  
+
+
+
+.aside__listFilms-infor{
+  
+  height: 70px;
+  width: 70%;
+  float: right;
+  padding-top: 6px;
+  padding-left: 13px;
+  
+}
+.outstanding__listFilms-item{
+  margin-bottom: 15px;
+}
+.outstanding__listFilm-title{
+  color:  var( --placeholder-text);
+  font-size: larger;
+  height: 20px;
+  padding-bottom: 7px;
+}
+
+.aside__trailerFilms-img{
+  height: 90px;
+  width: 80px;
+}
+.aside__listFilms-infor h3 {
+  color: #fff;
+  font-size: larger;
+  padding-bottom: 3px;
+}
+.aside__listFilms-infor i {
+  color: var(--text-color);
+  padding: 0px 3px;
+  font-style:normal;
+}
+.infor_text{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Footer */
+#footer {
+  display: none;
+}
+.grid__footer {
+  background-color: rgb(45, 44, 44);
+}
+.footer__nav {
+  height: 46px;
+  background-color: black;
+}
+.footer__nav ul {
+  margin-top: 0px;
+}
+
+.footer__nav-logo{
+  padding: 0px;
+}
+
+.footer__nav li {
+  display: inline-block;
+  padding: 0 35px;
+}
+
+.aside__oustanding-btn:hover {
+  color:red;
+}
+.footer__nav li a {
+  color: white;
+  text-decoration: none; 
+  line-height: 46px;
+  transition: 0,2s;
+}
+
+.footer__nav-item:hover {
+  
+  
+  text-decoration: underline red;
+  text-underline-offset: 10px ;
+  
+}
+
+.grid_row{
+  margin-top: 10px;
+  width: 100%;
+  float:left;
+  margin-bottom: 20px;
+  background-color: rgb(61, 60, 60);
+}
+.grid_center{
+  margin: auto;
+  width: 70%;
+}
+.column{
+  float: left;
+  width: 25%;
+  padding-top: 7px;
+}
+.footer_heading{
+  
+  color: rgb(194, 190, 190);
+}
+.column ul{
+  list-style-type: none;
+  padding: 0px;
+}
+.footer_item{
+  padding-top: 3px;
+}
+.footer_item a{
+  text-decoration: none;
+  color: rgb(104, 103, 103);
+  
+  
+}
+
+.footer_item:hover a {
+  color: white;
+}
+
+.footer__bottom{
+  background-color:rgb(61, 60, 60) ;
+  width: 100%;
+}
+
+.footer__bottom-center{
+  width: 70%;
+  margin:0 auto;
+}
+.footer__bottom-center p {
+  width: 90%;
+  color:rgb(148, 147, 147) ;
+  display: -webkit-box;
+}
+
+.footer__bottom-icon{
+  padding: 5px;
+  display: inline-block;
+  list-style-type: none;
+}
+.footer__icon{
+  width: 260;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+
+.footer__bottom-center p a {
+  text-decoration: underline;
+  color:rgb(104, 103, 103) ;
+}
+.footer__bottom-center p a:hover {
+  color:wheat;
+}
+.footer__icon a {
+  text-decoration: none;
+  color: black;
+}
+
+/* TheloaiPhim */
+
+/* PhimChieuRap */
+.wrap__movieTheater {
+  width: 100%;
+  height: 15rem;
+  max-height: 17rem;
+  padding-bottom: 3rem;
+  display: inline-block;
+}
+/* Heading movieTheater */
+.movieTheater__heading {
+  display: block;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+.movieTheater__heading .movieTheater__heading-launch {
+  color: var(--text-color-light);
+  padding-right: 0.5rem;
+  text-decoration: none;
+}
+.movieTheater__heading .movieTheater__heading-launch:hover {
+  color : var(--rate-text);
+}
+
+.movieTheater__heading .movieTheater__heading-tab {
+  color: var(--placeholder-text);
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.movieTheater__heading-tab span {
+  padding-left: 0.5rem;
+  font-weight: 200;
+}
+
+.movieTheater__filter {
+  width: 100%;
+}
+.movieTheater__filter .movieTheater__filter-item {
+  display: inline-block;
+  padding: 2rem 2rem 1rem 1rem;
+  margin-right: 2rem;
+}
+
+.movieTheater__filter-item .movieTheater__filter-tag {
+  color: var(--placeholder-text);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.movieTheater__filter-item .movieTheater__filter-tag i{
+  padding-right: 0.5rem;
+}
+.movieTheater__filter-option .movieTheater__filter-lists {
+  width: calc(100% + 4rem);
+  height: 4rem; 
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color:  #222;
+  color: var(--placeholder-text);
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 5px;
+}
+/* .movieTheater__filter-option .movieTheater__filter-lists:focus {
+  border: none;
+} */
+
+.movieTheater__filter-btn {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 3px;
+  color: var(--text-color-light);
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+  border: none;
+}
+
+.movieTheater__filter-btn:hover {
+  background-color: #263238;
+}
+
+/* Content movieTheater */
+
+.carousel__item-descFilms{
+  position: absolute;
+  background-color: var(--rate-text);
+  line-height: 2rem;
+  max-width: 4.2rem;
+  right: 0;
+  top : 8%;
+  border-radius: 3px;
+  color: var(--background-color);
+  margin-right: 0.5rem;
+}
+
+.carousel__item-descFilms span {
+  font-size: 1rem;
+  /* padding: 0.5rem; */
+  padding: 0.3rem 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Switch pages in PHIMCHIEURAP */
+.carousel__switchTab {
+  margin-left: 15rem;
+  padding-top: 2rem;
+  
+}
+.carousel__switchTab .carousel__switchTab-page{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--placeholder-text);
+  width: 1rem;
+  max-width: 1.2rem;
+  line-height: 1.5rem;
+  background-color: red;
+  margin: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 3px;
+  background-color: var(--wrap-color);
+}
+
+.carousel__switchTab .carousel__switchTab-page:hover {
+  background-color: var(--icon-color);
+  color: var(--text-color-light);
+}
+
+.carousel__switchTab  .carousel__switchTab-noClick:hover {
+  background-color: var(--wrap-color);
+  color: var(--placeholder-text);
+}

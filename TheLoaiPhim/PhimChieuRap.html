@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LazyFilms</title>
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.com/releases/v6.5.1/css/all.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="../assets/fonts/Alata/Alata-Regular.ttf">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+
+<body>
+  <div class="wrap">
+    <!--Header-->
+    <header id="header">
+      <!--navbar-->
+      <nav class="nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a>
+              <img src="../assets/img/Logo.png" alt="LogoLazyFilms" class="header__nav-logo">
+            </a>
+          </li>
+          <li class="header__nav-item header__mainPage">
+            <a href="../index.html">TRANG CHỦ</a>
+            <div class="header__mainPage-active"></div>
+          </li>
+          <li class="header__nav-item header__nav-subMenu">
+            <a href="#">THỂ LOẠI
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="#">Âm Nhạc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Chiến Tranh</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Gia Đình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hành Động</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Học Đường</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Anime</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Gây Cấn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hình Sự</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Bí Ẩn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Cổ Trang</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hoạt Hình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kiếm Hiệp</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kinh Dị</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">TV-Show</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thần Thoại</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Phiêu Lưu</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Viễn Tưởng</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </li>
+          <li class="header__nav-item header__nav-subMenu">
+            <a href="#">QUỐC GIA
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="#">Ấn Độ</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Âu-Mỹ</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Việt Nam</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hàn Quốc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hồng Kông</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thái Lan</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hàn Quốc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Indonesia</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Đài Loan</a>
+                </li>
+
+              </ul>
+          </li>
+          <!-- <li class="header__nav-item">
+              <a href="#">NĂM PHÁT HÀNH
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+             
+            </li> -->
+          <li class="header__nav-item">
+            <a href="#">TOP PHIM</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="./category/TheLoaiFims/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
+          </li>
+          <li class="header__nav-item ">
+            <div class="header__nav-form">
+              <input type="text" placeholder="Nhập tên phim cần tìm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </li>
+
+          <li class="header__nav-item header__nav-login">
+            <a href="#">Đăng Nhập</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="body__container">
+      <!-- Heading PhimChieuRap -->
+      <div class="wrap__movieTheater">
+        <!-- Heading -->
+        <div class="movieTheater__heading">
+          <a href="../index.html" class="movieTheater__heading-launch">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+          </a>
+          <span class="movieTheater__heading-tab">
+            <i class="fa-regular fa-slash-forward"></i>
+            <span>Phim Chiếu rạp</span>
+          </span>
+        </div>
+
+        <div class="movieTheater__filter">
+          <form action="#" class="form__filter">
+            <!-- action="/loc-phim" -->
+            <div class="movieTheater__filter-item">
+              <label class="movieTheater__filter-tag" for="">
+                <i class="fa-regular fa-layer-group"></i>
+                Sắp xếp
+              </label>
+              <div class="movieTheater__filter-option">
+                <select name="" id="" class="movieTheater__filter-lists">
+                  <option value="asc">Mới nhất</option>
+                  <option value="desc">Cũ nhất</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="movieTheater__filter-item">
+              <label class="movieTheater__filter-tag" for="">
+                <i class="fa-solid fa-chart-tree-map"></i>
+                Danh mục
+              </label>
+              <div class="movieTheater__filter-option">
+                <select name="" id="" class="movieTheater__filter-lists">
+                  <option value="all">Tất cả</option>
+                  <option value="single">Phim lẻ</option>
+                  <option value="series">Phim bộ</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="movieTheater__filter-item">
+              <label class="movieTheater__filter-tag" for="">
+                <i class="fa-solid fa-clapperboard"></i>
+                Thể loại
+              </label>
+              <div class="movieTheater__filter-option">
+                <select name="" id="" class="movieTheater__filter-lists">
+                  <option value="all">Tất cả</option>
+                  <option value="love">Tình cảm</option>
+                  <option value="music">Âm nhạc</option>
+                  <option value="anime">Anime</option>
+                  <option value="mystery">Bí ẩn</option>
+                  <option value="scary">Kinh dị</option>
+                  <option value="action">Hành động</option>
+                  <option value="funny">Hài hước</option>
+                  <option value="science">Viễn tưởng</option>
+                  <option value="legend">Thần thoại</option>
+                  <option value="sport">Thể thao</option>
+                  <option value="super">Siêu anh hùng</option>
+                  <option value="criminal">Tội phạm</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="movieTheater__filter-item">
+              <label class="movieTheater__filter-tag" for="">
+                <i class="fa-regular fa-globe"></i>
+                Quốc gia
+              </label>
+              <div class="movieTheater__filter-option">
+                <select name="" id="" class="movieTheater__filter-lists">
+                  <option value="all">Tất cả</option>
+                  <option value="india">Ấn Độ</option>
+                  <option value="korea">Hàn Quốc</option>
+                  <option value="china">Trung Quốc</option>
+                  <option value="latinh">Âu-Mỹ</option>
+                  <option value="thailand">Thái Lan</option>
+                  <option value="indo">Indonesia</option>
+                  <option value="vietnam">Việt Nam</option>
+                  <option value="japan">Nhật Bản</option>
+                  <option value="hongkong">Hồng Kông</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="movieTheater__filter-item">
+              <label class="movieTheater__filter-tag" for="">
+                <i class="fa-regular fa-calendar-days"></i>
+                Năm phát hành
+              </label>
+              <div class="movieTheater__filter-option">
+                <select name="" id="" class="movieTheater__filter-lists">
+                  <option value="all">Tất cả</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="movieTheater__filter-btn btn">
+              <!-- type = "submit" -->
+              <span>Lọc phim</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!--Content-->
+      <div class="wrap__content">
+        <!-- Content left -->
+        <div class="carousel">
+          <!-- TAB PHIM CHIẾU RẠP -->
+          <div class="carousel__film-longChap">
+            <div class="carousel__tvHome-heading">
+              <h2>PHIM CHIẾU RẠP
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+            </div>
+            <!-- List films -->
+            <div class="carousel__tvHome-listFilms">
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu ">
+                  <a href="#" class="carousel__item-infomation carousel__item-movieTheater">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="../assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                    </div>
+                    <div class="carousel__item-descFilms">
+                      <span>Full HD</span>
+                    </div>
+
+                  </a>
+                  <!-- Short desc -->
+                  <div class="carousel__listFilms-shortDescription">
+                    <h2 class="carousel__shortDescription-heading">
+                      THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                    </h2>
+                    <ul class="carousel__shortDescription-lists">
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                        <span class="carousel__shortDescription-rate">9.0</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="carousel__shortDescription-time">45 phút/1</span>
+                      </li>
+                      <li class="carousel__shortDescription-item">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span class="carousel__shortDescription-year">2/2024</span>
+                      </li>
+                    </ul>
+                    <p class="carousel__shortDescription-para">
+                      Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn tượng,
+                      đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                    </p>
+                    <div class="carousel__shortDecription-type">
+                      <i class="fa-solid fa-folder"></i>
+                      <span>Thể loại :</span>
+                      <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                    </div>
+                  </div>
+
+                  <div class="carouse__listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+                </li>
+
+
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="carousel__switchTab">
+            <a href="#" class="carousel__switchTab-page">
+              <span>1</span>
+            </a>
+            <a href="#" class="carousel__switchTab-page">
+              <span>2</span>
+            </a>
+            <a href="#" class="carousel__switchTab-page">
+              <span>3</span>
+            </a>
+            <span href="#" class="carousel__switchTab-page carousel__switchTab-noClick">
+              ...
+            </span>
+            <a href="#" class="carousel__switchTab-page">
+              <span>11</span>
+
+            </a>
+            <a href="#" class="carousel__switchTab-page">
+              <span>Next</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Aside -->
+        <aside id="aside">
+          <section class="aside__outstanding">
+            <!--BLock trailer 1-->
+            <div class="aside__outstanding-heading">
+              <h2>HOT TUẦN</h2>
+              <a href="#" class="aside__oustanding-btn">Phim lẻ</a>
+              <a href="#" class="aside__oustanding-btn">Phim bộ</a>
+            </div>
+
+            <!--List phim-->
+            <ul class="outstanding__listFilms">
+              <!--unit film-->
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <!-- No click -->
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="#" alt="Tên tôi là Loh Kiwan">
+                    <div class="outstanding__listFilms-rank">#1</div>
+                    <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+                  </div>
+                  <h3>Tên tôi là Loh Kiwan</h3>
+                  <span class="outstanding__listFilm-title">My name is Loh Kiwan</span>
+                </a>
+                <div class="outstanding__listFilms-info">
+                  <i class="fa-light fa-star"> </i>
+                  <i class="fa-light fa-clock"> 113 phút</i>
+                  <i class="fa-regular fa-calendar">2024</i>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="aside__trailerFilms">
+            <!--Block trailer -->
+            <div class="aside__trailerFilms-heading">
+              <h2>PHIM SẮP CHIẾU</h2>
+              <a href="#" class="aside__oustanding-btn">Trailer</a>
+            </div>
+
+            <!--List film -->
+            <ul class="aside__trailerFilms-listFilms">
+              <!--Unit Film-->
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+
+              <li class="aside__trailerFilms-item">
+                <a href="#" class="">
+                  <div class="aside__trailerFilms-img">
+                    <img src="#" alt="Gia Đình X Điệp Viên ">
+                    <div class="aside__trailerFilms-rank">#1</div>
+                  </div>
+                  <h3>Gia Đình X Điệp Viên </h3>
+                  <span class="aside__trailerFilms-title">Spy x Family </span>
+                </a>
+                <div class="aside__trailerFilms-info">
+                  <i class="fa-light fa-star">8.4</i>
+                  <i class="fa-light fa-clock"> 110 phút </i>
+                  <i class="fa-light fa-calendar">2024</i>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!--Footer-->
+      <footer id="footer">
+        <div class="grid">
+          <!--Footer navigation-->
+          <section class="footer__nav">
+            <ul>
+              <li class="footer__nav-logo">
+                <a href="#"><img src="" alt="Lazyfilm logo" width="" height=""></a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Trang chủ</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Yêu cầu phim</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Báo lỗi</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Group thảo luận</a>
+              </li>
+            </ul>
+          </section>
+
+          <!--Footer Infomation -->
+          <section class="grid_row">
+            <div class="column">
+              <h3 class="footer_heading">Giới thiệu về chúng tôi</h3>
+              <ul>
+                <li class="footer_item"><a href="#">Thông tin website</a></li>
+              </ul>
+            </div>
+
+            <div class="column">
+              <h3 class="footer_heading">Hợp tác</h3>
+              <ul>
+                <li class="footer_item"><a href="#">Đăng quảng cáo</a></li>
+              </ul>
+            </div>
+
+            <div class="column">
+              <h3 class="footer_heading">Hỗ trợ lỗi</h3>
+              <ul>
+                <li class="footer_item"><a href="#">Phản ánh ý kiến</a></li>
+                <li class="footer_item"><a href="#">Hỗ trợ lỗi</a></li>
+                <li class="footer_item"><a href="#">Câu hỏi thường gặp</a></li>
+              </ul>
+            </div>
+
+            <div class="column">
+              <h3 class="footer_heading">Điều khoản dịch vụ</h3>
+              <ul>
+                <li class="footer_item"><a href="#">Điều khoản riêng tư</a></li>
+                <li class="footer_item"><a href="#">Điều khoản sử dụng</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <!--Footer bottom-->
+          <section class="footer__bottom">
+            <div class="footer__bottom-copyright">
+              <p>Copyright &copy;2024 Lazyfilm</p>
+              <p>Chúng tôi sử dụng Cookies để cải thiện trải nghiệm sử dụng của bạn.
+                Nếu bạn tiếp tục sử dụng trang web của chúng tôi, có nghĩa là bạn đồng ý chúng tôi sử dụng cookie.
+                <a href="#">Đọc Chính sách quyền riêng tư Lazyfilms</a>
+              </p>
+              <!--Icon-->
+              <ul>
+                <li class="footer__bottom-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </li>
+                <li class="footer__bottom-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </li>
+                <li class="footer__bottom-icon">
+                  <i class="fa-brands fa-youtube"></i>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+:root {
+  --header-height: 120px;
+  --primary-color: #;
+  --text-color : #e1dfdf;
+  --text-color-light: #fff;
+  --background-color : #000;
+  --wrap-color:  #263238;
+  --icon-color: #ffc107;
+  --btn-color : #b71c1c;
+  --active-color:#b5e745;
+  --placeholder-text: #828282;
+  --bg-rate : #000000a6;
+  --rate-text: #f5ec42;
+  --btn-hover: #263238;
+} 
+
+* {
+  box-sizing: border-box;
+  padding : 0;
+  margin : 0;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+  line-height: 1.6rem;
+  font-family: 'Alata', sans-serif;
+}
+
+@font-face {
+  font-family: 'Alata';
+  src: url('../fonts/Alata/Alata-Regular.ttf') format('truetype');
+  /* Thay đổi đường dẫn đến tệp font của bạn */
+}
+
+.btn {
+  margin-left: 0rem;
+  background-color: var(--btn-color);
+  padding: 0 1.2rem;
+  border-radius: 3px;
+  padding: 1.2rem 1.3rem;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+
+
