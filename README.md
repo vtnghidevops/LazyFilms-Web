@@ -1,6 +1,7 @@
 
 # LAZYFILMS 
 ## Hình ảnh thiết kế web
+:point_right:[Github Pages](https://vtnghidevops.github.io/LazyFilms-Web/)
 
 ### **Header**
 ![](./assets/img/Header.png)
