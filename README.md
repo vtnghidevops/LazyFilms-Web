@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # LAZYFILMS 
 ## Hình ảnh thiết kế web
 
@@ -77,7 +77,5 @@
 ### 2. Phần còn lại
 - Các **mô tả cơ bản** về trang web cơ bản: chính sách, giới thiệu, hỗ trợ quảng cáo.
 - Link các trang xã hội của web.
-=======
-# LazyFilms-Web
-Chill Thôi !!!!
->>>>>>> b9643b05d602fa80e89e470f15f9d6b5faff5952
+
+
