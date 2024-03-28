@@ -1,0 +1,3295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LazyFilms</title>
+  <link rel="stylesheet" href="./assets/fonts/fontawesome.com/releases/v6.5.1/css/all.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="./assets/fonts/Alata/Alata-Regular.ttf">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+
+
+</head>
+
+<body>
+  <div class="wrap">
+    <!--Header-->
+    <header id="header">
+      <!--navbar-->
+      <nav class="nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a>
+              <img src="./assets/img/Logo.png" alt="LogoLazyFilms" class="header__nav-logo">
+            </a>
+          </li>
+          <li class="header__nav-item header__mainPage">
+            <a href="#">TRANG CHỦ</a>
+            <div class="header__mainPage-active"></div>
+          </li>
+          <li class="header__nav-item header__nav-subMenu">
+            <a href="#">THỂ LOẠI
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="#">Âm Nhạc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Chiến Tranh</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Gia Đình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hành Động</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Học Đường</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Anime</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Gây Cấn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hình Sự</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Bí Ẩn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Cổ Trang</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hoạt Hình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kiếm Hiệp</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kinh Dị</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">TV-Show</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thần Thoại</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Phiêu Lưu</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Viễn Tưởng</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </li>
+          <li class="header__nav-item header__nav-subMenu">
+            <a href="#">QUỐC GIA
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="#">Ấn Độ</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Âu-Mỹ</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Việt Nam</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hàn Quốc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hồng Kông</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thái Lan</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hàn Quốc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Indonesia</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Đài Loan</a>
+                </li>
+
+              </ul>
+          </li>
+          <!-- <li class="header__nav-item">
+              <a href="#">NĂM PHÁT HÀNH
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+             
+            </li> -->
+          <li class="header__nav-item">
+            <a href="./Pages/TheLoaiPhim/TopPhim.html">TOP PHIM</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="./Pages/TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
+          </li>
+          <li class="header__nav-item ">
+            <div class="header__nav-form">
+              <input type="text" placeholder="Nhập tên phim cần tìm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </li>
+
+          <li class="header__nav-item header__nav-login">
+            <a href="./Pages/Login/Login.html">Đăng Nhập</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Slider-->
+    <div class="body__container">
+      <div id="slider">
+        <!--video trailer-->
+        <div class="slider__video">
+          <!-- autoplay <iframe width="560" height="315" src="https://www.youtube.com/embed/oc_P11PNvRs" frameborder="1" allowfullscreen autoplay></iframe> -->
+          <video class="slider__video-trailer" width="640" height="330" autoplay muted controls>
+            <source src="https://trailer.vieon.vn/Teaser_HayChamSocMe.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!--information-->
+        <div class="slider__textContent">
+          <ul id="slider__information-list">
+            <li class="slider__textContent-heading">
+              <img src="./assets/img/NhatKyBanCong-title.png" alt="NhatKyBanCong" class="slider__textContent-img">
+            </li>
+            <div class="slider__information-items">
+              <ul>
+                <li class="slider__infomation-year">2024</li>
+                <li>|</li>
+
+                <li class="slider__infomation-country">Hàn Quốc</li>
+                <li>|</li>
+
+                <li class="slider__infomation-time">2g 5ph</li>
+                <li>|</li>
+
+                <li>HD</li>
+              </ul>
+            </div>
+
+            <span class="slider__infomation-paragraph">
+              Bà Jeong đã 85 tuổi và mắc căn bệnh đãng trí. Chẳng may bà bị gãy tay do trượt chân té ngã. Do quá lo lắng
+              nên con trai đã lén đặt camera để giám sát.
+            </span>
+            <li class="slider__information-item slider__info-watch slider__info-common">
+              <a href="#">
+                <i class="fa-duotone fa-play"></i>
+                Xem Phim
+              </a>
+            </li>
+            <li class="slider__information-item slider__info-detail slider__info-common">
+              <a href="#">
+                <i class="fa-regular fa-circle-info"></i>
+                Chi Tiết
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--NextAndPrevious Button-->
+        <div class="slider__button">
+          <button class="slider__button-tap" type="button">
+            <i class="fa-light fa-angle-left"></i>
+          </button>
+          <!-- <div class = "slider__switch-tab">
+            <ul class="slider__switch-lists">
+              <li class="slider_switch-item">
+                <i class="fa-regular fa-window-minimize"></i>
+              </li>
+              <li class="slider_switch-item">
+                <i class="fa-regular fa-window-minimize"></i>
+              </li>
+              <li class="slider_switch-item"
+              ></li>
+              <li class="slider_switch-item">
+                <i class="fa-regular fa-window-minimize"></i>
+
+              </li>
+              <li class="slider_switch-item">
+                <i class="fa-regular fa-window-minimize"></i>
+
+              </li>
+            </ul>
+          </div> -->
+          <button class="slider__button-tap" type="button">
+            <i class="fa-light fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!--Content-->
+      <div class="wrap__content">
+        <!-- Content left -->
+        <div class="carousel">
+          <!-- Phim Mới cập nhật -->
+          <div class="carousel__film-update">
+            <!-- Heading -->
+            <div class="carousel__tvHome-heading">
+              <h2>MỚI CẬP NHẬT
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+
+              <a href="#" class="carousel__tvHome-btn">
+                Tất Cả
+              </a>
+              <a href="#" class="carousel__tvHome-btn">Hành Động</a>
+              <a href="#" class="carousel__tvHome-btn">Kinh Dị</a>
+              <a href="#" class="carousel__tvHome-btn">Anime</a>
+              <a href="#" class="carousel__tvHome-btn">Viễn Tưởng</a>
+              <a href="#" class="carousel__tvHome-btn">Lãng Mạn</a>
+            </div>
+            <!-- List films mới cập nhật-->
+            <div class="carousel__tvHome-listFilms">
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/TheWitch.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint">
+                          <i class="fa-solid fa-star judge__listFilms-star"></i>
+                          8.5
+                        </span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">The Witch</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 1.234</span>
+                      <!-- Label Films No chapter-->
+                      <div class="carousel__item-noChapter">
+                        <span>Full HD</span>
+                      </div>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THE WITCH - SÁT THỦ NHÂN TẠO
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">8.5</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">137 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Bộ phim "Sát thủ nhân tạo 2: Mẫu vật còn lại" kể về hành trình thoát khỏi phòng thí nghiệm bí
+                          mật
+                          của một cô gái. Sau khi tỉnh dậy tại đây, cô gặp Kyung Hee...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Bí ẩn, Hành động</h4>
+                        </div>
+
+                      </div>
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Phim Bộ -->
+          <div class="carousel__film-longChap">
+            <div class="carousel__tvHome-heading">
+              <h2>PHIM BỘ MỚI
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+            </div>
+            <!-- List films -->
+            <div class="carousel__tvHome-listFilms">
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/Thumb.jpg" alt="TheWitch">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Thumb</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
+                      <!-- Label Films Have Chapter-->
+                      <span class="carousel__item-haveChapter">
+                        Tập
+                        <i>23</i>
+                      </span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.0</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">45 phút/1</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2/2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
+                          tượng,
+                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
+                        </div>
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                  </a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+          <!-- Phim Anime -->
+          <div class="carousel__film-anime">
+            <div class="carousel__tvHome-heading">
+              <h2>ANIME
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+
+            </div>
+
+            <div class="carousel__tvHome-listFilms">
+              <!-- List films anime-->
+              <div class="carousel__tvHome-listFilms">
+                <ul class="carousel__listFilms">
+                  <!-- unit film -->
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                </ul>
+
+                <ul class="carousel__listFilms">
+                  <!-- unit film -->
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                  <li class="carousel__listFilms-item carousel__list-subMenu">
+                    <a href="#" class="carousel__item-infomation">
+                      <div class="carousel__listFilms-img">
+                        <figure class="carousel__img-fixed">
+                          <img src="./assets/img/Onepiece.png" alt="Onepiece">
+                          <span class="carousel__listFilms-ratePoint"> <i
+                              class="fa-solid fa-star judge__listFilms-star"></i>9.3</span>
+                        </figure>
+                        <h3 class="carousel__listFilms-title">One piece</h3>
+                        <span class="carousel__listFilms-view">Lượt xem: 4.523</span>
+                        <!-- Label Films Have Chapter-->
+                        <span class="carousel__item-haveChapter">
+                          Tập
+                          <i>1039</i>
+                        </span>
+                        <!-- Short desc -->
+                        <div class="carousel__listFilms-shortDescription">
+                          <h2 class="carousel__shortDescription-heading">
+                            ONE PIECE - VUA HẢI TẶC
+                          </h2>
+                          <ul class="carousel__shortDescription-lists">
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                              <span class="carousel__shortDescription-rate">9.3</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-clock"></i>
+                              <span class="carousel__shortDescription-time">30 phút/1</span>
+                            </li>
+                            <li class="carousel__shortDescription-item">
+                              <i class="fa-regular fa-calendar-days"></i>
+                              <span class="carousel__shortDescription-year">1997</span>
+
+                            </li>
+                          </ul>
+                          <p class="carousel__shortDescription-para">
+                            Vua Hải Tặc xoay quanh 1 nhóm cướp biển được gọi là Băng Hải tặc Mũ Rơm - Straw Hat Pirates
+                            -
+                            được thành lập và lãnh đạo bởi thuyền trưởng Monkey D. Luffy. Cậu bé Luffy ...
+                          </p>
+                          <div class="carousel__shortDecription-type">
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Thể loại :</span>
+                            <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                          </div>
+
+                        </div>
+
+                        <div class="common-listFilms-buttonPlay">
+                          <a href="#" class="clickFilms">
+                            <i class="fa-thin fa-circle-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sắp Chiếu -->
+          <div class="carousel__film-commingSoon">
+            <div class="carousel__tvHome-heading">
+              <h2>PHIM SẮP CHIẾU
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+
+            </div>
+
+            <div class="carousel__tvHome-listFilms">
+              <!-- List phim sắp chiếu -->
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+              </ul>
+
+              <ul class="carousel__listFilms">
+                <!-- unit film -->
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+                <li class="carousel__listFilms-item carousel__list-subMenu">
+                  <a href="#" class="carousel__item-infomation">
+                    <div class="carousel__listFilms-img">
+                      <figure class="carousel__img-fixed">
+                        <img src="./assets/img/SPY.jpg" alt="Spy X Family">
+                        <span class="carousel__listFilms-ratePoint"> <i
+                            class="fa-solid fa-star judge__listFilms-star"></i>9.2</span>
+                      </figure>
+                      <h3 class="carousel__listFilms-title">Spy X Family</h3>
+                      <span class="carousel__listFilms-view">Lượt xem: 2.310</span>
+                      <!-- Short desc -->
+                      <div class="carousel__listFilms-shortDescription">
+                        <h2 class="carousel__shortDescription-heading">
+                          SPY X Family
+                        </h2>
+                        <ul class="carousel__shortDescription-lists">
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                            <span class="carousel__shortDescription-rate">9.2</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="carousel__shortDescription-time">120 phút</span>
+                          </li>
+                          <li class="carousel__shortDescription-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span class="carousel__shortDescription-year">2024</span>
+                          </li>
+                        </ul>
+                        <p class="carousel__shortDescription-para">
+                          Gia Đình x Điệp Viên Mã: Trắng" là một bộ phim hoạt hình Nhật Bản đầy kịch tính và hấp dẫn,
+                          được
+                          đạo diễn bởi Takashi Katagiri và viết kịch bản bởi Ichirō Ōkouchi, hợp tác sản xuất bởi ...
+                        </p>
+                        <div class="carousel__shortDecription-type">
+                          <i class="fa-solid fa-folder"></i>
+                          <span>Thể loại :</span>
+                          <h4 class="carousel__shortDecription-text">Hành động, Anime</h4>
+                        </div>
+
+                      </div>
+
+                      <div class="common-listFilms-buttonPlay">
+                        <a href="#" class="clickFilms">
+                          <i class="fa-thin fa-circle-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Aside -->
+        <aside class="aside">
+          <!-- random films -->
+          <div class="aside__random-films">
+            <div class="aside__random-heading">
+              <span>Hôm nay xem gì ?</span>
+            </div>
+            <p class="aside__random-paragraph">
+              Nếu chưa biết phải chọn phim gì. Hãy để chúng tôi chọn giúp bạn :>
+            </p>
+            <a href="#" class="aside__random-buttonPlay">
+              <i class="fa-solid fa-play"></i>
+              <span class="aside__buttonPlay-text">Xem Phim
+                <strong>Ngẫu Nhiên</strong>
+              </span>
+            </a>
+          </div>
+          <!-- Fanpage -->
+          <div class="aside__block-fanpage">
+            <div class="aside__fanpage-heading">
+              Fanpage LazyFilms
+            </div>
+            <a href="#" class="aside__fanpage-follow">
+              <i class="fa-brands fa-square-facebook"></i>
+              <span>Theo dõi trang</span>
+            </a>
+            <div class="aside__fanpage-img">
+              <img src="./assets/img/Fanpage.png" alt="#">
+            </div>
+            <p class="aside__fanpage-desc">
+              Like và Follow Trang LazyFilms để nhận thông báo về phim sớm nhất
+            </p>
+          </div>
+          <!-- Nổi bật -->
+          <section class="aside__outstanding">
+            <!--BLock trailer 1-->
+            <div class="aside__outstanding-heading">
+              <ul>
+                <li>
+                  <h2>HOT TUẦN</h2>
+                </li>
+                <li><a href="#" class="aside__oustanding-btn aside__outstading-single aside__outstading-active">Phim
+                    lẻ</a></li>
+                <li><a href="#" class="aside__oustanding-btn aside__outstading-series">Phim bộ</a></li>
+              </ul>
+            </div>
+
+            <!--List phim-->
+            <ul class="outstanding__listFilms">
+              <!--unit film-->
+              <li class="outstanding__listFilms-item">
+                <a href="#" class="">
+                  <div class="outstanding__listFilms-img">
+                    <img src="https://image.tmdb.org/t/p/w185/2jDDBvllcb4Uscm5XmgQRTwzDUG.jpg" alt="Bá Chủ Bầu Trời" ">
+                            <div class=" outstanding__listFilms-rank">#1
+                  </div>
+                  <div class="triangle_left"></div>
+                  <div class="triangle_right"></div>
+                  <div class="triangle_top"></div>
+                  <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+
+                  <!-- btn play hover -->
+                  <div class="aside-listFilms-buttonPlay">
+                    <a href="#" class="clickFilms">
+                      <i class="fa-thin fa-circle-play"></i>
+                    </a>
+                  </div>
+      </div>
+      <div class="aside__listFilms-infor">
+        <h3>Bá Chủ Bầu Trời</h3>
+        <span class="outstanding__listFilm-title">Masters of the Air</span>
+        <!-- No click -->
+        <div class="outstanding__listFilms-info">
+          <ul class="outstading__listFilms-iconLists">
+            <li class="outstading__listFilms-item">
+              <i class="fa-solid fa-star judge__listFilms-star"></i>
+              <span class="outstading__listFilms-rate"> 8.5 </span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-light fa-clock"> </i>
+              <span class="outstading__listFilms-time"> 113 phút</span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="outstading__listFilms-year"> 2024</span>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </div>
+      </a>
+      </li>
+
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://image.tmdb.org/t/p/w185/dkMsZu2cSOopqbSxUSLERQtRgbP.jpg"
+              alt="Thế thần: Ngự khí sư cuối cùng" ">
+                            <div class=" outstanding__listFilms-rank">#2
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+    </div>
+    <div class="aside__listFilms-infor">
+      <h3>Thế thần: Ngự khí sư cuối cùng</h3>
+      <span class="outstanding__listFilm-title">Avatar: The Last Airbender</span>
+      <!-- No click -->
+      <div class="outstanding__listFilms-info">
+        <ul class="outstading__listFilms-iconLists">
+          <li class="outstading__listFilms-item">
+            <i class="fa-solid fa-star judge__listFilms-star"></i>
+            <span class="outstading__listFilms-rate"> 8.5 </span>
+          </li>
+          <li class="outstading__listFilms-item">
+            <i class="fa-light fa-clock"> </i>
+            <span class="outstading__listFilms-time"> 113 phút</span>
+          </li>
+          <li class="outstading__listFilms-item">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="outstading__listFilms-year"> 2024</span>
+          </li>
+        </ul>
+
+
+
+      </div>
+    </div>
+    </a>
+    </li>
+
+    <li class="outstanding__listFilms-item">
+      <a href="#" class="">
+        <div class="outstanding__listFilms-img">
+          <img src="https://image.tmdb.org/t/p/w185/e1HOt09BgYH5oZ8xfgi8TQiReYR.jpg" alt="Nghịch Lý Kẻ Sát Nhân" ">
+                            <div class=" outstanding__listFilms-rank">#3
+        </div>
+        <div class="triangle_left"></div>
+        <div class="triangle_right"></div>
+        <div class="triangle_top"></div>
+        <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+        <!-- btn play hover -->
+        <div class="aside-listFilms-buttonPlay">
+          <a href="#" class="clickFilms">
+            <i class="fa-thin fa-circle-play"></i>
+          </a>
+        </div>
+  </div>
+  <div class="aside__listFilms-infor">
+    <h3>Nghịch Lý Kẻ Sát Nhân</h3>
+    <span class="outstanding__listFilm-title">A Killer Paradox</span>
+    <!-- No click -->
+    <div class="outstanding__listFilms-info">
+      <ul class="outstading__listFilms-iconLists">
+        <li class="outstading__listFilms-item">
+          <i class="fa-solid fa-star judge__listFilms-star"></i>
+          <span class="outstading__listFilms-rate"> 8.5 </span>
+        </li>
+        <li class="outstading__listFilms-item">
+          <i class="fa-light fa-clock"> </i>
+          <span class="outstading__listFilms-time"> 113 phút</span>
+        </li>
+        <li class="outstading__listFilms-item">
+          <i class="fa-regular fa-calendar"></i>
+          <span class="outstading__listFilms-year"> 2024</span>
+        </li>
+      </ul>
+
+
+
+    </div>
+  </div>
+  </a>
+  </li>
+
+  <li class="outstanding__listFilms-item">
+    <a href="#" class="">
+      <div class="outstanding__listFilms-img">
+        <img src="https://image.tmdb.org/t/p/w185/hmHA5jqxN3ESIAGx0jAwV7TJhTQ.jpg" alt="Halo Phần 2" ">
+                            <div class=" outstanding__listFilms-rank">#4
+      </div>
+      <div class="triangle_left"></div>
+      <div class="triangle_right"></div>
+      <div class="triangle_top"></div>
+      <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+      <!-- btn play hover -->
+      <div class="aside-listFilms-buttonPlay">
+        <a href="#" class="clickFilms">
+          <i class="fa-thin fa-circle-play"></i>
+        </a>
+      </div>
+      </div>
+      <div class="aside__listFilms-infor">
+        <h3>Halo Phần 2</h3>
+        <span class="outstanding__listFilm-title">Halo Season 2</span>
+        <!-- No click -->
+        <div class="outstanding__listFilms-info">
+          <ul class="outstading__listFilms-iconLists">
+            <li class="outstading__listFilms-item">
+              <i class="fa-solid fa-star judge__listFilms-star"></i>
+              <span class="outstading__listFilms-rate"> 8.5 </span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-light fa-clock"> </i>
+              <span class="outstading__listFilms-time"> 113 phút</span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="outstading__listFilms-year"> 2024</span>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </div>
+    </a>
+  </li>
+
+
+  <li class="outstanding__listFilms-item">
+    <a href="#" class="">
+      <div class="outstanding__listFilms-img">
+        <img src="https://image.tmdb.org/t/p/w185/gtmkmtldZhLZU2HrKok1L1VW73F.jpg" alt="Nam Lai Bắc Vãng" ">
+                            <div class=" outstanding__listFilms-rank">#5
+      </div>
+      <div class="triangle_left"></div>
+      <div class="triangle_right"></div>
+      <div class="triangle_top"></div>
+      <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+      <!-- btn play hover -->
+      <div class="aside-listFilms-buttonPlay">
+        <a href="#" class="clickFilms">
+          <i class="fa-thin fa-circle-play"></i>
+        </a>
+      </div>
+      </div>
+      <div class="aside__listFilms-infor">
+        <h3>Nam Lai Bắc Vãng</h3>
+        <span class="outstanding__listFilm-title">南来北往</span>
+        <!-- No click -->
+        <div class="outstanding__listFilms-info">
+          <ul class="outstading__listFilms-iconLists">
+            <li class="outstading__listFilms-item">
+              <i class="fa-solid fa-star judge__listFilms-star"></i>
+              <span class="outstading__listFilms-rate"> 8.5 </span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-light fa-clock"> </i>
+              <span class="outstading__listFilms-time"> 113 phút</span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="outstading__listFilms-year"> 2024</span>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="outstanding__listFilms-item">
+    <a href="#" class="">
+      <div class="outstanding__listFilms-img">
+        <img src="https://image.tmdb.org/t/p/w185/JV3DXl1fITfoyHtyPzNuZyzh8q.jpg" alt="Cô Đi Mà Lấy Chồng Tôi" ">
+                            <div class=" outstanding__listFilms-rank">#6
+      </div>
+      <div class="triangle_left"></div>
+      <div class="triangle_right"></div>
+      <div class="triangle_top"></div>
+      <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+      <!-- btn play hover -->
+      <div class="aside-listFilms-buttonPlay">
+        <a href="#" class="clickFilms">
+          <i class="fa-thin fa-circle-play"></i>
+        </a>
+      </div>
+      </div>
+      <div class="aside__listFilms-infor">
+        <h3>Cô Đi Mà Lấy Chồng Tôi</h3>
+        <span class="outstanding__listFilm-title">Marry My Husband</span>
+        <!-- No click -->
+        <div class="outstanding__listFilms-info">
+          <ul class="outstading__listFilms-iconLists">
+            <li class="outstading__listFilms-item">
+              <i class="fa-solid fa-star judge__listFilms-star"></i>
+              <span class="outstading__listFilms-rate"> 8.5 </span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-light fa-clock"> </i>
+              <span class="outstading__listFilms-time"> 113 phút</span>
+            </li>
+            <li class="outstading__listFilms-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="outstading__listFilms-year"> 2024</span>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </div>
+    </a>
+  </li>
+
+
+
+
+
+  </ul>
+        </section>
+
+        <!-- Trailer -->
+        <section class="aside__trailerFilms">
+    <!--Block trailer -->
+    <div class="aside__trailerFilms-heading">
+      <ul class="outstanding__listFilms">
+        <li>
+          <h2>PHIM SẮP CHIẾU</h2>
+        </li>
+        <li><a href="#" class="aside__oustanding-btn aside__outstading-active">Trailer</a></li>
+      </ul>
+    </div>
+
+    <!--List film -->
+    <ul class="aside__trailerFilms-listFilms">
+      <!--Unit Film-->
+
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTq4Sa7j8Wj-bbXvarN8JTOE9Fgc4nJeYH1czXWQs-igDwptLsW"
+              alt="Mai">
+            <div class=" outstanding__listFilms-rank">#1
+            </div>
+            <div class="triangle_left"></div>
+            <div class="triangle_right"></div>
+            <div class="triangle_top"></div>
+            <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+            <!-- btn play hover -->
+            <div class="aside-listFilms-buttonPlay">
+              <a href="#" class="clickFilms">
+                <i class="fa-thin fa-circle-play"></i>
+              </a>
+            </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>Mai</h3>
+            <span class="outstanding__listFilm-title">Mai</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://phimmoisz.net/wp-content/uploads/2024/03/thumb-13151-1709823818.jpg" alt="Exhuma" ">
+                              <div class=" outstanding__listFilms-rank">#2
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>Quật Mộ Trùng Ma</h3>
+            <span class="outstanding__listFilm-title">Exhuma</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://phimmoisz.net/wp-content/uploads/2023/12/thumb-8314-1702893478.jpg" alt="KungFu Panda 4" ">
+                              <div class=" outstanding__listFilms-rank">#3
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>KungFu Panda 4</h3>
+            <span class="outstanding__listFilm-title">KungFu Panda 4</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://phimmoisz.net/wp-content/uploads/2024/03/thumb-13214-1709912331.jpg" alt="Dune 2" ">
+                              <div class=" outstanding__listFilms-rank">#4
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>Hành Tinh Cát (Phần 2)</h3>
+            <span class="outstanding__listFilm-title">Dune 2</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://phimmoisz.net/wp-content/uploads/2024/02/thumb-11006-1707187268.jpg" alt="Death Whisperer" ">
+                              <div class=" outstanding__listFilms-rank">#5
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>Quỷ Ăn Tạng</h3>
+            <span class="outstanding__listFilm-title">Death Whisperer</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="outstanding__listFilms-item">
+        <a href="#" class="">
+          <div class="outstanding__listFilms-img">
+            <img src="https://phimmoisz.net/wp-content/uploads/2024/02/thumb-11006-1707187268.jpg" alt="Death Whisperer" ">
+                              <div class=" outstanding__listFilms-rank">#5
+          </div>
+          <div class="triangle_left"></div>
+          <div class="triangle_right"></div>
+          <div class="triangle_top"></div>
+          <!-- <i class="fa-regular fa-bookmark">#1</i> -->
+          <!-- btn play hover -->
+          <div class="aside-listFilms-buttonPlay">
+            <a href="#" class="clickFilms">
+              <i class="fa-thin fa-circle-play"></i>
+            </a>
+          </div>
+          </div>
+          <div class="aside__listFilms-infor">
+            <h3>Quỷ Ăn Tạng</h3>
+            <span class="outstanding__listFilm-title">Death Whisperer</span>
+            <!-- No click -->
+            <div class="outstanding__listFilms-info">
+              <ul class="outstading__listFilms-iconLists">
+                <li class="outstading__listFilms-item">
+                  <i class="fa-solid fa-star judge__listFilms-star"></i>
+                  <span class="outstading__listFilms-rate"> 8.5 </span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-light fa-clock"> </i>
+                  <span class="outstading__listFilms-time"> 113 phút</span>
+                </li>
+                <li class="outstading__listFilms-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="outstading__listFilms-year"> 2024</span>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+        </a>
+      </li>
+
+
+    </ul>
+        </section>
+  </aside>
+  </div>
+
+
+  </div>
+  <!--Footer-->
+  <footer id="footer">
+    <div class="wrap__footer">
+      <!--Footer navigation-->
+      <nav class="footer__nav">
+        <!--  -->
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="#">
+              <img src="./assets/img/Logo.png" alt="LogoLazyFilms" class="footer__nav-logo">
+            </a>
+          </li>
+
+          <li class="footer__nav-item header__mainPage">
+            <a href="#">TRANG CHỦ</a>
+
+          </li>
+          <li class="footer__nav-item">
+            <a href="./Pages/RequireWeb/YeuCauPhim.html">YÊU CẦU PHIM</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="./Pages/RequireWeb/BaoLoi.html">BÁO LỖI</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">GROUP THẢO LUẬN</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--Footer Infomation -->
+
+      <div class="footer__info">
+        <div class="footer__info-column">
+          <h3 class="footer__info-heading">Giới thiệu về chúng tôi</h3>
+          <ul>
+            <li class="footer__info-item"><a href="#">Thông tin website</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__info-column">
+          <h3 class="footer__info-heading">Hợp tác</h3>
+          <ul>
+            <li class="footer__info-item"><a href="#">Đăng quảng cáo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__info-column">
+          <h3 class="footer__info-heading">Hỗ trợ lỗi</h3>
+          <ul>
+            <li class="footer__info-item"><a href="#">Phản ánh ý kiến</a></li>
+            <li class="footer__info-item"><a href="#">Hỗ trợ lỗi</a></li>
+            <li class="footer__info-item"><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__info-column">
+          <h3 class="footer__info-heading">Điều khoản dịch vụ</h3>
+          <ul>
+            <li class="footer__info-item"><a href="#">Điều khoản riêng tư</a></li>
+            <li class="footer__info-item"><a href="#">Điều khoản sử dụng</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+
+      <!--Footer bottom-->
+      <div class="footer__bottom">
+        <div class="footer__bottom-center">
+          <p>Copyright &copy;2024 Lazyfilm <br />
+            Chúng tôi sử dụng Cookies để cải thiện trải nghiệm sử dụng của bạn.
+            Nếu bạn tiếp tục sử dụng trang web của chúng tôi, có nghĩa là bạn đồng ý chúng tôi sử dụng cookie.
+            <a href="#">Đọc Chính sách quyền riêng tư Lazyfilms</a>
+          </p>
+          <!--Icon-->
+
+          <ul class="footer__icon">
+            <li class="footer__bottom-icon"> <a href="#" class="footer__icon-facebook">
+                <i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li class="footer__bottom-icon"><a href="#" class="footer__icon-instagram">
+                <i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer__bottom-icon"><a href="#" class="footer__icon-youtube">
+                <i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+
+  </footer>
+  </div>
+
+
+
+
+</body>
+
+</html>
