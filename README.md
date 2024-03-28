@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 # LAZYFILMS 
 ## Hình ảnh thiết kế web
 :point_right:[Github Pages](https://vtnghidevops.github.io/LazyFilms-Web/)
+=======
+
+# LAZYFILMS 
+## Hình ảnh thiết kế web
+:point_right:[Github Pages](https://vtnghidevops.github.io/LazyFilms-Web/)
+
+>>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 ### **Header**
 ![](./assets/img/Header.png)
 ### **Slider**
@@ -76,3 +84,8 @@
 ### 2. Phần còn lại
 - Các **mô tả cơ bản** về trang web cơ bản: chính sách, giới thiệu, hỗ trợ quảng cáo.
 - Link các trang xã hội của web.
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
