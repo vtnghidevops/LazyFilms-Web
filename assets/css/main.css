@@ -1,8 +1,5 @@
 /* Header */
-<<<<<<< HEAD
 
-=======
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 .wrap {
   background-color: var(--wrap-color);
 }
@@ -126,7 +123,6 @@
   font-size: 1.3rem;
 }
 
-<<<<<<< HEAD
 .header__nav-login:hover {
   background-color: var(--wrap-color);
 }
@@ -390,10 +386,6 @@
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-=======
-.header__nav-login a:hover {
-  color: var(--text-color-light);
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 
 
@@ -940,10 +932,7 @@
   font-weight: 300;
   /* margin: 1rem; */
   margin-bottom: 0.5rem;
-<<<<<<< HEAD
   color : var(--background-color);
-=======
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 
 .carousel__shortDescription-lists{
@@ -957,10 +946,7 @@
 .carousel__shortDescription-item i {
   font-size: 1rem;
   padding: 0.1rem;
-<<<<<<< HEAD
   color: var(--background-color);
-=======
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 .carousel__shortDescription-item span {
   color: var(--placeholder-text);
@@ -1045,7 +1031,6 @@
 
 
 .aside{
-<<<<<<< HEAD
   width: 30%;
   float: right;
   padding: 0.5rem 0 0 1rem;
@@ -1211,30 +1196,13 @@
 {
   padding: 0.8rem 0 ;
   margin-bottom: 1rem;
-=======
-  width: 25%px;
-  float: right;
-  padding-left: 25px;
-  padding-top: 5px;
-}
-
-
-.aside__outstanding-heading
-{
-  padding: 0.8rem 0 ;
-  margin-bottom: 10px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
   border-bottom-color: var(--text-color-light);
   border-bottom-style: solid;
   border-bottom-width: thin;
 }
 .aside__outstanding-heading ul li {
   display: inline-block;
-<<<<<<< HEAD
   padding: 0 0.3rem;
-=======
-  padding: 0 3px
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 .aside__outstanding-heading ul li a{
   text-decoration: none;
@@ -1244,17 +1212,12 @@
   color: var(--btn-color);
 }
 
-<<<<<<< HEAD
 .aside__trailerFilms {
   margin-top: 2rem;
   padding-left :2rem;
 }
 .aside__trailerFilms-heading {
   margin-top: 0rem;
-=======
-.aside__trailerFilms-heading {
-  margin-top: 5rem;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 .aside__trailerFilms-heading ul li h2,
 .aside__outstanding-heading ul li h2{
@@ -1276,13 +1239,8 @@
 }
 
 .aside__trailerFilms-heading{
-<<<<<<< HEAD
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-=======
-  margin-bottom: 10px;
-  padding-bottom: 10px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: thin;
@@ -1291,11 +1249,7 @@
 
 .aside__trailerFilms-heading ul li{
   display: inline-block;
-<<<<<<< HEAD
   padding: 0.3rem;
-=======
-  padding: 3px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 .aside__trailerFilms-heading ul li a{
   text-decoration: none;
@@ -1305,29 +1259,17 @@
   color: white;
 }
 .outstanding__listFilms{
-<<<<<<< HEAD
   padding-top: 1.7rem;
-=======
-  padding-top: 17px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 .outstanding__listFilms-img{
   height: 10rem;
   width: 8rem;
   display: inline-block;
-<<<<<<< HEAD
   padding-right: 0.5rem;
   position: relative;
 }
 .outstanding__listFilms-img img {
   height: 10rem;
-=======
-  padding-right: 5px;
-  position: relative;
-}
-.outstanding__listFilms-img img {
-  height: 100px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 
 .aside-listFilms-buttonPlay {
@@ -1361,10 +1303,7 @@
 
 .outstanding__listFilms-img:hover .aside-listFilms-buttonPlay{
   display: block;
-<<<<<<< HEAD
   cursor: pointer;
-=======
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
 }
 
 .outstanding__listFilms-img:hover .aside-listFilms-buttonPlay i
@@ -1374,7 +1313,6 @@
 }
 .outstanding__listFilms-rank{
   position: absolute;
-<<<<<<< HEAD
   top: -0.3rem;
   left: 0;
   background-color: yellow;
@@ -1383,31 +1321,15 @@
   height: 2rem;
   text-decoration: none;
   color: var(--background-color);
-=======
-  top: -3px;
-  left: 0;
-  background-color: yellow;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  text-decoration: none;
-  color: black;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
   
 }
 .triangle_left {
   position: absolute;
   width: 0;
   height: 0;
-<<<<<<< HEAD
   top: 0.5rem;
   left: 0;
   border: solid 1.1rem;
-=======
-  top:5px;
-  left: 0;
-  border: solid 11px;
->>>>>>> be159ee70e1a90b79b4b4347a3180963b3c94350
   border-color: transparent transparent transparent yellow;
 }
 .triangle_right {
