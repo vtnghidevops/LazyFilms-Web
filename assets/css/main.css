@@ -59,7 +59,7 @@
   font-weight: 500;
   line-height: 1.5rem;
   padding: 1.3rem;
-  margin: 0px -1rem;
+  margin: 0rem -1rem;
 }
 
 .header__nav-item i {
@@ -81,7 +81,7 @@
   padding: 1.1rem 1.7rem;
   background-color: var(--wrap-color);
   border: none;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   color: var(--text-color);
   outline: none;
 }
@@ -115,7 +115,7 @@
   margin-left: 0rem;
   background-color: var(--btn-color);
   padding: 0 1.2rem;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   padding: 1.2rem 1.3rem;
 }
 
@@ -139,13 +139,13 @@
 }
 .container__login-pages {
 	background-color: var(--text-color);
-	border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22);
+	border-radius: 1rem;
+  box-shadow: 0 1.4rem 2.8rem rgba(0,0,0,0.25) 0 1rem 1rem rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 76.8rem;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 48rem;
 }
 
 .container__login-pages button {
@@ -179,7 +179,7 @@
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+	margin: -2rem 0 5rem;
 }
 
 .container__login-form h1 {
@@ -188,33 +188,33 @@
 }
 
 .container__login-form p {
-	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
+	line-height: 2rem;
+	letter-spacing: 0.05rem;
+	margin: 2rem 0 3rem;
 }
 
 .container__login-form span {
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .container__login-form a {
 	color: #333;
-	font-size: 14px;
+	font-size: 1.4rem;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 1.5rem 0;
 }
 
 .container__login-form button {
-	border-radius: 20px;
-	border: 1px solid #FF4B2B;
+	border-radius: 2rem;
+	border: 0.1rem solid #FF4B2B;
 	background-color: #FF4B2B;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 1.2rem;
 	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
+	padding: 1.2rem 4.5rem;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 }
@@ -238,7 +238,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding: 0 5rem;
 	height: 100%;
 	text-align: center;
 }
@@ -246,21 +246,21 @@
 .container__login-form input {
 	background-color: #eee;
 	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
+	padding: 1.2rem 1.5rem;
+	margin: 0.8rem 0;
 	width: 100%;
 }
 
 .container__login-form {
 	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+	border-radius: 1rem;
+  	box-shadow: 0 1.4rem 2.8rem rgba(0,0,0,0.25), 
+			0 1rem 1rem rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 76.8rem;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 48rem;
 }
 
 .form-container {
@@ -347,7 +347,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 40px;
+	padding: 0 4rem;
 	text-align: center;
 	top: 0;
 	height: 100%;
@@ -374,18 +374,18 @@
 }
 
 .social-container {
-	margin: 20px 0;
+	margin: 2rem 0;
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 0.1rem solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
+	margin: 0 0.5rem;
+	height: 4rem;
+	width: 4rem;
 }
 
 
@@ -401,7 +401,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  border: 6px solid ;
+  border: 0.6rem solid ;
   border-color : transparent transparent var(--active-color) transparent; 
   margin-left: 3rem;
   margin-bottom: -1.5rem;
@@ -465,7 +465,7 @@
   background-color: var(--active-color);
   margin-bottom: -1.5rem;
   z-index: 1;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   display: none;
 } 
 
@@ -485,7 +485,7 @@
   transition: right linear 0.2s;
   overflow: hidden;
   /*  box-shadow: h-offset(shadow ngang) v-offset(dọc) blur(mờ) spread(phân tán) color optional; */
-  box-shadow: 0 2px 2px #b8b7b7;
+  box-shadow: 0 0.2rem 0.2rem #b8b7b7;
 }
 .header__nav-subMenu .header__subMenu::before {
   display: block;
@@ -539,7 +539,7 @@
 /* Handle */
 .header__subMenu::-webkit-scrollbar-thumb {
   background-color: var(--btn-color);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
 }
 
 /* Hover */
@@ -572,7 +572,7 @@
 /* Body */
 .body__container {
   background-color: var(--background-color);
-  width: 1070px;
+  width: 107rem;
   max-width: 100%;
   height: auto;
   max-height: 320rem;
@@ -692,7 +692,7 @@
     padding: 1rem 0 0 1.4rem;
     margin: 0 0 3rem 2.4rem;
     background-color: var(--text-color-light);
-    border-radius: 3px;
+    border-radius: 0.3rem;
 }
 
 .slider__info-common a:hover {
@@ -742,7 +742,7 @@
   max-width: 5rem;
   cursor: pointer;
   margin-left: 2rem;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   display: inline-block;
 }
 
@@ -796,7 +796,7 @@
   display: inline-block;
   line-height: 4rem;
   background-color: var(--btn-color);
-  border-radius: 3px;
+  border-radius: 0.3rem;
   padding: 0 1.4rem;
   margin-right: 1rem;
 }
@@ -813,7 +813,7 @@
   padding: 0.5rem 1rem ;
   margin: 0 0.5rem;
   background-color: var(--wrap-color);
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 
 .carousel__tvHome-heading .carousel__tvHome-btn:hover {
@@ -854,7 +854,7 @@
 }
 
 .carousel__listFilms-img img{
-  border-radius: 3px;
+  border-radius: 0.3rem;
   /* margin-right: 0.5rem; */
   width: 100%;
   margin: 1rem 0;
@@ -912,7 +912,7 @@
   top : 0;
   margin-left: 10rem;
   background-color: var(--text-color-light);
-  border-radius: 3px;
+  border-radius: 0.3rem;
   padding: 2rem;
   display: none;
   z-index: 1;
@@ -921,7 +921,7 @@
 .carousel__listFilms-shortDescription::before {
   content : " ";
   position: absolute;
-  border: 10px solid;
+  border: 1rem solid;
   border-color: transparent var(--text-color-light) transparent transparent;
   left: 0;
   margin-left: -1.9rem;
@@ -1128,7 +1128,7 @@
   height: 0.4rem;
   width: 100%;
   background-color: var(--wrap-color);
-  bottom: 0px;
+  bottom: 0rem;
   margin-bottom: 0.9rem;
   
 }
@@ -1336,25 +1336,25 @@
   position: absolute;
   width: 0;
   height: 0;
-  top:5px;
-  right: 60px;
-  border: solid 11px;
+  top: 0.5rem;
+  right: 6rem;
+  border: solid 1.1rem;
   border-color: transparent yellow transparent transparent ;
 }
 .triangle_top{
   position: absolute;
   width: 0;
   height: 0;
-  top: -5.5px;
-  right: 57.5px;
-  border: solid 3px;
+  top: -0.55rem;
+  right: 5.75rem;
+  border: solid 0.3rem;
   border-color: transparent transparent yellow transparent;
 }
   
 /* Aside infor */
 
 .aside__listFilms-infor {
-  height: 70px;
+  height: 7rem;
   width: 65%;
   float: right;
 }
@@ -1369,28 +1369,28 @@
 }
 
 .outstanding__listFilms-item{
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .outstanding__listFilm-title{
   color:  var( --placeholder-text);
   font-size: larger;
-  height: 20px;
-  padding-bottom: 7px;
+  height: 2rem;
+  padding-bottom: 0.7rem;
 }
 
 .aside__trailerFilms-img{
-  height: 90px;
-  width: 80px;
+  height: 9rem;
+  width: 8rem;
 }
 .aside__listFilms-infor h3 {
   color: #fff;
   font-size: larger;
-  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
 }
 .aside__listFilms-infor i {
   color: var(--text-color);
-  padding: 0px 3px;
+  padding: 0rem 0.3rem;
   font-style:normal;
 }
 .outstanding__listFilms-info {
@@ -1432,7 +1432,7 @@
 }
 .wrap__footer {
   background-color: var(--background-color);
-  width: 1070px;
+  width: 107rem;
   max-width: 100%;
   height: auto;
   max-height: 320rem;
@@ -1477,7 +1477,7 @@
 .footer__info-column{
   float: left;
   width: 25%;
-  padding-top: 7px;
+  padding-top: 0.7rem;
 }
 .footer__info-item{
   padding-top: 0.8rem;
@@ -1538,7 +1538,7 @@
   margin: -4rem -4rem 0 0;
 }
 .footer__icon .footer__bottom-icon{
-  padding: 5px;
+  padding: 0.5rem;
   display: inline-block;
   text-decoration: none;
 }
@@ -1623,7 +1623,7 @@
   border: none;
   cursor: pointer;
   appearance: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 /* .movieTheater__filter-option .movieTheater__filter-lists:focus {
   border: none;
@@ -1633,9 +1633,9 @@
   margin-left: 2rem;
   font-size: 1.4rem;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   color: var(--text-color-light);
-  box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+  box-shadow: inset 0 -0.3rem 0 rgba(0,0,0,.2);
   border: none;
 }
 
@@ -1652,7 +1652,7 @@
   max-width: 4.2rem;
   right: 0;
   top : 8%;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   color: var(--background-color);
   margin-right: 0.5rem;
 }
@@ -1688,7 +1688,7 @@
     font-size: 1.3rem;
     text-transform: uppercase;
     line-height: 1rem;
-    text-shadow: 0 0 2px rgba(29, 28, 28, 0.3);
+    text-shadow: 0 0 0.2rem rgba(29, 28, 28, 0.3);
 }
 
 .carousel__item-haveChapter i {
@@ -1719,7 +1719,7 @@
   background-color: red;
   margin: 1rem;
   padding: 0.6rem 1.5rem;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   background-color: var(--wrap-color);
 }
 
