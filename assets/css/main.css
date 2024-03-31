@@ -1793,4 +1793,82 @@
   color: var(--text-color-light);
   margin-right: 1rem;
 }
+/*Page_Required*/
+.carousel__required-content{
+  background-color:rgb(14, 13, 13);
+  ;
+  height: 35rem;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+}
+.carousel__required-contentLabel{
+  
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-right: 1rem;
+  line-height: 4rem;
+  
+}
 
+.carousel__required-contentInput{
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.6rem;
+  background-color: #222;
+  color: #FFFFFF;
+  font-size: 1.7rem;
+  font-family: 'Alata';
+  padding-left: 0.5rem;
+}
+
+.carousel__required-contentGrQuality{
+  display: inline-block;
+}
+
+.carousel__required-contentGrQuality .movieTheater__filter-lists{
+  height: 4rem; 
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color:  #222;
+  color: var(--placeholder-text);
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 0.5rem;
+}
+
+.carousel__required-contentInputChName{
+  height: 4rem;
+  border-radius: 0.6rem;
+  background-color: #222;
+  color: #FFFFFF;
+  font-size: 1.7rem;
+  font-family: 'Alata';
+  padding-left: 0.5rem;
+  margin-right: 9rem;
+}
+.carousel__required-contentInputDescribe{
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.6rem;
+  background-color:#b5b2b2;
+  color: #000;
+  font-size: 1.7rem;
+  font-family: 'Alata';
+  padding-left: 0.5rem;
+  height: 7rem;
+}
+
+.carousel__required-btn{
+width: 15%;
+margin: 3rem 42.5%;
+height: 4rem;
+border-radius: 0.5rem;
+background-color: var(--btn-color);
+color:#fff;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel__required-btn:hover{
+  background-color: var(--btn-hover);
+}
