@@ -292,26 +292,27 @@
             <!-- List films -->
           <div class="carousel__required">
             <form class="carousel__required-content">
-              <label class="carousel__required-contentLabel">Tên Phim</label>
-              <input class="carousel__required-contentInput" type="text"/><br>
-              <label class="carousel__required-contentLabel">Tên Diễn Viên</label>
-              <input class="carousel__required-contentInputChName" type="text"/>
-              <label class="carousel__required-contentLabel">Chất Lượng Hình Ảnh</label>
-              <div class = "carousel__required-contentGrQuality"> 
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="all">Tất cả</option>
-                  <option value="2024">1080p60</option>
-                  <option value="2023">720p60</option>
-                  <option value="2022">480</option>
-                  <option value="2021">360</option>
-                  <option value="2020">240</option>
-                  <option value="2019">144</option>
-                </select>
+              <div class = "carousel__required-contentForm">
+                <label class="carousel__required-contentLabel">Tên Phim (*)</label>
+                <input class="carousel__required-contentInput" type="text"/><br>
               </div>
-              <input class="carousel__required-contentInputDescribe" type="text" placeholder="Mô tả nội dung phim"/><br>
+              <div class="carousel__required-contentForm">
+                <label class="carousel__required-contentLabel">Tên Diễn Viên</label>
+                <input class="carousel__required-contentInput" type="text"/><br>
+              </div>
+              <div class="carousel__required-contentFormDescribe">
+                <label class="carousel__required-contentLabel">Mô Tả Phim</label>
+                <input class="carousel__required-contentInput" type="text" placeholder="Mô tả nội dung phim"/> <br>
+              </div>
+              <div class="carousel__required-contentForm">
+                <input class="carousel__required-contentInputCaptcha" placeholder="Gõ nội dung captcha bên cạnh"/>
+                <div class="carousel__required-contentInputCaptchaValue">
+                <label class="">7eApwP</label>
+                </div>
+              </div>
               <button class="carousel__required-btn">
                 <!-- type = "submit" -->
-                <span>Tìm Phim</span>
+                <span>Gửi Yêu Cầu</span>
               </button>
             </form>
           </div>
