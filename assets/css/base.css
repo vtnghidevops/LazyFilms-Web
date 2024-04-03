@@ -14,8 +14,10 @@
   --btn-hover: #263238;
   --bg-overlay: #FF416C;
   --btn-overlay: #FF4B2B;
-  --btn-hover: #263238;
   --fbook-color: #0866ff;
+  --gg-color: #d04226;
+  --bg-color-grey: #2c2c2e;
+  --bg-color-black: #202020;
 } 
 
 * {
@@ -37,13 +39,10 @@ html {
 }
 
 .btn {
-  margin-left: 0rem;
   background-color: var(--btn-color);
   padding: 0 1.2rem;
   border-radius: 3px;
   padding: 1.2rem 1.3rem;
-  border-radius: 5px;
-  color: var(--text-color);
 }
 
 
