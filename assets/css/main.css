@@ -173,6 +173,7 @@ body {
 
 .header__modal--info h5 {
   font-weight: 100;
+  line-height: 2rem;
 }
 
 .header__modal--info strong {
@@ -2051,6 +2052,7 @@ body::-webkit-scrollbar,
   color: var(--text-color-light);
   margin-right: 1rem;
 }
+
 /*Page_Required*/
 .carousel__required-content{
   background-color:rgb(14, 13, 13);
@@ -2097,9 +2099,9 @@ body::-webkit-scrollbar,
   height: 11rem;
 }
 
+
 .carousel__required-contentFormDescribe .carousel__required-contentLabel{
   position: relative;
-  top: 3rem;
 }
 
 
