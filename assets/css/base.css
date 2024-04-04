@@ -18,6 +18,9 @@
   --gg-color: #d04226;
   --bg-color-grey: #2c2c2e;
   --bg-color-black: #202020;
+  --bg-color-grey1: #0e0e0e;
+  --bg-tab: #8b898966;
+
 } 
 
 * {
@@ -40,8 +43,7 @@ html {
 
 .btn {
   background-color: var(--btn-color);
-  padding: 0 1.2rem;
-  border-radius: 3px;
+  border-radius: 0.8rem;
   padding: 1.2rem 1.3rem;
 }
 

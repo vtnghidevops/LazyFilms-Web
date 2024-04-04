@@ -149,11 +149,35 @@
           <li class="header__nav-item">
             <a href="./Pages/TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
           </li>
+
           <li class="header__nav-item ">
             <div class="header__nav-form">
-              <input type="text" placeholder="Nhập tên phim cần tìm">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <!-- <input type="text" placeholder="Nhập tên phim cần tìm"> -->
+              <a href="./Pages/Search/search.html" class="header__nav-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <a href="#" class="header__nav-notification">
+                <i class="fa-regular fa-bell"></i>
+                <div class="header__noti--modal">
+                  <h3 class="header__modal--title">Thông báo</h3>
+                  <div class="header__modal--info">
+                    <h5>Vui lòng 
+                      <strong>Đăng nhập</strong>
+                      để nhận những thông báo mới nhất từ LazyFilms
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
+
+          </li>
+
+          <li class="header__nav-item header__nav-premium btn">
+            <a href="#" class="header__premium">
+              <i class="fa-solid fa-money-bills-simple">
+              </i>
+              Premium
+            </a>
           </li>
 
           <li class="header__nav-item header__nav-login">
@@ -164,7 +188,7 @@
     </header>
 
     <!-- Section Login -->
-    <div class="container__login" id ="login">
+    <div class="container__login" id="login">
       <div class="login__section">
         <a class="login__section-close">
           <i class="fa-regular fa-circle-xmark"></i>
@@ -185,11 +209,11 @@
           </div>
 
           <div class="login__modal-group">
-            <a href="#"><span class = "login__modal--forgotPass">Quên mật khẩu ?</span></a>
+            <a href="#"><span class="login__modal--forgotPass">Quên mật khẩu ?</span></a>
           </div>
 
           <div class="login__modal--group">
-            <button class = "login__button" type = "submit" name ="submit">Đăng nhập</button>
+            <button class="login__button" type="submit" name="submit">Đăng nhập</button>
           </div>
 
         </form>
@@ -207,16 +231,16 @@
         </div>
 
         <div class="login__modal--group">
-          <span class = "login__modal-register">Chưa có tài khoản? 
-           <a href="#r">Đăng ký ngay</a> </span>
-         </div>
-        
+          <span class="login__modal-register">Chưa có tài khoản?
+            <a href="#register">Đăng ký ngay</a> </span>
+        </div>
+
 
       </div>
     </div>
 
     <!-- Section register -->
-    <div class="container__register" id ="regiters">
+    <div class="container__register" id="regiters">
       <div class="register__section">
         <a class="register__section-close">
           <i class="fa-regular fa-circle-xmark"></i>
@@ -248,22 +272,22 @@
 
 
           <div class="login__modal--group login__btn--register">
-            <button class = "register__button" type = "submit" name ="submit">Đăng ký</button>
+            <button class="register__button" type="submit" name="submit">Đăng ký</button>
           </div>
 
         </form>
 
         <div class="login__modal--group">
-          <span class = "login__modal-register">Đã có tài khoản? 
-           <a href="#l">Đăng nhập ngay</a> </span>
-         </div>
-        
+          <span class="login__modal-register">Đã có tài khoản?
+            <a href="#l">Đăng nhập ngay</a> </span>
+        </div>
+
 
       </div>
     </div>
 
-    <!--Slider-->
     <div class="body__container">
+      <!--Slider-->
       <div id="slider">
         <!--video trailer-->
         <div class="slider__video">
@@ -3004,10 +3028,10 @@
 
 
   </ul>
-        </section>
+  </section>
 
-        <!-- Trailer -->
-        <section class="aside__trailerFilms">
+  <!-- Trailer -->
+  <section class="aside__trailerFilms">
     <!--Block trailer -->
     <div class="aside__trailerFilms-heading">
       <ul class="outstanding__listFilms">
@@ -3285,7 +3309,7 @@
 
 
     </ul>
-        </section>
+  </section>
   </aside>
   </div>
 
