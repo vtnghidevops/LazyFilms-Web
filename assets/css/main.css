@@ -1986,3 +1986,162 @@ body::-webkit-scrollbar,
   background-color: var(--wrap-color);
   color: var(--placeholder-text);
 }
+
+/*Page báo lỗi*/
+.carousel__report{
+  width: 90%;
+  background-color: rgb(14, 13, 13);
+  margin-top: 5rem;
+  margin-left:5%;
+  height: 25rem;
+}
+
+
+.carousel__report-inputLink{
+  width: 90%;
+  position: relative;
+  left: 5%;
+  height: 4rem;
+  margin-top: 3rem;
+  border-radius: 0.6rem;
+  padding-left: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+.carousel__report-inputDescribe{
+  width: 90%;
+  position: relative;
+  left: 5%;
+  height: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  border-radius: 0.6rem;
+  padding-left: 0.5rem;
+  text-decoration:dashed;
+  background-color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+
+.carousel__report-inputSubmit {
+  padding: 1.25rem;
+  background-color: var(--btn-color);
+  text-decoration: none;
+  border-radius: 0.2rem;
+  margin-left: 40%;
+
+
+}
+
+.carousel__report-inputSubmit:hover {
+  background-color: var(--btn-hover);
+}
+
+.carousel__report-inputSubmit-text {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.carousel__report-inputSubmit i {
+  color: var(--text-color-light);
+  margin-right: 1rem;
+}
+/*Page_Required*/
+.carousel__required-content{
+  background-color:rgb(14, 13, 13);
+  ;
+  height: 35rem;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+}
+.carousel__required-contentLabel{
+  
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-right: 1rem;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  
+}
+
+.carousel__required-contentInput{
+  height: 5rem;
+  width: 55%;
+  border-radius: 0.8rem;
+  background-color: #222;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-family: 'Alata';
+  border: 0;
+  outline: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  float: right;
+  margin-right: 20%;
+  padding-left: 1rem;
+}
+
+.carousel__required-contentFormDescribe{
+  display: inline-block;
+  height: 13rem;
+  width: 100%;
+}
+
+.carousel__required-contentFormDescribe .carousel__required-contentInput{
+  height: 11rem;
+}
+
+.carousel__required-contentFormDescribe .carousel__required-contentLabel{
+  position: relative;
+  top: 3rem;
+}
+
+
+.carousel__required-btn{
+width: 15%;
+margin: 0 18rem;
+height: 4rem;
+border-radius: 0.5rem;
+background-color: var(--btn-color);
+color:#fff;
+font-family: 'Alata';
+font-size: 1.3rem;
+}
+
+.carousel__required-btn:hover{
+  background-color: var(--btn-hover);
+}
+.carousel__required-contentForm{
+  display: inline-block;
+  height: 7rem;
+  width: 100%;
+}
+
+.carousel__required-contentInputCaptcha{
+  width: 30%;
+  height: 3rem;
+  margin-left: 3rem;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  background-color: rgb(73, 75, 78);
+  margin-left: 18rem;
+  color:#fff;
+}
+.carousel__required-contentInputCaptchaValue{
+  width: 13%;
+  height: 3rem;
+  margin-left: 2rem;
+  background-color: #fff;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  display: inline-block;
+  padding: 0 1rem;
+  text-align: center;
+}
