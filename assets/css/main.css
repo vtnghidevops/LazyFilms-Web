@@ -2248,7 +2248,7 @@ body::-webkit-scrollbar,
 .carousel__required-content{
   background-color:rgb(14, 13, 13);
   ;
-  height: 35rem;
+  height: auto;
   margin-top: 3rem;
   padding: 2rem 1rem;
 }
@@ -2259,7 +2259,7 @@ body::-webkit-scrollbar,
   margin-right: 1rem;
   line-height: 4rem;
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 3.5rem;
   
 }
 
@@ -2280,21 +2280,20 @@ body::-webkit-scrollbar,
   padding-left: 1rem;
 }
 
-.carousel__required-contentFormDescribe{
-  display: inline-block;
-  height: 13rem;
-  width: 100%;
+.carousel__required-contentFormDescribeText{
+  margin-left: 4.3rem;
+  display: inline-flex;
 }
 
-.carousel__required-contentFormDescribe .carousel__required-contentInput{
-  height: 11rem;
+.carousel__required-contentFormDescribeText .carousel__required-contentInputDescribe {
+  background-color: #222;
+  outline: 0;
+  border: 0;
+  border-radius: 0.8rem;
+  padding : 0.5rem;
+  font-family: 'Alata';
+  color: #FFFFFF;
 }
-
-
-.carousel__required-contentFormDescribe .carousel__required-contentLabel{
-  position: relative;
-}
-
 
 .carousel__required-btn{
 width: 15%;
@@ -2312,8 +2311,9 @@ font-size: 1.3rem;
 }
 .carousel__required-contentForm{
   display: inline-block;
-  height: 7rem;
+  height: fit-content;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .carousel__required-contentInputCaptcha{
