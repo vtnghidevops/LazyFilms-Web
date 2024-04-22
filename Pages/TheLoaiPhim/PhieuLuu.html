@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../../assets/fonts/Alata/Alata-Regular.ttf">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
-
+  <script src = "../../script/movieGenre.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a>
-              <img src="../../assets/img/Logo.png" alt="LogoLazyFilms" class="header__nav-logo">
+              <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
           </li>
           <li class="header__nav-item header__mainPage">
@@ -33,66 +33,64 @@
             <a href="#">THỂ LOẠI
               <i class="fa-solid fa-angle-down"></i>
             </a>
-            <!-- SubMenu -->
-            <div class="header__subMenu">
+             <!-- SubMenu -->
+             <div class="header__subMenu">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="#">Âm Nhạc</a>
+                  <a href="./TinhCam.html">Tình Cảm</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Chiến Tranh</a>
+                  <a href="./ChienTranh.html">Chiến Tranh</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Gia Đình</a>
+                  <a href="./GiaDinh.html">Gia Đình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hành Động</a>
+                  <a href="./HanhDong.html">Hành Động</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Học Đường</a>
+                  <a href="./HocDuong.html">Học Đường</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Anime</a>
+                  <a href="./Anime">Anime</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Gây Cấn</a>
+                  <a href="./GayCan.html">Gây Cấn</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hình Sự</a>
+                  <a href="./HinhSu.html">Hình Sự</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Khoa Học</a>
+                  <a href="./KhoaHoc.html">Khoa Học</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Bí Ẩn</a>
+                  <a href="./BiAn.html">Bí Ẩn</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Cổ Trang</a>
+                  <a href="./CoTrang.html">Cổ Trang</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hoạt Hình</a>
+                  <a href="./HoatHinh.html">Hoạt Hình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Kiếm Hiệp</a>
+                  <a href="./KiemHiep.html">Kiếm Hiệp</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Kinh Dị</a>
+                  <a href="./KinhDi.html">Kinh Dị</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">TV-Show</a>
+                  <a href="./TvShow.html">TV-Show</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Thần Thoại</a>
+                  <a href="./ThanThoai.html">Thần Thoại</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Phiêu Lưu</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Viễn Tưởng</a>
+                  <a href="./VienTuong.html">Viễn Tưởng</a>
                 </li>
-                <li class="header__subMenu-item">
-                  <a href="#">Khoa Học</a>
-                </li>
+                
 
               </ul>
             </div>
@@ -193,46 +191,46 @@
         <div class="login__section--heading">
           <span>Đăng nhập</span>
         </div>
-
+    
         <form action="#" class="login__modal-form">
           <div class="login__modal--group">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-
+    
           <div class="login__modal--group">
             <input type="password" placeholder="Mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
+    
           <div class="login__modal-group">
             <a href="#"><span class="login__modal--forgotPass">Quên mật khẩu ?</span></a>
           </div>
-
+    
           <div class="login__modal--group">
             <button class="login__button" type="submit" name="submit">Đăng nhập</button>
           </div>
-
+    
         </form>
-
-        <p class="login__regester-suggestion">Hoặc đăng nhập bằng</p>
+    
+        <p class="login__register-suggestion">Hoặc đăng nhập bằng</p>
         <div class="login__section--choiceLogin">
           <a href="#" class="login__choiceLogin-fb">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-
+    
           <a href="#" class="login__choiceLogin-gg">
             <i class="fa-brands fa-google-plus-g"></i>
           </a>
-
+    
         </div>
-
+    
         <div class="login__modal--group">
           <span class="login__modal-register">Chưa có tài khoản?
-            <a href="#register">Đăng ký ngay</a> </span>
+            <a class = "go__register" href="#">Đăng ký ngay</a> </span>
         </div>
-
-
+    
+    
       </div>
     </div>
 
@@ -245,1321 +243,2175 @@
         <div class="register__section--heading">
           <span>Đăng ký</span>
         </div>
-
-        <form action="#" class="login__modal-form">
-          <div class="login__modal--group">
+      
+        <form action="#" class="login__modal-form register__modal-form">
+          <div class="login__modal--group register__modal-form">
             <input type="text" placeholder="Tên tài khoản" name="account" autocomplete="off">
           </div>
-
-          <div class="login__modal--group">
+      
+          <div class="login__modal--group register__modal-form">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-
-          <div class="login__modal--group">
+      
+          <div class="login__modal--group register__modal-form">
             <input type="password" placeholder="Mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
+      
           <div class="login__modal--group login__password-auth">
             <input type="password" placeholder="Nhập lại mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
-
+      
+      
           <div class="login__modal--group login__btn--register">
             <button class="register__button" type="submit" name="submit">Đăng ký</button>
           </div>
-
+      
         </form>
-
+      
         <div class="login__modal--group">
           <span class="login__modal-register">Đã có tài khoản?
-            <a href="#l">Đăng nhập ngay</a> </span>
+            <a class="back__login" href="#">Đăng nhập ngay</a> </span>
+        </div>
+      
+      
+      </div>
+    </div>
+
+    <!-- Forgot password -->
+    <div class="container__forgot" id="forgotPass">
+      <div class="forgot__section">
+        <a class="forgot__section-close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </a>
+        <div class="register__section--heading forgot__section--heading">
+          <span>Khôi phục mật khẩu</span>
         </div>
 
+        <div class="login__modal--group prompt__enter forgot__modal_group">
+          <span class="prompt__enter-email">Vui lòng nhập Email đăng nhập</span>
+        </div>
 
+        <form action="#" class="login__modal-form forgot__modal-form">
+          <div class="login__modal--group forgot__modal_group" >
+            <input type="email" placeholder="Email" name="email" autocomplete="off">
+          </div>
+
+          <div class="login__modal--group forgot__modal_group">
+            <button class="login__button" type="submit" name="submit">Tiếp tục</button>
+          </div>
+    
+        </form>
+    
+        <div class="forgot__modal_group">
+          <span class = "forgot__accepted-privacy ">Khi bạn nhấn tiếp tục, bạn đồng ý với 
+            <a class = "privacy" href="#" >Chính sách và quy định</a> 
+          </span>
+        </div>
+    
+    
       </div>
     </div>
 
 
     <div class="body__container">
-      <!-- Heading PhimChieuRap -->
-      <div class="wrap__movieTheater">
-        <!-- Heading -->
-        <div class="movieTheater__heading">
-          <a href="../../../index.html" class="movieTheater__heading-launch">
-            <i class="fa-solid fa-house"></i>
-            <span>Trang chủ</span>
-          </a>
-          <span class="movieTheater__heading-tab">
-            <i class="fa-regular fa-slash-forward"></i>
-            <span>Phiêu lưu</span>
-          </span>
-        </div>
-
-        <div class="movieTheater__filter">
-          <form action="#" class="form__filter">
-            <!-- action="/loc-phim" -->
-            <div class="movieTheater__filter-item">
-              <label class="movieTheater__filter-tag" for="">
-                <i class="fa-regular fa-layer-group"></i>
-                Sắp xếp
-              </label>
-              <div class="movieTheater__filter-option">
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="asc">Mới nhất</option>
-                  <option value="desc">Cũ nhất</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="movieTheater__filter-item">
-              <label class="movieTheater__filter-tag" for="">
-                <i class="fa-solid fa-chart-tree-map"></i>
-                Danh mục
-              </label>
-              <div class="movieTheater__filter-option">
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="all">Tất cả</option>
-                  <option value="single">Phim lẻ</option>
-                  <option value="series">Phim bộ</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="movieTheater__filter-item">
-              <label class="movieTheater__filter-tag" for="">
-                <i class="fa-solid fa-clapperboard"></i>
-                Thể loại
-              </label>
-              <div class="movieTheater__filter-option">
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="all">Tất cả</option>
-                  <option value="love">Tình cảm</option>
-                  <option value="music">Âm nhạc</option>
-                  <option value="anime">Anime</option>
-                  <option value="mystery">Bí ẩn</option>
-                  <option value="scary">Kinh dị</option>
-                  <option value="action">Hành động</option>
-                  <option value="funny">Hài hước</option>
-                  <option value="science">Viễn tưởng</option>
-                  <option value="legend">Thần thoại</option>
-                  <option value="sport">Thể thao</option>
-                  <option value="super">Siêu anh hùng</option>
-                  <option value="criminal">Tội phạm</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="movieTheater__filter-item">
-              <label class="movieTheater__filter-tag" for="">
-                <i class="fa-regular fa-globe"></i>
-                Quốc gia
-              </label>
-              <div class="movieTheater__filter-option">
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="all">Tất cả</option>
-                  <option value="india">Ấn Độ</option>
-                  <option value="korea">Hàn Quốc</option>
-                  <option value="china">Trung Quốc</option>
-                  <option value="latinh">Âu-Mỹ</option>
-                  <option value="thailand">Thái Lan</option>
-                  <option value="indo">Indonesia</option>
-                  <option value="vietnam">Việt Nam</option>
-                  <option value="japan">Nhật Bản</option>
-                  <option value="hongkong">Hồng Kông</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="movieTheater__filter-item">
-              <label class="movieTheater__filter-tag" for="">
-                <i class="fa-regular fa-calendar-days"></i>
-                Năm phát hành
-              </label>
-              <div class="movieTheater__filter-option">
-                <select name="" id="" class="movieTheater__filter-lists">
-                  <option value="all">Tất cả</option>
-                  <option value="2024">2024</option>
-                  <option value="2023">2023</option>
-                  <option value="2022">2022</option>
-                  <option value="2021">2021</option>
-                  <option value="2020">2020</option>
-                  <option value="2019">2019</option>
-                </select>
-              </div>
-            </div>
-
-            <button class="movieTheater__filter-btn btn">
-              <!-- type = "submit" -->
-              <span>Lọc phim</span>
-            </button>
-          </form>
-        </div>
-      </div>
-
+    
       <!--Content-->
       <div class="wrap__content">
-        <!-- Content left -->
-        <div class="carousel">
-          <!-- TAB TOP PHIM -->
-          <div class="carousel__film-longChap">
-            <div class="carousel__tvHome-heading">
-              <h2>PHIÊU LƯU
-                <i class="fa-light fa-angle-right"></i>
-              </h2>
-            </div>
-            <!-- List films -->
-            <div class="carousel__tvHome-listFilms">
-              <ul class="carousel__listFilms">
-                <!-- unit film -->
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-              <ul class="carousel__listFilms">
-                <!-- unit film -->
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-              <ul class="carousel__listFilms">
-                <!-- unit film -->
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-              <ul class="carousel__listFilms">
-                <!-- unit film -->
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-                <li class="carousel__listFilms-item carousel__list-subMenu">
-                  <a href="#" class="carousel__item-infomation">
-                    <div class="carousel__listFilms-img">
-                      <figure class="carousel__img-fixed">
-                        <img src="../../assets/img/Thumb.jpg" alt="TheWitch">
-                        <span class="carousel__listFilms-ratePoint"> <i
-                            class="fa-solid fa-star judge__listFilms-star"></i>9.0</span>
-                      </figure>
-                      <h3 class="carousel__listFilms-title">Thumb</h3>
-                      <span class="carousel__listFilms-view">Lượt xem: 2.345</span>
-                      <!-- Label Films Have Chapter-->
-                      <span class="carousel__item-haveChapter">
-                        Tập
-                        <i>23</i>
-                      </span>
-                      <!-- Short desc -->
-                      <div class="carousel__listFilms-shortDescription">
-                        <h2 class="carousel__shortDescription-heading">
-                          THUMB - LIỆT DIỄM CHI VŨ CANH KỲ
-                        </h2>
-                        <ul class="carousel__shortDescription-lists">
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-solid fa-star carousel__shortDescription-star"></i>
-                            <span class="carousel__shortDescription-rate">9.0</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-clock"></i>
-                            <span class="carousel__shortDescription-time">45 phút/1</span>
-                          </li>
-                          <li class="carousel__shortDescription-item">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            <span class="carousel__shortDescription-year">2/2024</span>
-                          </li>
-                        </ul>
-                        <p class="carousel__shortDescription-para">
-                          Liệt Diễm Chi Vũ Canh Kỷ - Lie Yan Zhi Wu Geng Ji (2023) là một tác phẩm điện ảnh đầy ấn
-                          tượng,
-                          đan xen những màu sắc đậm nét và văn phong tiếng Việt tinh tế. Phim xoay quanh cuộc ...
-                        </p>
-                        <div class="carousel__shortDecription-type">
-                          <i class="fa-solid fa-folder"></i>
-                          <span>Thể loại :</span>
-                          <h4 class="carousel__shortDecription-text">Cổ trang, Thần thoại</h4>
-                        </div>
-                      </div>
-
-                      <div class="common-listFilms-buttonPlay">
-                        <a href="#" class="clickFilms">
-                          <i class="fa-thin fa-circle-play"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </div>
-
+        <!-- Đang xem - Cho Login -->
+        <div class="carousel__film-watching">
+          <div class="carousel__tvHome-heading">
+            <h2>ĐANG XEM
+              <i class="fa-light fa-angle-right"></i>
+            </h2>
           </div>
+      
+          <!-- List film đang xem-->
+          <div class="carousel__tvHome-listFilms carousel__watching carousel__tvHome-watching">
+            <ul class="carousel__listFilms carousel__watching-list">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/phia-sau-khung-cua-so.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Phía sau khung cửa sổ</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/su-troi-day-cua-khien-hiep-si-phan-3-fpt-play-1695878378873_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Hiệp Sĩ Khiên - P3</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/thanh-guom-diet-quy-phan-lang-ren-kiem-fpt-play-1688540271106_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Thanh gươm diệt quỷ - Làng thợ rèn</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/hoc-vien-ma-vuong-phan-2-fpt-play-1672803829721_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Học viện ma vương - P2</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/nguyet-dao-di-gioi-phan-2-fpt-play-1704692496477_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Nguyệt đạo dị giới - P2</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/chu-thuat-hoi-chien-phan-2-fpt-play-1693551746015_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Doraemom</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/dexie_bebong.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Doraemom</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/dexie_bebong.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Doraemom</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/dexie_bebong.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Doraemom</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/dexie_bebong.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Doraemom</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+          </div>
+          <!-- btn -->
+          <div class="carousel__button-prev" type="Nextbutton">
+            <i class="fa-light fa-angle-left"></i>
+          </div>
+      
+          <div class="carousel__button-next" type="Prebutton">
+            <i class="fa-light fa-angle-right"></i>
+          </div>
+        </div>
+
+        <!-- Thể loại phiêu lưu -->
+        <div class="romantic__movie" id = "adventure">
+          <div class="carousel__tvHome-heading romantic__movie-heading">
+            <h2>PHIÊU LƯU
+              <!-- <i class="fa-light fa-angle-right"></i> -->
+            </h2>
+          </div>
+      
+          <!-- List film đang xem-->
+          <div class="carousel__tvHome-listFilms carousel__watching carousel__tvHome-watching romantic__movie-tvHome">
+            <ul class="carousel__listFilms carousel__watching-list romantic__movie-listFilms">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/bang-qua-ngan-ha-fpt-play-1710741437924_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Băng qua ngân hà</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/am-anh-fpt-play-1707127317602_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Ám ảnh</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/mua-viet-tinh-ca-fpt-play-1705391773101_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mùa viết tình ca</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/me-chong-fpt-play-1673509942325_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mẹ chồng</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/rat-muon-den-the-gioi-cua-em-de-yeu-em-fpt-play-1653042706077_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Rất muốn đến thế giới của em để yêu em</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+
+            <ul class="carousel__listFilms carousel__watching-list romantic__movie-listFilms">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/bang-qua-ngan-ha-fpt-play-1710741437924_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Băng qua ngân hà</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/am-anh-fpt-play-1707127317602_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Ám ảnh</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/mua-viet-tinh-ca-fpt-play-1705391773101_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mùa viết tình ca</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/me-chong-fpt-play-1673509942325_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mẹ chồng</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/rat-muon-den-the-gioi-cua-em-de-yeu-em-fpt-play-1653042706077_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Rất muốn đến thế giới của em để yêu em</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+
+            <ul class="carousel__listFilms carousel__watching-list romantic__movie-listFilms">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/bang-qua-ngan-ha-fpt-play-1710741437924_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Băng qua ngân hà</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/am-anh-fpt-play-1707127317602_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Ám ảnh</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/mua-viet-tinh-ca-fpt-play-1705391773101_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mùa viết tình ca</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/me-chong-fpt-play-1673509942325_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mẹ chồng</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/rat-muon-den-the-gioi-cua-em-de-yeu-em-fpt-play-1653042706077_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Rất muốn đến thế giới của em để yêu em</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+
+            <ul class="carousel__listFilms carousel__watching-list romantic__movie-listFilms">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/bang-qua-ngan-ha-fpt-play-1710741437924_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Băng qua ngân hà</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/am-anh-fpt-play-1707127317602_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Ám ảnh</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/mua-viet-tinh-ca-fpt-play-1705391773101_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mùa viết tình ca</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/me-chong-fpt-play-1673509942325_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mẹ chồng</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/rat-muon-den-the-gioi-cua-em-de-yeu-em-fpt-play-1653042706077_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Rất muốn đến thế giới của em để yêu em</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+
+            <ul class="carousel__listFilms carousel__watching-list romantic__movie-listFilms">
+              <!-- unit film -->
+              <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
+                <a href="../../Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img
+                        src="../../assets/img/bang-qua-ngan-ha-fpt-play-1710741437924_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Băng qua ngân hà</h3>
+      
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        HẢI VƯƠNG
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2023</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm
+                        nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng,
+                        đế chế huyền thoại bao năm ẩn mình ..
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Hành động, Viễn tưởng</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/am-anh-fpt-play-1707127317602_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Ám ảnh</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/mua-viet-tinh-ca-fpt-play-1705391773101_Landscape.jpg"
+                        alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mùa viết tình ca</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/svip19-06-2023_10g35-25.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Kẻ Độc Tôn
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Gabriel Yulaw từng là đặc vụ của Cơ quan Đa vũ trụ (MVA) - quản lý việc du hành xuyên không
+                        gian. Yulaw đang tìm cách
+                        săn lùng tất cả các biến thể của chính anh ta trong các vũ trụ thay thế. Bằng cách giết...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/me-chong-fpt-play-1673509942325_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Mẹ chồng</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Monster #8
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.6</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">1/24 Tập</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Những con "kaiju" (quái vật khổng lồ) bất ngờ xuất hiện và hoành hành khắp Nhật Bản trong
+                        nhiều năm.
+                        Một đơn vị tinh nhuệ được gọi là Quân đoàn Phòng vệ phải liều mạng hàng ngày để bảo vệ dân
+                        thường.
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, Anime</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+              <li class="carousel__listFilms-item carousel__list-subMenu romantic__movie-item">
+                <a href="./Pages/WatchVideo/index.html" class="carousel__item-infomation">
+                  <div class="carousel__listFilms-img">
+                    <figure class="carousel__img-fixed">
+                      <img src="../../assets/img/rat-muon-den-the-gioi-cua-em-de-yeu-em-fpt-play-1653042706077_Landscape.jpg" alt="HaiVuong">
+                      <span class="carousel__listFilms-ratePoint">
+                        <i class="fa-solid fa-star judge__listFilms-star"></i>
+                        8.5
+                      </span>
+                      <div class="common-listFilms-buttonPlay modal__small" href="./Pages/WatchVideo/index.html">
+                        <div href="./Pages/WatchVideo/index.html" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </figure>
+                    <h3 class="carousel__listFilms-title">Rất muốn đến thế giới của em để yêu em</h3>
+                    <!-- Label Films No chapter-->
+                    <div class="carousel__item-noChapter">
+                      <img src="../../assets/img/new.jpg" alt="Mới">
+                    </div>
+                    <!-- Short desc -->
+                    <div class="carousel__listFilms-shortDescription">
+                      <h2 class="carousel__shortDescription-heading">
+                        Godzilla Đối Đầu Kong
+                      </h2>
+                      <ul class="carousel__shortDescription-lists">
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-solid fa-star carousel__shortDescription-star"></i>
+                          <span class="carousel__shortDescription-rate">8.5</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="carousel__shortDescription-time">134 phút</span>
+                        </li>
+                        <li class="carousel__shortDescription-item">
+                          <i class="fa-regular fa-calendar-days"></i>
+                          <span class="carousel__shortDescription-year">2024</span>
+                        </li>
+                      </ul>
+                      <p class="carousel__shortDescription-para">
+                        Vào thời đại quái thú hiện diện khắp Trái đất, cuộc chiến sinh tồn của nhân loại khiến
+                        Godzilla và Kong rơi vào thế đối
+                        đầu và dẫn đến trận chiến vô tiền khoáng hậu của hai thế lực tự nhiên...
+                      </p>
+                      <div class="carousel__shortDecription-type">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Thể loại :</span>
+                        <h4 class="carousel__shortDecription-text">Bạo lực, tâm lý</h4>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+      
+                </a>
+              </li>
+      
+            </ul>
+          </div>
+
+          <!-- Chuyển tab -->
           <div class="carousel__switchTab">
             <a href="#" class="carousel__switchTab-page">
               <span>1</span>
@@ -1577,14 +2429,19 @@
               <span>11</span>
 
             </a>
-            <a href="#" class="carousel__switchTab-page">
+            <!-- <a href="#" class="carousel__switchTab-page">
               <span>Next</span>
-            </a>
+            </a> -->
           </div>
-        </div>
 
-        <!-- Aside -->
-        <aside class="aside">
+          
+        </div>
+      
+       
+      </div>
+
+      <!-- Aside -->
+      <aside class="aside">
            <!-- random films -->
            <div class="aside__random-films">
             <div class="aside__random-heading">
@@ -1610,7 +2467,7 @@
               <span>Theo dõi trang</span>
             </a>
             <div class="aside__fanpage-img">
-              <img src="../../assets/img/Fanpage.png" alt="#">
+              <img src="../../assets/img/Fanpage.jpg" alt="#">
             </div>
             <p class="aside__fanpage-desc">
               Like và Follow Trang LazyFilms để nhận thông báo về phim sớm nhất
@@ -1857,13 +2714,18 @@
             </ul>
           </section>
         
-        </aside>
-  </div>
+      </aside>
+    </div>
 
+    <div id="scroll-Top">
+      <div class="return-to-top">
+        <i class="fa fa-angle-up " id="scroll-top" ></i>
+      </div>
+    </div><!--/.scroll-Top-->
 
-  </div>
-  <!-- Footer -->
-  <footer id="footer">
+    
+    <!-- Footer -->
+    <footer id="footer">
     <div class="wrap__footer">
       <!--Footer navigation-->
       <nav class="footer__nav">
@@ -1871,7 +2733,7 @@
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
             <a href="#">
-              <img src="../../assets/img/Logo.png" alt="LogoLazyFilms" class="footer__nav-logo">
+              <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="footer__nav-logo">
             </a>
           </li>
 
@@ -1954,9 +2816,9 @@
       </div>
 
 
-  </footer>
-  </div>
+    </footer>
 
+  </div>
 
 </body>
 

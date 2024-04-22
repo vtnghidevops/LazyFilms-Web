@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../../assets/fonts/Alata/Alata-Regular.ttf">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
+
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a>
-              <img src="../../assets/img/Logo.png" alt="LogoLazyFilms" class="header__nav-logo">
+              <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
           </li>
           <li class="header__nav-item header__mainPage">
@@ -288,9 +290,12 @@
       <div class="wrap__content">
         <!-- Content left -->
         <div class="container__video">
-          <iframe class = "state__video" title="video" src="https://drive.google.com/file/d/1039ilMHdDmbMB2zOt8DrGgQVsZnuKdXq/preview">
-          </iframe>
-          <img src="../../assets/img/Logo-removebg-preview.png" alt="logo LazyFilms" class="overlay__video-logo">
+          <!-- <iframe class = "state__video" title="video" src="https://drive.google.com/file/d/1039ilMHdDmbMB2zOt8DrGgQVsZnuKdXq/preview">
+          </iframe> -->
+          <video class = "state__video" autoplay>
+            <source src="../../Video/Bleach- Huyết Chiến Ngàn Năm - Chia Biệt - FPT Play mp4" type="video/mp4">
+           </video>
+          <img src="../../assets/img/Logo-removebg-preview.jpg" alt="logo LazyFilms" class="overlay__video-logo">
           <div class="video__loading">
             <i class="fa-duotone fa-play"></i>
             <!-- <span class = "text__hover">Trình phát video đang loading</span> -->
@@ -744,7 +749,7 @@
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/ChuThuatHoiChien_P2.jpg" alt="ChuThuatHoiChien_P2">
+                      <img src="../../assets/img/chu-thuat-hoi-chien-phan-2-fpt-play-1693551746015_Landscape.jpg" alt="ChuThuatHoiChien_P2">
                     </div>
 
                     <div class="modal__frame">
@@ -924,7 +929,7 @@
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
               <a href="#">
-                <img src="../../assets/img/Logo.png" alt="LogoLazyFilms" class="footer__nav-logo">
+                <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="footer__nav-logo">
               </a>
             </li>
 
@@ -1010,7 +1015,76 @@
     </footer>
   </div>
 
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle Video
+        let video = document.querySelector('.state__video');
+        let controlPlay = document.querySelector('.control__watch-play');
+        let controlStop = document.querySelector('.control__watch-stop');
+        let controlSkipBack = document.querySelector('.video__control-skipBack');
+        let controlSkipForward = document.querySelector('.video__control-skipFoward');
+        let controlVolumeMuted = document.querySelector('.control__volume-muted');
+        let controlVolumeOpen = document.querySelector('.control__volume-open');
+        let controlReport = document.querySelector('.video__control-report');
+        let controlNext = document.querySelector('.video__control-next');
+        let controlSetting = document.querySelector('.video__control-setting');
+        let controlFullscreen = document.querySelector('.video__control-fullscreen');
+    
+        // Play / Pause Video
+        /* controlPlay.addEventListener('click', () => {
+            video.play();
+        });
+        controlStop.addEventListener('click', () => {
+            video.pause();
+        }); */
+        controlPlay.addEventListener('click', () => {
+          if (video.paused) {
+              video.play();
+          } else {
+              video.pause();
+          }
+      });
+    
+        // Tua lại/tua tới 10s
+        controlSkipBack.addEventListener('click', () => {
+            video.currentTime -= 10;
+        });
+        controlSkipForward.addEventListener('click', () => {
+            video.currentTime += 10;
+        });
+    
+        // Tắt/bật tiếng
+        controlVolumeMuted.addEventListener('click', () => {
+            video.muted = true;
+        });
+        controlVolumeOpen.addEventListener('click', () => {
+            video.muted = false;
+        });
+    
+        // Các tính năng khác
+        controlReport.addEventListener('click', () => {
+            alert('Báo cáo sự cố đã được gửi!');
+        });
+        controlNext.addEventListener('click', () => {
+            alert('Tập tiếp theo đang được tải!');
+        });
+        controlSetting.addEventListener('click', () => {
+            alert('Cài đặt đang được mở!');
+        });
+        controlFullscreen.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { /* Firefox */
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { /* IE/Edge */
+                video.msRequestFullscreen();
+            }
+        });
+    });
+    </script>
+    
 </body>
 
 </html>

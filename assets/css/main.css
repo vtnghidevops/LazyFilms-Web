@@ -4,7 +4,9 @@ body {
 }
 .wrap {
   background-color: var(--background-color);
-  
+  height: max-content;
+  position: relative;
+  /* transition: 1s ease-in; */
 }
 
 #header {
@@ -469,10 +471,13 @@ body {
   justify-content: center;
   z-index: 1000;
   display: none;
-
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: shapeTranslate 0.3s ease-in;
 }
-
-.login__section, .register__section {
+.forgot__section,
+.login__section,
+.register__section {
   display: inline-block;
   height: 50rem;
   width: 35rem;
@@ -482,8 +487,11 @@ body {
   border-radius: 0.8rem;
   position: relative;
   overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
+.forgot__section .forgot__section-close,
 .register__section .register__section-close,
 .login__section .login__section-close {
   position: absolute;
@@ -495,11 +503,13 @@ body {
   margin: 0.8rem 0.8rem 0 0;
 }
 
+.forgot__section .forgot__section-close:hover,
 .register__section .register__section-close:hover,
 .login__section .login__section-close:hover {
   color: var(--text-color);
 }
 
+.forgot__section--heading,
 .register__section--heading,
 .login__section--heading {
   text-align: left;
@@ -541,7 +551,9 @@ body {
   right: 1.5rem;
   cursor: pointer;
 }
-
+.login__modal-group a{
+  text-decoration: none;
+}
 .login__modal-group .login__modal--forgotPass {
   display: block;
   font-size: 1.3rem;
@@ -550,6 +562,8 @@ body {
   margin: 0rem 0 1rem 0.5rem;
   font-weight: 200;
 }
+
+
 
 .login__modal--group .login__modal-register {
   color: var(--text-color);
@@ -560,20 +574,20 @@ body {
 .login__modal--group .login__button {
   outline: none;
   border: none;
-  background-color: var(--bg-color-grey);
-  color: var(--text-color);
+  background-color: var(--btn-overlay);
+  color: var(--text-color-light);
   border-radius: 0.8rem;
   padding: 1.2rem 1.3rem;
   width: 100%;
   text-align: center;
   font-size: 1.4rem;
   cursor: pointer;
-
+  font-weight: bold;
 }
 
-.login__regester-suggestion {
+.login__register-suggestion {
   color: var(--placeholder-text);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -617,7 +631,7 @@ body {
 
 .login__modal-register a{
   text-decoration: none;
-  color: var(--btn-color);
+  color: var(--btn-overlay);
   padding: 1rem;
   font-style: bold;
 }
@@ -636,6 +650,9 @@ body {
   justify-content: center;
   z-index: 1000;
   display: none;
+  transition: opacity 0.3s ease;
+  animation: shapeTranslate 0.3s ease-in;
+  opacity: 0;
 }
 .register__section {
   height: 45rem;
@@ -644,6 +661,76 @@ body {
   margin-top: 2rem;
 }
 
+/* forgot password */
+.container__forgot {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Căn chỉnh có cái container nằm giữa á*/
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.3s ease;
+  animation: shapeTranslate 0.3s ease-in; 
+  opacity: 0; 
+}
+
+.forgot__section {
+  height: 35rem;
+}
+
+.forgot__section--heading {
+  position: absolute;
+  top: 6%;
+  font-weight: 400;
+}
+
+.container__forgot .prompt__enter {
+  left : 5%;
+  top: 33%;
+  position: absolute;
+}
+.prompt__enter-email {
+  color: var(--text-color);
+  text-align: left !important;
+  width: 100%;
+  display: block;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+
+.container__forgot .login__modal-form {
+  position: absolute;
+  top: 40%;
+  width: 95%;
+  left: 3%;
+}
+
+.forgot__modal-form .forgot__modal_group {
+  margin-bottom: 2rem;
+}
+
+.forgot__modal_group .forgot__accepted-privacy {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  bottom: 4%;
+  text-align: center;
+}
+
+.forgot__accepted-privacy a {
+  text-decoration: none;
+  color: var(--btn-overlay);
+  display: block;
+  margin: 1rem;
+}
 /* Sub menu */
 .header__nav-subMenu {
   position: relative;
@@ -812,7 +899,7 @@ body::-webkit-scrollbar,
 .body__container {
   background-color: var(--background-color);
   width: 1070px;
-  height: auto;
+  height: max-content;
   max-height: 320rem;
   margin: 2rem auto;
   padding: 2rem 2rem;
@@ -945,7 +1032,7 @@ body::-webkit-scrollbar,
 
 /* Lớp phủ */
 .item__background-opacity {
-  background-image: url(../img/Background-Opacity.a5660cf.png);
+  background-image: url(../img/Background-Opacity.a5660cf.jpg);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1075,19 +1162,23 @@ body::-webkit-scrollbar,
   width: 100%;
 }
 
+.carousel__film-watching,
 .carousel__film-update, 
 .carousel__film-anime, 
 .carousel__film-longChap {
   /* padding-top: 2rem; */
   margin-bottom: 1.5rem;
   position: relative;
+  overflow: hidden;
 }
 
 
 .carousel__tvHome-heading {
   width: 100%;
   /* height: 5rem; */
-  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   /* margin-bottom: -1rem; */
 }
 /* Heading carousel */
@@ -1132,11 +1223,12 @@ body::-webkit-scrollbar,
 .carousel__listFilms {
   list-style: none;
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: max-content;
   height: 20rem;
-  max-height: 40rem;
+  /* max-height: 40rem; */
+  max-height: fit-content;
   transition: all 0.5s;
 
   /* position: relative; */
@@ -1167,20 +1259,30 @@ body::-webkit-scrollbar,
   margin-right: 1rem;
 
 }
+.carousel__listFilms-img {
+  max-width: 100%;
+}
 
 .carousel__listFilms-img .carousel__img-fixed img{
   border-radius: 0.8rem;
   /* margin-right: 0.5rem; */
   width: 100%;
-  margin: 1rem 0;
   min-width: 13rem;
   height: 13rem;
+  object-fit: contain;
+  max-height: max-content;
 }
 
 .carousel__img-fixed {
   width: 100%;
   position: relative;
   margin-right: 1rem;
+  /* hover img */
+  overflow: hidden;
+  margin: 1rem 0;
+  border-radius: 0.8rem;
+  z-index: 5;
+
 }
 .carousel__img-fixed .carousel__listFilms-ratePoint {
   position: absolute;
@@ -1193,23 +1295,42 @@ body::-webkit-scrollbar,
   min-width: 1.8rem;
   font-size: 0.8rem;
   bottom: 0;
-  margin: 0 0.5rem 1.8rem 0;
+  margin: 0 0.5rem 0.8rem 0;
 }
 .carousel__listFilms-ratePoint i {
   padding-right: 0.2rem;
 }
 .carousel__listFilms-img .carousel__listFilms-title {
-  color: var(--text-color-light);
+  /* color: var(--text-color-light);
   font-weight: 400;
-  width: 100%;
-  text-align: center;
+  max-width: 100%;
+  text-align: left;
   font-size: 1.5rem;
-
+  cursor:default;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 2.2rem; */
+  /* display: -webkit-box; Thêm dòng này */
+  /* -webkit-line-clamp: 2; Sửa dòng này */
+  /* -webkit-box-orient: vertical; Thêm dòng này */
+  color: var(--text-color-light);
+  font-weight: 400;
+  max-width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 2.2rem;
-  /* text-align: justify; */
+  display: -webkit-box; /* Thêm dòng này */
+  -webkit-line-clamp: 2; /* Sửa dòng này */
+  -webkit-box-orient: vertical; /* Thêm dòng này */
+}
+
+.carousel__listFilms-title:hover {
+  color: var(--gg-color);
+  cursor: pointer;
 }
 .carousel__listFilms-img .carousel__listFilms-view {
   color: var(--placeholder-text);
@@ -1239,6 +1360,7 @@ body::-webkit-scrollbar,
   opacity: 0;
   transition: opacity .5s;
   border-radius: 0 0.5rem;
+  z-index: 100;
 }
 
 .carousel__button-next {
@@ -1333,17 +1455,19 @@ body::-webkit-scrollbar,
   display: inline-block;
   color: var(--placeholder-text);
 }
+
+.modal__small,
 .common-listFilms-buttonPlay {
   margin-top: 1rem;
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   /* background-color: red; */
-  top: 0;
+  top: -1rem;
   left: 0;
   display: none;
   cursor: pointer;
-  height: 100%;
+  height: 14rem;
 
 }
 .common-listFilms-buttonPlay i {
@@ -1365,22 +1489,65 @@ body::-webkit-scrollbar,
 }
 
 
-.carousel__list-subMenu:hover .common-listFilms-buttonPlay {
+.carousel__img-fixed:hover .common-listFilms-buttonPlay {
   display: block;
 }
 /* .common-listFilms-buttonPlay, */
-.carousel__list-subMenu:hover .carousel__item-infomation {
-  transform: scale(1.05);
-  z-index: 500;
+
+.carousel__img-fixed:hover img {
+  transform: scale(1.2);
   transition: 0.5s;
+  border-radius: 0.8rem;
 }
 /* .carousel__list-subMenu:hover .carousel__listFilms-shortDescription, */
-.carousel__list-subMenu:hover .common-listFilms-buttonPlay i
+.carousel__img-fixed:hover .common-listFilms-buttonPlay i
 {
   display: block;
   animation: shapeTranslate ease-in 0.25s;
   /* animation-direction: center; */
   
+}
+/* Đang xem */
+.carousel__film-watching .carousel__button-prev,
+.carousel__film-watching .carousel__button-next {
+  height: 14rem;
+  top: 20%;
+}
+
+/* Update phim */
+.carousel__film-SVIP,
+.carousel__film-longChap,
+.carousel__film-commingSoon,
+.carousel__film-anime,
+.carousel__film-update {
+  height: max-content;
+  margin-bottom: 3rem;
+}
+
+.carousel__film-anime .carousel__listFilms-anime,
+.carousel__film-update .carousel__listFilms-update {
+  height: 100%;
+}
+
+.carousel__listFilms-update li {
+  height: 100%;
+  width: 8%;
+}
+
+.carousel__listFilms-update .carousel__img-fixed img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.modal__medium {
+  height: 18.5rem;
+}
+
+.carousel__film-update .carousel__button-prev,
+.carousel__film-update .carousel__button-next {
+  height: 18rem;
+  top: 19%;
 }
 
 /* Long chap */
@@ -1390,9 +1557,13 @@ body::-webkit-scrollbar,
   /* overflow: none; */
 
 }
+.carousel__tvHome-watching,
+.carousel__tvHome-anime,
+.carousel__tvHome-update,
+.carousel__tvHome-commingSoon,
 .carousel__tvHome-longChap {
   /* border: 1px solid #fff; */
-  height: 34rem ;
+  height: max-content ;
   width: 100%;
 }
 
@@ -1403,8 +1574,8 @@ body::-webkit-scrollbar,
 }
 
 .longChap__listFilms-item {
-  /* width: 30%; */
-  height: 100%;
+  width: 30%;
+  height: auto;
   max-width: 30%;
 }
 
@@ -1413,6 +1584,7 @@ body::-webkit-scrollbar,
   margin-right: -1rem;
 }
 
+
 .carousel__listFilms-img .longChap__img-fixed img{
   max-height: 80%;
   height: 28rem;
@@ -1420,10 +1592,12 @@ body::-webkit-scrollbar,
   max-width: 100%;
   
 }
-
+.longChap__img-fixed .carousel__listFilms-ratePoint {
+  margin: 0 0.5rem 1.8rem 0;
+}
 /* Modal longChap */
 .common__modal-ox {
-  height: 95%;
+  height: 28.5rem;
 }
 
 .common__modal-ox i{
@@ -1431,7 +1605,54 @@ body::-webkit-scrollbar,
   top: 44%;
 }
 
+.carousel__film-longChap .carousel__button-prev,
+.carousel__film-longChap .carousel__button-next {
+  height: 27.5rem;
+  top: 16%;
+}
 
+/* Anime */
+.carousel__film-anime .carousel__button-prev,
+.carousel__film-anime .carousel__button-next {
+  height: 18rem;
+  top: 17%;
+}
+
+/* CommingSoon */
+.carousel__film-commingSoon {
+  position: relative;
+}
+.carousel__film-commingSoon .carousel__button-prev,
+.carousel__film-commingSoon .carousel__button-next {
+  height: 27.5rem;
+  top: 16%;
+}
+.paid__movies {
+  top :7% !important;
+}
+/* Danh Mục */
+.carousel__category {
+  position: relative;
+}
+.carousel__category .carousel__category-list {
+  height: 14rem;
+}
+
+.carousel__category .carousel__button-prev,
+.carousel__category .carousel__button-next {
+  height: 13rem;
+  top: 28%;
+}
+/* SVIP */
+.carousel__film-SVIP {
+  position: relative;
+}
+
+.carousel__film-SVIP .carousel__button-prev,
+.carousel__film-SVIP .carousel__button-next {
+  height: 27.5rem;
+  top: 16%;
+}
 /* Aside */
 
 
@@ -1442,7 +1663,7 @@ body::-webkit-scrollbar,
   right: -5%;
   /* float: right; */
   padding: 2rem;
-  /* display: none; */
+  display: none;
   z-index: 3;
   background-color: var(--background-color);
   box-shadow: #222;
@@ -2015,7 +2236,38 @@ body::-webkit-scrollbar,
 }
 
 /* TheloaiPhim */
+/* Phim tình cảm */
+.romantic__movie {
+  width: 100%;
+  /* border: 1px solid #fff; */
+  position: relative;
+  margin: 4rem 0;
+}
+.romantic__movie-heading {
+  justify-content: center;
+}
 
+.romantic__movie-listFilms {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+}
+.romantic__movie-item {
+  width: 18.83%;
+  object-fit: contain;
+
+}
+.romantic__movie .carousel__listFilms-title {
+  font-size: 1.4rem;
+}
+.romantic__movie .carousel__item-noChapter {
+  top: 15%;
+}
+
+.romantic__movie .carousel__listFilms-ratePoint {
+  bottom: 6%;
+}
 /* PhimChieuRap */
 .wrap__movieTheater {
   width: 100%;
@@ -2023,6 +2275,7 @@ body::-webkit-scrollbar,
   max-height: 17rem;
   padding-bottom: 3rem;
   display: inline-block;
+  display: none;
 }
 /* Heading movieTheater */
 .movieTheater__heading {
@@ -2033,12 +2286,12 @@ body::-webkit-scrollbar,
 }
 
 .movieTheater__heading .movieTheater__heading-launch {
-  color: var(--text-color-light);
+  color: var(--text-color);
   padding-right: 0.5rem;
   text-decoration: none;
 }
 .movieTheater__heading .movieTheater__heading-launch:hover {
-  color : var(--rate-text);
+  color : var(--gg-color);
 }
 
 .movieTheater__heading .movieTheater__heading-tab {
@@ -2112,6 +2365,7 @@ body::-webkit-scrollbar,
   border-radius: 3px;
   color: var(--background-color);
   margin-right: 0.5rem;
+  z-index: 5;
 }
 
 .carousel__item-noChapter img {
@@ -2135,6 +2389,7 @@ body::-webkit-scrollbar,
     text-transform: uppercase;
     line-height: 1rem;
     text-shadow: 0 0 2px rgba(29, 28, 28, 0.3);
+    z-index: 5;
 }
 
 .carousel__item-haveChapter i {
@@ -2151,26 +2406,33 @@ body::-webkit-scrollbar,
 
 /* Switch pages in PHIMCHIEURAP */
 .carousel__switchTab {
-  margin-left: 15rem;
-  padding-top: 2rem;
+  position: absolute;
+  bottom: -7%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   
 }
 .carousel__switchTab .carousel__switchTab-page{
   text-decoration: none;
   font-size: 1.5rem;
-  color: var(--placeholder-text);
-  width: 1rem;
-  max-width: 1.2rem;
+  color: var(--text-color);
+  width: max-content;
   line-height: 1.5rem;
-  background-color: red;
+  /* background-color: red; */
   margin: 1rem;
-  padding: 0.6rem 1.5rem;
-  border-radius: 3px;
-  background-color: var(--wrap-color);
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  /* background-color: var(--wrap-color); */
+  border: 1px solid var(--placeholder-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel__switchTab .carousel__switchTab-page:hover {
-  background-color: var(--icon-color);
+  background-color: var(--gg-color);
   color: var(--text-color-light);
 }
 
@@ -2346,13 +2608,20 @@ font-size: 1.3rem;
   background-color: transparent;
   position: relative;
   width: 100%;
+  /* border: 1px solid #fff; */
 }
 
 .container__video .state__video {
   border: none;
   outline: none;
+  /* height: 100%;
+  width : 100%; */
+  top: 0;
+  left: 0;
   height: 100%;
-  width : 100%;
+  width: 100%;
+  position: absolute;
+  /* overflow: hidden; */
 }
 
 .container__video .overlay__video-logo {
@@ -2391,7 +2660,7 @@ font-size: 1.3rem;
 .video__control-bar {
   display: flex;
   position: absolute;
-  left: 0;
+  left: -1%;
   bottom: 0;
   transform: translate(4%,-80%);
   padding: 0.5rem;
@@ -2910,4 +3179,41 @@ font-size: 1.3rem;
 
 .actor__item-name {
   text-align: center;
+}
+
+/* return To Top */
+.return-to-top {
+  position: fixed;
+  right: 5%;
+  bottom: 3rem;
+  display: none;
+  width: 4rem;
+  line-height: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  background: var(--gg-color);
+  border: 1px solid var(--gg-color);
+  border-radius: 50%;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  z-index: 1000;
+}
+
+.return-to-top i {
+  animation: updown 2s ease-in-out infinite;
+}
+
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
 }
