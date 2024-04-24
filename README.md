@@ -2,13 +2,13 @@
 ## Hình ảnh thiết kế web
 :point_right:[Github Pages](https://vtnghidevops.github.io/LazyFilms-Web/)
 ### **Header**
-![](./assets/img/Header.png)
+![](./assets/img/Header.jpg)
 ### **Slider**
-![](./assets/img/slider.png)
+![](./assets/img/slider.jpg)
 ### **Content**
-![](./assets/img/content.png)
+![](./assets/img/content.jpg)
 ### **Footer**
-![](./assets/img/Footer.png)
+![](./assets/img/Footer.jpg)
 
 
 
