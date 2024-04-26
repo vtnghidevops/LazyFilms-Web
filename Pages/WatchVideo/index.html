@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../../assets/fonts/Alata/Alata-Regular.ttf">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
-
+  <script src="../../script/movieGenre.js" defer></script>
 
 </head>
 
@@ -194,46 +194,46 @@
         <div class="login__section--heading">
           <span>Đăng nhập</span>
         </div>
-
+    
         <form action="#" class="login__modal-form">
           <div class="login__modal--group">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-
+    
           <div class="login__modal--group">
             <input type="password" placeholder="Mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
+    
           <div class="login__modal-group">
             <a href="#"><span class="login__modal--forgotPass">Quên mật khẩu ?</span></a>
           </div>
-
+    
           <div class="login__modal--group">
             <button class="login__button" type="submit" name="submit">Đăng nhập</button>
           </div>
-
+    
         </form>
-
-        <p class="login__regester-suggestion">Hoặc đăng nhập bằng</p>
+    
+        <p class="login__register-suggestion">Hoặc đăng nhập bằng</p>
         <div class="login__section--choiceLogin">
           <a href="#" class="login__choiceLogin-fb">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-
+    
           <a href="#" class="login__choiceLogin-gg">
             <i class="fa-brands fa-google-plus-g"></i>
           </a>
-
+    
         </div>
-
+    
         <div class="login__modal--group">
           <span class="login__modal-register">Chưa có tài khoản?
-            <a href="#register">Đăng ký ngay</a> </span>
+            <a class = "go__register" href="#">Đăng ký ngay</a> </span>
         </div>
-
-
+    
+    
       </div>
     </div>
 
@@ -246,61 +246,104 @@
         <div class="register__section--heading">
           <span>Đăng ký</span>
         </div>
-
-        <form action="#" class="login__modal-form">
-          <div class="login__modal--group">
+      
+        <form action="#" class="login__modal-form register__modal-form">
+          <div class="login__modal--group register__modal-form">
             <input type="text" placeholder="Tên tài khoản" name="account" autocomplete="off">
           </div>
-
-          <div class="login__modal--group">
+      
+          <div class="login__modal--group register__modal-form">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-
-          <div class="login__modal--group">
+      
+          <div class="login__modal--group register__modal-form">
             <input type="password" placeholder="Mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
+      
           <div class="login__modal--group login__password-auth">
             <input type="password" placeholder="Nhập lại mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
-
+      
+      
           <div class="login__modal--group login__btn--register">
             <button class="register__button" type="submit" name="submit">Đăng ký</button>
           </div>
-
+      
         </form>
-
+      
         <div class="login__modal--group">
           <span class="login__modal-register">Đã có tài khoản?
-            <a href="#l">Đăng nhập ngay</a> </span>
+            <a class="back__login" href="#">Đăng nhập ngay</a> </span>
         </div>
-
-
+      
+      
       </div>
     </div>
 
+    <!-- Forgot password -->
+    <div class="container__forgot" id="forgotPass">
+      <div class="forgot__section">
+        <a class="forgot__section-close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </a>
+        <div class="register__section--heading forgot__section--heading">
+          <span>Khôi phục mật khẩu</span>
+        </div>
+
+        <div class="login__modal--group prompt__enter forgot__modal_group">
+          <span class="prompt__enter-email">Vui lòng nhập Email đăng nhập</span>
+        </div>
+
+        <form action="#" class="login__modal-form forgot__modal-form">
+          <div class="login__modal--group forgot__modal_group" >
+            <input type="email" placeholder="Email" name="email" autocomplete="off">
+          </div>
+
+          <div class="login__modal--group forgot__modal_group">
+            <button class="login__button" type="submit" name="submit">Tiếp tục</button>
+          </div>
+    
+        </form>
+    
+        <div class="forgot__modal_group">
+          <span class = "forgot__accepted-privacy ">Khi bạn nhấn tiếp tục, bạn đồng ý với 
+            <a class = "privacy" href="#" >Chính sách và quy định</a> 
+          </span>
+        </div>
+    
+    
+      </div>
+    </div>
+
+    <!-- Share Video -->
+    <div class="container__shareVideo" id = "shareVD">
+      <div class="share__section">
+        <a class="share__section-close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </a>
+        
+        
+      </div>
+    </div>
 
     <div class="body__container">
       <!--Content-->
       <div class="wrap__content">
-        <!-- Content left -->
+        <!-- container video -->
         <div class="container__video">
-          <!-- <iframe class = "state__video" title="video" src="https://drive.google.com/file/d/1039ilMHdDmbMB2zOt8DrGgQVsZnuKdXq/preview">
-          </iframe> -->
-          <video class = "state__video" autoplay>
+          <video class="state__video" autoplay>
             <source src="../../Video/Bleach- Huyết Chiến Ngàn Năm - Chia Biệt - FPT Play mp4" type="video/mp4">
-           </video>
+          </video>
           <img src="../../assets/img/Logo-removebg-preview.jpg" alt="logo LazyFilms" class="overlay__video-logo">
           <div class="video__loading">
             <i class="fa-duotone fa-play"></i>
             <!-- <span class = "text__hover">Trình phát video đang loading</span> -->
           </div>
-
+        
           <div class="video__control-bar">
             <!-- left -->
             <div class="control__bar-left">
@@ -310,25 +353,25 @@
                   <i class="fa-solid fa-play"></i>
                   <span class="control__play-hover">Phát</span>
                 </div>
-  
+        
                 <!-- Start video -->
                 <div class="control__watch-stop">
                   <i class="fa-solid fa-pause"></i>
                   <span class="control__pause-hover">Tạm dừng</span>
                 </div>
-  
+        
               </button>
-  
+        
               <button class="video__control-skipBack">
                 <i class="fa-solid fa-rotate-left"></i>
                 <span class="control__skipBack-hover">Tua lui 10s</span>
               </button>
-  
+        
               <button class="video__control-skipFoward">
                 <i class="fa-solid fa-rotate-right"></i>
                 <span class="control__skipFoward-hover">Tua tới 10s</span>
               </button>
-  
+        
               <div class="video__control-volume">
                 <button class="control__volume">
                   <!-- Tắt tiếng -->
@@ -336,66 +379,65 @@
                     <i class="fa-solid fa-volume"></i>
                     <span class="control__muted-hover">Tắt tiếng</span>
                     <!-- Edit tiếng -->
-  
+        
                   </div>
-  
+        
                   <!-- Bật tiếng -->
                   <div class="control__volume-open">
                     <i class="fa-solid fa-volume"></i>
                     <span class="control__open-hover">Bật tiếng</span>
                     <!-- Edit tiếng -->
-  
+        
                   </div>
                 </button>
               </div>
-  
-  
+        
+        
               <div class="video__control-time">
                 <span class="control__time-text" role="presentation">Thời gian hiện tại</span>
                 <span class="control__time-display" role="presentation">0:01</span>
               </div>
-
+        
               <div class="video__control-process">
-    
+        
               </div>
-              
+        
             </div>
-
+        
             <!-- right -->
             <div class="control__bar-right">
               <div class="video__control-duration">
                 <span class="control__duration-text" role="presentation">Độ dài</span>
                 <span class="control__duration-display" role="presentation">24:00</span>
               </div>
-    
-              
-    
+        
+        
+        
               <button class="video__control-report">
                 <i class="fa-solid fa-flag"></i>
                 <span class="control__report-hover">Báo cáo sự cố</span>
               </button>
-              
+        
               <button class="video__control-next">
                 <i class="fa-solid fa-forward-step"></i>
                 <span class="control__next-hover">Tập tiếp theo</span>
               </button>
-
+        
               <button class="video__control-setting">
                 <i class="fa-solid fa-gear"></i>
                 <span class="control__setting-hover">Cài đặt</span>
               </button>
-    
+        
               <button class="video__control-fullscreen">
                 <i class="fa-solid fa-expand"></i>
                 <span class="control__fullscreen-hover">FullScreen</span>
               </button>
             </div>
-            
+        
           </div>
+        
+        </div>
 
-          </div>
-
-          
 
         <!-- Desc -->
         <div class="container__video-desc">
@@ -502,60 +544,64 @@
 
           </div>
         </div>
+        
 
         <!-- Danh sách phim của nó -->
         <div class="container__episodes">
           <h2 class = "container__episodes-heading">Danh sách</h2>
           <div class="episodes__tabs">
             <ul class="episodes__list">
-
+          
               <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t1.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t1.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
                   </a>
-                 
+          
                   <div class="episodes__item-chapter">
                     <span class="item__chapter-text">Tập 1</span>
                   </div>
                   <div class="episodes__item-timeline">24 phút</div>
-
+          
                 </div>
               </li>
-
+          
               <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t2.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t2.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
                   </a>
-                 
+          
                   <div class="episodes__item-chapter">
                     <span class="item__chapter-text">Tập 2</span>
                   </div>
                   <div class="episodes__item-timeline">24 phút</div>
-
+          
                 </div>
               </li>
-
+          
               <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t3.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t3.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
@@ -563,18 +609,19 @@
                   <div class="episodes__item-chapter">
                     <span class="item__chapter-text">Tập 3</span>
                   </div>
-
+          
                   <div class="episodes__item-timeline">24 phút</div>
                 </div>
               </li>
-
+          
               <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t4.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t4.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
@@ -583,17 +630,18 @@
                     <span class="item__chapter-text">Tập 4</span>
                   </div>
                   <div class="episodes__item-timeline">24 phút</div>
-
+          
                 </div>
               </li>
-
+          
               <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
@@ -602,17 +650,18 @@
                     <span class="item__chapter-text">Tập 5</span>
                   </div>
                   <div class="episodes__item-timeline">24 phút</div>
-
+          
                 </div>
               </li>
-
-              <!-- <li class="episodes__list-item">
+          
+              <li class="episodes__list-item">
                 <div class="episodes__item">
                   <a href="" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg" alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
-
+          
                     <div class="modal__frame">
                       <i class="fa-solid fa-play"></i>
                     </div>
@@ -621,13 +670,104 @@
                     <span class="item__chapter-text">Tập 5</span>
                   </div>
                   <div class="episodes__item-timeline">24 phút</div>
-
+          
                 </div>
-              </li> -->
-             
+              </li>
+          
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                    </div>
+          
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text">Tập 5</span>
+                  </div>
+                  <div class="episodes__item-timeline">24 phút</div>
+          
+                </div>
+              </li>
+          
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                    </div>
+          
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text">Tập 5</span>
+                  </div>
+                  <div class="episodes__item-timeline">24 phút</div>
+          
+                </div>
+              </li>
+          
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                    </div>
+          
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text">Tập 5</span>
+                  </div>
+                  <div class="episodes__item-timeline">24 phút</div>
+          
+                </div>
+              </li>
+          
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
+                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
+                    </div>
+          
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text">Tập 5</span>
+                  </div>
+                  <div class="episodes__item-timeline">24 phút</div>
+          
+                </div>
+              </li>
+          
             </ul>
+          
+            <!-- btn -->
+            <div class="carousel__button-prev" type="Nextbutton">
+              <i class="fa-light fa-angle-left"></i>
+            </div>
+          
+            <div class="carousel__button-next" type="Prebutton">
+              <i class="fa-light fa-angle-right"></i>
+            </div>
           </div>
+          
         </div>
+        
         <!-- Season -->
         <div class="container__season">
           <h2 class = "container__season-heading">Các Season</h2>
@@ -671,6 +811,8 @@
 
                 </div>
               </li>
+
+            
             </ul>
           </div>
         </div>
@@ -701,11 +843,107 @@
             </ul>
           </div>
         </div>
+
         <!-- Nội dung liên quan -->
         <div class="container__connection ">
           <h2 class = "container__connection-heading">Nội dung liên quan</h2>
           <div class="episodes__tabs">
             <ul class="episodes__list">
+
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_XuGiaThanChet.jpg" alt="Bleach_XuGiaThanChet">
+                    </div>
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                    
+                  </a>
+                 
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text item__name-season">Bleach: Xứ Giả Thần Chết</span>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/Bleach_HuyetChienNganNam.jpg" alt="Bleach_HuyetChienNganNam">
+                    </div>
+
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                 
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text item__name-season">Bleach: Huyết Chiến Ngàn Năm</span>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/chu-thuat-hoi-chien-phan-2-fpt-play-1693551746015_Landscape.jpg" alt="ChuThuatHoiChien_P2">
+                    </div>
+
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                 
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text item__name-season">Chú thuật hồi chiến (P2)</span>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/thanh-guom-diet-quy-phan-lang-tho-ren.jpg" alt="ThanhGuomDietQuyLangThoRen">
+                    </div>
+
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                 
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text item__name-season">Thanh Gươm Duyệt Quỷ Làng Thợ Rèn</span>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="episodes__list-item">
+                <div class="episodes__item">
+                  <a href="" class="episodes__item-link">
+                    <div class="episodes__item-frames">
+                      <img src="../../assets/img/ThietGiapChiThanh.jpg" alt="ThietGiapChiThanh">
+                    </div>
+
+                    <div class="modal__frame">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </a>
+                 
+                  <div class="episodes__item-chapter">
+                    <span class="item__chapter-text item__name-season">Thiết Giáp Chi Thành</span>
+                  </div>
+
+                </div>
+              </li>
 
               <li class="episodes__list-item">
                 <div class="episodes__item">
@@ -805,8 +1043,17 @@
 
               
             </ul>
+            <!-- btn -->
+            <div class="carousel__button-prev" type="Nextbutton">
+              <i class="fa-light fa-angle-left"></i>
+            </div>
+          
+            <div class="carousel__button-next" type="Prebutton">
+              <i class="fa-light fa-angle-right"></i>
+            </div>
           </div>
         </div>
+
         <!-- Diễn viên -->
         <div class="container__actor">
           <h2 class = "container__actor-heading">Diễn Viên</h2>
@@ -909,17 +1156,658 @@
                 </div>
               </li>
 
+              <li class="actor__list-item">
+                <div class="actor__item">
+                  <a href="" class="actor__item-link">
+                    <div class="actor__item-frames">
+                      <img src="../../assets/img/Actor__MasayaOnosaka.jpg" alt="MasayaOnosaka">
+                    </div>
+
+                  </a>
+                 
+                  <div class="actor__item-name">
+                    <span class="item__name-season item__name-text">Masaya Onosaka</span>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="actor__list-item">
+                <div class="actor__item">
+                  <a href="" class="actor__item-link">
+                    <div class="actor__item-frames">
+                      <img src="../../assets/img/Actor__YukiMatsuoka.jpg" alt="YukiMatsuoka">
+                    </div>
+
+                  </a>
+                 
+                  <div class="actor__item-name">
+                    <span class="item__name-season item__name-text">Yuki Matsuoka</span>
+                  </div>
+
+                </div>
+              </li>
+
+
               
 
             </ul>
+            <!-- btn -->
+            <div class="carousel__button-prev" type="Nextbutton">
+              <i class="fa-light fa-angle-left"></i>
+            </div>
+          
+            <div class="carousel__button-next" type="Prebutton">
+              <i class="fa-light fa-angle-right"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Comment -->
+        <div class="container__comment">
+          <div class="comment">
+            <!-- Heading -->
+            <div class="comment__heading">
+              <div class="comment__heading-title">Bình luận
+                <span class = "comment__title-count">(15)</span>
+              </div>
+
+              <div class="commment__heading-filter">
+                <button class="comment__filter-select">
+                  <span>
+                    Nhiều like nhất
+                    <i class="fa-solid fa-angle-down"></i>
+                  </span>
+                </button>
+                <ul class="comment__filter-option">
+                  <li class = "comment__option-item">
+                    <a href="#" class = "active-option">
+                      <img src="../../assets/img/done.jpg" alt="done">
+                      <span>Nhiều like nhất</span>
+                    </a>
+                  </li >
+                  <li class = "comment__option-item">
+                    <a href="#" >
+                      <img src="../../assets/img/done.jpg" alt="done">
+                      <span>Mới nhất</span>
+                    </a>
+                  </li>
+                  <li class = "comment__option-item">
+                    <a href="#" >
+                      <img src="../../assets/img/done.jpg" alt="done">
+                      <span>Cũ nhất</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Input comment from users -->
+            <div class="comment__input">
+              <div class="comment__input-avata">
+                <img src="../../assets/img/img_user.jpg" alt="user">
+              </div>
+              <div class="comment__list-item">
+                <textarea name = "cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
+                <div class="send__cmt">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+              </div>
+            </div>
+            <!-- List comment -->
+            <div class="comment__list">
+              <!-- item cmt-->
+              <div class="comment__item">
+                <div class="comment__item-avata">
+                  <img src="../../assets/img/test_avt_admin.jpg" alt="">
+                </div>
+                <!-- main comment -->
+                <div class="comment__item-detail">
+                  <div class="comment__detail-area">
+                    <div class="detail__area-main">
+                      <!-- heading -->
+                      <div class="area__main-title">
+                        <span class="area__title-name">LazyFilms</span>
+                        <div class="area__dot"></div>
+                        <span class="area__tilte-time">3 tháng</span>
+                      </div>
+                      <!-- Detail comment -->
+                      <div class="area__main-detail">
+                        <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                      </div>
+                    </div>
+              
+                    <!-- Like , reply comment -->
+                    <div class="comment__item-reply">
+                      <div class="item__reply-like">
+                        <span>
+                          <i class="fa-solid fa-thumbs-up liked"></i>
+                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <span class="count__like">19</span>
+                        </span>
+                      </div>
+              
+                      <div class="item__reply-message">
+                        <span>
+                          <i class="fa-light fa-message-dots"></i>
+                          <span class="count__cmt">7</span>
+                        </span>
+                      </div>
+              
+                    </div>
+              
+                    <!-- Phản hồi khác nếu có , giới hạn < 4, khi đó click thêm -> show thêm-->
+                    <div class="comment__item-replyOther">
+                      <span class="item__replyOther-title">Xem thêm
+                        <span class="count__replyOther">7</span>
+                        phản hồi
+                        <i class="fa-solid fa-angle-down"></i>
+                      </span>
+                      <span class="item__replyOther-title hidden__reply">
+                        Ẩn phản hồi
+                        <i class="fa-solid fa-angle-up"></i>
+                      </span>
+              
+                      <!-- Show - Active -->
+                      <div class="comment__item-showOther active__showOther">
+                        <!-- item -->
+                        <div class="comment_showOther_item ">
+                          <!-- avata -->
+                          <div class="comment__item-avata">
+                            <img src="../../assets/img/test_avata.jpg" alt="">
+                          </div>
+                          <!-- main comment -->
+                          <div class="comment__item-detail">
+                            <div class="detail__area-main">
+                              <!-- heading -->
+                              <div class="area__main-title">
+                                <span class="area__title-name">LazyFilms</span>
+                                <div class="area__dot"></div>
+                                <span class="area__tilte-time">3 tháng</span>
+                              </div>
+                              <!-- Detail comment -->
+                              <div class="area__main-detail">
+                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                              </div>
+                            </div>
+                          
+                            <!-- Like , reply comment -->
+                            <div class="comment__item-reply">
+                              <div class="item__reply-like">
+                                <span>
+                                  <i class="fa-solid fa-thumbs-up liked"></i>
+                                  <i class="fa-regular fa-thumbs-up unlike"></i>
+                                  <span class="count__like">19</span>
+                                </span>
+                              </div>
+                          
+                              <div class="item__reply-message">
+                                <span>
+                                  <i class="fa-light fa-message-dots"></i>
+                                  <span class="count__cmt">7</span>
+                                </span>
+                              </div>
+                          
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- item -->
+                        <div class="comment_showOther_item ">
+                          <!-- avata -->
+                          <div class="comment__item-avata">
+                            <img src="../../assets/img/test_avata.jpg" alt="">
+                          </div>
+                          <!-- main comment -->
+                          <div class="comment__item-detail">
+                            <div class="detail__area-main">
+                              <!-- heading -->
+                              <div class="area__main-title">
+                                <span class="area__title-name">LazyFilms</span>
+                                <div class="area__dot"></div>
+                                <span class="area__tilte-time">3 tháng</span>
+                              </div>
+                              <!-- Detail comment -->
+                              <div class="area__main-detail">
+                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                              </div>
+                            </div>
+                          
+                            <!-- Like , reply comment -->
+                            <div class="comment__item-reply">
+                              <div class="item__reply-like">
+                                <span>
+                                  <i class="fa-solid fa-thumbs-up liked"></i>
+                                  <i class="fa-regular fa-thumbs-up unlike"></i>
+                                  <span class="count__like">19</span>
+                                </span>
+                              </div>
+                          
+                              <div class="item__reply-message">
+                                <span>
+                                  <i class="fa-light fa-message-dots"></i>
+                                  <span class="count__cmt">7</span>
+                                </span>
+                              </div>
+                          
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- item -->
+                        <div class="comment_showOther_item ">
+                          <!-- avata -->
+                          <div class="comment__item-avata">
+                            <img src="../../assets/img/test_avata.jpg" alt="">
+                          </div>
+                          <!-- main comment -->
+                          <div class="comment__item-detail">
+                            <div class="detail__area-main">
+                              <!-- heading -->
+                              <div class="area__main-title">
+                                <span class="area__title-name">LazyFilms</span>
+                                <div class="area__dot"></div>
+                                <span class="area__tilte-time">3 tháng</span>
+                              </div>
+                              <!-- Detail comment -->
+                              <div class="area__main-detail">
+                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                              </div>
+                            </div>
+                          
+                            <!-- Like , reply comment -->
+                            <div class="comment__item-reply">
+                              <div class="item__reply-like">
+                                <span>
+                                  <i class="fa-solid fa-thumbs-up liked"></i>
+                                  <i class="fa-regular fa-thumbs-up unlike"></i>
+                                  <span class="count__like">19</span>
+                                </span>
+                              </div>
+                          
+                              <div class="item__reply-message">
+                                <span>
+                                  <i class="fa-light fa-message-dots"></i>
+                                  <span class="count__cmt">7</span>
+                                </span>
+                              </div>
+                          
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                      <!-- Phản hồi khác nếu có , giới hạn < 4, khi đó click thêm -> show thêm-->
+                      <div class="comment__item-replyOther active__showLimited">
+                        <span class="item__replyOther-title">Xem thêm
+                          <span class="count__replyOther">4</span>
+                          phản hồi
+                          <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                        <span class="item__replyOther-title hidden__reply">
+                          Ẩn phản hồi
+                          <i class="fa-solid fa-angle-up"></i>
+                        </span>
+                
+                        <!-- Show - Active -->
+                        <div class="comment__item-showOther active__showOther active__showLimited-item">
+                          <!-- item -->
+                          <div class="comment_showOther_item ">
+                            <!-- avata -->
+                            <div class="comment__item-avata">
+                              <img src="../../assets/img/test_avata.jpg" alt="">
+                            </div>
+                            <!-- main comment -->
+                            <div class="comment__item-detail">
+                              <div class="detail__area-main">
+                                <!-- heading -->
+                                <div class="area__main-title">
+                                  <span class="area__title-name">LazyFilms</span>
+                                  <div class="area__dot"></div>
+                                  <span class="area__tilte-time">3 tháng</span>
+                                </div>
+                                <!-- Detail comment -->
+                                <div class="area__main-detail">
+                                  <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                                </div>
+                              </div>
+                            
+                              <!-- Like , reply comment -->
+                              <div class="comment__item-reply">
+                                <div class="item__reply-like">
+                                  <span>
+                                    <i class="fa-solid fa-thumbs-up liked"></i>
+                                    <i class="fa-regular fa-thumbs-up unlike"></i>
+                                    <span class="count__like">19</span>
+                                  </span>
+                                </div>
+                            
+                                <div class="item__reply-message">
+                                  <span>
+                                    <i class="fa-light fa-message-dots"></i>
+                                    <span class="count__cmt">7</span>
+                                  </span>
+                                </div>
+                            
+                              </div>
+                            </div>
+  
+                          </div>
+  
+                          <!-- item -->
+                          <div class="comment_showOther_item ">
+                            <!-- avata -->
+                            <div class="comment__item-avata">
+                              <img src="../../assets/img/test_avata.jpg" alt="">
+                            </div>
+                            <!-- main comment -->
+                            <div class="comment__item-detail">
+                              <div class="detail__area-main">
+                                <!-- heading -->
+                                <div class="area__main-title">
+                                  <span class="area__title-name">LazyFilms</span>
+                                  <div class="area__dot"></div>
+                                  <span class="area__tilte-time">3 tháng</span>
+                                </div>
+                                <!-- Detail comment -->
+                                <div class="area__main-detail">
+                                  <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                                </div>
+                              </div>
+                            
+                              <!-- Like , reply comment -->
+                              <div class="comment__item-reply">
+                                <div class="item__reply-like">
+                                  <span>
+                                    <i class="fa-solid fa-thumbs-up liked"></i>
+                                    <i class="fa-regular fa-thumbs-up unlike"></i>
+                                    <span class="count__like">19</span>
+                                  </span>
+                                </div>
+                            
+                                <div class="item__reply-message">
+                                  <span>
+                                    <i class="fa-light fa-message-dots"></i>
+                                    <span class="count__cmt">7</span>
+                                  </span>
+                                </div>
+                            
+                              </div>
+                            </div>
+  
+                          </div>
+  
+                          <!-- item -->
+                          <div class="comment_showOther_item ">
+                            <!-- avata -->
+                            <div class="comment__item-avata">
+                              <img src="../../assets/img/test_avata.jpg" alt="">
+                            </div>
+                            <!-- main comment -->
+                            <div class="comment__item-detail">
+                              <div class="detail__area-main">
+                                <!-- heading -->
+                                <div class="area__main-title">
+                                  <span class="area__title-name">LazyFilms</span>
+                                  <div class="area__dot"></div>
+                                  <span class="area__tilte-time">3 tháng</span>
+                                </div>
+                                <!-- Detail comment -->
+                                <div class="area__main-detail">
+                                  <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc 18h30.</span>
+                                </div>
+                              </div>
+                            
+                              <!-- Like , reply comment -->
+                              <div class="comment__item-reply">
+                                <div class="item__reply-like">
+                                  <span>
+                                    <i class="fa-solid fa-thumbs-up liked"></i>
+                                    <i class="fa-regular fa-thumbs-up unlike"></i>
+                                    <span class="count__like">19</span>
+                                  </span>
+                                </div>
+                            
+                                <div class="item__reply-message">
+                                  <span>
+                                    <i class="fa-light fa-message-dots"></i>
+                                    <span class="count__cmt">7</span>
+                                  </span>
+                                </div>
+                            
+                              </div>
+                            </div>
+  
+                          </div>
+                        </div>
+                      </div>
+
+
+                    <!-- Reply user to user --> 
+                    <div class="user__reply">
+                      <div class="comment__list-item">
+                        <textarea name = "cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận...">@LazyFilms: </textarea>
+                        <div class="send__cmt">
+                          <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <!-- item cmt-->
+              <div class="comment__item">
+                <div class="comment__item-avata">
+                  <img src="../../assets/img/test_avata.jpg" alt="">
+                </div>
+                <!-- main comment -->
+                <div class="comment__item-detail">
+                  <div class="comment__detail-area">
+                    <div class="detail__area-main">
+                      <!-- heading -->
+                      <div class="area__main-title">
+                        <span class="area__title-name">Phi Long</span>
+                        <div class="area__dot"></div>
+                        <span class="area__tilte-time">16 ngày</span>
+                      </div>
+                      <!-- Detail comment -->
+                      <div class="area__main-detail">
+                        <span>main được buff bẩn thế :)</span>
+                      </div>
+                    </div>
+              
+                    <!-- Like , reply comment -->
+                    <div class="comment__item-reply">
+                      <div class="item__reply-like">
+                        <span>
+                          <i class="fa-solid fa-thumbs-up liked"></i>
+                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <span class="count__like">17</span>
+                        </span>
+                      </div>
+              
+                      <div class="item__reply-message">
+                        <span>
+                          <i class="fa-light fa-message-dots"></i>
+                          <span class="count__cmt">2</span>
+                        </span>
+                      </div>
+              
+                    </div>
+                    <!-- Thêm other ở đây -->
+                  </div>
+                  
+                </div>
+              
+                <!-- btn tải thêm bình luận -->
+              
+              </div>
+
+              <!-- item cmt-->
+              <div class="comment__item">
+                <div class="comment__item-avata">
+                  <img src="../../assets/img/img_user.jpg" alt="">
+                </div>
+                <!-- main comment -->
+                <div class="comment__item-detail">
+                  <div class="comment__detail-area">
+                    <div class="detail__area-main">
+                      <!-- heading -->
+                      <div class="area__main-title">
+                        <span class="area__title-name">Cao Tuấn</span>
+                        <div class="area__dot"></div>
+                        <span class="area__tilte-time">2 ngày</span>
+                      </div>
+                      <!-- Detail comment -->
+                      <div class="area__main-detail">
+                        <span>Khứa có râu dame bịp vãi</span>
+                      </div>
+                    </div>
+              
+                    <!-- Like , reply comment -->
+                    <div class="comment__item-reply">
+                      <div class="item__reply-like">
+                        <span>
+                          <i class="fa-solid fa-thumbs-up liked"></i>
+                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <span class="count__like">12</span>
+                        </span>
+                      </div>
+              
+                      <div class="item__reply-message">
+                        <span>
+                          <i class="fa-light fa-message-dots"></i>
+                          <span class="count__cmt">2</span>
+                        </span>
+                      </div>
+              
+                    </div>
+              
+                    <!-- Thêm item other ở đây -->
+                  </div>
+                  
+                </div>
+
+                <!-- btn tải thêm bình luận -->
+              
+              </div>
+
+              <!-- item cmt-->
+              <div class="comment__item">
+                <div class="comment__item-avata">
+                  <img src="../../assets/img/img_user_1.jpg" alt="">
+                </div>
+                <!-- main comment -->
+                <div class="comment__item-detail">
+                  <div class="comment__detail-area">
+                    <div class="detail__area-main">
+                      <!-- heading -->
+                      <div class="area__main-title">
+                        <span class="area__title-name">Waifu</span>
+                        <div class="area__dot"></div>
+                        <span class="area__tilte-time">2 ngày</span>
+                      </div>
+                      <!-- Detail comment -->
+                      <div class="area__main-detail">
+                        <span>@@</span>
+                      </div>
+                    </div>
+              
+                    <!-- Like , reply comment -->
+                    <div class="comment__item-reply">
+                      <div class="item__reply-like">
+                        <span>
+                          <i class="fa-solid fa-thumbs-up liked"></i>
+                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <span class="count__like">10</span>
+                        </span>
+                      </div>
+              
+                      <div class="item__reply-message">
+                        <span>
+                          <i class="fa-light fa-message-dots"></i>
+                          <span class="count__cmt">4</span>
+                        </span>
+                      </div>
+              
+                    </div>
+              
+                    <!-- Thêm item other ở đây -->
+                  </div>
+                  
+                </div>
+
+                <!-- btn tải thêm bình luận -->
+              
+              </div>
+
+              <!-- item cmt-->
+              <div class="comment__item">
+                <div class="comment__item-avata">
+                  <img src="../../assets/img/img_user.jpg" alt="">
+                </div>
+                <!-- main comment -->
+                <div class="comment__item-detail">
+                  <div class="comment__detail-area">
+                    <div class="detail__area-main">
+                      <!-- heading -->
+                      <div class="area__main-title">
+                        <span class="area__title-name">Thiện Khang</span>
+                        <div class="area__dot"></div>
+                        <span class="area__tilte-time">10 ngày</span>
+                      </div>
+                      <!-- Detail comment -->
+                      <div class="area__main-detail">
+                        <span>Chắc edit cực lắm, đánh nhau bùng chèo</span>
+                      </div>
+                    </div>
+              
+                    <!-- Like , reply comment -->
+                    <div class="comment__item-reply">
+                      <div class="item__reply-like">
+                        <span>
+                          <i class="fa-solid fa-thumbs-up liked"></i>
+                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <span class="count__like">7</span>
+                        </span>
+                      </div>
+              
+                      <div class="item__reply-message">
+                        <span>
+                          <i class="fa-light fa-message-dots"></i>
+                          <span class="count__cmt">4</span>
+                        </span>
+                      </div>
+              
+                    </div>
+              
+                    <!-- Thêm item other ở đây -->
+                  </div>
+                  
+                </div>
+
+                <!-- btn tải thêm bình luận -->
+              
+              </div>
+
+              
+            </div>
+
+            <!-- Button Tải thêm cmt -->
+            <div class="comment__moreLoad">Tải thêm bình luận</div>
           </div>
         </div>
-        <!-- Comment -->
-
       </div>
 
 
     </div>
+
     <!-- Footer -->
     <footer id="footer">
       <div class="wrap__footer">
@@ -1029,7 +1917,9 @@
         let controlNext = document.querySelector('.video__control-next');
         let controlSetting = document.querySelector('.video__control-setting');
         let controlFullscreen = document.querySelector('.video__control-fullscreen');
-    
+          
+         
+
         // Play / Pause Video
         /* controlPlay.addEventListener('click', () => {
             video.play();
