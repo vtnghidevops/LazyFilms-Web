@@ -3217,3 +3217,92 @@ font-size: 1.3rem;
     transform: translateY(-0.5rem);
   }
 }
+.wrap_admin{
+  height: 100%;
+}
+.slidebar {
+  width: 13%;
+  background-color: #6d5454;
+  height: 100rem;
+
+}
+
+.slidebar .slidebar_menu-items{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 1rem 1rem;
+  padding-left: 2rem;
+  border-bottom: 0.5px solid hsl(156, 9%, 77%);
+ }
+ .slidebar .header_logo{
+  height: 7rem;
+  padding-bottom: 4rem;
+  border-bottom: 0.0001rem solid #a6b8c0;
+  background-color: #ce9d9dcc;
+}
+.slidebar .slidebar_menu-items:hover{
+  background-color:#3f3333;
+}
+.slidebar .slidebar_menu-items a{
+  text-decoration: none;
+  color:antiquewhite;
+  
+}
+.wrap_admin{
+  display: -webkit-box;
+}
+
+.admin_carousel{
+  width: 100%;
+  height: 100%;
+}
+
+.admin_carousel-webName{
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  position: relative;
+  text-align: center;
+  background-color: #ce9d9dcc;
+}
+.carousel_content-addFilm{
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+  padding: 2rem 35%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.carousel_content-addFilm-btn{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  align-items: center;
+  border: 0.02rem solid;
+}
+.carousel_content-addFilm-btn:hover{
+  background-color: #b8b7b7;
+  
+}
+
+.carousel_content-listFilms .title {
+  text-align: center;
+}
+.carousel_content-listFilms .carousel_content-findFilms{
+  padding-top: 1rem;
+  text-align: -webkit-center;
+}
+.carousel_content-listFilms{
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.carousel_content-findFilms-input {
+  padding-left: 0.5rem;
+  font-family: 'Alata';
+}
+.carousel_content-findFilms-btn{
+  padding: 0 0.2rem;
+}
