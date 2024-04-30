@@ -262,13 +262,6 @@ buttons.forEach(button => {
   });
 });
 
-//Handle Show/Off Aside
-let aside = document.querySelector('.aside')
-let btnAside = document.querySelector('.aside .show__trending')
-
-btnAside.addEventListener('click',()=>{
-  
-})
 
 
 // scroll to top
@@ -305,6 +298,18 @@ document.querySelector('.return-to-top').addEventListener('click', function(e) {
   window.requestAnimationFrame(step);
 });
 
+// Open premium
+const vip = document.getElementById('premium')
+const btnVip = document.querySelector('.header__nav-premium ')
+const btnClosePremium = document.querySelector('.premium__section-heading i')
+btnVip.addEventListener('click',()=>{
+  vip.style.display = "block"
+  vip.style.opacity = 1
+})
 
-
-
+btnClosePremium.addEventListener('click',()=>{
+  vip.style.opacity = '0';
+  setTimeout(() => {
+    vip.style.display = 'none';
+  }, 500);
+})
