@@ -4443,6 +4443,7 @@ font-size: 1.3rem;
   }
 }
 
+
 /* Share video */
 .container__shareVideo {
   display: flex;
@@ -4474,6 +4475,7 @@ font-size: 1.3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   color: #fff;
   padding: 1.5rem;
 }
@@ -5420,4 +5422,219 @@ font-size: 1.3rem;
 
 .section__change-password {
   height: 50rem;
+=======
+}
+
+.wrap_admin{
+  height: 100%;
+}
+.slidebar {
+  width: 13%;
+  background-color: #E7E9EB;
+  height: auto;
+
+}
+
+.slidebar .slidebar_menu-items{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 1rem 1rem;
+  padding-left: 2rem;
+  border-bottom: 0.5px solid hsl(156, 9%, 77%);
+ }
+ .slidebar .header_logo{
+  height: 7rem;
+  padding-bottom: 4rem;
+  border-bottom: 0.0001rem solid #FFFFFF;
+ 
+}
+.slidebar .slidebar_menu-items:hover{
+  background-color: #4caf50;
+}
+.slidebar .slidebar_menu-items a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  
+}
+.wrap_admin{
+  display: -webkit-box;
+}
+
+.admin_carousel{
+  height: 100%;
+}
+
+.admin_carousel-webName{
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  position: relative;
+  display: inline-flex;
+  background-color: #ffffff;
+}
+.carousel_admin-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel_content-addFilm,
+.carousel_content-listFilms {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel_content-addFilm-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 2rem;
+  width: 98%;
+ 
+}
+
+.carousel_content-addFilm-btn:hover {
+  background-color: #45a049;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carousel_content-findFilms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carousel_content-findFilms-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.carousel_content-findFilms-btn {
+  padding: 8px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel_content-findFilms-btn:hover {
+  background-color: #45a049;
+}
+
+.admin_login{
+  position: relative;
+  margin-left: 28%;
+  border: #000000 solid 0.02rem;
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  background-color: #d5cccc;
+}
+.admin_carousel-webName h1{
+  padding-left: 42%;
+}
+.container_addFilms {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: shapeTranslate 0.3s ease-in;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+}
+.addFilms_header a{
+  float:right;
+  font-size: 1.5rem;
+}
+
+
+.container_addFilms h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container_addFilms form {
+  margin-bottom: 15px;
+}
+
+.container_addFilms form h3 {
+  margin-bottom: 5px;
+}
+
+.container_addFilms input[type="text"],
+.container_addFilms textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure that padding and border don't increase the width */
+  margin-top: 5px;
+  resize: none;
+}
+
+.container_addFilms input[type="file"] {
+  margin-top: 5px;
+}
+
+.container_addFilms button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.container_addFilms button:hover {
+  background-color: #45a049;
+}
+
+.container_addFilms label {
+  margin-right: 10px;
+}
+.admin_listFilms{
+  margin-top: 2rem;
+}
+.admin_listFilms th {
+  border-right: #b8b7b7 solid 0.02px;
+  padding: 0 0.5rem;
+  background-color: #b8b7b7;
+}
+
+.addFilm__section-close{
+  color: #000000;
+}
+.addFilm__section-close:hover{
+  color: var(--text-color);
+>>>>>>> 35c8129b9333ca9eb0b19e96c3e7bcce02fcd0d6
 }

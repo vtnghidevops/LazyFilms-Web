@@ -81,8 +81,6 @@ backLogin.addEventListener('click', () => {
 });
 
 
-
-
 // Handle slider
 const sld_list = document.querySelector('.slider__list')
 const sld_items = document.querySelectorAll('.slider__list-item')
