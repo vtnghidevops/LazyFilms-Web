@@ -29,12 +29,12 @@
         <div class="menu-bar">
             <div class="slidebar_menu">
                 <ul class="slidebar_menu-list" id="admin_sidebar">
-                    <li class="slidebar_menu-items">
+                    <li class="slidebar_menu-items" id="current">
                         <a href="./dashboard.html">
                             Dashboard
                         </a> 
                     </li>
-                    <li class="slidebar_menu-items" id="current" >
+                    <li class="slidebar_menu-items">
                         <a href="./Users.html">
                             Users
                         </a>
@@ -44,7 +44,7 @@
                             Phim
                         </a>
                     </li>
-                    <li class="slidebar_menu-items">
+                    <li class="slidebar_menu-items" >
                         <a href="./Report.html">
                             Báo Lỗi
                         </a>
@@ -67,54 +67,23 @@
         <div class="admin_carousel-webName">
             <h1>LAZYFILMS.COM</h1>
         </div>
-        <div class="user__heading">
-            <div class="user__heading-header">
-           <h2>USERS</h2>
-           <h3 class="Number_of_Users">(1)</h3>
+        <div class="">
+           <table class="dashboard__content">
+            <tr>
+                <th width="25%"><a href="">Số lượng phim</a></th>
+                <th width="25%"><a href="">Số lượng Users</a></th>
+                <th width="25%"><a href="">Số lượng báo lỗi</a></th>
+                <th width="25%"><a href="">Số lượng yêu cầu phim</a></th>
+            </tr>
+            <tr>
+                <td class="NumberOfFilms">100</td>
+                <td class="NumberOfUsers">100</td>
+                <td class="NumberOfReport">100</td>
+                <td class="NumberOfRequire">100</td>
+            </tr>
+           </table>
         </div>
-           <div>
-                <ul class="user__heading-nav">
-                    <li class="user__heading-nav-item"><a href="#">All</a></li>
-                    <li class="user__heading-nav-itemUsers"><a href="#">Users</a></li>
-                    <li class="user__heading-nav-item"><a href="#">Administrators</a></li>
-                    
-                        <form class="user__heading-nav-item-search">
-                            <input type="text"/> 
-                            <button>search users</button>         
-                        </form>
-                </ul>
-           </div>
-        </div>
-        <div class="user__content">
-            <form class="user__choose-all">
-                <input type="checkbox" />
-                <label> Chọn tất cả</label>
-            </form>
-            <table class="user__infor" width="87%">
-               <thead>
-                    <tr>
-                        <th width="4%"></th>
-                        <th width="25%">UserName</th>
-                        <th width="23%">Name</th>
-                        <th width="23%">Email</th>
-                        <th width="15%">Role</th>
-                        <th width="10%">Post</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"/></td>
-                        <td>ngvana01</td>
-                        <td>NGuyễn Văn A</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>user</td>
-                        <td>1</td>
-
-                    </tr>
-               </thead>
-            </table>
-            <button class="btn__delete-Users">Delete</button>
-            <!--Add Users Section-->
-
-        </div>
+       
     </div>
 </body>
 

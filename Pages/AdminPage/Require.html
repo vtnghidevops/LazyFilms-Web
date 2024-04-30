@@ -34,7 +34,7 @@
                             Dashboard
                         </a> 
                     </li>
-                    <li class="slidebar_menu-items" id="current" >
+                    <li class="slidebar_menu-items">
                         <a href="./Users.html">
                             Users
                         </a>
@@ -49,7 +49,7 @@
                             Báo Lỗi
                         </a>
                     </li>
-                    <li class="slidebar_menu-items">
+                    <li class="slidebar_menu-items" id="current" >
                         <a href="./Require.html">
                             Yêu Cầu Phim
                         </a>
@@ -66,54 +66,24 @@
     <div class="admin_carousel">
         <div class="admin_carousel-webName">
             <h1>LAZYFILMS.COM</h1>
-        </div>
-        <div class="user__heading">
-            <div class="user__heading-header">
-           <h2>USERS</h2>
-           <h3 class="Number_of_Users">(1)</h3>
-        </div>
-           <div>
-                <ul class="user__heading-nav">
-                    <li class="user__heading-nav-item"><a href="#">All</a></li>
-                    <li class="user__heading-nav-itemUsers"><a href="#">Users</a></li>
-                    <li class="user__heading-nav-item"><a href="#">Administrators</a></li>
-                    
-                        <form class="user__heading-nav-item-search">
-                            <input type="text"/> 
-                            <button>search users</button>         
-                        </form>
-                </ul>
-           </div>
-        </div>
-        <div class="user__content">
-            <form class="user__choose-all">
-                <input type="checkbox" />
-                <label> Chọn tất cả</label>
-            </form>
-            <table class="user__infor" width="87%">
-               <thead>
-                    <tr>
-                        <th width="4%"></th>
-                        <th width="25%">UserName</th>
-                        <th width="23%">Name</th>
-                        <th width="23%">Email</th>
-                        <th width="15%">Role</th>
-                        <th width="10%">Post</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"/></td>
-                        <td>ngvana01</td>
-                        <td>NGuyễn Văn A</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>user</td>
-                        <td>1</td>
-
-                    </tr>
-               </thead>
+        </div>      
+        <div class="required__content">
+            <table class="required__list" width="80%">
+                <tr>
+                    <th width="15%">UserName</th>
+                    <th width="15%%">Tên phim</th>
+                    <th width="15%%">Tên diễn viên</th>
+                    <th width="30%">Mô tả</th>
+                    <th width="25%">Tình trạng</th>
+                </tr>
+                <tr>
+                    <td class="UserName">nguyenvana</td>
+                    <td class="NameOfFilm">#</td>
+                    <td class="ActorsName"></td>
+                    <td class="RequiredDesc"></td>
+                    <td class="RequiredStatus"><a href="">Chưa phản hồi</a></td>
+                </tr>
             </table>
-            <button class="btn__delete-Users">Delete</button>
-            <!--Add Users Section-->
-
         </div>
     </div>
 </body>
