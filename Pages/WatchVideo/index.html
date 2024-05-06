@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <script src="../../script/movieGenre.js" defer></script>
-
+  <script src="../../script/video.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -1058,20 +1059,29 @@
             <i class="fa-duotone fa-play"></i>
             <!-- <span class = "text__hover">Trình phát video đang loading</span> -->
           </div>
+          <div class="video__setting">
+            <ul class="video__setting-quality">
+              <li class="video__setting-heading">Chất lượng</li>
+              <li class="video__setting-items">Auto</li>
+              <li class="video__setting-items">1080p</li>
+              <li class="video__setting-items">720p</li>
+              <li class="video__setting-items">480p</li>
+            </ul>
+          </div>
   
           <div class="video__control-bar">
             <!-- left -->
             <div class="control__bar-left">
-              <button class="video__control-watch">
+              <button class="video__control-watch" id="videoControl">
                 <!-- Stop video -->
-                <div class="control__watch-play">
+                <div class="control__watch-play" id="videoPlay">
                   <i class="fa-solid fa-play"></i>
                   <span class="control__play-hover">Phát</span>
                 </div>
   
                 <!-- Start video -->
-                <div class="control__watch-stop">
-                  <i class="fa-solid fa-pause"></i>
+                <div class="control__watch-stop" id="videoStop">
+                  <i id="iconControl" class="fa-solid fa-pause"></i>
                   <span class="control__pause-hover">Tạm dừng</span>
                 </div>
   
@@ -1099,7 +1109,7 @@
   
                   <!-- Bật tiếng -->
                   <div class="control__volume-open">
-                    <i class="fa-solid fa-volume"></i>
+                    <i class="fa-solid fa-volume-slash"></i>
                     <span class="control__open-hover">Bật tiếng</span>
                     <!-- Edit tiếng -->
   
@@ -1224,8 +1234,8 @@
             <div class="desc__right-heading">
               <button class="right__heading-follow">
                 <span class="btn__heading-text">
-                  <i class="fa-regular fa-heart heart__liked"></i>
-                  <i class="fa-solid fa-heart heart__dont--liked"></i>
+                  <img id="unfollowHeart" class="icon__followed-Heart" src="/assets/img/icon-heart-unfollowed.png">
+                  <img id="followHeart" class="icon__followed-Heart" src="/assets/img/icons8-heart-50.png">
                   Theo dõi
                 </span>
               </button>
@@ -2637,79 +2647,6 @@
   
     </footer>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Handle Video
-        let video = document.querySelector('.state__video');
-        let controlPlay = document.querySelector('.control__watch-play');
-        let controlStop = document.querySelector('.control__watch-stop');
-        let controlSkipBack = document.querySelector('.video__control-skipBack');
-        let controlSkipForward = document.querySelector('.video__control-skipFoward');
-        let controlVolumeMuted = document.querySelector('.control__volume-muted');
-        let controlVolumeOpen = document.querySelector('.control__volume-open');
-        let controlReport = document.querySelector('.video__control-report');
-        let controlNext = document.querySelector('.video__control-next');
-        let controlSetting = document.querySelector('.video__control-setting');
-        let controlFullscreen = document.querySelector('.video__control-fullscreen');
-          
-         
-
-        // Play / Pause Video
-        /* controlPlay.addEventListener('click', () => {
-            video.play();
-        });
-        controlStop.addEventListener('click', () => {
-            video.pause();
-        }); */
-        controlPlay.addEventListener('click', () => {
-          if (video.paused) {
-              video.play();
-          } else {
-              video.pause();
-          }
-      });
-    
-        // Tua lại/tua tới 10s
-        controlSkipBack.addEventListener('click', () => {
-            video.currentTime -= 10;
-        });
-        controlSkipForward.addEventListener('click', () => {
-            video.currentTime += 10;
-        });
-    
-        // Tắt/bật tiếng
-        controlVolumeMuted.addEventListener('click', () => {
-            video.muted = true;
-        });
-        controlVolumeOpen.addEventListener('click', () => {
-            video.muted = false;
-        });
-    
-        // Các tính năng khác
-        controlReport.addEventListener('click', () => {
-            alert('Báo cáo sự cố đã được gửi!');
-        });
-        controlNext.addEventListener('click', () => {
-            alert('Tập tiếp theo đang được tải!');
-        });
-        controlSetting.addEventListener('click', () => {
-            alert('Cài đặt đang được mở!');
-        });
-        controlFullscreen.addEventListener('click', () => {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { /* Firefox */
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { /* IE/Edge */
-                video.msRequestFullscreen();
-            }
-        });
-    });
-    </script>
-    
 </body>
 
 </html>

@@ -3528,6 +3528,7 @@ font-size: 1.3rem;
   width: 8rem;
   cursor: pointer;
   border-radius: 50%;
+  display: none;
 }
 .video__loading i {
   position: absolute;
@@ -3606,6 +3607,7 @@ font-size: 1.3rem;
 
 /* control hover and block */
 
+
 .control__volume-open .control__open-hover,
 .control__volume-muted .control__muted-hover,
 .video__control-skipBack .control__skipBack-hover,
@@ -3619,7 +3621,7 @@ font-size: 1.3rem;
   line-height: 1.5rem;
   top: 0;
   left: -0.9rem;
-  width: 5rem;
+  width: fit-content;
   margin-top: -4.5rem;
   background-color: var(--background-color);
   border-radius: 0.8rem;
@@ -5579,7 +5581,7 @@ font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
-.container_addFilms form {
+.container_addFilms div {
   margin-bottom: 15px;
 }
 
@@ -5773,3 +5775,53 @@ font-size: 1.3rem;
  #current{
   background-color: #45a049;
 }
+
+/*Active for Follow button*/
+.active__btn-follow {
+    display: none;
+  
+}
+
+.active__btn-videoControl{
+  display:block;
+}
+.video__setting{
+  position: absolute;
+  right: 5%;
+  bottom: 7rem;
+  height: 18rem;
+  width: 15%;
+  background-color: #232323;
+  border-radius: 0.5rem;
+  display: none;
+}
+.video__setting-quality li{
+  font-size: 1.5rem;
+  color: rgb(182, 181, 181);
+  padding: 0.7rem;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.video__setting-quality .video__setting-heading{
+  padding-top: 2rem ;
+  font-size: 1.9rem;
+  color: white;
+}
+.video__setting-quality .video__setting-items:hover{
+  color:white;
+}
+
+.video__setting-item-active{
+  color:white;
+}
+
+.icon__followed-Heart{
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#followHeart{
+  display: none;
+}
+
