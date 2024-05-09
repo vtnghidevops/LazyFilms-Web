@@ -3552,7 +3552,7 @@ font-size: 1.3rem;
   bottom: 0;
   transform: translate(4%,-80%);
   padding: 0.5rem;
-  width: 100%;
+  width: 97%;
   margin-bottom: -2.8rem;
 }
 
@@ -3581,7 +3581,7 @@ font-size: 1.3rem;
 .control__bar-left .video__control-time {
   position: absolute;
   top: 0;
-  margin-top: -1.5rem;
+  margin-top: -2rem;
   left: 0.5rem;
 }
 
@@ -3596,11 +3596,9 @@ font-size: 1.3rem;
 
 /* control play */
 .control__watch-play {
-
+  display: none
 }
-.control__watch-stop {
-  display: none;
-}
+.control__watch-stop,
 .video__control-bar button i {
   color: var(--text-color-light);
 }
@@ -3668,7 +3666,7 @@ font-size: 1.3rem;
 .video__control-process {
   position: absolute;
   height: 0.5rem;
-  width: 80%;
+  width: 85%;
   background-color: rgba(115, 133, 159, 0.5);
   top: 0;
   margin: -0.8rem 0 0 5.4rem;
@@ -3700,8 +3698,8 @@ font-size: 1.3rem;
 
 /* control bar right */
 .control__bar-right {
-  display: flex;
-  width: 25%;
+  position: absolute;
+  right: 0.5%
 }
 
 
@@ -3733,7 +3731,7 @@ font-size: 1.3rem;
 
 /* control bar setting */
 .video__control-setting .control__setting-hover {
-  right: 8rem;
+  right: 4rem;
   width: 10rem;
 }
 
@@ -3748,8 +3746,8 @@ font-size: 1.3rem;
 .video__control-duration {
   position: absolute;
   top: 0;
-  margin-top: -1.5rem;
-  right: 7.5rem;
+  margin-top: -2rem;
+  right: 2rem;
 }
 
 .control__duration-display {
@@ -4361,14 +4359,11 @@ font-size: 1.3rem;
   display: block;
 }
 .comment_showOther_item {
-  display: flex;
+  display: none;
   margin-bottom: 2rem;
 }
 
-.comment_showOther_item {
-  display: none;
-  /* Flex */
-}
+
 /* Item mở rộng thêm khi reply > 3 */
 .active__showLimited-item {
   display: none;
@@ -5779,7 +5774,6 @@ font-size: 1.3rem;
 /*Active for Follow button*/
 .active__btn-follow {
     display: none;
-  
 }
 
 .active__btn-videoControl{
@@ -5787,10 +5781,10 @@ font-size: 1.3rem;
 }
 .video__setting{
   position: absolute;
-  right: 5%;
+  right: 2%;
   bottom: 7rem;
   height: 18rem;
-  width: 15%;
+  width: 13.5rem;
   background-color: #232323;
   border-radius: 0.5rem;
   display: none;
@@ -5814,6 +5808,38 @@ font-size: 1.3rem;
 .video__setting-item-active{
   color:white;
 }
+.video__next{
+  position: absolute;
+  right:3%;
+  bottom: 7rem;
+  width: 25rem;
+  height: 15rem;
+  background-color: #1f1f1f;
+  border-radius: 0.5rem;
+  display: none;
+}
+.video__next img {
+  max-width: 100%;
+  width: 13rem;
+  position: relative;
+}
+.video__next-Heading {
+  text-align: center;
+  color: rgb(222, 207, 207);
+  font-size: 1.5rem;
+  border-bottom: #616161 solid 0.001rem;
+  padding: 1rem;
+}
+.video__next-Content span{
+  font-size: 1.3rem;
+  color: #e7e2e2;
+  padding-left: 1rem;
+}
+.video__next-Content{
+  padding: 1rem;
+  display: flex;
+}
+
 
 .icon__followed-Heart{
   width: 2.2rem;
@@ -5825,3 +5851,38 @@ font-size: 1.3rem;
   display: none;
 }
 
+.video__container .full-screen{
+  max-width:  initial;
+  width: 100%;
+}
+
+.comment_showOther_item-show{
+  display: flex;
+}
+.user-authorization{
+  display: inline-flex;
+}
+.user-authorization form{
+  padding: 0 1rem
+}
+.user-authorization form button{
+  width: 7rem;
+  height: 3rem;
+}
+
+.admin-userForm button{
+  background-color: green;
+  border-style: none;
+  border-radius: 0.4rem;
+
+}
+.vip-userForm button{
+  background-color: rgb(243, 243, 82);
+  border-style: none;
+  border-radius: 0.4rem;
+}
+.delete-userForm button{
+  background-color: rgb(213, 49, 44);
+  border-style: none;
+  border-radius: 0.4rem;
+}

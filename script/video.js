@@ -1,36 +1,3 @@
-let btn_follow = document.getElementsByClassName("right__heading-follow")
-let btn_share = document.getElementsByClassName("right__heading-share")
-let btn_closeShare = document.getElementsByClassName("share__section-close")
-
-
-
-//click button share videos
-$(document).ready(function(){
-    $(btn_share).click(function(){
-        $("#shareVD").css('opacity','1');
-        $("#shareVD").show();
-    });
-});
-//click button follow
-// $(document).ready(function(){
-//     $(btn_follow).click(function(){
-//         $("#followHeart").toggleClass("active__btn-follow")
-//     });
-// });
-$(document).ready(function(){
-    $(btn_follow).click(function(){
-        $("#followHeart").toggleClass("active__btn-follow");
-        $('.icon__followed-Heart').toggle();
-    });
-});
-
-
-//btn close share video section
-$(document).ready(function(){
-    $(btn_closeShare).click(function(){
-        $("#shareVD").hide();
-    });
-});
 
 
 
@@ -47,6 +14,32 @@ $(document).ready(function() {
     let controlNext = $('.video__control-next');
     let controlSetting = $('.video__control-setting');
     let controlFullscreen = $('.video__control-fullscreen');
+    let btnFollow = $(".right__heading-follow")
+    let btnShare = $(".right__heading-share")
+    let btnCloseShare = $(".share__section-close")
+
+    //click button share videos
+    $(document).ready(function(){
+        $(btnShare).click(function(){
+            $("#shareVD").css('opacity','1');
+            $("#shareVD").show();
+        });
+    });
+    //Click follow 
+    $(document).ready(function(){
+        $(btnFollow).click(function(){
+            $("#followHeart").toggleClass("active__btn-follow");
+            $('.icon__followed-Heart').toggle();
+        });
+    });
+
+
+    //btn close share video section
+    $(document).ready(function(){
+        $(btnCloseShare).click(function(){
+            $("#shareVD").hide();
+        });
+    });
 
    //play/pause video 
     $(document).ready(function() {
@@ -111,23 +104,76 @@ $(document).ready(function() {
     controlSetting.click( function() {
         $('.video__setting').toggle();
     });
+
+    // Fullscreen mode
+    let container = $('#container');
     controlFullscreen.on('click', function() {
-        let elem = video.get(0);
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-            elem.msRequestFullscreen();
+        if (!document.fullscreenElement) {
+            let elem = container.get(0);
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+                $('.video__control-process').css('width', '90%')
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+                $('.video__control-process').css('width', '90%')
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+                $('.video__control-process').css('width', '90%')
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+                $('.video__control-process').css('width', '90%')
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+                $('.video__control-process').css('width', '85%')
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+                $('.video__control-process').css('width', '85%')
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                document.webkitExitFullscreen();
+                $('.video__control-process').css('width', '85%')
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+                $('.video__control-process').css('width', '85%')
+            }
         }
+
+    });
+
+    //Next episode
+    controlNext.mouseover(function(){
+        $(".video__next").show();
+    });
+    controlNext.mouseout(function(){
+        $(".video__next").hide();
+    });
+
+
+});
+
+
+     //Comment
+let moreCmt = $('.comment__item-replyOther')
+let btnLikeCmt = $('.item__reply-like')
+$(document).ready(function(){
+    moreCmt.click(function(){
+    $('.comment_showOther_item').toggleClass("comment_showOther_item-show");
+    $('.item__replyOther-title').toggleClass('hidden__reply');
     });
 });
 
 
+$(document).ready(function(){
+    btnLikeCmt.click(function(){
+        // Tìm phần tử cha chung chứa nút được nhấp và các phần tử liên quan
+        var parentContainer = $(this).closest('.comment__item-detail');
 
+        // Thay đổi các phần tử liên quan bên trong phần tử cha
+        parentContainer.find('.item__reply-like .liked').toggle();
+        parentContainer.find('.item__reply-like .unlike').toggle();
+    });
+});
 
-
-
+let 
 

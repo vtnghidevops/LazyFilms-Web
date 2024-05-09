@@ -95,10 +95,10 @@
                     <tr>
                         <th width="4%"></th>
                         <th width="25%">UserName</th>
-                        <th width="23%">Name</th>
-                        <th width="23%">Email</th>
-                        <th width="15%">Role</th>
-                        <th width="10%">Post</th>
+                        <th width="20%">Name</th>
+                        <th width="20%">Email</th>
+                        <th width="10%">Role</th>
+                        <th width="21%">Post</th>
                     </tr>
                     <tr>
                         <td><input type="checkbox"/></td>
@@ -106,13 +106,29 @@
                         <td>NGuyễn Văn A</td>
                         <td>nguyenvana@gmail.com</td>
                         <td>user</td>
-                        <td>1</td>
+                        <td>
+                            <div class="user-authorization">
+                                <form class="admin-userForm" action="">
+                                    <input type="hidden" name="_method" value="ADMIN">
+                                    <input type="hidden" name="userID" value="">
+                                    <button type="submit" class="btn_vipUser">Admin</button>
+                                </form>
+                                <form class="vip-userForm" action="">
+                                    <input type="hidden" name="_method" value="VIP">
+                                    <input type="hidden" name="userID" value="">
+                                    <button type="submit" class="btn_vipUser">Vip</button>
+                                </form>
+                                <form class="delete-userForm" action="delete">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="userID" value="">
+                                    <button type="submit" class="btn_deleteUser">Delete</button>
+                                </form>
+                            </div>
+                        </td>
 
                     </tr>
                </thead>
             </table>
-            <button class="btn__delete-Users">Delete</button>
-            <!--Add Users Section-->
 
         </div>
     </div>
