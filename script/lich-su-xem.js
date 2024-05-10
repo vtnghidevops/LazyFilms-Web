@@ -31,11 +31,11 @@ if (checkListHistoryToAdd()) {
   });
 
   $('.history__item-target').hover(function () {
-    if (!isButtonChangeClicked) {
+    if (isButtonChangeClicked == false) {
       $(this).find('.btn__play-history').show();
     }
   }, function () {
-    if (!isButtonChangeClicked) {
+    if (isButtonChangeClicked == true) {
       $(this).find('.btn__play-history').hide();
     }
   });
