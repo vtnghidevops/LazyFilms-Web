@@ -31,7 +31,8 @@
 html {
   font-size: 62.5%; /* 10px */
   line-height: 1.6rem;
-  font-family: 'Alata', sans-serif;
+  font-family: 'Alata', "Arial", sans-serif;
+  height: 2rem;
 }
 
 @font-face {
@@ -87,11 +88,15 @@ img {
 .active__btn {
   color: var(--text-color-light) !important;
   background: linear-gradient(114.88deg, #fe592a 0%, #e93013 97.15%) !important; 
+  border: none !important;
+  font-weight: 600;
 }
 
-::-ms-reveal {
+/* ::-ms-reveal {
   filter: invert(100%);
+} */
+.active {
+  display: block !important;
 }
-
 
 

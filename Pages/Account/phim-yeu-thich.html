@@ -4,15 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LazyFilms</title>
+    <title>LazyFilms: Xem Phim Không Giới Hạn</title>
+
   <link rel="stylesheet" href="../../assets/fonts/fontawesome.com/releases/v6.5.1/css/all.css" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   <link rel="stylesheet" href="../../assets/fonts/Alata/Alata-Regular.ttf">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
-  <!-- defer : chắn chắc dom đã load -->
-  <script src="./script/main.js" defer></script>
+  <link rel="icon" href="../../assets/img/SubLogo.jpg" type="image/x-icon" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+
+  <!-- defer : chắn chắc dom đã load -->
+  <script src="../../script/main.js" defer></script>
+  <script src="../../script/lich-su-xem.js" defer></script>
+  <script src="../../script/thong-tin-ca-nhan.js" defer></script>
 
 </head>
 
@@ -23,16 +29,16 @@
       <nav class="nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="#">
+            <a href="../../index.html">
               <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
           </li>
-
+  
           <li class="header__nav-item header__mainPage">
             <a href="../../index.html">TRANG CHỦ</a>
             <div class="header__mainPage-active"></div>
           </li>
-
+  
           <li class="header__nav-item header__nav-subMenu">
             <a href="#">THỂ LOẠI
               <i class="fa-solid fa-angle-down"></i>
@@ -41,63 +47,68 @@
             <div class="header__subMenu">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/TinhCam.html">Tình Cảm</a>
+                  <a href="../Pages/TheLoaiPhim/TinhCam.html">Tình Cảm</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/ChienTranh.html">Chiến Tranh</a>
+                  <a href="#">Chiến Tranh</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/GiaDinh.html">Gia Đình</a>
+                  <a href="#">Gia Đình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/HanhDong.html">Hành Động</a>
+                  <a href="#">Hành Động</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/HocDuong.html">Học Đường</a>
+                  <a href="#">Học Đường</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/Anime.html">Anime</a>
+                  <a href="#">Anime</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/GayCan.html">Gây Cấn</a>
+                  <a href="#">Gây Cấn</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/HinhSu.html">Hình Sự</a>
+                  <a href="#">Hình Sự</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/KhoaHoc.html">Khoa Học</a>
+                  <a href="#">Khoa Học</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/BiAn.html">Bí Ẩn</a>
+                  <a href="#">Bí Ẩn</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/CoTrang.html">Cổ Trang</a>
+                  <a href="#">Cổ Trang</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/HoatHinh.html">Hoạt Hình</a>
+                  <a href="#">Hoạt Hình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/KiemHiep.html">Kiếm Hiệp</a>
+                  <a href="#">Kiếm Hiệp</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/KinhDi.html">Kinh Dị</a>
+                  <a href="#">Kinh Dị</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/TvShow.html">TV-Show</a>
+                  <a href="#">TV-Show</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/ThanThoai.html">Thần Thoại</a>
+                  <a href="#">Thần Thoại</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/PhieuLuu.html">Phiêu Lưu</a>
+                  <a href="#">Phiêu Lưu</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="../TheLoaiPhim/VienTuong.html">Viễn Tưởng</a>
+                  <a href="#">Viễn Tưởng</a>
                 </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+  
               </ul>
             </div>
+  
           </li>
-
+  
           <li class="header__nav-item header__nav-subMenu">
             <a href="#">QUỐC GIA
               <i class="fa-solid fa-angle-down"></i>
@@ -132,48 +143,42 @@
                 <li class="header__subMenu-item">
                   <a href="#">Đài Loan</a>
                 </li>
-
+  
               </ul>
           </li>
-
+  
           <li class="header__nav-item">
-            <a href="../TheLoaiPhim/TopPhim.html">TOP PHIM</a>
+            <a href="../Pages/TheLoaiPhim/TopPhim.html">TOP PHIM</a>
           </li>
-
+  
           <li class="header__nav-item">
-            <a href="../TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
+            <a href="../Pages/TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
           </li>
-
+  
           <li class="header__nav-item ">
             <div class="header__nav-form">
-              <!-- <input type="text" placeholder="Nhập tên phim cần tìm"> -->
-              <a href="../Search/search.html" class="header__nav-search">
+              <a href="../Pages/Search/search.html" class="header__nav-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
-              <!-- TH Chưa Loggin -->
-              <div class="header__nav-notification non__active-noti">
-                <img src="../../assets/img/icon-alarm-active.jpg" alt="" class="non__active-bell">
+
+              <div class="header__nav-notification">
+                <img src="../../assets/img/icon-alarm-active.jpg" alt="" class="non__active-noti active">
+                <img src="../../assets/img/icon-alarm-active-fill.jpg" alt="" class="active__noti">
                 <div class="header__noti--modal">
                   <div class="header__modal-title">
                     <h3>Thông báo</h3>
                   </div>
-                  <div class="header__modal--info">
+
+                  <!-- Chưa Login -->
+                  <div class="header__modal--info not__logged">
                     <h5>Vui lòng
                       <strong>Đăng nhập</strong>
                       để nhận những thông báo mới nhất từ LazyFilms
                     </h5>
                   </div>
-                </div>
-              </div>
 
-              <!-- TH đã login và có thông báo -->
-              <div class="header__nav-notification active__noti">
-                <img src="../../assets/img/icon-alarm-active-fill.jpg" alt="" class="active__bell">
-                <div class="header__noti--modal">
-                  <div class="header__modal-title">
-                    <h3>Thông báo</h3>
-                  </div>
-                  <div class="header__modal-info">
+                  <!-- Đã Login -->
+                  <div class="header__modal-info logged">
                     <div class="header__info-list">
                       <!-- item <-> 1 ngày -->
                       <div class="header__info-item">
@@ -194,9 +199,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -213,9 +218,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -232,9 +237,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -251,9 +256,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -270,9 +275,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -295,9 +300,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -314,9 +319,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -333,9 +338,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -352,9 +357,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -371,9 +376,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -396,9 +401,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -415,9 +420,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -434,9 +439,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -453,9 +458,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -472,9 +477,9 @@
                                   </div>
                                   <div class="right__text-time">4 giờ trước</div>
                                 </div>
-
+  
                               </div>
-
+  
                             </div>
                           </li>
                         </ul>
@@ -483,61 +488,64 @@
                   </div>
                 </div>
               </div>
+  
+             
             </div>
-            <!-- TH Đã Login -->
-
+            
+  
           </li>
-
+  
           <li class="header__nav-item header__nav-premium ">
             <a href="#" class="header__premium">
               <img src="../../assets/img/img_VIP.jpg" alt="VIP" class="header__premium-img">
             </a>
           </li>
-
+  
           <li class="header__nav-item header__nav-login">
-            <a class="not__logged" href="#">Đăng nhập</a>
+            <!-- Chưa login -->
+            <a class="btn__login not__logged active " href="#">ĐĂNG NHẬP</a>
             <!-- Khi login -->
-            <div class="logged">
-              <button class="wrap__profile" href="../Account/thong-tin-ca-nhan.html">
+            <div class="show__login logged">
+              <button class="wrap__profile" href="../Pages/Account/thong-tin-ca-nhan.html">
                 <div class="profile__dropdown">
                   <img src="../../assets/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
                 </div>
                 <img src="../../assets/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
               </button>
-
-              <div class="profile__menu show__menu">
+  
+              <div class="profile__menu">
                 <ul class="profile__menu-list">
-                  <li href="#" class="profile__menu-item">
+                  <a href="./Pages/Account/phim-yeu-thich.html" class="profile__menu-item">
                     <span class="loved__films">
                       <i class="fa-regular fa-heart"></i>
                       Phim yêu thích
                     </span>
-                  </li>
-                  <li href="#" class="profile__menu-item">
+                  </a>
+                  <a href="./Pages/Account/lich-su-xem.html" class="profile__menu-item">
                     <span class="history__films">
                       <i class="fa-solid fa-clock-rotate-left"></i>
                       Lịch sử xem
                     </span>
-                  </li>
-                  <a href="#" class="profile__menu-item">
+                  </a>
+                  <a href="./Pages/Account/thong-tin-ca-nhan.html" class="profile__menu-item">
                     <span class="setting__personal">
                       <i class="fa-regular fa-user"></i>
                       Cài đặt cá nhân
                     </span>
                   </a>
-
-                  <a href="#" class="profile__menu-item">
+  
+                  <a href="../../index.html" class="profile__menu-item">
                     <span class="logout">
                       <i class="fa-solid fa-arrow-right-from-bracket"></i>
                       Đăng xuất
                     </span>
                   </a>
-
+  
                 </ul>
               </div>
             </div>
-
-
+  
+  
           </li>
         </ul>
       </nav>
@@ -547,7 +555,7 @@
     <div class="container__login" id="login">
       <div class="login__section">
         <a class="login__section-close">
-          <i class="fa-regular fa-circle-xmark"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
         </a>
         <div class="login__section--heading">
           <span>Đăng nhập</span>
@@ -599,7 +607,7 @@
     <div class="container__register" id="regiters">
       <div class="register__section">
         <a class="register__section-close">
-          <i class="fa-regular fa-circle-xmark"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
         </a>
         <div class="register__section--heading">
           <span>Đăng ký</span>
@@ -646,7 +654,7 @@
     <div class="container__forgot" id="forgotPass">
       <div class="forgot__section">
         <a class="forgot__section-close">
-          <i class="fa-regular fa-circle-xmark"></i>
+          <i class="fa-solid fa-circle-xmark"></i>
         </a>
         <div class="register__section--heading forgot__section--heading">
           <span>Khôi phục mật khẩu</span>
@@ -684,7 +692,7 @@
         <div class="wrap__heading">
           <div class="premium__section-heading">
             <div class="user__info-wrap">
-              <img src="./assets/img/user_avata_male.jpg" alt="avata_user" class="user__info-avata">
+              <img src="../../assets/img/user_avata_male.jpg" alt="avata_user" class="user__info-avata">
               <div class="user__info-right">
                 <p class="info__right-name">Anh Tuấn</p>
                 <p class="info__right-VIP" title="Đăng kí VIP để tận hưởng kho phim">Đăng ký VIP để tận hưởng kho phim
@@ -784,43 +792,43 @@
               <div class="privilage__list">
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/hd.jpg" alt="HD">
+                  <img src="../../assets/img/hd.jpg" alt="HD">
                   <span class="privilage__item-detail">1080P</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/hot.jpg" alt="HD">
+                  <img src="../../assets/img/hot.jpg" alt="HD">
                   <span class="privilage__item-detail">Phim Bộ hot xem ngay</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/download.jpg" alt="HD">
+                  <img src="../../assets/img/download.jpg" alt="HD">
                   <span class="privilage__item-detail">Tải xuống nội dung thành viên</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/block_ads.jpg" alt="HD">
+                  <img src="../../assets/img/block_ads.jpg" alt="HD">
                   <span class="privilage__item-detail">VIP được chăn quảng cáo</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/shared__device.jpg" alt="HD">
+                  <img src="../../assets/img/shared__device.jpg" alt="HD">
                   <span class="privilage__item-detail">Dùng chung nhiều thiết bị</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/blockbuster_movie.jpg" alt="HD">
+                  <img src="../../assets/img/blockbuster_movie.jpg" alt="HD">
                   <span class="privilage__item-detail">Phim bom tấn</span>
                 </div>
 
                 <!-- item -->
                 <div class="privilage__item">
-                  <img src="./assets/img/dolby.jpg" alt="HD">
+                  <img src="../../assets/img/dolby.jpg" alt="HD">
                   <span class="privilage__item-detail">Trải nghiệm rạp chiếu phim Dolby</span>
                 </div>
 
@@ -842,7 +850,7 @@
                       <div class="checkbox__selected"></div>
                     </div>
                     <div class="pay__item-banking">
-                      <img src="./assets/img/vnpay.jpg" alt="VNPAY" class="item__banking-VNPAY">
+                      <img src="../../assets/img/vnpay.jpg" alt="VNPAY" class="item__banking-VNPAY">
                       <span>VNPAY_QR</span>
                     </div>
                   </div>
@@ -852,7 +860,7 @@
                       <div class="checkbox__selected"></div>
                     </div>
                     <div class="pay__item-momo">
-                      <img src="./assets/img/momo21-10-2020_17g15-59.jpg" alt="Momo" class="item__banking-Momo">
+                      <img src="../../assets/img/momo21-10-2020_17g15-59.jpg" alt="Momo" class="item__banking-Momo">
                       <span>Ví MoMo</span>
                     </div>
                   </div>
@@ -864,31 +872,31 @@
                   <h4 class="pay__detail-tilte">Thông tin thanh toán</h4>
                   <!-- Thông tin account thành toán -->
                   <div class="pay__info-account">
-                    <span class="info_package-title">Tài khoản</span>
-                    <span class="info_package-name">lazyfilms@gmail.com</span>
+                    <span class="info__package-title">Tài khoản</span>
+                    <span class="info__package-nameee">lazyfilms@gmail.com</span>
                   </div>
                   <div class="line"></div>
                   <!-- Thông tin gói -->
                   <div class="pay__info-package">
                     <div class="package__detail">
-                      <span class="info_package-title">Tên gói</span>
-                      <span class="info_package-name">VIP tháng</span>
+                      <span class="info__package-title">Tên gói</span>
+                      <span class="info__package-nameee">VIP tháng</span>
                     </div>
                     <div class="package__time">
-                      <span class="info_package-title">Thời hạn gói</span>
-                      <span class="info_package-name">1 tháng</span>
+                      <span class="info__package-title">Thời hạn gói</span>
+                      <span class="info__package-nameee">1 tháng</span>
                     </div>
                   </div>
                   <div class="line"></div>
                   <!-- Giá gói -->
                   <div class="pay__info-price">
-                    <span class="info_package-title">Giá gói</span>
-                    <span class="info_package-name">49.000 VND</span>
+                    <span class="info__package-title">Giá gói</span>
+                    <span class="info__package-nameee">49.000 VND</span>
                   </div>
                   <!-- Giảm giá -->
                   <div class="pay__info-discount">
-                    <span class="info_package-title">Giảm giá</span>
-                    <span class="info_package-name">0 VND</span>
+                    <span class="info__package-title">Giảm giá</span>
+                    <span class="info__package-nameee">0 VND</span>
                   </div>
                   <!-- Nhập mã khuyến mãi -->
                   <div class="pay__btn-discount">
@@ -899,8 +907,8 @@
                   <div class="line"></div>
                   <!-- Tổng  -->
                   <div class="pay__info-total">
-                    <span class="info_package-title">Tổng thanh toán</span>
-                    <span class="info_package-name">49.000 VND</span>
+                    <span class="info__package-title">Tổng thanh toán</span>
+                    <span class="info__package-nameee">49.000 VND</span>
                   </div>
                   <!-- Btn Thanh toán -->
                   <div class="btn__payment">
@@ -954,7 +962,7 @@
                 </a>
               </li>
               <div class="line"></div>
-              <li class="siderbar__nav-item">
+              <li class="siderbar__nav-item logout__profile">
                 <a href="#" class="slider__item-link" target="__self">
                   <span class="item__link-title">Đăng xuất tài khoản</span>
                 </a>
@@ -965,18 +973,18 @@
 
         <div class="main__content content__history content__loved">
           <h2 class="history__title ">Phim yêu thích</h2>
-          <div class="history__btn-change">
-            <div class="button__change active__btn-change btn__cancel" role="button">Hủy bỏ</div>
+          <div class="history__btn-change active">
+            <div class="button__change btn__cancel" role="button">Hủy bỏ</div>
             <!-- active__btn-change -->
-            <div class="button__change active__btn-change" role="button">Chỉnh sửa</div>
+            <div class="button__change" role="button">Chỉnh sửa</div>
             <!-- nonActive__btn-del -->
-            <div class="button__change active__btn-change btn__del nonActive__btn-del " role="button">Xóa bỏ</div>
+            <div class="button__change btn__del nonActive__btn-del" role="button">Xóa bỏ</div>
           </div>
 
           <div class="line"></div>
           <div class="btn__select-all">
-            <!-- check_box-selected -->
-            <div class="check_box">
+            <!-- mask__check-selected -->
+            <div class="mask__check ">
               <i class="fa-solid fa-check"></i>
             </div>
             <span>Chọn toàn bộ</span>
@@ -985,15 +993,15 @@
             <!-- Khi có bất kỳ phim yêu thích nào -->
             <div class="history__empty loved__empty">
               <img src="../../assets/img/empty_history.jpg" alt="Không có hồ sơ xem">
-              <p class="history__empty-title">Không có hồ sơ xem</p>
-              <p class="history__empty-desc">Bạn không có lịch sử xem, hãy nhanh chóng xem video thôi!</p>
+              <p class="history__empty-title">Chưa có nội dung yêu thích</p>
+              <p class="history__empty-desc">Hãy thêm nhiều phim yêu thích của bạn.</p>
               <a class="history__btn-back" href="../../index.html">Theo dõi phim ngay bây giờ</a>
             </div>
             <!-- Khi có xem -->
             <div class="history__list loved__list">
               <!-- item -->
               <div class="history__item loved__item">
-                <a href="#" class="history__item-target">
+                <a href="../../Pages/WatchVideo/index.html" class="history__item-target">
                   <div class="history__item-img">
                     <div class="item__img">
                       <img src="../../assets/img/mong-hoa-luc-fpt-play-1713777247933_Landscape.jpg" alt="monghoaluc">
@@ -1027,7 +1035,7 @@
               </div>
               <!-- item -->
               <div class="history__item loved__item">
-                <a href="#" class="history__item-target">
+                <a href="../../Pages/WatchVideo/index.html" class="history__item-target">
                   <div class="history__item-img">
                     <div class="item__img">
                       <img src="../../assets/img/dai-chien-titan-phan-4a-fpt-play-1710480044777_Landscape.jpg"
@@ -1062,7 +1070,7 @@
               </div>
             </div>
           </div>
-          <div class="no__more">Không có nhiều thêm nữa</div>
+          <div class="no__more active">Không có nhiều thêm nữa</div>
 
         </div>
       </div>
@@ -1075,7 +1083,7 @@
       </div>
     </div><!--/.scroll-Top-->
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer id="footer">
       <div class="wrap__footer">
         <!--Footer navigation-->
@@ -1087,25 +1095,19 @@
                 <img src="../../assets/img/Logo.jpg" alt="LogoLazyFilms" class="footer__nav-logo">
               </a>
             </li>
-
+  
             <li class="footer__nav-item header__mainPage">
-              <a href="#">TRANG CHỦ</a>
-
-            </li>
-            <li class="footer__nav-item">
-              <a href="./Pages/RequireWeb/YeuCauPhim.html">YÊU CẦU PHIM</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="./Pages/RequireWeb/BaoLoi.html">BÁO LỖI</a>
+              <a href="../../index.html">TRANG CHỦ</a>
+  
             </li>
             <li class="footer__nav-item">
               <a href="#">GROUP THẢO LUẬN</a>
             </li>
           </ul>
         </nav>
-
+  
         <!--Footer Infomation -->
-
+  
         <div class="footer__info">
           <div class="footer__info-column">
             <h3 class="footer__info-heading">Giới thiệu về chúng tôi</h3>
@@ -1113,14 +1115,14 @@
               <li class="footer__info-item"><a href="#">Thông tin website</a></li>
             </ul>
           </div>
-
+  
           <div class="footer__info-column">
             <h3 class="footer__info-heading">Hợp tác</h3>
             <ul>
               <li class="footer__info-item"><a href="#">Đăng quảng cáo</a></li>
             </ul>
           </div>
-
+  
           <div class="footer__info-column">
             <h3 class="footer__info-heading">Hỗ trợ lỗi</h3>
             <ul>
@@ -1129,18 +1131,18 @@
               <li class="footer__info-item"><a href="#">Câu hỏi thường gặp</a></li>
             </ul>
           </div>
-
+  
           <div class="footer__info-column">
             <h3 class="footer__info-heading">Điều khoản dịch vụ</h3>
             <ul>
               <li class="footer__info-item"><a href="#">Điều khoản riêng tư</a></li>
               <li class="footer__info-item"><a href="#">Điều khoản sử dụng</a></li>
             </ul>
-
+  
           </div>
         </div>
-
-
+  
+  
         <!--Footer bottom-->
         <div class="footer__bottom">
           <div class="footer__bottom-center">
@@ -1150,7 +1152,7 @@
               <a href="#">Đọc Chính sách quyền riêng tư Lazyfilms</a>
             </p>
             <!--Icon-->
-
+  
             <ul class="footer__icon">
               <li class="footer__bottom-icon"> <a href="#" class="footer__icon-facebook">
                   <i class="fa-brands fa-square-facebook"></i></a>
@@ -1162,11 +1164,11 @@
                   <i class="fa-brands fa-youtube"></i></a>
               </li>
             </ul>
-
+  
           </div>
         </div>
-
-
+  
+  
     </footer>
   </div>
 
