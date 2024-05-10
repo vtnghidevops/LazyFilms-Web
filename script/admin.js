@@ -5,9 +5,11 @@ let btnCloseLogin = document.querySelector('.login__section-close');
 let btnCloseRegister = document.querySelector('.register__section-close');
 let btnCloseForgot = document.querySelector('.forgot__section-close');
 
+document.addEventListener('DOMContentLoaded', function() {
 btnAddFilm.addEventListener('click', () => {
     addFilm.style.opacity = '1';
     addFilm.style.display = 'block';
+});
 });
 
 function closePage(btnClose){
@@ -33,7 +35,11 @@ function closePage(btnClose){
         }, 500); // Chờ cho transition kết thúc
     }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
 btnCloseAddFilm.addEventListener('click', () => {
     closePage(btnCloseAddFilm);
 });
+});
+
+
+
