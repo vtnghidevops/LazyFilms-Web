@@ -57,7 +57,7 @@ app.use("/css", express.static(__dirname + '/assets/css'));
 app.use("/img", express.static(__dirname + '/assets/img'));
 app.use("/fonts", express.static(__dirname + '/assets/fonts'));
 app.use("/script", express.static(__dirname + '/script'));
-app.use("/movie", express.static(__dirname + '/Video'));
+app.use("/Video", express.static(__dirname + '/Video'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());

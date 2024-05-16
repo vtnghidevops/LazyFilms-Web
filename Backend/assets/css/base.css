@@ -49,6 +49,7 @@ html {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 ul {
@@ -80,7 +81,7 @@ img {
 }
 
 .item__bar-percent {
-  width: 45%;
+  width: 0%;
   height: 4px;
   background-color: #ff6500;
 }
@@ -99,4 +100,6 @@ img {
   display: block !important;
 }
 
-
+.active__page {
+  color: var(--primary-color) !important;
+}

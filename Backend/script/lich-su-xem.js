@@ -31,11 +31,13 @@ if (checkListHistoryToAdd()) {
   });
 
   $('.history__item-target').hover(function () {
-    if (isButtonChangeClicked == false) {
+    if (!isButtonChangeClicked) {
       $(this).find('.btn__play-history').show();
+    }else {
+      $(this).find('.btn__play-history').hide();
     }
   }, function () {
-    if (isButtonChangeClicked == true) {
+    if (isButtonChangeClicked) {
       $(this).find('.btn__play-history').hide();
     }
   });
@@ -52,7 +54,10 @@ if (checkListHistoryToAdd()) {
 
  });
 
-  $modal.on('click', function () {
+  $modal.on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
     if (isButtonChangeClicked) {
       if ($(this).find('.mask__check').hasClass('mask__check-selected')) {
         $(this).find('.mask__check').removeClass('mask__check-selected');
