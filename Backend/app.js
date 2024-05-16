@@ -95,13 +95,13 @@ app.post('/register', async (req, res) => {
         const savedUser = await newUser.save();
 
         // Set the 'loggedIn' cookie after successful registration
-        res.cookie('loggedIn', true, { secure: true });
 
-        res.cookie('userId', savedUser._id);
+        res.cookie('userId', user._id.toString(), { secure: true });
 
         // Redirect the user to the home page upon successful registration
-        // res.redirect('/');
-        res.render('index', { loggedIn: true });
+        
+        res.redirect('/');
+        // res.render('./WatchVideo/Watch', { loggedIn: true });
     } catch (error) {
         // Handle errors
         console.error('Error saving user:', error);
@@ -133,13 +133,12 @@ app.post('/login', async (req, res) => {
         }
 
         // Set the 'loggedIn' cookie after successful login
-        res.cookie('loggedIn', true, { secure: true });
 
-        res.cookie('userId', user._id);
+        res.cookie('userId', user._id.toString(), { secure: true });
 
         // Redirect the user to the home page upon successful login
-        // res.redirect('/');
-        res.render('index', { loggedIn: true });
+        
+        res.redirect('/');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).send('Internal Server Error');
@@ -148,8 +147,13 @@ app.post('/login', async (req, res) => {
 
 // Routes
 app.get('/', (req, res) => {
-    const loggedIn = req.cookies.loggedIn || false; // Default to false if loggedIn cookie is not set
+    const loggedIn = !!req.cookies.userId; // Default to false if loggedIn cookie is not set
     res.render('index', { loggedIn: loggedIn });
+});
+
+app.get('/Movie/Watch', (req, res) => {
+    const loggedIn = !!req.cookies.userId;
+    res.render('./WatchVideo/Watch', { loggedIn: loggedIn });
 });
 
 
@@ -160,37 +164,66 @@ app.post('/logout', (req, res) => {
 });
 
 
-app.get('/get', async (req, res) => {
-    const id = req.cookies.userId
-    if (typeof(req.cookies.userId) == "undefined") {
-         console.log(":123")
+
+// Route for submitting comments
+app.post('/submit-comment', async (req, res) => {
+    const userId = req.cookies.userId;
+    const { cmt } = req.body;
+
+    if (!userId || !cmt) {
+        return res.status(401).send('Please log in to submit a comment.'); 
     }
 
+    try {
+        const movieId = "66441414376328045c958839"
+
+        const movie = await Movies.findById(movieId);
+        if (!movie) {
+            return res.status(404).send('Movie not found');
+        }
+
+        movie.comments.push({ userId: userId, commentText: cmt });
+        await movie.save();
+
+        // Redirect to the movie watch page or any other desired page
+        res.redirect('./Movie/Watch'); // or wherever you want to redirect after submission
+    } catch (error) {
+        console.error('Error submitting comment:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+
+app.get('/get',(req, res) => {
+    if(typeof(req.cookies.userId !== 'string')) {
+        console.log("Not logged in")
+        
+    }
 })
 
-// app.get('/', (req, res) => {
-//     Movies.find().sort({year: -1})
-//         .then(result => {
-//             res.render('index', {movie_info: result, titleeeeee: "Test123"})
-//             // console.log(result)
-//         })
-// })
-
-// app.post('/',(req,res) => {
-//     console.log(req.body)
-// })
-
-
-app.get('/WatchVideo', (req, res) => {
-    Movies.findOne({name: "Minions"})
+app.get('/', (req, res) => {
+    Movies.find().sort({year: -1})
         .then(result => {
-            res.render('watch', {info: result, title: "Test123"})
-            Movies.find({category: result.category[0]})
-                .then(result2 => {
-                    console.log(result2)
-                })
-    })
+            res.render('index', {movie_info: result, titleeeeee: "Test123"})
+            // console.log(result)
+        })
 })
+
+app.post('/',(req,res) => {
+    console.log(req.body)
+})
+
+
+// app.get('/WatchVideo', (req, res) => {
+//     Movies.findOne({name: "Minions"})
+//         .then(result => {
+//             res.render('watch', {info: result, title: "Test123"})
+//             Movies.find({category: result.category[0]})
+//                 .then(result2 => {
+//                     console.log(result2)
+//                 })
+//     })
+// })
 
 app.get('/Movie/Search', (req, res) => {
     let Url = req.originalUrl;

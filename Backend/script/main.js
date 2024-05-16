@@ -146,7 +146,7 @@ let $block__watching = $('.carousel__film-watching')
 // Đăng nhập
 $btnBlockLogin.click(() => {
    closeModalOneTab($login)
-   toggleActiveAndRemoveActive($show__login, $clickLogin)
+   // toggleActiveAndRemoveActive($show__login, $clickLogin)
    $block__watching.addClass('active')
 })
 

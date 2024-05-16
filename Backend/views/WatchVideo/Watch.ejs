@@ -496,48 +496,54 @@
           </li>
   
           <li class="header__nav-item header__nav-login">
-            <!-- Chưa login -->
-            <a class="btn__login not__logged active " href="#" >ĐĂNG NHẬP</a>
-            <!-- Khi login -->
-            <div class="show__login logged">
-              <button class="wrap__profile" href="../Pages/Account/thong-tin-ca-nhan.html">
-                <div class="profile__dropdown">
-                  <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
-                </div>
-                <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-              </button>
-  
-              <div class="profile__menu">
-                <ul class="profile__menu-list">
-                  <a href="./Pages/Account/phim-yeu-thich.html" class="profile__menu-item">
-                    <span class="loved__films">
-                      <i class="fa-regular fa-heart"></i>
-                      Phim yêu thích
-                    </span>
-                  </a>
-                  <a href="./Pages/Account/lich-su-xem.html" class="profile__menu-item">
-                    <span class="history__films">
-                      <i class="fa-solid fa-clock-rotate-left"></i>
-                      Lịch sử xem
-                    </span>
-                  </a>
-                  <a href="./Pages/Account/thong-tin-ca-nhan.html" class="profile__menu-item">
-                    <span class="setting__personal">
-                      <i class="fa-regular fa-user"></i>
-                      Cài đặt cá nhân
-                    </span>
-                  </a>
-  
-                  <a href="/index.html" class="profile__menu-item">
-                    <span class="logout">
-                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                      Đăng xuất
-                    </span>
-                  </a>
-  
-                </ul>
+            <% if (loggedIn) { %>
+              <!-- Khi login -->
+              <div class="show__login logged active">
+                  <button class="wrap__profile" href="./Pages/Account/thong-tin-ca-nhan.html">
+                      <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                      </div>
+                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                  </button>
+          
+                  <div class="profile__menu">
+                      <ul class="profile__menu-list">
+                          <a href="./Pages/Account/phim-yeu-thich.html" class="profile__menu-item">
+                              <span class="loved__films">
+                                  <i class="fa-regular fa-heart"></i>
+                                  Phim yêu thích
+                              </span>
+                          </a>
+                          <a href="./Pages/Account/lich-su-xem.html" class="profile__menu-item">
+                              <span class="history__films">
+                                  <i class="fa-solid fa-clock-rotate-left"></i>
+                                  Lịch sử xem
+                              </span>
+                          </a>
+                          <a href="./Pages/Account/thong-tin-ca-nhan.html" class="profile__menu-item">
+                              <span class="setting__personal">
+                                  <i class="fa-regular fa-user"></i>
+                                  Cài đặt cá nhân
+                              </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+                        
+          
+                      </ul>
+                  </div>
               </div>
-            </div>
+          <% } else { %>
+              <!-- Chưa login -->
+              <a class="btn__login not__logged active" href="#">ĐĂNG NHẬP</a>
+          <% } %>
   
   
           </li>
@@ -549,98 +555,98 @@
     <div class="container__login" id="login">
       <div class="login__section">
         <a class="login__section-close">
-          <i class="fa-solid fa-circle-xmark"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
         </a>
         <div class="login__section--heading">
           <span>Đăng nhập</span>
         </div>
-
-        <form action="#" class="login__modal-form">
+    
+        <form action="/login" method="POST" class="login__modal-form">
           <div class="login__modal--group">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-
+    
           <div class="login__modal--group">
-            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Mật khẩu" name="password">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-
+    
           <div class="login__modal-group">
             <a href="#"><span class="login__modal--forgotPass">Quên mật khẩu ?</span></a>
           </div>
-
+    
           <div class="login__modal--group">
             <button class="login__button" type="submit" name="submit">Đăng nhập</button>
           </div>
-
+    
         </form>
-
+    
         <p class="login__register-suggestion">Hoặc đăng nhập bằng</p>
         <div class="login__section--choiceLogin">
           <a href="#" class="login__choiceLogin-fb">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-
+    
           <a href="#" class="login__choiceLogin-gg">
             <i class="fa-brands fa-google-plus-g"></i>
           </a>
-
+    
         </div>
-
+    
         <div class="login__modal--group">
           <span class="login__modal-register">Chưa có tài khoản?
-            <a class="go__register" href="#">Đăng ký ngay</a> </span>
+            <a class = "go__register" href="#">Đăng ký ngay</a> </span>
         </div>
-
-
+    
+    
       </div>
     </div>
-  
+
     <!-- Section register -->
     <div class="container__register" id="regiters">
       <div class="register__section">
         <a class="register__section-close">
-          <i class="fa-solid fa-circle-xmark"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
         </a>
         <div class="register__section--heading">
           <span>Đăng ký</span>
         </div>
-  
-        <form action="#" class="login__modal-form register__modal-form">
+      
+        <form action="/register" method="POST" class="login__modal-form register__modal-form">
           <div class="login__modal--group register__modal-form">
             <input type="text" placeholder="Tên tài khoản" name="account" autocomplete="off">
           </div>
-  
+      
           <div class="login__modal--group register__modal-form">
             <input type="email" placeholder="Email" name="email" autocomplete="off">
           </div>
-  
+      
           <div class="login__modal--group register__modal-form">
-            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Mật khẩu" name="password" autocomplete="off">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-  
+      
           <div class="login__modal--group login__password-auth">
             <input type="password" placeholder="Nhập lại mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
             <!-- <i class="fa-regular fa-eye"></i> -->
           </div>
-  
-  
+      
+      
           <div class="login__modal--group login__btn--register">
             <button class="register__button" type="submit" name="submit">Đăng ký</button>
           </div>
-  
+      
         </form>
-  
+      
         <div class="login__modal--group">
           <span class="login__modal-register">Đã có tài khoản?
             <a class="back__login" href="#">Đăng nhập ngay</a> </span>
         </div>
-  
-  
+      
+      
       </div>
     </div>
   
@@ -1184,7 +1190,12 @@
               </div>
   
               <div class="video__control-process">
-  
+                <div class="video__control-process">
+                  <div class="item__bar">
+                    <p class="item__bar-percent"></p>
+                    <p class="watch__present"> Đã xem 54%</p>
+                  </div>
+                </div>
               </div>
   
             </div>
@@ -2033,9 +2044,11 @@
             </div>
   
             <!-- Yêu cầu đăng nhập để sự dụng cmt -->
+            <% if (!loggedIn) { %>
             <div class="required__login not__logged">
               Vui lòng <strong class="text__login">Đăng nhập</strong> vào tài khoản LazyFilms để sử dụng bình luận
             </div>
+            <% } %>
   
             <!-- Input comment from users -->
             <div class="comment__input logged">
@@ -2043,13 +2056,17 @@
                 <img src="/img/img_user.jpg" alt="user">
               </div>
               <div class="comment__list-item">
-                <textarea name="cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
-                <div class="send__cmt">
-                  <i class="fa-solid fa-paper-plane"></i>
-                </div>
+                <!-- Start of the form -->
+                <form class="comment-form" action="/submit-comment" method="post">
+                  <textarea name="cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
+                  <div class="send__cmt">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                </form>
+                <!-- End of the form -->
               </div>
             </div>
-  
+
             <!-- List comment -->
             <div class="comment__list">
               <!-- item cmt-->

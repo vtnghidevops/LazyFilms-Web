@@ -1,7 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const movieSchema = new Schema ({
+const commentSchema = new Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',
+        required: true
+    },
+    commentText: {
+        type: String,
+        required: true
+    }
+});
+
+const movieSchema = new Schema({
     name_vn: {
         type: String,
         required: true
@@ -41,8 +53,9 @@ const movieSchema = new Schema ({
     vip: {
         type: Boolean,
         required: false
-    }
-}, {timestamps: true});
+    },
+    comments: [commentSchema] // Array of comment sub-documents
+}, { timestamps: true });
 
 const Movies = mongoose.model('movies', movieSchema);
 module.exports = Movies;
