@@ -6289,3 +6289,7 @@ body::-webkit-scrollbar-track {
 .bars__mobile {
   display: none;
 }
+
+.fullscreen{
+  width: 90%;
+}

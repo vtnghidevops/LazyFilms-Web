@@ -225,7 +225,58 @@ btnLikeCmt.click(function () {
     parentContainer.find('.item__reply-like .unlike').toggle();
 });
 
-// Process bar
+    var $episodeList = $('.episodes__tabs .episodes__list');
+    var hammertime0 = new Hammer($episodeList[0]);
+    var hammertime1= new Hammer($episodeList[1]);
+    var hammertime2 = new Hammer($episodeList[2]);
+    var hammertime3 = new Hammer($episodeList[3]);
+
+    hammertime0.on('swipeleft', function() {
+      handleSwipe('left');
+    });
+
+    hammertime0.on('swiperight', function() {
+      handleSwipe('right');
+    });
+    hammertime1.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+    hammertime1.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime2.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime2.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime3.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime3.on('swiperight', function() {
+        handleSwipe('right');
+      });
+
+
+    function handleSwipe(direction) {
+      var currentScrollPosition = $episodeList.scrollLeft();
+      var scrollAmount = $episodeList.width(); // Adjust the scroll amount based on your needs
+
+      if (direction === 'left') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition + scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      } else if (direction === 'right') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition - scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      }
+    }
+
+  // Process bar
   var progressBar = $('.item__bar-percent'); // Lấy thanh tiến trình
   var presentText = $('.watch__present'); // Lấy phần trăm thời gian đã xem
   var timeDisplay = $('.control__time-display'); // Lấy phần tử hiển thị thời gian hiện tại
@@ -283,3 +334,4 @@ $('.video__control-process').on('click', function(e) {
     var seconds = Math.floor(lastSeekTime % 60);
     timeDisplay.text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'));
 });
+
