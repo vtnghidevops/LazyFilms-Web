@@ -1,8 +1,4 @@
 
-
-
-
-
 $(document).ready(function() {
     // Handle Video
     let video = $('.state__video');
@@ -107,39 +103,42 @@ $(document).ready(function() {
 
     // Fullscreen mode
     let container = $('#container');
+    
     controlFullscreen.on('click', function() {
         if (!document.fullscreenElement) {
             let elem = container.get(0);
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
-                $('.video__control-process').css('width', '90%')
+                $('.video__control-process').addClass('fullscreen')
             } else if (elem.mozRequestFullScreen) { /* Firefox */
                 elem.mozRequestFullScreen();
-                $('.video__control-process').css('width', '90%')
+                $('.video__control-process').addClass('fullscreen')
             } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
                 elem.webkitRequestFullscreen();
-                $('.video__control-process').css('width', '90%')
+                $('.video__control-process').addClass('fullscreen')
             } else if (elem.msRequestFullscreen) { /* IE/Edge */
                 elem.msRequestFullscreen();
-                $('.video__control-process').css('width', '90%')
+                $('.video__control-process').addClass('fullscreen')
             }
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
-                $('.video__control-process').css('width', '85%')
+                $('.video__control-process').removeClass('fullscreen')
             } else if (document.mozCancelFullScreen) { /* Firefox */
                 document.mozCancelFullScreen();
-                $('.video__control-process').css('width', '85%')
+                $('.video__control-process').removeClass('fullscreen')
             } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
                 document.webkitExitFullscreen();
-                $('.video__control-process').css('width', '85%')
+                $('.video__control-process').removeClass('fullscreen')
             } else if (document.msExitFullscreen) { /* IE/Edge */
                 document.msExitFullscreen();
-                $('.video__control-process').css('width', '85%')
-            }
+                $('.video__control-process').removeClass('fullscreen')
+        }
         }
 
     });
+
+   
 
     //Next episode
     controlNext.mouseover(function(){
@@ -150,21 +149,26 @@ $(document).ready(function() {
     });
 
 
+
+
+
+    // Comment
+// let moreCmt = $('.comment__item-replyOther')
+// let btnLikeCmt = $('.item__reply-like')
+// $(document).ready(function(){
+//     moreCmt.click(function(){
+//     $('.comment_showOther_item').toggleClass("comment_showOther_item-show");
+//     $('.item__replyOther-title').toggleClass('hidden__reply');
+//     });
+// });
+
+$(document).ready(function(){
+    $('.comment__item-replyOther').each()
 });
 
-
-     //Comment
-let moreCmt = $('.comment__item-replyOther')
-let btnLikeCmt = $('.item__reply-like')
+//like comment
 $(document).ready(function(){
-    moreCmt.click(function(){
-    $('.comment_showOther_item').toggleClass("comment_showOther_item-show");
-    $('.item__replyOther-title').toggleClass('hidden__reply');
-    });
-});
-
-
-$(document).ready(function(){
+    let btnLikeCmt = $('.item__reply-like')
     btnLikeCmt.click(function(){
         // Tìm phần tử cha chung chứa nút được nhấp và các phần tử liên quan
         var parentContainer = $(this).closest('.comment__item-detail');
@@ -175,5 +179,63 @@ $(document).ready(function(){
     });
 });
 
-let 
+});
 
+//event lướt qua list tập phim, season, phim liên quan trên điện thoại
+
+$(document).ready(function() {
+    var $episodeList = $('.episodes__tabs .episodes__list');
+    var hammertime0 = new Hammer($episodeList[0]);
+    var hammertime1= new Hammer($episodeList[1]);
+    var hammertime2 = new Hammer($episodeList[2]);
+    var hammertime3 = new Hammer($episodeList[3]);
+
+    hammertime0.on('swipeleft', function() {
+      handleSwipe('left');
+    });
+
+    hammertime0.on('swiperight', function() {
+      handleSwipe('right');
+    });
+    hammertime1.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+    hammertime1.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime2.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime2.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime3.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime3.on('swiperight', function() {
+        handleSwipe('right');
+      });
+
+
+    function handleSwipe(direction) {
+      var currentScrollPosition = $episodeList.scrollLeft();
+      var scrollAmount = $episodeList.width(); // Adjust the scroll amount based on your needs
+
+      if (direction === 'left') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition + scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      } else if (direction === 'right') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition - scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      }
+    }
+  });
+
+
+
+ 

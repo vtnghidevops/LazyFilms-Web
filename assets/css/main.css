@@ -3581,7 +3581,7 @@ font-size: 1.3rem;
 .control__bar-left .video__control-time {
   position: absolute;
   top: 0;
-  margin-top: -2rem;
+  margin-top: -1.5rem;
   left: 0.5rem;
 }
 
@@ -5885,4 +5885,7 @@ font-size: 1.3rem;
   background-color: rgb(213, 49, 44);
   border-style: none;
   border-radius: 0.4rem;
+}
+.fullscreen{
+  width: 90%;
 }
