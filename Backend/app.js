@@ -15,7 +15,7 @@ const { render } = require('ejs');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const path = "./Movies/" + req.body.name_vn + "/"
+        const path = "./Movie/" + req.body.name_vn + "/"
         fs.mkdirsSync(path);
         cb(null, path)
     },
@@ -30,7 +30,7 @@ const storage = multer.diskStorage({
         if(file.fieldname === "trailer") 
             cb(null, "trailer.mp4")
         if(file.fieldname === "actor_pic") 
-            cb(null, file.originalname)
+            cb(null, file.originalname = Buffer.from(file.originalname, 'latin1').toString('utf8'))
     }
 })
 const upload = multer({storage: storage})
@@ -40,7 +40,7 @@ const file_field = [
     {name: "pic_doc", maxCount: 1},
     {name: "trailer", maxCount: 1},
     {name: "vid", maxCount: 1},
-    {name: "actor_pic", maxCount: 1},
+    {name: "actor_pic", maxCount: 3},
 ]
 
 // Connect to mongodb
@@ -370,14 +370,15 @@ app.post('/Admin/Films', upload.fields(file_field) , function(req,res) {
         category: req.body.Category,
         nation: req.body.nation,
         year: req.body.year,
-        actor_name: req.body.actor_name.split(","),
+        actor_name: req.body.actor_name.split(", "),
         director_name: req.body.director_name,
         discription: req.body.discription,
-        path: "./test123/" + req.body.name_vn + "/",
+        path: "./Movie/" + req.body.name_vn + "/",
         vip : req.body.vip
     }
     const saveMovie = new Movies(data)
     saveMovie.save()
+    console.log(req.body)
     res.redirect('/Admin/Films')
 })
 
