@@ -81,9 +81,21 @@ img {
 }
 
 .item__bar-percent {
-  width: 45%;
+  width: 0;
   height: 4px;
   background-color: #ff6500;
+  position: relative;
+}
+
+.item__bar-percent:before {
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  right: -0.7rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color:  #ff6500;
 }
 
 .active__btn {
@@ -91,6 +103,7 @@ img {
   background: linear-gradient(114.88deg, #fe592a 0%, #e93013 97.15%) !important; 
   border: none !important;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* ::-ms-reveal {
@@ -102,4 +115,13 @@ img {
 
 .active__page {
   color: var(--primary-color) !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+button {
+  border: none;
+  background: none;
 }

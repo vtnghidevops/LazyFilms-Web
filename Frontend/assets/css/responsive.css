@@ -645,6 +645,9 @@
     height: max-content !important;
   }
 
+  .romantic__movie-listFilms li:nth-child(6) {
+    display: block;
+  }
   .romantic__movie .romantic__movie-item {
     width: 47.3% !important;
     margin-right: 1rem;
@@ -862,4 +865,6 @@
   /* .actor__item{
 width: 10rem;
 } */
+
+  
 }

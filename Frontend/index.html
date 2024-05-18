@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="icon" href="./assets/img/SubLogo.jpg" type="image/x-icon" />
   <!-- defer : chắn chắc dom đã load -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
   <!-- <script src="./script/main.js" defer></script> -->
   <script src ="./script/main.js" defer></script>
@@ -713,7 +714,7 @@
           <div class="login__modal--group">
             <input type="password" placeholder="Mật khẩu">
             <i class="fa-regular fa-eye-slash"></i>
-            <!-- <i class="fa-regular fa-eye"></i> -->
+            <i class="fa-regular fa-eye"></i>
           </div>
   
           <div class="login__modal-group">
@@ -814,7 +815,7 @@
           </div>
   
           <div class="login__modal--group forgot__modal_group">
-            <button class="login__button continue__btn-otp" type="submit" name="submit">Tiếp tục</button>
+            <button class="login__button continue__btn-reset" type="submit" name="submit">Tiếp tục</button>
           </div>
   
         </form>
@@ -1239,6 +1240,25 @@
           </div>
         </div>
     
+      </div>
+    </div>
+
+    <!-- Notification successfull -->
+    <div class="container__noti-sucessfull" id = "noti_suc">
+      <div class="section__edit-profile section__noti-successfull">
+        <a class="forgot__section-close">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </a>
+        <!-- body -->
+        <div class="edit__profile-body noti__successfull-body">
+          <h4 class="edit__body-title">Thành Công</h4>
+          <p class="tel__body-desc">Tài khoản của quý khách đã được cập nhật email thành công. Quý khách có thể quay lại và tiếp tục trải nghiệm!</p>
+        </div>
+
+        <div class="edit__profile-submit submit__back">
+          <button class ="active__btn">Quay lại</button>
+        </div>
+
       </div>
     </div>
 
