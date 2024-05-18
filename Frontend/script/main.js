@@ -691,3 +691,59 @@ console.log($passwordInput)
       // Chuyển đổi kiểu nhập liệu của trường mật khẩu trở lại password
       $passwordInput.attr('type', 'password');
   });
+
+  //Luot danh sach 
+  $('.carousel__listFilms').each(function() {
+   const $carouselList = $(this);
+   const $carouselItems = $carouselList.find('.carousel__listFilms-item');
+   let posX = 0;
+   let lastPosX = 0;
+
+   const hammer = new Hammer($carouselList[0]);
+   hammer.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+   hammer.on('panstart', function(e) {
+       lastPosX = posX;
+       $carouselList.css('transition', 'none'); // Disable transition during pan
+   });
+
+   hammer.on('panmove', function(e) {
+       const containerWidth = $carouselList.closest('.carousel__tvHome-listFilms').width();
+       const listWidth = $carouselList[0].scrollWidth;
+
+       posX = lastPosX + (e.deltaX * 2);  // Increase speed by adjusting deltaX multiplier
+
+       // Prevent scrolling beyond left boundary
+       if (posX > 0) {
+           posX = 0;
+       }
+
+       // Prevent scrolling beyond right boundary
+       const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+       if (posX < maxScrollX) {
+           posX = maxScrollX;
+       }
+
+       $carouselList.css('transform', `translateX(${posX}px)`);
+   });
+
+   hammer.on('panend', function(e) {
+       const containerWidth = $carouselList.closest('.carousel__tvHome-listFilms').width();
+       const listWidth = $carouselList[0].scrollWidth;
+
+       // Prevent scrolling beyond left boundary
+       if (posX > 0) {
+           posX = 0;
+       }
+
+       // Prevent scrolling beyond right boundary
+       const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+       if (posX < maxScrollX) {
+           posX = maxScrollX;
+       }
+
+       // Enable smooth transition after pan
+       $carouselList.css('transition', 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)'); // Adjusted transition time for faster scroll
+       $carouselList.css('transform', `translateX(${posX}px)`);
+   });
+});

@@ -601,3 +601,115 @@ function findCurClassActiveBtn($button) {
 }
 
 
+//event swipe ngang để hiển thị danh sách phim
+function setupListScrolling($list) {
+    const $listItems = $list.find('li');
+    let posX = 0;
+    let lastPosX = 0;
+    const containerWidth = $list.closest('.episodes__tag').width();
+    let listWidth = 0;
+    let endOfListPosition = 0;
+
+    // Calculate list width based on list items
+    $listItems.each(function() {
+        listWidth += $(this).outerWidth(true); // Include padding and margin
+    });
+
+    // Calculate the end position of the list
+    endOfListPosition = containerWidth - listWidth;
+
+    const hammer = new Hammer($list[0]);
+    hammer.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+    hammer.on('panstart', function(e) {
+        lastPosX = posX;
+        $list.css('transition', 'none'); // Disable transition during pan
+    });
+
+    hammer.on('panmove', function(e) {
+        posX = lastPosX + (e.deltaX * 2);  // Increase speed by adjusting deltaX multiplier
+
+        // Prevent scrolling beyond left boundary
+        if (posX > 0) {
+            posX = 0;
+        }
+
+        // Prevent scrolling beyond right boundary
+        if (posX < endOfListPosition) {
+            posX = endOfListPosition;
+            e.preventDefault(); // Prevent further scrolling if at the end
+            e.stopImmediatePropagation(); // Stop immediate propagation of the event
+        }
+
+        $list.css('transform', `translateX(${posX}px)`);
+    });
+
+    hammer.on('panend', function(e) {
+        // Enable smooth transition after pan
+        $list.css('transition', 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)'); // Adjusted transition time for faster scroll
+        $list.css('transform', `translateX(${posX}px)`);
+    });
+}
+
+// Setup scrolling for each list
+$('.episodes__list, .season__list, .trailer__list, .connection__list').each(function() {
+    setupListScrolling($(this));
+});
+
+//swipe diễn viên
+$('.actor__list').each(function() {
+    const $actorList = $(this);
+    let posX = 0;
+    let lastPosX = 0;
+
+    const hammer = new Hammer($actorList[0]);
+    hammer.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+    hammer.on('panstart', function(e) {
+      lastPosX = posX;
+      $actorList.css('transition', 'none'); // Disable transition during pan
+    });
+
+    hammer.on('panmove', function(e) {
+      const containerWidth = $actorList.parent().width();
+      const listWidth = $actorList[0].scrollWidth;
+
+      posX = lastPosX + (e.deltaX * 2);  // Increase speed by adjusting deltaX multiplier
+
+      // Prevent scrolling beyond left boundary
+      if (posX > 0) {
+        posX = 0;
+      }
+
+      // Prevent scrolling beyond right boundary
+      const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+      if (posX < maxScrollX) {
+        posX = maxScrollX;
+      }
+
+      $actorList.css('transform', `translateX(${posX}px)`);
+    });
+
+    hammer.on('panend', function(e) {
+      const containerWidth = $actorList.parent().width();
+      const listWidth = $actorList[0].scrollWidth;
+
+      // Prevent scrolling beyond left boundary
+      if (posX > 0) {
+        posX = 0;
+      }
+
+      // Prevent scrolling beyond right boundary
+      const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+      if (posX < maxScrollX) {
+        posX = maxScrollX;
+      }
+
+      // Enable smooth transition after pan
+      $actorList.css('transition', 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)'); // Adjusted transition time for faster scroll
+      $actorList.css('transform', `translateX(${posX}px)`);
+    });
+  });
+
+
+
