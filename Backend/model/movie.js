@@ -27,28 +27,28 @@ const movieSchema = new Schema({
         required: false
     },
     category: {
-        type: [String], // Array of strings
-        required: false
+        type: Array,
+       required: false
     },
     nation: {
         type: String,
         required: false
     },
     actor_name: {
-        type: [String], // Array of strings
+        type: Array,
         required: false
     },
     director_name: {
         type: String,
         required: false
     },
-    description: {
+    discription: {
         type: String,
-        required: false
+       required: false
     },
     path: {
         type: String,
-        required: false
+       required: false
     },
     vip: {
         type: Boolean,

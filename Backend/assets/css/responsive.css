@@ -1,21 +1,865 @@
 /* PC */
-@media (min-width: 1024px){
-
+@media (min-width: 1024px) {
+  .qr__content .qr__payment-header {
+    display: block;
+  }
 }
 
-/* Tablet and mobile 42px*/ 
-@media (max-width: 1023px) {
-
-
-
-}
+/* Tablet and mobile 42px*/
+@media (max-width: 1023px) {}
 
 /* Table */
-@media (min-width: 740px) and (max-width: 1023px){
+@media (min-width: 740px) and (max-width: 1023px) {}
 
-}
-
-/* Mobile */
+/* Mobile IP14*/
 @media (max-width: 739px) {
 
+  /* Fix width */
+  body {
+    max-width: 100vw;
+  }
+
+  .wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #header {
+    width: 100%;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  /* Fix vài li hiện thị */
+  .header__nav-list>li {
+    display: none;
+    /* hoặc bất kỳ giá trị display nào bạn muốn */
+  }
+
+  .bars__mobile,
+  .logo__header,
+  .header__nav-premium,
+  .search__header {
+    display: block !important;
+    /* Hiển thị các phần tử con cụ thể */
+  }
+
+  /* Search and noti */
+  .search__header {
+    padding: 0;
+    margin-left: 3rem;
+  }
+
+  .header__nav-notification {
+    display: none;
+  }
+
+  /* Logo */
+  .logo__header {
+    padding: 0;
+    /* margin-left: -1rem; */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo__header a {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__nav-logo {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* bars mobile */
+  .bars__mobile {
+    margin-right: 1.5rem;
+  }
+
+  .bars__mobile i {
+    font-size: 2.5rem;
+    color: var(--text-color);
+  }
+
+  /* Content sidebar */
+  .sidebar__mobile {
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 250px;
+    right: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: column !important; */
+    /* flex-wrap: wrap; */
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: #1f1f1f !important;
+    z-index: 4;
+    display: none;
+  }
+
+  .modal__sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    opacity: .6;
+    background-color: #1f1f1f !important;
+    /* display: none; */
+  }
+
+  .sidebar__body {
+    width: 100%;
+
+  }
+
+  .sidebar__nav-list {
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+
+  .siderbar__nav-item {
+    margin: 0;
+    height: 4rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__item-link {
+    padding: .75rem 1.75rem;
+    color: #a6a6a6;
+    line-height: 1;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+
+  .submenu__type {
+    display: none;
+  }
+
+  .submenu__type .header__subMenu-list {
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  .submenu__type .header__subMenu-item {
+    width: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .submenu__type .header__subMenu-item a {
+    color: #a6a6a6;
+  }
+
+  /* Slider */
+  .body__container {
+    max-width: 100vw;
+  }
+
+  #slider {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 3rem;
+  }
+
+  .slider__list {
+    width: 100%;
+  }
+
+  .slider__list-item {
+    width: 100%;
+  }
+
+  .slider__item-img img {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .slider__item-banner {
+    width: 100%;
+    left: 0;
+    padding: 4%;
+  }
+
+  .slider__banner-title {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .slider__banner-title img {
+    width: 60%;
+  }
+
+
+  .slider__banner-detail {
+    margin: 0 0 0.5rem 0;
+    width: 81%;
+  }
+
+  .slider__banner-detail span {
+    font-size: 1rem;
+  }
+
+  .pay {
+    margin-left: 0 !important;
+  }
+
+  .banner__detail-rating {
+    margin-left: 0.3rem !important;
+  }
+
+  .slider__banner-action {
+    margin-top: 0.5rem;
+  }
+
+  .slider__banner-action span {
+    font-size: 1.2rem;
+  }
+
+
+  .slider__banner-action .banner__action-watch {
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+    height: 3.5rem;
+    /* width: 3rem; */
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+
+  .banner__action-share,
+  .banner__action-heart {
+    height: 3.7rem;
+    margin: 0 0.5rem 0 0;
+    width: 3.7rem;
+  }
+
+  .banner__action-share i,
+  .banner__action-heart i {
+    font-size: 1.5rem;
+  }
+
+  .slider__button .slider__button-prev i,
+  .slider__button .slider__button-next i {
+    font-size: 4rem;
+  }
+
+  .slider__button .slider__button-prev,
+  .slider__button .slider__button-next {
+    width: 4rem;
+    height: 65%;
+    z-index: 5;
+  }
+
+  .slider__dots {
+    width: 100%;
+    right: -54%;
+  }
+
+  .slider__dots-small {
+    width: 0.4rem !important;
+    height: 0.4rem !important;
+  }
+
+  .slider__dots-small2 {
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+  }
+
+  .active__dots {
+    width: 2rem !important;
+  }
+
+  .slider__dots li {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  /* content */
+  .carousel__tvHome-heading {
+    font-size: 1.2rem;
+  }
+
+  .carousel__listFilms-img .carousel__listFilms-title {
+    font-size: 1.3rem;
+  }
+
+  .carousel__listFilms-anime li,
+  .carousel__listFilms-update li {
+    max-width: 25rem;
+  }
+
+  .carousel__listFilms-img .SVIP__img-fixed img,
+  .carousel__listFilms-img .VN__img-fixed img,
+  .carousel__listFilms-img .commingSoon__img-fixed img,
+  .carousel__listFilms-img .longChap__img-fixed img {
+    height: 23rem;
+  }
+
+  .movieTheater__listFilms-item {
+    margin-right: 1rem;
+  }
+
+  .carousel__listFilms-img .movieTheater__img-fixed img {
+    width: 16.5rem;
+    height: 23rem;
+  }
+
+  .SVIP__listFilms-item,
+  .VN-listFilms-item,
+  .commingSoom__listFilms-item,
+  .movieTheaeter__listFilms-item,
+  .longChap__listFilms-item {
+    max-width: 15rem;
+  }
+
+  .carousel__tvHome-trending {
+    margin: 0;
+  }
+
+
+  .carousel__category {
+    margin-bottom: 1rem;
+  }
+
+  .carousel__trending-list {
+    align-items: center;
+    height: 15rem;
+  }
+
+  .carousel__films-trending {
+    margin-bottom: 1rem;
+  }
+
+  .carousel__trending-item {
+    height: 83%;
+    width: 13.2rem;
+    min-width: 10rem;
+
+  }
+
+  .carousel__category-item .carousel__item-infomation {
+    width: 100%;
+    margin: 0;
+  }
+
+
+
+  .carousel__category-list {
+    height: 12rem !important;
+  }
+
+  .carousel__category-item {
+    max-width: 15rem;
+    margin-right: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel__film-watching {
+    margin-bottom: 1rem;
+  }
+
+  .carousel__watching-list {
+    height: 18rem;
+  }
+
+  .carousel__watching-item {
+    min-width: 10rem;
+    max-width: 15rem;
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  .carousel__watching-item .carousel__item-infomation {
+    margin: 0;
+  }
+
+  .carousel__watching-item .carousel__img-fixed img {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* footer */
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__nav-list:nth-child(1) a {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .footer__nav-list .footer__nav-logo {
+    padding: 0;
+  }
+
+  .footer__nav-list a {
+    font-size: 1.4rem !important;
+    padding: 0;
+  }
+
+  .footer__nav-item {
+    margin-right: 1rem;
+    width: max-content;
+  }
+
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 40rem;
+    height: 35rem;
+    padding: 0 0 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .footer__info-column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+
+  .footer__bottom .footer__bottom-center {
+    padding: 0 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 13rem;
+    max-height: 15rem;
+    justify-content: space-evenly;
+  }
+
+  .footer__bottom-center ul,
+  .footer__bottom-center p {
+    width: 100%;
+  }
+
+  .footer__icon {
+    margin: 0;
+  }
+
+  .footer__nav-list .header__mainPage {
+    display: none;
+  }
+
+  /* Search */
+  /* Input */
+  .container__search--input {
+    left: 10%;
+    width: 63%;
+  }
+
+  .container__search--heading .btn__search {
+    width: 20%;
+    font-size: 1.3rem;
+    height: 4rem;
+  }
+
+  /* Trending */
+  .container__search--trending {
+    padding: 0;
+    margin: 2rem 0 0 0;
+    width: 100%;
+  }
+
+  .container__search-topSearch {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .search__wrap--info {
+    left: 42%;
+  }
+
+  .search__item--film .search__film--img {
+    width: 35%;
+  }
+
+  /* respond search */
+  .container__respond-search {
+    width: 39rem;
+    min-width: 39rem;
+  }
+
+  .respond__search-text {
+    left: 14%;
+  }
+
+  /* Login */
+  .section__edit-profile,
+  .section__send-OTP,
+  .forgot__section,
+  .register__section,
+  .login__section {
+    height: 50rem;
+    width: 40rem;
+    max-height: 60rem;
+  }
+
+  .forgot__section--heading,
+  .register__section--heading,
+  .login__section--heading {
+    margin-bottom: 4rem;
+  }
+
+  .login__modal-form {
+    padding-top: 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .login__register-suggestion {
+    font-size: 1.5rem;
+  }
+
+  .login__section--choiceLogin {
+    height: 6rem;
+  }
+
+  .login__section--choiceLogin .login__choiceLogin-fb,
+  .login__section--choiceLogin .login__choiceLogin-gg {
+    max-width: 14%;
+    width: 12%;
+    position: relative;
+  }
+
+  .login__choiceLogin-fb i,
+  .login__choiceLogin-gg i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+
+  .login__modal-register {
+    margin-top: 2rem;
+  }
+
+  /* forgot */
+  .forgot__section {
+    height: 36rem;
+  }
+
+  /* OTP */
+  .section__send-OTP {
+    height: 33rem;
+  }
+
+  /* Premium */
+  .premium__section {
+    width: 92vw;
+  }
+
+  .premium__section-detail {
+    margin: 0;
+  }
+
+  .detail__package-list {
+    flex-wrap: wrap;
+  }
+
+  .detail__package-item {
+    width: 47%;
+    margin-bottom: 1rem;
+  }
+
+  .package__extend-wrap {
+    flex-wrap: wrap;
+  }
+
+  .extend__title {
+    margin-bottom: 1rem;
+  }
+
+  .privilage__list {
+    flex-wrap: wrap;
+  }
+
+  .privilage__item {
+    width: 46%;
+    margin-top: 0;
+  }
+
+  .pay__with-detail {
+    left: 0;
+    top: 34%;
+  }
+
+  .pay__with-main {
+    width: 100%;
+  }
+
+  /* QR */
+  .qr__section {
+    flex-wrap: wrap;
+    width: 92vw;
+  }
+
+  .qr__img {
+    width: 100%;
+  }
+
+  .qr__img img {
+    width: 100%;
+    /* height: 80%; */
+  }
+
+  .qr__content {
+    display: none;
+  }
+
+  .qr__contain {
+    left: 10%;
+  }
+
+  .qr__payment-header {
+    display: block;
+  }
+
+  /* Thể loại phim */
+  .romantic__movie {
+    margin-top: 0;
+  }
+
+  .romantic__movie .romantic__movie-listFilms {
+    flex-wrap: wrap;
+    width: 94vw;
+    height: max-content !important;
+  }
+
+  .romantic__movie .romantic__movie-item {
+    width: 47.3% !important;
+    margin-right: 1rem;
+  }
+
+  .carousel__switchTab {
+    bottom: -3%;
+  }
+
+  /* Login */
+  .show__login {
+    padding: 0.75rem 1.75rem;
+    position: relative;
+  }
+
+  .header__nav-login {
+    padding: 0;
+  }
+
+  .wrap__profile {
+    background-color: #1f1f1f !important;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    width: 22rem;
+    align-items: center;
+  }
+
+  .wrap__profile img {
+    max-width: 4rem;
+  }
+
+  .profile__dropdown-toggle {
+    /* position: absolute;
+    top: 26%;
+    right: 0;
+    transform: translateX(-50%); */
+    max-width: 2.5rem !important;
+  }
+
+  .profile__menu {
+    left: 5%;
+    top: 6rem;
+    background-color: #1f1f1f;
+  }
+
+  /* Thong tin ca nhan */
+
+  .widget__sidebar {
+    width: auto;
+  }
+
+  .sidebar__nav-list {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .sidebar__nav-list .siderbar__nav-item:nth-child(2) {
+    width: 21rem !important;
+  }
+
+  .siderbar__nav-item {
+    width: 29rem !important;
+  }
+
+  .main__content {
+    width: 91vw;
+    padding: 0;
+  }
+
+  .profile__main-img {
+    border-radius: 0;
+    width: 24%;
+    margin: 0;
+  }
+
+  .profile__main-img img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .profile__main-info {
+    width: 76%;
+  }
+
+  .profile__main-info .button__change {
+    font-size: 1.4rem;
+  }
+
+  .info__block-other span {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+
+  }
+
+  #UID {
+    display: none;
+  }
+
+  .vip__banner-joinVip {
+    top: 38%;
+  }
+
+  /* Edit profile */
+  .section__edit-profile {
+    height: 56rem;
+  }
+
+  /* Noti successful */
+  .section__noti-successfull {
+    height: 24rem;
+  }
+
+  /* Change tel */
+  .section__change-tel {
+    height: 34rem;
+  }
+
+  /* Send otp */
+  .section__send-OTP {
+    height: 34rem;
+  }
+
+  /* Change pass */
+  .section__change-password {
+    height: 51rem;
+  }
+
+  /* History */
+  .history__title {
+    margin-top: 2rem;
+  }
+
+  .history__list {
+    flex-wrap: wrap;
+  }
+
+  .history__item {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+
+  .item__img img {
+    width: 100%;
+  }
+
+  .carousel__button-prev,
+  .carousel__button-next {
+    display: none;
+  }
+
+  .container__video {
+    height: 22rem;
+  }
+
+  .desc__left-heading {
+    margin-top: 1rem;
+  }
+
+  .desc__left-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .container__video-desc {
+    display: contents;
+
+  }
+
+  .video__desc-left {
+    width: auto;
+    position: relative;
+
+  }
+
+  .video__desc-right {
+    width: auto;
+    position: relative;
+
+  }
+
+  .video__control-process {
+    width: 60%;
+  }
+
+  .comment {
+    min-width: 0rem;
+  }
+
+  .container__comment {
+    min-width: 0rem;
+  }
+
+  .footer__nav-list {}
+
+  .video__setting {
+    width: 8rem;
+    height: fit-content;
+  }
+
+  .video__setting-quality {
+    padding-bottom: 1rem;
+  }
+
+  .video__setting-quality li {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+
+  .video__setting-quality .video__setting-heading {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  /* .actor__item{
+width: 10rem;
+} */
 }

@@ -11,10 +11,11 @@ let fs = require('fs-extra');
 const { MongoClient } = require('mongodb');
 
 const cookieParser = require('cookie-parser');
+const { render } = require('ejs');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const path = "./Movies/" + req.body.name_vn + "/"
+        const path = "./Movie/" + req.body.name_vn + "/"
         fs.mkdirsSync(path);
         cb(null, path)
     },
@@ -29,7 +30,7 @@ const storage = multer.diskStorage({
         if(file.fieldname === "trailer") 
             cb(null, "trailer.mp4")
         if(file.fieldname === "actor_pic") 
-            cb(null, file.originalname)
+            cb(null, file.originalname = Buffer.from(file.originalname, 'latin1').toString('utf8'))
     }
 })
 const upload = multer({storage: storage})
@@ -39,7 +40,7 @@ const file_field = [
     {name: "pic_doc", maxCount: 1},
     {name: "trailer", maxCount: 1},
     {name: "vid", maxCount: 1},
-    {name: "actor_pic", maxCount: 1},
+    {name: "actor_pic", maxCount: 3},
 ]
 
 // Connect to mongodb
@@ -56,7 +57,7 @@ app.use("/css", express.static(__dirname + '/assets/css'));
 app.use("/img", express.static(__dirname + '/assets/img'));
 app.use("/fonts", express.static(__dirname + '/assets/fonts'));
 app.use("/script", express.static(__dirname + '/script'));
-app.use("/movie", express.static(__dirname + '/Video'));
+app.use("/Video", express.static(__dirname + '/Video'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -82,6 +83,11 @@ app.post('/register', async (req, res) => {
             username: account,
             email: email,
             password: hashedPassword,
+            role: 'USER',
+            name: 'LazyFilm User',
+            gender: 'Ai bik',
+            phone_num: 'Chưa cập nhật',
+            birthdate: new Date(),
             // Add additional fields as needed (e.g., profilePicture, birthdate, gender)
         });
 
@@ -233,7 +239,7 @@ app.get('/Movie/Search', (req, res) => {
     } 
     else {
         if (Url.split("+").length == 1) {
-            Movies.find({ 'name': { '$regex': movie_name}}).sort({year: -1})
+            Movies.find({ 'name_vn': { '$regex': movie_name}}).sort({year: -1})
                 .then(result => {
                     // console.log(result)
                     res.render("./Search/search")
@@ -260,41 +266,100 @@ app.post('/search', async (req, res) => {
 })
 
 app.post('/update', async (req, res) => {
-    const id = req.body.userID
     const update_data = req.body.update_data
+    console.log(typeof(req.body.movieId))
 
-    if(update_data == "VIP") {
-        user_data = await Movies.findById(id)
-        user_data.nation = 'VIP';
+    if(update_data == "DELETE" || update_data == "ADMIN" || update_data == "VIP") {
+        const id = req.body.userID
+        if(update_data == "VIP") {
+            user_data = await Users.findById(id)
+            user_data.role = 'VIP';
+            await user_data.save();
+        }
+        if(update_data == "ADMIN") {
+            user_data = await Users.findById(id)
+            user_data.role = 'ADMIN';
+            await user_data.save();
+        }
+        if(update_data == "DELETE") {
+            user_data = await Users.findById(id)
+            await user_data.deleteOne({"_id": {"$oid": id}})
+        }
+        res.redirect('/Admin/Users')
+    }
+        
+    if(req.body.sex === '1' || req.body.sex === '2'){
+        var id = req.cookies.userId
+        var gender = req.body.sex
+        switch (gender) {
+            case '1':
+                gender = "Nam"
+                break;
+        
+            case '2':
+                gender = "Nữ"
+                break;
+        }
+        user_data = await Users.findById(id)
+        user_data.gender = gender;
+        user_data.name = req.body.name;
+        user_data.birthdate = new Date(req.body.birthdate);
         await user_data.save();
     }
-    if(update_data == "ADMIN") {
-        user_data = await Movies.findById(id)
-        user_data.nation = 'ADMIN';
-        await user_data.save();
+
+    if(typeof(req.body.phone_num) == "string") {
+        if(req.body.phone_num.length === 10) {
+            var id = req.cookies.userId
+            user_data = await Users.findById(id)
+            user_data.phone_num = req.body.phone_num.toString()
+            await user_data.save()
+        }
     }
-    if(update_data === "DELETE") {
-        user_data = await Movies.findById(id)
-        await user_data.deleteOne({"_id": {"$oid": id}})
+
+    if(typeof(req.body.movieId) == "string") {
+        movie_data = await Movies.findById(req.body.movieId)
+        await movie_data.deleteOne({"_id": {"$oid": req.body.movieId}})
     }
-    console.log(await Movies.findById(id))
-    res.redirect('/Admin/Users')
+
 })
 
-// app.get('/Movie/Watch', (req, res) => {
-//     res.render("./WatchVideo/Watch") 
-// })
+app.get('/Movie/Watch', (req, res) => {
+    res.render("./WatchVideo/Watch") 
+})
 
 app.get('/Account/Profile', (req, res) => {
-    res.render("./Account/profile") 
+    const userid = req.cookies.userId
+    Users.findById(userid)
+        .then(result => {
+            res.render("./Account/profile", {user: result, userid}) 
+        })
 })
 
-app.get('/Admin/dashboard', (req, res) => {
-    res.render("./AdminPage/dashboard") 
+app.get('/Admin/dashboard', async (req, res) => {
+    const movies_num = await Movies.countDocuments({});
+    const users_num = await Users.countDocuments({});
+    res.render("./AdminPage/dashboard", {movies_num, users_num}) 
 })
 
 app.get('/Admin/Films', (req, res) => {
-    res.render("./AdminPage/Films") 
+    let Url = req.originalUrl;
+    const temp = Url.split('=')
+    if(temp[1] == undefined) {
+        res.render("./AdminPage/Films", {movie: ""}) 
+    } else {
+        if (Url.split("+").length == 1) {
+            Movies.find({ 'name_vn': { '$regex': temp[1]}}).sort({year: -1})
+                .then(result => {
+                    res.render("./AdminPage/Films", {movie: result})
+                })
+        } else {
+            Movies.find( { $text: { $search: temp[1] } } ).sort({year: -1})
+                .then(result => {
+                    res.render("./AdminPage/Films", {movie: result})
+                })
+        }
+    }
+    
 })
 
 // TODO
@@ -305,15 +370,15 @@ app.post('/Admin/Films', upload.fields(file_field) , function(req,res) {
         category: req.body.Category,
         nation: req.body.nation,
         year: req.body.year,
-        actor_name: req.body.actor_name.split(","),
+        actor_name: req.body.actor_name.split(", "),
         director_name: req.body.director_name,
         discription: req.body.discription,
-        path: "./test123/" + req.body.name_vn + "/",
+        path: "./Movie/" + req.body.name_vn + "/",
         vip : req.body.vip
     }
     const saveMovie = new Movies(data)
     saveMovie.save()
-
+    console.log(req.body)
     res.redirect('/Admin/Films')
 })
 
@@ -326,7 +391,10 @@ app.get('/Admin/Require', (req, res) => {
 })
 
 app.get('/Admin/Users', (req, res) => {
-    res.render("./AdminPage/Users") 
+    Users.find().limit(10)
+        .then(result => {
+            res.render("./AdminPage/Users", {user: result}) 
+        })
 })
 
 app.get('/Tinhcam', (req, res) => {

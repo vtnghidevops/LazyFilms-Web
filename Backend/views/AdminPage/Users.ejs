@@ -97,33 +97,36 @@
                                 <th width="10%">Role</th>
                                 <th width="21%">Change role / Delete</th>
                             </tr>
+
+                            <% user.forEach(user => { %>
                             <tr>
                                 <td></td>
-                                <td>ngvana01</td>
-                                <td>NGuyễn Văn A</td>
-                                <td>nguyenvana@gmail.com</td>
-                                <td>user</td>
+                                <td><%= user.username  %></td>
+                                <td><%= user.name  %></td>
+                                <td><%= user.email  %></td>
+                                <td><%= user.role  %></td>
                                 <td>
                                     <div class="user-authorization">
                                         <form class="admin-userForm" action="/update" method="post">
                                             <input type="hidden" name="update_data" action="/update" value="ADMIN">
-                                            <input type="hidden" name="userID" value="663b16c51aaaa0847b51c465">
+                                            <input type="hidden" name="userID" value=<%= user._id %>>
                                             <button type="submit" class="btn_vipUser">Admin</button>
                                         </form>
                                         <form class="vip-userForm" action="/update" method="post">
                                             <input type="hidden" name="update_data" action="/update" value="VIP">
-                                            <input type="hidden" name="userID" value="663b16c51aaaa0847b51c465">
+                                            <input type="hidden" name="userID" value=<%= user._id %>>
                                             <button type="submit" class="btn_vipUser">Vip</button>
                                         </form>
                                         <form class="delete-userForm" action="/update" method="post">
                                             <input type="hidden" name="update_data" value="DELETE">
-                                            <input type="hidden" name="userID" value="663c89228d78ea7096c0c205">
+                                            <input type="hidden" name="userID" value=<%= user._id %>>
                                             <button type="submit" class="btn_deleteUser">Delete</button>
                                         </form>
                                     </div>
                                 </td>
-        
                             </tr>
+                            <% }) %>
+
                        </thead>
                     </table>
         

@@ -140,12 +140,7 @@ function checkInputsInfoBlock() {
   var oldPassAgain = $('.info__item-passAgain').val().trim().length > 0;
   var newPass = $('.info__item-newPass').val().trim().length > 0;
   var updateTel = $('.info__item-tel').val().trim().length > 0;
-  console.log(genderSelected)
-  console.log(dateFilled)
-  console.log(oldPass)
-  console.log(oldPassAgain)
-  console.log(newPass)
-  console.log(updateTel)
+
 
   // Vì gender có default value
   if ((nameFilled  || dateFilled || oldPass || oldPassAgain || newPass || updateTel || otpFilled) && genderSelected ) {
@@ -202,6 +197,7 @@ $('.OTP__number').on('focus', function () {
   $('.OTP__number').removeClass('active__OTP');
   $(this).addClass('active__OTP');
 });
+
 // Full 1 input thì next
 $('.OTP__number').on('input', function () {
   if ($(this).val().length === 1) {

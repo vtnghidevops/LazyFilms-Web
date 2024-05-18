@@ -78,47 +78,48 @@
             <div class="carousel_content-listFilms">
                 <h1 class="title">LIỆT KÊ TẤT CẢ PHIM</h1>
                 <form class="carousel_content-findFilms" >
-                    <input class="carousel_content-findFilms-input" type="text" />
-                    <input class="carousel_content-findFilms-btn" type="button" value="Tìm kiếm phim"/>
+                    <input class="carousel_content-findFilms-input" type="text" name="Films"/>
+                    <button type = "submit" class = "carousel_content-findFilms-btn">Tìm kiếm</button>
+
                 </form>
                 <div class="carousel_content-listFilms-infor">
-                    <table class="admin_listFilms">
+                    <table class="user__infor" width="87%">
                         <thead>
-                            <tr>
-                                <th width = 16.667% >Tên phim</th>
-                                <th width = 3.333%>Số tập</th>
-                                <th width = 3.333%>Tập phim</th>
-                                <th width = 3.333%>Trạng thái</th>
-                                <th width = 13.333%>Hình ảnh phim</th>
-                                <th width = 3.333%>Năm phim</th>
-                                <th width = 3.333%>Thời lượng</th>
-                                <th width = 3.333%>Chất lượng</th>
-                                <th width = 3.333%>Ngôn ngữ</th>
-                                <th width = 3.333%>Thể loại</th>
-                                <th width = 3.333%>Quốc gia</th>
-                                <th width = 3.333%>Loại phim</th>
-                                <th width = 13.333%>Trailer</th>
-                                <th width = 3.333%>Lượt xem</th>
-                                <th width = 3.333%>Phim nổi bậc</th>
-                                <th width = 3.333%>Hiển thị</th>
-                                <th width = 3.333%>Quản lý</th>
-                            </tr>
+                             <tr>
+                                 <th width="4%"></th>
+                                 <th width="25%">Movie name</th>
+                                 <th width="20%">Year</th>
+                                 <th width="20%">Nation</th>
+                                 <th width="10%">Vip?</th>
+                                 <th width="21%">Delete Movie</th>
+                             </tr>
+                             
+                             <% if(movie !== "") { %>
+                                <% movie.forEach(movie => { %>
+                                    <tr>
+                                        <td></td>
+                                        <td><%= movie.name_vn %></td>
+                                        <td><%= movie.year  %></td>
+                                        <td><%= movie.nation %></td>
+                                        <td><%= movie.vip %></td>
+                                        <td>
+                                            <div class="user-authorization">
+                                                <form class="delete-userForm" action="/update" method="post">
+                                                    <input type="hidden" name="movieId" value=<%= movie._id %>>
+                                                    <button type="submit" class="btn_deleteUser">Delete</button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                             <% })} %>
+                             
+                             
+ 
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bleach: Huyết Chiến Ngàn Năm - Chia Biệt 
-                                    (Bleach: Thousand-Year Blood War - The Separation)
-                                </td>
-                                <td>16</td>
-                                <td></td>
-                                <!-- Add more table data cells as needed -->
-                            </tr>
-                        </tbody>
-                    </table>
+                     </table>
                     
                 </div>
                 <!--Section add films-->
-                <form class="container_addFilms" id ="addFilm" method = "POST">
                     <form action="/Admin/Films" class="container_addFilms" id ="addFilm" method="post" enctype="multipart/form-data">
                         <div class="addFilms_header">
                             <a class="addFilm__section-close" href="#">
@@ -127,7 +128,7 @@
                             <h1>THÊM PHIM MỚI</h1>
                         </div>
                         <div class="">
-                            <h3>TÊN PHIM (tiếng Việt)</h3>
+                            <h3>TÊN PHIM (tiếng Việt)</h3> 
                             <input type="text" class="NameOfFilm_VN" name="name_vn"/>
                         </div>
                         <div class="">

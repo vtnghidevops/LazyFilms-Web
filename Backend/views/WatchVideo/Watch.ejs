@@ -14,6 +14,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
   <script src="/script/main.js" defer> </script>
   <script src="/script/video.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  
 </head>
 
 <body>
@@ -1109,7 +1111,7 @@
         <!-- container video -->
         <div class="container__video" id="container">
           <video class="state__video" autoplay>
-            <source src="/Video/Bleach- Huyết Chiến Ngàn Năm - Chia Biệt - FPT Play mp4" type="video/mp4">
+            <source src="/Video/Minions.mp4" type="video/mp4">
           </video>
           <img src="/img/Logo-removebg-preview.jpg" alt="logo LazyFilms" class="overlay__video-logo">
           <div class="video__loading">
@@ -1189,9 +1191,12 @@
                 <span class="control__time-display" role="presentation">0:01</span>
               </div>
   
-              <div class="video__control-process">
-  
-              </div>
+                <div class="video__control-process">
+                  <div class="item__bar">
+                    <p class="item__bar-percent"></p>
+                    <p class="watch__present"> Đã xem 54%</p>
+                  </div>
+                </div>
   
             </div>
   
@@ -2050,16 +2055,16 @@
               <div class="comment__input-avata">
                 <img src="/img/img_user.jpg" alt="user">
               </div>
-              <div class="comment__list-item">
-                <!-- Start of the form -->
-                <form class="comment-form" action="/submit-comment" method="post">
+              <form class="comment-form" action="/submit-comment" method="post" style="width: 100%;">
+                <div class="comment__list-item">
+                  <!-- Start of the form -->
                   <textarea name="cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
-                  <div class="send__cmt">
-                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                  </div>
-                </form>
-                <!-- End of the form -->
-              </div>
+                  <button class="send__cmt">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                  <!-- End of the form -->
+                </div>
+              </form>
             </div>
 
             <!-- List comment -->
@@ -2619,98 +2624,101 @@
             <div class="comment__moreLoad">Tải thêm bình luận</div>
           </div>
         </div>
+
+        
       </div>
-  
-  
+      
     </div>
-  
+
     <!-- Footer -->
     <footer id="footer">
-      <div class="wrap__footer">
-        <!--Footer navigation-->
-        <nav class="footer__nav">
-          <!--  -->
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="#">
-                <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="footer__nav-logo">
-              </a>
-            </li>
-  
-            <li class="footer__nav-item header__mainPage">
-              <a href="/index.html">TRANG CHỦ</a>
-  
-            </li>
-            <li class="footer__nav-item">
-              <a href="#">GROUP THẢO LUẬN</a>
-            </li>
-          </ul>
-        </nav>
-  
-        <!--Footer Infomation -->
-  
-        <div class="footer__info">
-          <div class="footer__info-column">
-            <h3 class="footer__info-heading">Giới thiệu về chúng tôi</h3>
-            <ul>
-              <li class="footer__info-item"><a href="#">Thông tin website</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer__info-column">
-            <h3 class="footer__info-heading">Hợp tác</h3>
-            <ul>
-              <li class="footer__info-item"><a href="#">Đăng quảng cáo</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer__info-column">
-            <h3 class="footer__info-heading">Hỗ trợ lỗi</h3>
-            <ul>
-              <li class="footer__info-item"><a href="#">Phản ánh ý kiến</a></li>
-              <li class="footer__info-item"><a href="#">Hỗ trợ lỗi</a></li>
-              <li class="footer__info-item"><a href="#">Câu hỏi thường gặp</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer__info-column">
-            <h3 class="footer__info-heading">Điều khoản dịch vụ</h3>
-            <ul>
-              <li class="footer__info-item"><a href="#">Điều khoản riêng tư</a></li>
-              <li class="footer__info-item"><a href="#">Điều khoản sử dụng</a></li>
-            </ul>
-  
-          </div>
-        </div>
-  
-  
-        <!--Footer bottom-->
-        <div class="footer__bottom">
-          <div class="footer__bottom-center">
-            <p>Copyright &copy;2024 Lazyfilm <br />
-              Chúng tôi sử dụng Cookies để cải thiện trải nghiệm sử dụng của bạn.
-              Nếu bạn tiếp tục sử dụng trang web của chúng tôi, có nghĩa là bạn đồng ý chúng tôi sử dụng cookie.
-              <a href="#">Đọc Chính sách quyền riêng tư Lazyfilms</a>
-            </p>
-            <!--Icon-->
-  
-            <ul class="footer__icon">
-              <li class="footer__bottom-icon"> <a href="#" class="footer__icon-facebook">
-                  <i class="fa-brands fa-square-facebook"></i></a>
+        <div class="wrap__footer">
+          <!--Footer navigation-->
+          <nav class="footer__nav">
+            <!--  -->
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#">
+                  <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="footer__nav-logo">
+                </a>
               </li>
-              <li class="footer__bottom-icon"><a href="#" class="footer__icon-instagram">
-                  <i class="fa-brands fa-instagram"></i></a>
+    
+              <li class="footer__nav-item header__mainPage">
+                <a href="/index.html">TRANG CHỦ</a>
+    
               </li>
-              <li class="footer__bottom-icon"><a href="#" class="footer__icon-youtube">
-                  <i class="fa-brands fa-youtube"></i></a>
+              <li class="footer__nav-item">
+                <a href="#">GROUP THẢO LUẬN</a>
               </li>
             </ul>
-  
+          </nav>
+    
+          <!--Footer Infomation -->
+    
+          <div class="footer__info">
+            <div class="footer__info-column">
+              <h3 class="footer__info-heading">Giới thiệu về chúng tôi</h3>
+              <ul>
+                <li class="footer__info-item"><a href="#">Thông tin website</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer__info-column">
+              <h3 class="footer__info-heading">Hợp tác</h3>
+              <ul>
+                <li class="footer__info-item"><a href="#">Đăng quảng cáo</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer__info-column">
+              <h3 class="footer__info-heading">Hỗ trợ lỗi</h3>
+              <ul>
+                <li class="footer__info-item"><a href="#">Phản ánh ý kiến</a></li>
+                <li class="footer__info-item"><a href="#">Hỗ trợ lỗi</a></li>
+                <li class="footer__info-item"><a href="#">Câu hỏi thường gặp</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer__info-column">
+              <h3 class="footer__info-heading">Điều khoản dịch vụ</h3>
+              <ul>
+                <li class="footer__info-item"><a href="#">Điều khoản riêng tư</a></li>
+                <li class="footer__info-item"><a href="#">Điều khoản sử dụng</a></li>
+              </ul>
+    
+            </div>
           </div>
-        </div>
-  
-  
+    
+    
+          <!--Footer bottom-->
+          <div class="footer__bottom">
+            <div class="footer__bottom-center">
+              <p>Copyright &copy;2024 Lazyfilm <br />
+                Chúng tôi sử dụng Cookies để cải thiện trải nghiệm sử dụng của bạn.
+                Nếu bạn tiếp tục sử dụng trang web của chúng tôi, có nghĩa là bạn đồng ý chúng tôi sử dụng cookie.
+                <a href="#">Đọc Chính sách quyền riêng tư Lazyfilms</a>
+              </p>
+              <!--Icon-->
+    
+              <ul class="footer__icon">
+                <li class="footer__bottom-icon"> <a href="#" class="footer__icon-facebook">
+                    <i class="fa-brands fa-square-facebook"></i></a>
+                </li>
+                <li class="footer__bottom-icon"><a href="#" class="footer__icon-instagram">
+                    <i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="footer__bottom-icon"><a href="#" class="footer__icon-youtube">
+                    <i class="fa-brands fa-youtube"></i></a>
+                </li>
+              </ul>
+    
+            </div>
+          </div>
+    
+    
     </footer>
+  
+      
   </div>
 
 </body>

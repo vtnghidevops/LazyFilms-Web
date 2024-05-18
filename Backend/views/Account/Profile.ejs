@@ -944,58 +944,61 @@
   
 
     <!-- Edit profile -->
-    <div class="container__edit-profile" id = "edit__profile">
-      <div class="section__edit-profile">
-        <a class="forgot__section-close">
-          <i class="fa-solid fa-circle-xmark"></i>
-        </a>
-        <!-- body -->
-        <div class="edit__profile-body">
-          <h4 class="edit__body-title">Thông tin cá nhân</h4>
-          <div class="edit__update-avata">
-            <span class="update__avata">
-              <span class="icon__upload" id = "icon__upload-avata">
-                <i class="fa-solid fa-pen"></i>
+      <div class="container__edit-profile" id = "edit__profile">
+        <div class="section__edit-profile">
+          <a class="forgot__section-close">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </a>
+          <!-- body -->
+
+        <form action="/update" method="post">
+          <div class="edit__profile-body">
+            <h4 class="edit__body-title">Thông tin cá nhân</h4>
+            <div class="edit__update-avata">
+              <span class="update__avata">
+                <span class="icon__upload" id = "icon__upload-avata">
+                  <i class="fa-solid fa-pen"></i>
+                </span>
+                <input type="file" id="avatarInput">
               </span>
-              <input type="file" id="avatarInput">
-            </span>
-          </div>
-          <div class="update__info">
-            <!-- item -->
-            <div class="update__info-item">
-              <span>Tên hiện thị</span>
-              <input type="text" class = "info__item-name" placeholder="Nhập tên hiện thị">
             </div>
-             <!-- item -->
-             <div class="update__info-item">
-              <span>Giới tính</span>
-              <div class="select__sex">
-                <select name="sex" id="sex__code">
-                  <option class="select__sex-option" value="1">
-                    Nam
-                  </option>
-                  <option class="select__sex-option" value="2">
-                    Nữ
-                  </option>
-                </select>
-                <div class="select__down"></div>
+            <div class="update__info">
+              <!-- item -->
+              <div class="update__info-item">
+                <span>Tên hiển thị</span>
+                <input type="text" class = "info__item-dob" placeholder="Nhập tên hiển thị" name="name">
               </div>
+              <!-- item -->
+              <div class="update__info-item">
+                <span>Giới tính</span>
+                <div class="select__sex">
+                  <select name="sex" id="sex__code">
+                    <option class="select__sex-option" value="1" >
+                      Nam
+                    </option>
+                    <option class="select__sex-option" value="2" >
+                      Nữ
+                    </option>
+                  </select>
+                  <div class="select__down"></div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="update__info-item">
+                <span>Sinh nhật</span>
+                <input type="text" class = "info__item-dob" placeholder="Theo dạng d/m/y" name="birthdate">
+              </div>
+              
             </div>
-             <!-- item -->
-             <div class="update__info-item">
-              <span>Sinh nhật</span>
-              <input type="text" class = "info__item-dob" placeholder="Theo dạng d/m/y">
-            </div>
-            
           </div>
+          <div class="edit__profile-submit ">
+            <button class="active__btn" type="submit">Cập nhật</button>
+          </div>
+        </form>
+          
         </div>
-
-        <div class="edit__profile-submit ">
-          <button class ="">Cập nhật</button>
-        </div>
-
       </div>
-    </div>
+    
 
      <!-- Container__QR -->
      <div class="container__qr-payment" id="QR_VNPAY">
@@ -1059,21 +1062,22 @@
           <i class="fa-solid fa-circle-xmark"></i>
         </a>
         <!-- body -->
-        <div class="edit__profile-body change__tel-body">
-          <h4 class="edit__body-title">Đổi số điện thoại</h4>
-          <p class="tel__body-desc">Nhập số điện thoại của bạn và hoàn tất quá trình thay đổi số điện thoại</p>
-          <div class="update__info">
-           <div class="update__info-item">
-            <span>Số điện thoại</span>
-            <input type="text" class = "info__item-tel" placeholder="Nhập số điện thoại của bạn">
-           </div>
-            
+        <form action="/update" method="post">
+          <div class="edit__profile-body change__tel-body">
+            <h4 class="edit__body-title">Đổi số điện thoại</h4>
+            <p class="tel__body-desc">Nhập số điện thoại của bạn và hoàn tất quá trình thay đổi số điện thoại</p>
+            <div class="update__info">
+            <div class="update__info-item">
+              <span>Số điện thoại</span>
+              <input type="text" class = "" placeholder="Nhập số điện thoại của bạn" name="phone_num">
+            </div>
+            </div>
           </div>
-        </div>
 
-        <div class="edit__profile-submit">
-          <button class ="">Cập nhật</button>
-        </div>
+          <div class="edit__profile-submit">
+            <button class ="active__btn">Cập nhật</button>
+          </div>
+        </form>
 
       </div>
     </div>
@@ -1228,25 +1232,25 @@
                   <!-- info -->
                   <div class="profile__main-info">
                     <div class="main__info-block">
-                      <p class="info__block-name">Anh Tuấn</p>
+                      <p class="info__block-name"><%= user.name  %></p>
                       <div class="info__block-other">
                         <span>
                           Giới tính:
-                          <span class="info__sex">(Chưa cập nhật)</span>
+                          <span class="info__sex"><%= user.gender  %></span>
                         </span>
 
                         <div class="slash"></div>
 
                         <span>
                           Ngày sinh:
-                          <span class="info__dob">(Chưa cập nhật)</span>
+                          <span class="info__dob"><%= user.birthdate.toLocaleDateString() %></span>
                         </span>
 
                         <div class="slash"></div>
 
                         <span>
                           UID:
-                          <span class="info__uid">10002</span>
+                          <span class="info__uid"><%= userid.substring(19) %></span>
                         </span>
 
 
@@ -1280,7 +1284,7 @@
                     <div class="security__item-content">
                       <span class="item__content-label">
                         Tài khoản
-                        <span class=info__account>&nbsp;&nbsp;LazyFilms</span>
+                        <span class=info__account>&nbsp;&nbsp;<%= user.username  %></span>
                       </span>
                       <div class="button__change" role="button">Thay đổi</div>
 
@@ -1292,7 +1296,7 @@
                     <div class="security__item-content">
                       <span class="item__content-label">
                         ID
-                        <span class=info__id>&nbsp;&nbsp;10002</span>
+                        <span class=info__id>&nbsp;&nbsp;<%= userid %></span>
                       </span>
                       <div class="button__change" role="button">Thay đổi</div>
                     </div>
@@ -1303,7 +1307,7 @@
                     <div class="security__item-content">
                       <span class="item__content-label">
                         Email
-                        <span class=info__email>&nbsp;&nbsp;lazyfilms@gmail.com</span>
+                        <span class=info__email>&nbsp;&nbsp;<%= user.email  %></span>
                       </span>
                       <div class="button__change" role="button">Thay đổi</div>
 
@@ -1315,7 +1319,7 @@
                     <div class="security__item-content">
                       <span class="item__content-label">
                         Số điện thoại
-                        <span class=info__account>&nbsp;&nbsp;(Chưa cập nhật)</span>
+                        <span class=info__account>&nbsp;&nbsp;<%= user.phone_num  %></span>
                       </span>
                       <div class="button__change active" role="button">Thay đổi</div>
 

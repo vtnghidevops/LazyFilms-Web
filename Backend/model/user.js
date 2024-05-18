@@ -14,19 +14,25 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  subscriptionType: {
+  role: {
     type: String,
-    enum: ['Premium', 'Standard']
+    required: true
+  },
+  name: {
+    type: String,
+    required: false,
   },
   profilePicture: {
+    type: String
+  },
+  phone_num: {
     type: String
   },
   birthdate: {
     type: Date
   },
   gender: {
-    type: String,
-    enum: ['Male', 'Female']
+    type: String
   }
 });
 

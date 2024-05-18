@@ -93,7 +93,7 @@ $(btnCloseShare).click(function () {
 
 
 //play/pause video 
-
+let videoElement = $('.state__video').get(0);
 $('#videoControl').click(function () {
     let videoElement = $('.state__video').get(0);
     if (videoElement.paused) {
@@ -223,5 +223,115 @@ btnLikeCmt.click(function () {
     // Thay đổi các phần tử liên quan bên trong phần tử cha
     parentContainer.find('.item__reply-like .liked').toggle();
     parentContainer.find('.item__reply-like .unlike').toggle();
+});
+
+    var $episodeList = $('.episodes__tabs .episodes__list');
+    var hammertime0 = new Hammer($episodeList[0]);
+    var hammertime1= new Hammer($episodeList[1]);
+    var hammertime2 = new Hammer($episodeList[2]);
+    var hammertime3 = new Hammer($episodeList[3]);
+
+    hammertime0.on('swipeleft', function() {
+      handleSwipe('left');
+    });
+
+    hammertime0.on('swiperight', function() {
+      handleSwipe('right');
+    });
+    hammertime1.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+    hammertime1.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime2.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime2.on('swiperight', function() {
+        handleSwipe('right');
+      });
+      hammertime3.on('swipeleft', function() {
+        handleSwipe('left');
+      });
+  
+      hammertime3.on('swiperight', function() {
+        handleSwipe('right');
+      });
+
+
+    function handleSwipe(direction) {
+      var currentScrollPosition = $episodeList.scrollLeft();
+      var scrollAmount = $episodeList.width(); // Adjust the scroll amount based on your needs
+
+      if (direction === 'left') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition + scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      } else if (direction === 'right') {
+        $episodeList.animate({
+          scrollLeft: currentScrollPosition - scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+      }
+    }
+
+  // Process bar
+  var progressBar = $('.item__bar-percent'); // Lấy thanh tiến trình
+  var presentText = $('.watch__present'); // Lấy phần trăm thời gian đã xem
+  var timeDisplay = $('.control__time-display'); // Lấy phần tử hiển thị thời gian hiện tại
+  var durationDisplay = $('.control__duration-display'); // Lấy phần tử hiển thị tổng thời gian
+  var lastSeekTime = 0; // Biến lưu trữ thời điểm tua cuối cùng
+
+
+ // Sự kiện 'timeupdate' của video
+video[0].addEventListener('timeupdate', function() {
+    var currentTime = this.currentTime;
+    var duration = this.duration;
+    var percentWatched = (currentTime / duration) * 100;
+    presentText.text('Đã xem ' + Math.round(percentWatched) + '%');
+    progressBar.css('width', percentWatched + '%');
+
+    var minutes = Math.floor(currentTime / 60);
+    var seconds = Math.floor((currentTime % 60));
+    timeDisplay.text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'));
+
+    var totalMinutes = Math.floor(duration / 60);
+    var totalSeconds = Math.floor((duration % 60));
+    durationDisplay.text(totalMinutes.toString().padStart(2, '0') + ':' + totalSeconds.toString().padStart(2, '0'));
+});
+
+// Sự kiện 'seeked' của video
+video[0].addEventListener('seeked', function() {
+    var currentTime = this.currentTime;
+    var duration = this.duration;
+    var percentWatched = (currentTime / duration) * 100;
+    presentText.text('Đã xem ' + Math.round(percentWatched) + '%');
+    progressBar.css('width', percentWatched + '%');
+});
+
+// Click thanh process -> chỉnh timeline
+$('.video__control-process').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var rect = this.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var width = rect.right - rect.left;
+    var percentClicked = (x / width) * 100;
+
+    // Cập nhật thời gian hiện tại của video dựa trên phần trăm click
+    var duration = video[0].duration;
+    lastSeekTime = percentClicked / 100 * duration; // Lưu trữ thời điểm tua cuối cùng
+    video[0].currentTime = lastSeekTime;
+
+    // Cập nhật phần trăm thời gian đã xem
+    presentText.text('Đã xem ' + Math.round((lastSeekTime / duration) * 100) + '%');
+    progressBar.css('width', (lastSeekTime / duration) * 100 + '%');
+
+    // Cập nhật thời gian hiện tại dưới dạng phút giây
+    var minutes = Math.floor(lastSeekTime / 60);
+    var seconds = Math.floor(lastSeekTime % 60);
+    timeDisplay.text(minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0'));
 });
 

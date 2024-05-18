@@ -134,7 +134,7 @@ $goLoginFromNoti.click(() => {
 })
 
 /* Vào trạng thái Login */
-let $btnBlockLogin = $('#login .login__modal--group .login__button')
+let $btnBlockLogin = $('#login .login__modal--group .login__button') // Nút Dang nhap tren cai block Dang Nhap email,..
 let $btnShowOptionPersonal = $('.wrap__profile')
 let $menuOption = $('.profile__menu')
 let $block__watching = $('.carousel__film-watching')
@@ -146,7 +146,7 @@ let $block__watching = $('.carousel__film-watching')
 // Đăng nhập
 $btnBlockLogin.click(() => {
    closeModalOneTab($login)
-   // toggleActiveAndRemoveActive($show__login, $clickLogin)
+   toggleActiveAndRemoveActive($show__login, $clickLogin)
    $block__watching.addClass('active')
 })
 
@@ -191,7 +191,7 @@ function startAutoSliding() {
    clearInterval(sliderChange); // Clear any existing interval
    sliderChange = setInterval(() => {
       updatePositionSlider('');
-   }, 5000);
+   }, 4000);
 }
 
 // Start automatic sliding initially
@@ -360,7 +360,7 @@ function startCountdown() {
       var seconds = countdownTime % 60;
       countdownElement.text(mimutes + ':' + seconds)
 
-      if (countdownTime == 595) {
+      if (countdownTime == 400) {
          if ($qr_vnpay.is(':visible')) {
             alert("QR hết hạn, Vui lòng thử lại")
             toggleShowModal($vip, $qr_vnpay)
@@ -613,3 +613,65 @@ function copyToClipboard(text) {
    // Xóa phần tử textarea khỏi DOM
    document.body.removeChild(tempInput);
 }
+
+// Quên mật khẩu
+let $btnSendOtpFg = $('.forgot__modal_group .continue__btn-otp')
+let $blcOtp = $('#send__OTP')
+let $btnSubmitInfoMain = $('.edit__profile-submit button');
+
+$btnSendOtpFg.click(function(e){
+   e.preventDefault();
+   toggleShowModal($blcOtp,$forgot)
+})
+
+// focus input nào thì active 
+$('.OTP__number').on('focus', function () {
+   $('.OTP__number').removeClass('active__OTP');
+   $(this).addClass('active__OTP');
+ });
+ // Full 1 input thì next
+ $('.OTP__number').on('input', function () {
+   if ($(this).val().length === 1) {
+     // Nếu đã đủ, chuyển đến input tiếp theo
+     $(this).parent().next('.form__item-OTP').find('.OTP__number').focus().select();
+   }
+   checkInputsInfoBlock();
+ });
+
+$('.OTP__submit ').click(function(){
+   closeModalOneTab($blcOtp)
+})
+
+ // Tùy biến OTP ( gmail )
+let $descOTPMain = $('#send__OTP .tel__body-desc')
+let $gmailToDescMain = $('.info__email-forgot');
+$descOTPMain.text(`Vui lòng nhập mã được gửi qua gmail đến ${$gmailToDescMain.val()}`);
+
+
+ function resetOTPInputs() {
+   $('.OTP__number').val('');
+   $('.OTP__number').removeClass('active__OTP');
+   $('.form__item-OTP:first-child .OTP__number').addClass('active__OTP');
+ }
+ 
+ $('#send__OTP .forgot__section-close').on('click', function () {
+   closeModalOneTab($blcOtp)
+   resetOTPInputs();
+ });
+ 
+ function checkInputsInfoBlock() {
+   // Check if all OTP input fields are filled
+   var otpFilled = $('.OTP__number').length === $('.OTP__number').filter(function() {
+     return $(this).val().trim().length === 1;
+  }).length;
+
+   if ((otpFilled)) {
+     $btnSubmitInfoMain.addClass('active__btn').css('cursor', 'pointer');
+   } else {
+     if ($(this).parent().hasClass('submit__back')) {
+       $(this).addClass('active__btn')
+     } else {
+       $(this).removeClass('active__btn')
+     }
+   }
+ }
