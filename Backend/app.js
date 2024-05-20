@@ -96,11 +96,11 @@ app.post('/register', async (req, res) => {
 
         // Set the 'loggedIn' cookie after successful registration
 
-        res.cookie('userId', user._id.toString(), { secure: true });
+        res.cookie('userId', savedUser._id.toString(), { secure: true });
 
         // Redirect the user to the home page upon successful registration
         
-        res.redirect('/');
+        res.redirect('back');
         // res.render('./WatchVideo/Watch', { loggedIn: true });
     } catch (error) {
         // Handle errors
@@ -138,11 +138,18 @@ app.post('/login', async (req, res) => {
 
         // Redirect the user to the home page upon successful login
         
-        res.redirect('/');
+        res.redirect('back');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).send('Internal Server Error');
     }
+});
+
+// Logout
+app.post('/logout', (req, res) => {
+    res.clearCookie('loggedIn');
+    res.clearCookie('userId');
+    res.redirect('back');
 });
 
 // Routes
@@ -151,19 +158,65 @@ app.get('/', (req, res) => {
     res.render('index', { loggedIn: loggedIn });
 });
 
-app.get('/Movie/Watch', (req, res) => {
+app.get('/Movie/Watch', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
-    res.render('./WatchVideo/Watch', { loggedIn: loggedIn });
+    const movieId = req.query.movieId || 'default_movie_id'; // Get movieId from query parameters or set a default value
+    let isFavorite = false;
+
+    if (loggedIn) {
+        try {
+            const userId = req.cookies.userId; // Assuming userId is stored in cookies
+            const user = await Users.findById(userId).exec();
+            if (user) {
+                isFavorite = user.favorites.some(favorite => favorite.movieId.toString() === movieId);
+            }
+        } catch (error) {
+            console.error('Error checking favorites:', error);
+        }
+    }
+
+    res.render('WatchVideo/Watch', { loggedIn: loggedIn, isFavorite: isFavorite, movieId: movieId });
 });
 
 
-app.post('/logout', (req, res) => {
-    res.clearCookie('loggedIn');
-    res.clearCookie('userId');
-    res.redirect('/');
+// POST /favorite route
+app.post('/favorite', async (req, res) => {
+    const movieId = req.body.movieId;
+    const userId = req.cookies.userId;
+
+    if (!userId) {
+        return res.status(401).send('Unauthorized');
+    }
+
+    try {
+        const user = await Users.findById(userId).exec();
+        if (user) {
+            const favoriteExists = user.favorites.some(favorite => favorite.movieId.toString() === movieId);
+            console.log(`Favorite exists: ${favoriteExists}`);
+
+            if (favoriteExists) {
+                // Remove from favorites
+                user.favorites = user.favorites.filter(favorite => favorite.movieId.toString() !== movieId);
+                console.log('Removed from favorites');
+            } else {
+                // Add to favorites
+                user.favorites.push({ movieId: new mongoose.Types.ObjectId(movieId) });
+                console.log('Added to favorites');
+            }
+
+            await user.save();
+
+            // Redirect back to the watch page with the correct query parameter
+            res.redirect(`/Movie/Watch?movieId=${movieId}`);
+            return;
+        }
+    } catch (error) {
+        console.error('Error adding/removing favorite movie:', error);
+        res.status(500).send('Internal Server Error');
+    }
+
+    res.redirect('back');
 });
-
-
 
 // Route for submitting comments
 app.post('/submit-comment', async (req, res) => {
@@ -175,7 +228,7 @@ app.post('/submit-comment', async (req, res) => {
     }
 
     try {
-        const movieId = "66441414376328045c958839"
+        const movieId = "6646108d6db65a50a48be698"
 
         const movie = await Movies.findById(movieId);
         if (!movie) {
@@ -186,7 +239,7 @@ app.post('/submit-comment', async (req, res) => {
         await movie.save();
 
         // Redirect to the movie watch page or any other desired page
-        res.redirect('./Movie/Watch'); // or wherever you want to redirect after submission
+        res.redirect('back'); // or wherever you want to redirect after submission
     } catch (error) {
         console.error('Error submitting comment:', error);
         res.status(500).send('Internal Server Error');
@@ -321,10 +374,6 @@ app.post('/update', async (req, res) => {
         await movie_data.deleteOne({"_id": {"$oid": req.body.movieId}})
     }
 
-})
-
-app.get('/Movie/Watch', (req, res) => {
-    res.render("./WatchVideo/Watch") 
 })
 
 app.get('/Account/Profile', (req, res) => {

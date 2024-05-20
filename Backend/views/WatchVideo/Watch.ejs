@@ -1302,13 +1302,21 @@
           <!-- right desc -->
           <div class="video__desc-right">
             <div class="desc__right-heading">
-              <button class="right__heading-follow">
-                <span class="btn__heading-text">
-                  <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png">
-                  <img id="followHeart" class="icon__followed-Heart" src="/img/icons8-heart-50.png">
-                  Theo dõi
-                </span>
-              </button>
+              <form action="/favorite" method="post" id="followForm">
+                <input type="hidden" name="movieId" value="6646108d6db65a50a48be698">
+                <button type="submit" class="right__heading-follow">
+                  <span class="btn__heading-text">
+                    <% if (isFavorite) { %>
+                      <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png" style="display: none;">
+                      <img id="followHeart" class="icon__followed-Heart active__btn-follow" src="/img/icons8-heart-50.png" style="display: inline;">
+                    <% } else { %>
+                      <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png" style="display: inline;">
+                      <img id="followHeart" class="icon__followed-Heart" src="/img/icons8-heart-50.png" style="display: none;">
+                    <% } %>
+                    Theo dõi
+                  </span>
+                </button>
+              </form>
   
               <button class="right__heading-share">
                 <span class="btn__heading-text">
