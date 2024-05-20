@@ -489,7 +489,7 @@
   }
 
   .search__item--film .search__film--img {
-    width: 35%;
+    width: 40%;
   }
 
   /* respond search */
@@ -816,7 +816,9 @@
     display: contents;
 
   }
-
+  .container__video .overlay__video-logo {
+    margin: 1rem 1rem 0 0;
+  }
   .video__desc-left {
     width: auto;
     position: relative;
@@ -862,9 +864,23 @@
     padding-top: 1rem;
   }
 
-  /* .actor__item{
-width: 10rem;
-} */
+  .video__loading {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
 
-  
+  .video__loading i {
+    font-size: 3rem;
+  }
+  .container__video .overlay__video-logo {
+    max-width: 10rem;
+  }
+
+  .history__btn-change .btn__cancel {
+    margin-right: 6rem;
+  }
+    .btn__select-all .mask__check {
+      right: 22%;
+      top: -12px;
+    }
 }

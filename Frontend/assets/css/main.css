@@ -3533,8 +3533,9 @@ body::-webkit-scrollbar-track {
   position: absolute;
   color: var(--placeholder-text);
   font-size: 5rem;
-  margin-left: 2.5rem;
-  margin-top: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%,-50%);
   /* transform: translate(75%,31%); */
 }
 
@@ -5005,6 +5006,8 @@ body::-webkit-scrollbar-track {
 .history__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .history__list {
@@ -5230,6 +5233,7 @@ body::-webkit-scrollbar-track {
   height: 100%;
   top: 0px;
   z-index: 1;
+  pointer-events: none;
 }
 
 .select__mask {

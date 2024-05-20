@@ -1,4 +1,11 @@
 
+function checkLoginWhenClickVideo() {
+    if(!flagStatusLogin) {
+        showModalOneTab($('#required__login'))
+    }
+}
+checkLoginWhenClickVideo()
+
 // report video
 let $btnReport = $('.video__control-report');
 let $blcReport = $('#report')
@@ -15,9 +22,14 @@ function closeModalOneTab($modalToHide) {
     $modalToHide.fadeOut(300)
 }
 $btnReport.click(function () {
-    showModalOneTab($blcReport)
-    $checkboxes.prop('checked', false);
-    $sendReport.removeClass('active__btn')
+    if(!flagStatusLogin) {
+        checkLoginWhenClickVideo()
+    }else {
+        showModalOneTab($blcReport)
+        $checkboxes.prop('checked', false);
+        $sendReport.removeClass('active__btn')
+    }
+   
 })
 
 $cancelReport.click(function () {
@@ -80,8 +92,13 @@ let btnCloseShare = $(".share__section-close")
 //Click follow 
 
 $(btnFollow).click(function () {
-    $("#followHeart").toggleClass("active__btn-follow");
-    $('.icon__followed-Heart').toggle();
+    if(!flagStatusLogin) {
+        checkLoginWhenClickVideo()
+    }else {
+        $("#followHeart").toggleClass("active__btn-follow");
+        $('.icon__followed-Heart').toggle();
+
+    }
 });
 
 
@@ -252,8 +269,11 @@ let moreCmt = $('.item__replyOther-title')
 let btnLikeCmt = $('.item__reply-like')
 let requireLogin = $('.required__login')
 let userCmt = $('.comment__input')
-let statusLogin = false;
 let loginInUser = $('.text__login')
+
+
+
+
 
 loginInUser.click(function () {
     showModalOneTab($login)
@@ -307,7 +327,7 @@ $('.comment__option-item a').click(function (e) {
 
 // send cmt
 // Gắn sự kiện click cho các phần tử hiện có và tương lai
-$(document).on('click', '.send__cmt', function(e){
+$('.send__cmt').on('click', function(e){
     e.preventDefault(); 
     var commentText = $(this).siblings('textarea').val()
     var avatarSrc = $(this).parent('.comment__list-item').siblings('.comment__input-avata').children('img').attr('src')

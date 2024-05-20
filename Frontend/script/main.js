@@ -149,8 +149,10 @@ $btnBlockLogin.click((e) => {
    closeModalOneTab($login)
    toggleActiveAndRemoveActive($show__login, $clickLogin)
    $block__watching.addClass('active')
-   $('.required__login').removeClass('active')
+   $('.comment .required__login').removeClass('active')
    $('.comment__input').css('display','flex')
+   closeModalOneTab($('#required__login'))
+   flagStatusLogin = true
 })
 
 // Show Option của personal
@@ -747,3 +749,27 @@ console.log($passwordInput)
        $carouselList.css('transform', `translateX(${posX}px)`);
    });
 });
+
+// Check click phim có phí
+function notiPay(e) {
+   e.preventDefault();
+   showModalOneTab($('#noti_suc'));
+   $('#noti_suc .edit__body-title').text('Thông báo');
+   $('#noti_suc .tel__body-desc').text('Vui lòng đăng ký VIP để trải nghiệm sản phẩm có phí');
+}
+
+$('.banner__action-watch').click(function(e) {
+   var payOnSlider = $(this).parents('.slider__banner-action').siblings('.slider__banner-detail').find('.pay').length > 0;
+   if (payOnSlider) {
+      notiPay(e)
+   }
+});
+
+$('.carousel__listFilms-item').click(function(e){
+   var payOnFilms = $(this).find('.paid__movies').length > 0;
+   console.log(payOnFilms)
+   if(payOnFilms){
+      notiPay(e)
+   }
+}) 
+
