@@ -764,7 +764,7 @@ body {
 .container__search .container__search-topSearch {
   position: absolute;
   right: 0;
-  top: 12.5%;
+  top: 8.5%;
   width: 40%;
   height: 50%;
   max-height: 50%;
@@ -1090,8 +1090,8 @@ body {
 
 .forgot__modal_group .forgot__accepted-privacy {
   position: absolute;
-  width: 70%;
-  left: 15%;
+  width: 76%;
+  left: 13%;
   font-size: 1.4rem;
   color: var(--text-color);
   bottom: 4%;
@@ -2624,6 +2624,9 @@ body::-webkit-scrollbar-track {
 }
 
 /* .common-listFilms-buttonPlay, */
+.episodes__item-link {
+  border-radius: 0.8rem;
+}
 .episodes__item-link:hover img,
 .carousel__img-fixed:hover img {
   transform: scale(1.2);
@@ -3503,6 +3506,7 @@ body::-webkit-scrollbar-track {
   width: 100%;
   position: absolute;
   /* overflow: hidden; */
+  cursor: pointer;
 }
 
 .container__video .overlay__video-logo {
@@ -3529,8 +3533,9 @@ body::-webkit-scrollbar-track {
   position: absolute;
   color: var(--placeholder-text);
   font-size: 5rem;
-  margin-left: 2.5rem;
-  margin-top: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%,-50%);
   /* transform: translate(75%,31%); */
 }
 
@@ -3583,6 +3588,8 @@ body::-webkit-scrollbar-track {
 }
 
 .control__time-display {
+  margin-top: 0.5rem;
+  display: block;
   font-size: 1.3rem;
   font-weight: 200;
   color: var(--text-color-light);
@@ -3603,7 +3610,18 @@ body::-webkit-scrollbar-track {
 }
 
 /* control hover and block */
-
+/* .video__control-volume {
+  position: relative;
+}
+.control__volume:after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 0.5rem;
+  background-color: #ff6500;
+  left: 4rem;
+  top: 40%;
+}  */
 
 .control__volume-open .control__open-hover,
 .control__volume-muted .control__muted-hover,
@@ -3975,7 +3993,10 @@ body::-webkit-scrollbar-track {
   margin-top: 1rem;
   position: relative;
 }
-
+.actor__tabs .carousel__button-next,
+.actor__tabs .carousel__button-prev {
+  height: 77% !important;
+}
 .episodes__tabs .carousel__button-next,
 .actor__tabs .carousel__button-next,
 .episodes__tabs .carousel__button-prev,
@@ -3985,16 +4006,20 @@ body::-webkit-scrollbar-track {
   width: 5rem;
 }
 
-
-
-
+.connection__list,
+.trailer__list,
+.season__list,
 .actor__list,
 .episodes__list {
   display: flex;
   list-style: none;
   width: max-content;
+  transition: all 0.3s ease-in-out;
 }
 
+.connection__list-item,
+.trailer__list-item,
+.season__list-item,
 .actor__list-item,
 .episodes__list-item {
   border-radius: 0.8rem;
@@ -4004,6 +4029,9 @@ body::-webkit-scrollbar-track {
   max-width: 19rem;
 }
 
+.connection__list-item .episodes__item-frames img,
+.trailer__list-item .episodes__item-frames img,
+.season__list-item .episodes__item-frames img,
 .actor__list-item .actor__item-frames img,
 .episodes__list-item .episodes__item-frames img {
   border-radius: 0.8rem;
@@ -4044,10 +4072,11 @@ body::-webkit-scrollbar-track {
 .episodes__item .modal__frame {
   top: 0;
   position: absolute;
-  height: 11.5rem;
+  height: 75%;
   width: 100%;
   background-color: rgba(32, 32, 32, 0.6);
   display: none;
+  border-radius: 0.8rem;
 }
 
 .modal__frame i {
@@ -4076,11 +4105,16 @@ body::-webkit-scrollbar-track {
   color: var(--text-color);
 }
 
+.connection__list-item .episodes__item-link,
+.trailer__list-item .episodes__item-link,
+.season__list-item .episodes__item-link,
 .episodes__list-item .episodes__item-link {
   overflow: hidden;
   display: block;
 }
-
+.connection__list-item .modal__frame {
+  height: 65%;
+}
 /* Trailer */
 .container__trailer {
   margin-top: 2rem;
@@ -4102,7 +4136,7 @@ body::-webkit-scrollbar-track {
 .actor__list-item .actor__item-frames img {
   border-radius: 50%;
   max-height: 13rem;
-  width: 100%;
+  max-width: 13rem;
 }
 
 
@@ -4221,6 +4255,7 @@ body::-webkit-scrollbar-track {
   padding: 0 1rem;
   margin-bottom: 2rem;
   width: 100%;
+  display: none;
 }
 
 .comment__input-avata img {
@@ -4272,6 +4307,7 @@ body::-webkit-scrollbar-track {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
+  display: none;
 }
 
 .comment__list-item .send__cmt i {
@@ -4376,7 +4412,7 @@ body::-webkit-scrollbar-track {
 }
 
 .item__reply-like .unlike {
-  display: block;
+  display: none;
 }
 
 /* Other reply */
@@ -4446,9 +4482,10 @@ body::-webkit-scrollbar-track {
 }
 
 .required__login {
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
+  display: none;
 }
 
 .text__login {
@@ -4969,6 +5006,8 @@ body::-webkit-scrollbar-track {
 .history__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .history__list {
@@ -5194,6 +5233,7 @@ body::-webkit-scrollbar-track {
   height: 100%;
   top: 0px;
   z-index: 1;
+  pointer-events: none;
 }
 
 .select__mask {
@@ -5466,6 +5506,9 @@ body::-webkit-scrollbar-track {
   padding-right: 32px;
   margin-top: -1rem;
 }
+.submit__OTP {
+  margin-top: 5rem;
+}
 
 .edit__profile-submit button {
   padding: 12px 24px;
@@ -5486,7 +5529,10 @@ body::-webkit-scrollbar-track {
   /* cursor: pointer; */
 
 }
-
+.submit__OTP button {
+  width: 155%;
+  margin-left: -4rem;
+}
 /* Change tel */
 .section__change-tel {
   height: 34rem;
@@ -5530,6 +5576,9 @@ body::-webkit-scrollbar-track {
 .send__again {
   text-align: center;
   padding-top: 1rem;
+  display: block;
+  width: 120%;
+  margin-left: -2rem;
 }
 
 .send__again p {
@@ -5559,6 +5608,7 @@ body::-webkit-scrollbar-track {
 
 .form__container-OTP {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 4rem 2rem;
@@ -6176,7 +6226,7 @@ body::-webkit-scrollbar-track {
   color: rgb(182, 181, 181);
   padding: 0.7rem;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
 .video__setting-quality .video__setting-heading {
@@ -6292,4 +6342,8 @@ body::-webkit-scrollbar-track {
 
 .fullscreen{
   width: 90%;
+}
+
+.romantic__movie-listFilms li:nth-child(6) {
+  display: none;
 }

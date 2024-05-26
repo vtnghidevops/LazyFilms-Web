@@ -57,7 +57,8 @@ if (checkListHistoryToAdd()) {
   $modal.on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
-
+    console.log("ủa")
+    console.log(isButtonChangeClicked)
     if (isButtonChangeClicked) {
       if ($(this).find('.mask__check').hasClass('mask__check-selected')) {
         $(this).find('.mask__check').removeClass('mask__check-selected');

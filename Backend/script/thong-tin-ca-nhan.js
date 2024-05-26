@@ -90,7 +90,7 @@ function assignInfoProfile() {
 }
 
 
-
+let flagOTP = false; // Danh dau data OTP , show khoi thanh cong or that bai
 // submit edit info
 $btnUpdateProfile.click(function () {
 
@@ -104,16 +104,23 @@ $btnUpdateProfile.click(function () {
 
   } else if (parentClass.hasClass('container__change-password')) {
     toggleShowModal($blcSuccess, $('#change__password'));
-    textDescSuccess.text("Tài khoản của quý khách đã thay đổi mật khẩu thành công. Quý khách có thể quay lại và tiếp tục trải nghiệm!")
+    var oldPassword = $('.info__item-enterPass').val();
+    var newPassword = $('.info__item-passAgain').val();
+    var confirmNewPassword = $('.info__item-newPass').val();
+    verifyPassword(oldPassword, newPassword, confirmNewPassword);
+    //textDescSuccess.text("Tài khoản của quý khách đã thay đổi mật khẩu thành công. Quý khách có thể quay lại và tiếp tục trải nghiệm!")
 
   } else if (parentClass.hasClass('container__change-tel')) {
     toggleShowModal($blcSuccess, $('#change__tel'));
     textDescSuccess.text("Tài khoản của quý khách đã được cập nhật số điện thoại thành công. Quý khách có thể quay lại và tiếp tục trải nghiệm!")
     var telChange = $('.info__item-tel').val();
     $('.personal__change-tel .info__account').html(`&nbsp;&nbsp;${telChange}`);
-
   }else if (parentClass.hasClass('container__send-OTP')){
-    toggleShowModal($('#change__password'),$('#send__OTP'))
+      var input1 = $('.OTP__number').eq(0).val();
+      var input2 = $('.OTP__number').eq(1).val();
+      var input3 = $('.OTP__number').eq(2).val();
+      var input4 = $('.OTP__number').eq(3).val();
+      verifyOTP(input1,input2,input3,input4)
   }
   resetInputsInfoBlock();
 })
@@ -219,3 +226,90 @@ $('#send__OTP .forgot__section-close').on('click', function () {
 $('.OTP__number').on("change", function(){
   console.log($('.OTP__number').val())
 })
+
+function verifyOTP(input1, input2, input3, input4) {
+    fetch('/Account/Profile/verify-OTP', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input1, input2, input3, input4 })
+    })
+   .then(response => response.json())
+   .then(data => {
+        if (data.success) {
+          flagOTP = true;
+          console.log("Data veef ")
+          console.log($('#noti_suc'))
+          showModalOneTab($('#noti_suc'))
+           $('#noti_suc .tel__body-desc').text("Xác thực OTP thành công, bạn có thể thay đổi mật khẩu ngay bây giờ.");
+           $('#noti_suc .submit__back button').text("Tiếp tục")
+           closeModalOneTab($('#send__OTP'))
+        } else {
+          flagOTP = false;
+          showModalOneTab($('#noti_suc'))
+          $('#noti_suc .tel__body-desc').text("Xác thực OTP thất bại, vui lòng thử lại.");
+          $('#noti_suc .edit__body-title').text("Thất bại.");
+
+          closeModalOneTab($('#send__OTP'))
+        }
+    })
+   .catch((error) => {
+        console.error('Error:', error);
+        document.getElementById('noti_suc').style.display = 'block';
+        document.querySelector('.tel__body-desc').textContent = "An error occurred. Please try again.";
+    });
+    return flagOTP;
+}
+
+function verifyPassword(oldPassword, newPassword, confirmNewPassword) {
+  fetch('/Account/Profile/resetLogined', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ oldPassword, newPassword, confirmNewPassword })
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          flagPass = true;
+          console.log("Password change successful.");
+          showModalOneTab($('#noti_suc'));
+          $('#noti_suc .tel__body-desc').text("Thay đổi mật khẩu thành công. Bạn có thể tiếp tục sử dụng dịch vụ.");
+          $('#noti_suc .submit__back button').text("Tiếp tục");
+          closeModalOneTab($('#change__password'));
+      } else {
+          flagPass = false;
+          console.error("Password change failed:", data.message);
+          showModalOneTab($('#noti_suc'));
+          $('#noti_suc .tel__body-desc').text("Thay đổi mật khẩu thất bại, vui lòng thử lại. Lỗi: " + data.message);
+          $('#noti_suc .edit__body-title').text("Thất bại");
+          closeModalOneTab($('#change__password'));
+      }
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+      document.getElementById('noti_suc').style.display = 'block';
+      document.querySelector('.tel__body-desc').textContent = "An error occurred. Please try again.";
+  });
+  return flagPass;
+}
+
+
+$('.submit__back').click(function(){
+  if(flagOTP === true) {
+    toggleShowModal($('#change__password'),$('#noti_suc'))
+    console.log("for")
+  }
+})
+
+//Khi cập nhật mật khẩu thành công thì trả về aherf = Account/Profile
+$('.submit__back').click(function(){
+  if(flagPass === true) {
+    toggleShowModal($('#change__password'),$('#noti_suc'))
+    window.location.href = "/Account/Profile"; // Điều hướng người dùng
+  }
+})
+
+

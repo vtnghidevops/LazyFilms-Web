@@ -2,7 +2,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 const Movies = require('./model/movie');
 const Users = require('./model/user');
 const Reports = require('./model/report');
@@ -10,6 +12,9 @@ const multer = require('multer');
 const fs = require('fs-extra');
 const notifier = require('node-notifier');
 const { MongoClient } = require('mongodb');
+const nodemailer = require('nodemailer');
+const crypto = require('crypto');
+const path = require('path');
 
 const cookieParser = require('cookie-parser');
 const { render } = require('ejs');
@@ -64,6 +69,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
+//Register
 app.post('/register', async (req, res) => {
     // Extract data from the request body
     const { account, email, password } = req.body;
@@ -102,7 +108,7 @@ app.post('/register', async (req, res) => {
 
         // Redirect the user to the home page upon successful registration
         
-        res.redirect('/');
+        res.redirect('back');
         // res.render('./WatchVideo/Watch', { loggedIn: true });
     } catch (error) {
         // Handle errors
@@ -126,8 +132,14 @@ app.post('/login', async (req, res) => {
             return res.status(400).send('Email not found');
         }
 
+        console.log(user);
+
         // Compare the plaintext password with the hashed password
         const passwordMatch = await bcrypt.compare(password, user.password);
+
+        console.log("Password match result:", passwordMatch);
+        console.log("password: ", password);
+        console.log("User Pass: ", user.password);
 
         // If passwords don't match, return an error
         if (!passwordMatch) {
@@ -140,11 +152,18 @@ app.post('/login', async (req, res) => {
 
         // Redirect the user to the home page upon successful login
         
-        res.redirect('/');
+        res.redirect('back');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).send('Internal Server Error');
     }
+});
+
+// Logout
+app.post('/logout', (req, res) => {
+    res.clearCookie('loggedIn');
+    res.clearCookie('userId');
+    res.redirect('back');
 });
 
 // Routes
@@ -184,12 +203,271 @@ app.get('/Movie/Watch/:id', async (req, res) => {
     res.render('./WatchVideo/Watch', { loggedIn: loggedIn, isFavorite, movie, fullUrl, related, user });
 });
 
-
+//Logout
 app.post('/logout', (req, res) => {
     res.clearCookie('loggedIn');
     res.clearCookie('userId');
     res.redirect('/');
 });
+
+// Cấu hình Gmail
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'tranthienmanh09@gmail.com',
+      pass: 'mzsf jwyd odlg mzuv'
+    }
+});
+
+// ************* Forgot password *************
+// Hàm xử lý route đúng cho reset-password
+app.get('/Reset-password', (req, res) => {
+    const token = req.query.token;  // Lấy token từ các tham số truy vấn
+    if (token) {
+        res.render(' ResetPassword/reset', { token: token });
+    } else {
+        res.status(400).send('Không được phép truy cập !');
+    }
+});
+
+// Điểm cuối để yêu cầu đặt lại mật khẩu
+app.post('/forgot-password', async (req, res) => {
+    const { email } = req.body;
+    const user = await Users.findOne({ email: email });
+    if (!user) {
+      return res.status(404).send('Không tìm thấy người dùng.');
+    }
+  
+    const token = crypto.randomBytes(20).toString('hex');
+    await Users.updateOne({ _id: user._id }, {
+      $set: {
+        resetPasswordToken: token,
+        resetPasswordExpires: Date.now() + 108000000 // Token hết hạn 30 phut
+      }
+    });
+  
+    const mailOptions = {
+      from: 'yourgmail@gmail.com',
+      to: user.email,
+      subject: 'Đặt lại mật khẩu',
+      text: `Bạn nhận được điều này vì bạn (hoặc ai đó) đã yêu cầu đặt lại mật khẩu cho tài khoản của bạn.\n\n` +
+            `Vui lòng nhấp vào liên kết sau, hoặc dán nó vào trình duyệt của bạn để hoàn thành quá trình trong vòng 30 phút kể từ khi nhận được nó:\n\n` +
+            `http://localhost:3000/Reset-password/${token}\n\n` +
+            `Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này và mật khẩu của bạn sẽ không thay đổi.\n`
+    };
+  
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        res.status(500).send('Lỗi gửi email');
+      } else {
+        console.log('Email đã được gửi: ' + info.response);
+        res.status(200).send('Email khôi phục đã được gửi.');
+      }
+    });
+  });
+
+// Trang đặt lại mật khẩu
+app.get('/Reset-password/:token', async (req, res) => {
+    const { token } = req.params;
+    const user = await Users.findOne({
+      resetPasswordToken: token,
+      resetPasswordExpires: { $gt: Date.now() }
+    });
+  
+    if (!user) {
+      return res.status(400).send('Token đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.');
+    }
+  
+    res.render('ResetPassword/reset', { token: token });
+  });
+
+// Xử lý đặt lại mật khẩu
+app.post('/ResetPassword/reset/:token', async (req, res) => {
+    const { token } = req.params;
+    const { newPassword, repassword } = req.body; // Giả định mật khẩu mới được gửi trong body
+
+    try {
+        // const user = await Users.findOne({
+        //     resetPasswordToken: token,
+        //     resetPasswordExpires: { $gt: Date.now() } // Kiểm tra token vẫn còn hợp lệ
+        // });
+
+        const user = await Users.findOne({ resetPasswordToken: token });
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        console.log("Pass 1:", hashedPassword);
+
+        user.password = hashedPassword;
+        user.resetPasswordToken = undefined; // Xóa token sau khi đã dùng
+        user.resetPasswordExpires = undefined; // Xóa thời gian hết hạn của token
+        await user.save(); // cập nhật lại mật khẩu ở account db
+
+        console.log(user);
+
+
+        // if (!user) {
+        //     return res.status(400).send('Mã token không hợp lệ hoặc đã hết hạn.');
+        // }
+
+        // if (password !== repassword) {
+        //     return res.status(400).json({ success: false, message: "Mật khẩu mới và mật khẩu xác nhận không khớp" });
+        // }
+
+        // // Kiểm tra điều kiện mật khẩu mới (ví dụ: độ dài tối thiểu)
+        // if (password.length < 6) {
+        //     return res.status(400).json({ success: false, message: "Mật khẩu mới phải có ít nhất 6 ký tự" });
+        // }
+
+        // Mã hóa mật khẩu mới và cập nhật vào cơ sở dữ liệu
+
+    } catch (error) {
+        console.error('Lỗi trong quá trình đặt lại mật khẩu: ', error);
+        res.status(500).send('Lỗi trong quá trình đặt lại mật khẩu.');
+    }
+});
+
+
+
+
+
+
+
+
+//**********OTP***********//
+
+//******Button "Thay đổi" => gửi otp đến mail ****** */
+app.post("/Account/Profile/change-password", async (req, res) => {
+    const { email } = req.body;
+    try {
+        const user = await Users.findOne({ email: email });
+        if (!user) {
+            return res.status(404).send("User email not found");
+        }
+        
+        const otp = Math.floor(1000 + Math.random() * 9000); // Generate 4 digits OTP
+        const otpExpiry = new Date(Date.now() + 18000000); // OTP expiry time (30 minutes)
+  
+        console.log("OTP", otp);
+
+        // Update user document with OTP
+        const updateDoc = {
+          $set: {
+            otp: otp,
+            otpExpiry: otpExpiry,
+          }
+        };
+        const options = { upsert: true };
+        await Users.updateOne({ email: email }, updateDoc, options);
+        
+        // Send OTP via email
+        const mailOptions = {
+          from: 'tranthienmanh09@gmail.com',  // Your Gmail address
+          to: email,
+          subject: 'Your OTP',
+          text: `Your OTP is ${otp} and it expires in 30 minutes.`
+        };
+  
+        transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+            res.status(500).send('Error sending email');
+          } else {
+            console.log('Email sent: ' + info.response);
+          }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+//****** Verify-OTP******/
+app.use(bodyParser.urlencoded({ extended: true }));
+app.post("/Account/Profile/verify-OTP", async (req, res) => {
+    const userId = req.cookies.userId;
+    const user = await Users.findById(userId)
+
+    const { input1, input2, input3, input4 } = req.body;
+    const otp = `${input1}${input2}${input3}${input4}`;
+    const currentDateTime = new Date().getTime(); // Chuyển đổi thời gian hiện tại thành timestamp
+
+    console.log("input", input1);
+    console.log("input",input2);
+    console.log("input",input3);
+    console.log("input",input4);
+
+    try {
+
+        console.log("Received body:", req.body);
+        console.log("OTP from user:", user.otp, typeof(user.otp));
+        console.log("Generated OTP:", otp, typeof(otp));
+        console.log("OTP expiry from user:", user.otpExpiry);
+        console.log("Current DateTime:", currentDateTime);
+
+        // Kiểm tra OTP và thời hạn
+        if (user.otp == otp && user.otpExpiry > currentDateTime) {
+            console.log("OTP verified successfully. You can now change your password.")
+            res.json({success: true})
+
+        } else {
+            console.log("OTP verification failed. Please check again.")
+            res.json({success: false})
+           
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+});
+
+// Xử lý đặt lại mật khẩu
+app.post('/Account/Profile/resetLogined', async (req, res) => {
+    const { oldPassword, newPassword, confirmNewPassword } = req.body;
+    const userId = req.cookies.userId;
+    const user = await Users.findById(userId)
+
+    console.log(req.body);
+
+    try {
+        if (!user) {
+            return res.status(404).json({ success: false, message: "Người dùng không tồn tại" });
+        }
+
+        // Kiểm tra mật khẩu cũ có chính xác không
+        const isMatch = await bcrypt.compare(oldPassword, user.password);
+
+        if (!isMatch) {
+            return res.status(400).json({ success: false, message: "Mật khẩu cũ không chính xác" });
+        }
+
+        // Kiểm tra mật khẩu mới có khớp với mật khẩu xác nhận không
+        if (newPassword !== confirmNewPassword) {
+            return res.status(400).json({ success: false, message: "Mật khẩu mới và mật khẩu xác nhận không khớp" });
+        }
+
+        // Kiểm tra điều kiện mật khẩu mới (ví dụ: độ dài tối thiểu)
+        if (newPassword.length < 6) {
+            return res.status(400).json({ success: false, message: "Mật khẩu mới phải có ít nhất 6 ký tự" });
+        }
+
+        // Mã hóa mật khẩu mới và cập nhật vào cơ sở dữ liệu
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+        user.password = hashedPassword;
+        await user.save(); // cập nhật lại mật khẩu ở account db
+
+        res.json({ success: true, message: "Mật khẩu đã được đặt lại thành công" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: "Lỗi máy chủ nội bộ" });
+    }
+});
+
+
+
+
+
+
 
 
 
@@ -434,17 +712,18 @@ app.post('/history', async (req,res) => {
     const user = await Users.findById(userid)
     const isHistory = req.body.isHistory
     const movieId = req.body.movieId
+    console.log(movieId)
 
     if(isHistory == "true") {
-        const delete_item = user.history.filter(item => item!== movieId);
+        const delete_item = user.history.filter(item => !movieId.includes(item));
         user.history = delete_item
         user.save()
     } 
 
     if(isHistory == "false") {
-        const delete_item = user.favorites.filter(item => item!== movieId);
+        const delete_item = user.favorites.filter(item => !movieId.includes(item));
         user.favorites = delete_item
-        user.save()
+        await user.save()
     }
 })
 

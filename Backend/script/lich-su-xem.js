@@ -86,27 +86,38 @@ if (checkListHistoryToAdd()) {
   // Khối nào cóa mask__check-selected thì xóa
   $btnDel.on('click', function () {
 
+    var movie_list = [];
+    var isHistory;
     $('.history__item').each(function () {
       if ($(this).find('.mask__check-selected').length > 0) {
 
         var value = $(this).find('.HiddenId').val();
-        var isHistory = $(this).find('.isHistory').val();
-        var data = {
-          movieId: value,
-          isHistory: isHistory,
-        }
+        isHistory = $(this).find('.isHistory').val();
 
-        fetch('/history', {
-          method: 'POST', // or 'GET'
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
+        movie_list.push(value)
+
+
+
+
         // If .mask__check-selected is found, remove the .modal__item
         $(this).remove();
       }
     });
+
+    // Send list of movies for deleting
+
+    var data = {
+      movieId: movie_list,
+      isHistory: isHistory,
+    }
+    fetch('/history', {
+      method: 'POST', // or 'GET'
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
 
     // After deletion, check if any .modal__item remains
     if ($('.history__item').length === 0) {

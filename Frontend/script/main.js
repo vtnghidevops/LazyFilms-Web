@@ -144,10 +144,15 @@ let $block__watching = $('.carousel__film-watching')
 // console.log($menuOption)
 
 // Đăng nhập
-$btnBlockLogin.click(() => {
+$btnBlockLogin.click((e) => {
+   e.preventDefault();
    closeModalOneTab($login)
    toggleActiveAndRemoveActive($show__login, $clickLogin)
    $block__watching.addClass('active')
+   $('.comment .required__login').removeClass('active')
+   $('.comment__input').css('display','flex')
+   closeModalOneTab($('#required__login'))
+   flagStatusLogin = true
 })
 
 // Show Option của personal
@@ -566,6 +571,31 @@ let iconHeartSolid = $('.banner__action-heart .fa-solid')
 let listBannerLink = $('.slider__list-item')
 let currentShareBanner; // Biến để lưu trữ shareBanner hiện tại
 
+function shareVideo(e,link) {
+   e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+   currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
+   showModalOneTab(blcShare);
+
+   // Gán giá trị href cho copyShare khi shareBanner được click
+   let currentListBannerLink = currentShareBanner.closest(link); // Tìm kiếm listBannerLink chứa shareBanner
+   let hrefValue = currentListBannerLink.attr('href'); 
+   let cleanedHrefValue = hrefValue.replace('./', '');
+  copyShare.val(`https://lazyfilms.vn/${cleanedHrefValue}`); 
+}
+
+
+$(".right__heading-share").click(function(e){
+   // shareVideo(e,'.state__video');
+   e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+   currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
+   showModalOneTab(blcShare);
+   // Gán src cho copyShare khi shareBanner được click
+   let srcValue = $('.state__video source').attr('src')
+   let cleanedSrc = srcValue.replace('../../', ''); // Loại bỏ '../../' nếu cần thiết
+  copyShare.val(`https://lazyfilms.vn/${cleanedSrc}`); 
+});
+
+
 shareBanner.click(function(e){
    e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
    currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
@@ -615,63 +645,131 @@ function copyToClipboard(text) {
 }
 
 // Quên mật khẩu
-let $btnSendOtpFg = $('.forgot__modal_group .continue__btn-otp')
-let $blcOtp = $('#send__OTP')
-let $btnSubmitInfoMain = $('.edit__profile-submit button');
+// let $blcOtp = $('#send__OTP')
+let $btnAcceptReset = $('.forgot__modal_group .continue__btn-reset')
+let $blcNotiFowardReset = $('#noti_suc')
 
-$btnSendOtpFg.click(function(e){
+$btnAcceptReset.click(function(e){
    e.preventDefault();
-   toggleShowModal($blcOtp,$forgot)
+   toggleShowModal($blcNotiFowardReset,$forgot)
+})
+$('#forgotPass .info__email-forgot').on('change',function(){
+   $('#noti_suc .tel__body-desc').text(`Email xác thực tài khoản đã được gửi về ${$(this).val()}. Vui lòng kiểm tra để đặt lại mặt khẩu.`)
 })
 
-// focus input nào thì active 
-$('.OTP__number').on('focus', function () {
-   $('.OTP__number').removeClass('active__OTP');
-   $(this).addClass('active__OTP');
- });
- // Full 1 input thì next
- $('.OTP__number').on('input', function () {
-   if ($(this).val().length === 1) {
-     // Nếu đã đủ, chuyển đến input tiếp theo
-     $(this).parent().next('.form__item-OTP').find('.OTP__number').focus().select();
-   }
-   checkInputsInfoBlock();
+ $('#noti_suc .forgot__section-close').on('click', function () {
+   closeModalOneTab($('#noti_suc'))
+   closeModalOneTab($login)
+   $('#forgotPass .info__email-forgot').val('') // reset
  });
 
-$('.OTP__submit ').click(function(){
-   closeModalOneTab($blcOtp)
-})
-
- // Tùy biến OTP ( gmail )
-let $descOTPMain = $('#send__OTP .tel__body-desc')
-let $gmailToDescMain = $('.info__email-forgot');
-$descOTPMain.text(`Vui lòng nhập mã được gửi qua gmail đến ${$gmailToDescMain.val()}`);
-
-
- function resetOTPInputs() {
-   $('.OTP__number').val('');
-   $('.OTP__number').removeClass('active__OTP');
-   $('.form__item-OTP:first-child .OTP__number').addClass('active__OTP');
- }
+ // Back home
+ $('.submit__back').click(() => {
+   closeModalOneTab($('#noti_suc'))
+ })
  
- $('#send__OTP .forgot__section-close').on('click', function () {
-   closeModalOneTab($blcOtp)
-   resetOTPInputs();
- });
- 
- function checkInputsInfoBlock() {
-   // Check if all OTP input fields are filled
-   var otpFilled = $('.OTP__number').length === $('.OTP__number').filter(function() {
-     return $(this).val().trim().length === 1;
-  }).length;
 
-   if ((otpFilled)) {
-     $btnSubmitInfoMain.addClass('active__btn').css('cursor', 'pointer');
-   } else {
-     if ($(this).parent().hasClass('submit__back')) {
-       $(this).addClass('active__btn')
-     } else {
-       $(this).removeClass('active__btn')
-     }
+ // Ẩn hiện pass
+  var $eyeSlash = $('.fa-regular.fa-eye-slash');
+  var $eye = $('.fa-regular.fa-eye');
+  var $passwordInput = $('.login__modal--group input[type=password]');
+console.log($passwordInput)
+  // Gán sự kiện click cho biểu tượng eye-slash
+  $eyeSlash.on('click', function() {
+      // Ẩn eye-slash và hiển thị eye
+      $eyeSlash.hide();
+      $eye.show();
+
+      // Chuyển đổi kiểu nhập liệu của trường mật khẩu thành text
+      $passwordInput.attr('type', 'text');
+  });
+
+  // Gán sự kiện click cho biểu tượng eye
+  $eye.on('click', function() {
+      // Ẩn eye và hiển thị eye-slash
+      $eye.hide();
+      $eyeSlash.show();
+
+      // Chuyển đổi kiểu nhập liệu của trường mật khẩu trở lại password
+      $passwordInput.attr('type', 'password');
+  });
+
+  //Luot danh sach 
+  $('.carousel__listFilms').each(function() {
+   const $carouselList = $(this);
+   const $carouselItems = $carouselList.find('.carousel__listFilms-item');
+   let posX = 0;
+   let lastPosX = 0;
+
+   const hammer = new Hammer($carouselList[0]);
+   hammer.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+   hammer.on('panstart', function(e) {
+       lastPosX = posX;
+       $carouselList.css('transition', 'none'); // Disable transition during pan
+   });
+
+   hammer.on('panmove', function(e) {
+       const containerWidth = $carouselList.closest('.carousel__tvHome-listFilms').width();
+       const listWidth = $carouselList[0].scrollWidth;
+
+       posX = lastPosX + (e.deltaX * 2);  // Increase speed by adjusting deltaX multiplier
+
+       // Prevent scrolling beyond left boundary
+       if (posX > 0) {
+           posX = 0;
+       }
+
+       // Prevent scrolling beyond right boundary
+       const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+       if (posX < maxScrollX) {
+           posX = maxScrollX;
+       }
+
+       $carouselList.css('transform', `translateX(${posX}px)`);
+   });
+
+   hammer.on('panend', function(e) {
+       const containerWidth = $carouselList.closest('.carousel__tvHome-listFilms').width();
+       const listWidth = $carouselList[0].scrollWidth;
+
+       // Prevent scrolling beyond left boundary
+       if (posX > 0) {
+           posX = 0;
+       }
+
+       // Prevent scrolling beyond right boundary
+       const maxScrollX = containerWidth - listWidth;  // Maximum scroll position to keep the last item at the right edge
+       if (posX < maxScrollX) {
+           posX = maxScrollX;
+       }
+
+       // Enable smooth transition after pan
+       $carouselList.css('transition', 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)'); // Adjusted transition time for faster scroll
+       $carouselList.css('transform', `translateX(${posX}px)`);
+   });
+});
+
+// Check click phim có phí
+function notiPay(e) {
+   e.preventDefault();
+   showModalOneTab($('#noti_suc'));
+   $('#noti_suc .edit__body-title').text('Thông báo');
+   $('#noti_suc .tel__body-desc').text('Vui lòng đăng ký VIP để trải nghiệm sản phẩm có phí');
+}
+
+$('.banner__action-watch').click(function(e) {
+   var payOnSlider = $(this).parents('.slider__banner-action').siblings('.slider__banner-detail').find('.pay').length > 0;
+   if (payOnSlider) {
+      notiPay(e)
    }
- }
+});
+
+$('.carousel__listFilms-item').click(function(e){
+   var payOnFilms = $(this).find('.paid__movies').length > 0;
+   console.log(payOnFilms)
+   if(payOnFilms){
+      notiPay(e)
+   }
+}) 
+

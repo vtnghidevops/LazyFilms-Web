@@ -1249,7 +1249,7 @@
       </div>
     </div>
 
-    <!-- Gửi OTP SDT -->
+     <!-- Gửi OTP SDT -->
     <div class="container__send-OTP" id="send__OTP">
       <div class="section__edit-profile section__send-OTP">
         <a class="forgot__section-close">
@@ -1262,70 +1262,72 @@
           </p>
     
           <div class="form__container-OTP">
-            <div class="form__list-OTP">
+            <div class="form__list-OTP" >
               <div class="form__item-OTP ">
-                <input type="tel" class="OTP__number active__OTP" maxlength="1">
+                <input type="tel" name="input1" class="OTP__number active__OTP" maxlength="1">
               </div>
               <div class="form__item-OTP">
-                <input type="tel" class="OTP__number" maxlength="1">
+                <input type="tel" name="input2" class="OTP__number" maxlength="1">
               </div>
               <div class="form__item-OTP">
-                <input type="tel" class="OTP__number" maxlength="1">
+                <input type="tel" name="input3" class="OTP__number" maxlength="1">
               </div>
               <div class="form__item-OTP">
-                <input type="tel" class="OTP__number" maxlength="1">
+                <input type="tel" name="input4" class="OTP__number" maxlength="1">
+              </div>
+              <!-- <button type = "submit" style="color: transperant" class = "btn__hidden-submit"></button> -->
+            </div>
+            <div class="edit__profile-submit submit__OTP">
+              <!-- edit__profile-submit -->
+              <button class="" type="button" id = "confirmOTPButton">Xác nhận</button>
+              <div class="send__again">
+                <p>Chưa nhận được mã ?
+                  <span class="resend__password">Gửi lại</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="edit__profile-submit">
-          <!-- edit__profile-submit -->
-          <button class="" type="button">Xác nhận</button>
-          <div class="send__again">
-            <p>Chưa nhận được mã ?
-              <span class="resend__password">Gửi lại</span>
-            </p>
-          </div>
-        </div>
+        
     
       </div>
     </div>
     
     <!-- Change Password -->
     <div class="container__change-password" id="change__password">
-      <div class="section__edit-profile section__change-password">
-        <a class="forgot__section-close">
-          <i class="fa-solid fa-circle-xmark"></i>
-        </a>
-        <!-- body -->
-        <div class="edit__profile-body change__tel-body">
-          <h4 class="edit__body-title">Thay đổi mật khẩu</h4>
-          <p class="tel__body-desc">Vui lòng nhập Mật khẩu tối đa 6 số (0-9)</p>
-          <div class="update__info">
-            <div class="update__info-item">
-              <span>Mật khẩu cũ</span>
-              <input type="password" class="info__item-enterPass" placeholder="Nhập mật khẩu">
-            </div>
+        <div class="section__edit-profile section__change-password">
+          <a class="forgot__section-close">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </a>
+          <!-- body -->
+          <div class="edit__profile-body change__tel-body">
+            <h4 class="edit__body-title">Thay đổi mật khẩu</h4>
+            <p class="tel__body-desc">Vui lòng nhập Mật khẩu tối đa 6 số (0-9)</p>
+            <div class="update__info">
+              <div class="update__info-item">
+                <span>Mật khẩu cũ</span>
+                <input type="password" name="oldPassword" class="info__item-enterPass" placeholder="Nhập mật khẩu">
+              </div>
 
-            <div class="update__info-item">
-              <span>Mật khẩu mới</span>
-              <input type="password" class="info__item-passAgain" placeholder="Nhập mật khẩu mới">
-            </div>
+              <div class="update__info-item">
+                <span>Mật khẩu mới</span>
+                <input type="password" name="newPassword" class="info__item-passAgain" placeholder="Nhập mật khẩu mới">
+              </div>
 
-            <div class="update__info-item">
-              <span>Xác nhận mật khẩu</span>
-              <input type="password" class="info__item-newPass" placeholder="Nhập mật khẩu mới">
+              <div class="update__info-item">
+                <span>Xác nhận mật khẩu</span>
+                <input type="password" name="confirmNewPassword" class="info__item-newPass" placeholder="Nhập mật khẩu mới">
+              </div>
+      
             </div>
-    
           </div>
+
+        <div class="edit__profile-submit">
+          <button class ="">Xác nhận</button>
         </div>
 
-    <div class="edit__profile-submit">
-      <button class ="">Xác nhận</button>
-    </div>
-
-  </div>
+      </div>
     </div>
 
     <div class="body__container">
@@ -1470,17 +1472,17 @@
                   </div>
 
 
-                  <!-- item -->
-                  <div class="personal__security-item personal__change-pwd">
+                  <!-- Change Password when Loginned -->
+                  <form action="/Account/Profile/change-password" div class="personal__security-item personal__change-pwd" method="post">
                     <div class="security__item-content">
                       <span class="item__content-label">
                         Mật khẩu
                         <span class=info__account>&nbsp;&nbsp;*********</span>
                       </span>
-                      <div class="button__change active" role="button">Thay đổi</div>
-
+                      <input type="hidden" name="email" value="<%= user.email %>" >  
+                      <button type="submit" class="button__change active" role="button">Thay đổi</button>
                     </div>
-                  </div>
+                  </form>
 
                 </div>
               </div>

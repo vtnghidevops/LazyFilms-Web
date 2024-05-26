@@ -190,7 +190,7 @@ $logoutAccept.click(() => {
 // Tùy biến OTP ( gmail )
 let $descOTP = $('#send__OTP .tel__body-desc')
 let $gmailToDesc = $('.info__email')
-$descOTP.text(`Vui lòng nhập mã được gửi qua gmail đến ${$gmailToDesc.text()}`)
+$descOTP.text(`Vui lòng nhập mã được gửi qua gmail đến${$gmailToDesc.text()}`)
 
 // focus input nào thì active 
 $('.OTP__number').on('focus', function () {
@@ -216,3 +216,6 @@ $('#send__OTP .forgot__section-close').on('click', function () {
   resetOTPInputs();
 });
 
+$('.OTP__number').on("change", function(){
+  console.log($('.OTP__number').val())
+})
