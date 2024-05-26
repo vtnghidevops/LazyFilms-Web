@@ -121,16 +121,6 @@ let $show__login = $('.header__nav-login .show__login') // block bao menu and pr
 
 // Khi click notification -> bell active -> show notification
 // Và bell not active -> none
-function checkLogin() {
-   return flagStatusLogin = $show__login.is(":visible")
-}
-
-var checkLoginVar = setInterval(()=> {
-   checkLogin();
-   console.log("flag", flagStatusLogin)
-},1000)
-
-
 
 // Click showing/hiding noti trước login
 $block__noti.click(() => {
@@ -154,15 +144,10 @@ let $block__watching = $('.carousel__film-watching')
 // console.log($menuOption)
 
 // Đăng nhập
-$btnBlockLogin.click((e) => {
-   // e.preventDefault();
+$btnBlockLogin.click(() => {
    closeModalOneTab($login)
    toggleActiveAndRemoveActive($show__login, $clickLogin)
    $block__watching.addClass('active')
-   // $('.comment .required__login').removeClass('active')
-   // $('.comment__input').css('display','flex')
-   closeModalOneTab($('#required__login'))
-   flagStatusLogin = true
 })
 
 // Show Option của personal
@@ -581,29 +566,6 @@ let iconHeartSolid = $('.banner__action-heart .fa-solid')
 let listBannerLink = $('.slider__list-item')
 let currentShareBanner; // Biến để lưu trữ shareBanner hiện tại
 
-function shareVideo(e,link) {
-   e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
-   currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
-   showModalOneTab(blcShare);
-
-   // Gán giá trị href cho copyShare khi shareBanner được click
-   let currentListBannerLink = currentShareBanner.closest(link); // Tìm kiếm listBannerLink chứa shareBanner
-   let hrefValue = currentListBannerLink.attr('href'); 
-   let cleanedHrefValue = hrefValue.replace('./', '');
-  copyShare.val(`http://localhost:3000${cleanedHrefValue}`); 
-}
-
-
-$(".right__heading-share").click(function(e){
-   // shareVideo(e,'.state__video');
-   e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
-   currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
-   showModalOneTab(blcShare);
-   // Gán src cho copyShare khi shareBanner được click
-
-});
-
-
 shareBanner.click(function(e){
    e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
    currentShareBanner = $(this); // Lưu trữ shareBanner hiện tại
@@ -613,27 +575,22 @@ shareBanner.click(function(e){
    let currentListBannerLink = currentShareBanner.closest('.slider__list-item'); // Tìm kiếm listBannerLink chứa shareBanner
    let hrefValue = currentListBannerLink.attr('href'); 
    let cleanedHrefValue = hrefValue.replace('./', '');
-  copyShare.val(`http://localhost:3000${cleanedHrefValue}`); 
+  copyShare.val(`https://lazyfilms.vn/${cleanedHrefValue}`); 
 })
 
 closeShare.click(function() {
    closeModalOneTab(blcShare)
 })
 
-$('.banner__action-heart').click(function(e){
+iconHeartLight.click(function(e){
    e.preventDefault();
-   iconHeartLight.click(function(e){
-      e.preventDefault();
-      toggleActiveAndRemoveActive(iconHeartLight,iconHeartSolid)
-   }) 
-   
-   iconHeartSolid.click(function(e){
-      e.preventDefault();
-      toggleActiveAndRemoveActive(iconHeartSolid,iconHeartLight)
-   }) 
-   
-})
+   toggleActiveAndRemoveActive(iconHeartLight,iconHeartSolid)
+}) 
 
+iconHeartSolid.click(function(e){
+   e.preventDefault();
+   toggleActiveAndRemoveActive(iconHeartSolid,iconHeartLight)
+}) 
 
 // Copy 
 $('.share__copy-btn').click(function(e) {

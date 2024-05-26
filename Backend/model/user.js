@@ -1,4 +1,17 @@
 const mongoose = require('mongoose');
+
+const favoriteSchema = new mongoose.Schema({
+  movieId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'movie', // This should match the name of your Movie model
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
+});
+
 const userSchema = new mongoose.Schema({
   username: {
     type:String,
@@ -35,6 +48,7 @@ const userSchema = new mongoose.Schema({
       required: false
   },
 
+  
   role: {
     type: String,
     required: true
@@ -54,8 +68,12 @@ const userSchema = new mongoose.Schema({
   },
   gender: {
     type: String
-  }
+  },
+  favorites: [favoriteSchema] // Add favorites as an array of favoriteSchema
 });
+
+
+
 
 const Users = mongoose.model('users', userSchema);
 

@@ -38,7 +38,6 @@ const storage = multer.diskStorage({
             cb(null, file.originalname = Buffer.from(file.originalname, 'latin1').toString('utf8'))
     }
 })
-
 const upload = multer({storage: storage})
 
 const file_field = [ 
@@ -103,11 +102,11 @@ app.post('/register', async (req, res) => {
 
         // Set the 'loggedIn' cookie after successful registration
 
-        res.cookie('userId', newUser._id.toString(), { secure: true });
+        res.cookie('userId', savedUser._id.toString(), { secure: true });
 
         // Redirect the user to the home page upon successful registration
         
-        res.redirect('/');
+        res.redirect('back');
         // res.render('./WatchVideo/Watch', { loggedIn: true });
     } catch (error) {
         // Handle errors
@@ -151,11 +150,18 @@ app.post('/login', async (req, res) => {
 
         // Redirect the user to the home page upon successful login
         
-        res.redirect('/');
+        res.redirect('back');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).send('Internal Server Error');
     }
+});
+
+// Logout
+app.post('/logout', (req, res) => {
+    res.clearCookie('loggedIn');
+    res.clearCookie('userId');
+    res.redirect('back');
 });
 
 // Routes
@@ -186,78 +192,113 @@ const transporter = nodemailer.createTransport({
 });
 
 // ************* Forgot password *************
+// Hàm xử lý route đúng cho reset-password
+app.get('/Reset-password', (req, res) => {
+    const token = req.query.token;  // Lấy token từ các tham số truy vấn
+    if (token) {
+        res.render(' ResetPassword/reset', { token: token });
+    } else {
+        res.status(400).send('Không được phép truy cập !');
+    }
+});
 
-// app.post('/forgot-password', async (req, res) => {
-//     const { email } = req.body;
-//     const user = await Users.findOne({ email: email });
-//     if (!user) {
-//         return res.status(404).send('No user with that email');
-//     }
+// Điểm cuối để yêu cầu đặt lại mật khẩu
+app.post('/forgot-password', async (req, res) => {
+    const { email } = req.body;
+    const user = await Users.findOne({ email: email });
+    if (!user) {
+      return res.status(404).send('Không tìm thấy người dùng.');
+    }
+  
+    const token = crypto.randomBytes(20).toString('hex');
+    await Users.updateOne({ _id: user._id }, {
+      $set: {
+        resetPasswordToken: token,
+        resetPasswordExpires: Date.now() + 108000000 // Token hết hạn 30 phut
+      }
+    });
+  
+    const mailOptions = {
+      from: 'yourgmail@gmail.com',
+      to: user.email,
+      subject: 'Đặt lại mật khẩu',
+      text: `Bạn nhận được điều này vì bạn (hoặc ai đó) đã yêu cầu đặt lại mật khẩu cho tài khoản của bạn.\n\n` +
+            `Vui lòng nhấp vào liên kết sau, hoặc dán nó vào trình duyệt của bạn để hoàn thành quá trình trong vòng 30 phút kể từ khi nhận được nó:\n\n` +
+            `http://localhost:3000/Reset-password/${token}\n\n` +
+            `Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này và mật khẩu của bạn sẽ không thay đổi.\n`
+    };
+  
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        res.status(500).send('Lỗi gửi email');
+      } else {
+        console.log('Email đã được gửi: ' + info.response);
+        res.status(200).send('Email khôi phục đã được gửi.');
+      }
+    });
+  });
 
-//     const token = crypto.randomBytes(20).toString('hex');
-//     user.resetPasswordToken = token;
-//     user.resetPasswordExpires = Date.now() + 1800000; // Token expires in one hour
-//     await user.save();
+// Trang đặt lại mật khẩu
+app.get('/Reset-password/:token', async (req, res) => {
+    const { token } = req.params;
+    const user = await Users.findOne({
+      resetPasswordToken: token,
+      resetPasswordExpires: { $gt: Date.now() }
+    });
+  
+    if (!user) {
+      return res.status(400).send('Token đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.');
+    }
+  
+    res.render('ResetPassword/reset', { token: token });
+  });
 
-//     const resetUrl = `http://${req.headers.host}/ResetPassword/reset/${token}`;
-//     const mailOptions = {
-//         from: 'tranthienmanh09@gmail.com',
-//         to: user.email,
-//         subject: 'Password Reset',
-//         text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n
-//                Please click on the following link, or paste this into your browser to complete the process:\n\n
-//                ${resetUrl} \n\n
-//                If you did not request this, please ignore this email and your password will remain unchanged.\n`
-//     };
+// Xử lý đặt lại mật khẩu
+app.post('/ResetPassword/reset/:token', async (req, res) => {
+    const { token } = req.params;
+    const { newPassword, repassword } = req.body; // Giả định mật khẩu mới được gửi trong body
 
-//     transporter.sendMail(mailOptions, (error, info) => {
-//         if (error) {
-//             return res.status(500).send('Email could not be sent.');
-//         }
-//         res.status(200).send('Recovery email sent.');
-//     });
-// });
+    try {
+        // const user = await Users.findOne({
+        //     resetPasswordToken: token,
+        //     resetPasswordExpires: { $gt: Date.now() } // Kiểm tra token vẫn còn hợp lệ
+        // });
 
-// app.post('/ResetPassword/reset/:token', async (req, res) => {
-//     const { token } = req.params;
-//     const { newPassword, rePassword } = req.body;
+        const user = await Users.findOne({ resetPasswordToken: token });
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
 
-//     if (newPassword !== rePassword) {
-//         return res.status(400).send('Passwords do not match');
-//     }
+        console.log("Pass 1:", hashedPassword);
 
-//     const user = await Users.findOne({
-//         resetPasswordToken: token,
-//         resetPasswordExpires: { $gt: Date.now() }
-//     });
+        user.password = hashedPassword;
+        user.resetPasswordToken = undefined; // Xóa token sau khi đã dùng
+        user.resetPasswordExpires = undefined; // Xóa thời gian hết hạn của token
+        await user.save(); // cập nhật lại mật khẩu ở account db
 
-//     if (!user) {
-//         return res.status(400).send('Password reset token is invalid or has expired.');
-//     }
+        console.log(user);
 
-//     const hashedPassword = await bcrypt.hash(newPassword, 10);
-//     user.password = hashedPassword;
-//     user.resetPasswordToken = undefined;
-//     user.resetPasswordExpires = undefined;
-//     await user.save();
 
-//     res.send('Your password has been updated.');
-// });
+        // if (!user) {
+        //     return res.status(400).send('Mã token không hợp lệ hoặc đã hết hạn.');
+        // }
 
-// app.get('/reset-password/:token', async (req, res) => {
-//     const { token } = req.params;
-//     const user = await Users.findOne({
-//         resetPasswordToken: token,
-//         resetPasswordExpires: { $gt: Date.now() }
-//     });
+        // if (password !== repassword) {
+        //     return res.status(400).json({ success: false, message: "Mật khẩu mới và mật khẩu xác nhận không khớp" });
+        // }
 
-//     if (!user) {
-//         return res.status(400).send('Password reset token is invalid or has expired.');
-//     }
+        // // Kiểm tra điều kiện mật khẩu mới (ví dụ: độ dài tối thiểu)
+        // if (password.length < 6) {
+        //     return res.status(400).json({ success: false, message: "Mật khẩu mới phải có ít nhất 6 ký tự" });
+        // }
 
-//     // Render the reset password form with the token
-//     res.render('/ResetPassword/reset/', { token });
-// });
+        // Mã hóa mật khẩu mới và cập nhật vào cơ sở dữ liệu
+
+    } catch (error) {
+        console.error('Lỗi trong quá trình đặt lại mật khẩu: ', error);
+        res.status(500).send('Lỗi trong quá trình đặt lại mật khẩu.');
+    }
+});
+
 
 
 
@@ -409,7 +450,7 @@ app.post('/submit-comment', async (req, res) => {
     }
 
     try {
-        const movieId = "66441414376328045c958839"
+        const movieId = "6646108d6db65a50a48be698"
 
         const movie = await Movies.findById(movieId);
         if (!movie) {
@@ -420,7 +461,7 @@ app.post('/submit-comment', async (req, res) => {
         await movie.save();
 
         // Redirect to the movie watch page or any other desired page
-        res.redirect('./Movie/Watch'); // or wherever you want to redirect after submission
+        res.redirect('back'); // or wherever you want to redirect after submission
     } catch (error) {
         console.error('Error submitting comment:', error);
         res.status(500).send('Internal Server Error');
@@ -557,10 +598,6 @@ app.post('/update', async (req, res) => {
 
 })
 
-app.get('/Movie/Watch', (req, res) => {
-    res.render("./WatchVideo/Watch") 
-})
-
 app.get('/Account/Profile', (req, res) => {
     const userid = req.cookies.userId
     Users.findById(userid)
@@ -648,7 +685,7 @@ app.get((req, res) => {
     res.status(404).render("404")  
 })
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
