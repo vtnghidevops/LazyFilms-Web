@@ -18,6 +18,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  history: {
+    type: Array,
+    required: true
+  },
+  favorites: {
+    type: Array,
+    required: true
+  },
   name: {
     type: String,
     required: false,

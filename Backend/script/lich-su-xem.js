@@ -57,7 +57,8 @@ if (checkListHistoryToAdd()) {
   $modal.on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
-
+    console.log("ủa")
+    console.log(isButtonChangeClicked)
     if (isButtonChangeClicked) {
       if ($(this).find('.mask__check').hasClass('mask__check-selected')) {
         $(this).find('.mask__check').removeClass('mask__check-selected');
@@ -87,6 +88,21 @@ if (checkListHistoryToAdd()) {
 
     $('.history__item').each(function () {
       if ($(this).find('.mask__check-selected').length > 0) {
+
+        var value = $(this).find('.HiddenId').val();
+        var isHistory = $(this).find('.isHistory').val();
+        var data = {
+          movieId: value,
+          isHistory: isHistory,
+        }
+
+        fetch('/history', {
+          method: 'POST', // or 'GET'
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
         // If .mask__check-selected is found, remove the .modal__item
         $(this).remove();
       }

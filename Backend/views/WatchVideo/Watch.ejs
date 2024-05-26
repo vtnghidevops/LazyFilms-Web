@@ -12,53 +12,203 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="icon" href="/img/SubLogo.jpg" type="image/x-icon" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="/script/main.js" defer> </script>
   <script src="/script/video.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="/script/mobile.js" defer></script>
+  <link rel="stylesheet" href="/css/responsive.css">
   
 </head>
 
 <body>
   <div class="wrap">
     <!--Header-->
+ <!--Header-->
+ <!--Header-->
+    <!--Header-->
     <header id="header">
       <nav class="nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="/index.html">
+           <!-- li cho mobile -->
+           <li class="header__nav-item bars__mobile">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+
+          <div class="sidebar__mobile">
+            <div class="sidebar__body">
+              <ul class="sidebar__nav-list ">
+                <li class="siderbar__nav-item header__nav-login">
+                  <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
+                  <div class="show__login">
+                    <button class="wrap__profile" href="/Account/Profile">
+                      <div class="profile__dropdown">
+                        <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                      </div>
+                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                    </button>
+  
+                    <div class="profile__menu">
+                      <ul class="profile__menu-list">
+                        <a href="/Account/Favorite" class="profile__menu-item">
+                          <span class="loved__films">
+                            <i class="fa-regular fa-heart"></i>
+                            Phim yêu thích
+                          </span>
+                        </a>
+                        <a href="/Account/History" class="profile__menu-item">
+                          <span class="history__films">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            Lịch sử xem
+                          </span>
+                        </a>
+                        <a href="/Account/Profile" class="profile__menu-item">
+                          <span class="setting__personal">
+                            <i class="fa-regular fa-user"></i>
+                            Cài đặt cá nhân
+                          </span>
+                        </a>
+        
+                        <a href="/" class="profile__menu-item">
+                          <span class="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Đăng xuất
+                          </span>
+                        </a>
+        
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                
+
+                <li class="siderbar__nav-item">
+                  <a href="/" class="nav__item-link active__page">Trang chủ</a>
+                </li>
+
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link movie__genre">Thể loại</a>
+                </li>
+
+                <!-- Sub menu -->
+                <div class="submenu__type">
+                  <ul class="header__subMenu-list ">
+                    <li class="header__subMenu-item">
+                      <a href="/Category/Tinh cam">Tình Cảm</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Chiến Tranh</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gia Đình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hành Động</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Tâm lý</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Anime</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gây Cấn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hình Sự</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Bí Ẩn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Cổ Trang</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hoạt Hình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kiếm Hiệp</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kinh Dị</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">TV-Show</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Thần Thoại</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Phiêu Lưu</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Viễn Tưởng</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+      
+                  </ul>
+                </div>
+
+
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim bộ</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim lẻ</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Top phim</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim chiếu rạp</a>
+                </li>
+              </ul>
+            </div>
+            <div class="modal__sidebar-mobile"></div>
+          </div>
+
+
+          <!-- End mobile -->
+          <li class="header__nav-item logo__header">
+            <a href="/">
               <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
           </li>
   
           <li class="header__nav-item header__mainPage">
-            <a href="/index.html">TRANG CHỦ</a>
+            <a href="/">TRANG CHỦ</a>
             <div class="header__mainPage-active"></div>
           </li>
   
           <li class="header__nav-item header__nav-subMenu">
-            <a href="#">THỂ LOẠI
+            <a href="/">THỂ LOẠI
               <i class="fa-solid fa-angle-down"></i>
             </a>
             <!-- SubMenu -->
             <div class="header__subMenu">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="../Pages/TheLoaiPhim/TinhCam.html">Tình Cảm</a>
+                  <a href="/Category/Tinh cam">Tình Cảm</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Chiến Tranh</a>
+                  <a href="/Category/Kinh di">Kinh dị</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Gia Đình</a>
+                  <a href="/Category/Gia dinh">Gia Đình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hành Động</a>
+                  <a href="/Category/Hanh dong">Hành Động</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Học Đường</a>
+                  <a href="/Category/Tam ly">Tâm lý</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Anime</a>
+                  <a href="/Category/Anime">Anime</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Gây Cấn</a>
@@ -67,10 +217,10 @@
                   <a href="#">Hình Sự</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Khoa Học</a>
+                  <a href="/Category/Khoa hoc vien tuong">Khoa Học</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Bí Ẩn</a>
+                  <a href="/Category/Bi an">Bí Ẩn</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Cổ Trang</a>
@@ -105,33 +255,30 @@
   
           </li>
   
-          <li class="header__nav-item header__nav-subMenu">
-            <a href="#">QUỐC GIA
+          <li class="header__nav-item header__nav-subMenu item__country" >
+            <a href="/">QUỐC GIA
               <i class="fa-solid fa-angle-down"></i>
             </a>
             <!-- SubMenu -->
-            <div class="header__subMenu">
+            <div class="header__subMenu ">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="#">Ấn Độ</a>
+                  <a href="/Nation/Nhat Ban">Nhật Bản</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Âu-Mỹ</a>
+                  <a href="/Nation/Au My">Âu-Mỹ</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Việt Nam</a>
+                  <a href="/Nation/Viet Nam">Việt Nam</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hàn Quốc</a>
+                  <a href="/Nation/Han Quoc">Hàn Quốc</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Hồng Kông</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Thái Lan</a>
-                </li>
-                <li class="header__subMenu-item">
-                  <a href="#">Hàn Quốc</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Indonesia</a>
@@ -144,16 +291,16 @@
           </li>
   
           <li class="header__nav-item">
-            <a href="../Pages/TheLoaiPhim/TopPhim.html">TOP PHIM</a>
+            <a href="/TopPhim">TOP PHIM</a>
           </li>
   
           <li class="header__nav-item">
-            <a href="../Pages/TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
+            <a href="/ChieuRap">PHIM CHIẾU RẠP</a>
           </li>
   
-          <li class="header__nav-item ">
+          <li class="header__nav-item search__header">
             <div class="header__nav-form">
-              <a href="/Pages/Search/search.html" class="header__nav-search">
+              <a href="/Movie/Search" class="header__nav-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
 
@@ -498,10 +645,11 @@
           </li>
   
           <li class="header__nav-item header__nav-login">
+            
             <% if (loggedIn) { %>
               <!-- Khi login -->
               <div class="show__login logged active">
-                  <button class="wrap__profile" href="./Pages/Account/thong-tin-ca-nhan.html">
+                  <button class="wrap__profile" href="/Account/Profile">
                       <div class="profile__dropdown">
                           <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
                       </div>
@@ -510,19 +658,19 @@
           
                   <div class="profile__menu">
                       <ul class="profile__menu-list">
-                          <a href="./Pages/Account/phim-yeu-thich.html" class="profile__menu-item">
+                          <a href="/Account/Favorite" class="profile__menu-item">
                               <span class="loved__films">
                                   <i class="fa-regular fa-heart"></i>
                                   Phim yêu thích
                               </span>
                           </a>
-                          <a href="./Pages/Account/lich-su-xem.html" class="profile__menu-item">
+                          <a href="/Account/History" class="profile__menu-item">
                               <span class="history__films">
                                   <i class="fa-solid fa-clock-rotate-left"></i>
                                   Lịch sử xem
                               </span>
                           </a>
-                          <a href="./Pages/Account/thong-tin-ca-nhan.html" class="profile__menu-item">
+                          <a href="/Account/Profile" class="profile__menu-item">
                               <span class="setting__personal">
                                   <i class="fa-regular fa-user"></i>
                                   Cài đặt cá nhân
@@ -687,11 +835,16 @@
       </div>
     </div>
   
-    <!-- Container__QR -->
-    <div class="container__qr-payment" id="QR_VNPAY">
+     <!-- Container__QR -->
+     <div class="container__qr-payment" id="QR_VNPAY">
       <div class="qr__section">
   
         <div class="qr__img">
+          <div class="qr__payment-header">
+            <a class="qr__section-close">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </a>
+          </div>
           <img src="/img/qr_vnpay.jpg" alt="container__qr">
           <div class="qr__contain">
             <img src="/img/qr_test.jpg" alt="qr" class="QR_VNPAY">
@@ -1027,7 +1180,7 @@
           </div>
         </div>
         <div class="share__section-copy">
-          <input type="text" class="share__copy-text">
+          <input type="text" class="share__copy-text" value="<%= fullUrl %>">
           <div class="share__copy-btn">
             <i class="fa-regular fa-copy "></i>
           </div>
@@ -1038,10 +1191,9 @@
     <!-- Yều cầu login để sài dịch vụ -->
     <div class="container__required-login" id="required__login">
       <div class="section__required">
-       
         <div class="required__content">
           <h3 class="required__login-title">Thông báo</h3>
-          <div class="required__login">
+          <div class="required__login active">
             Vui lòng <strong class="text__login">Đăng nhập</strong> để tiếp tục dịch vụ
           </div>
           <button type="button">Đóng</button>
@@ -1051,55 +1203,104 @@
     </div>
   
     <!-- Report  -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Function to handle the form submission
+          function sendData(button) {
+              // Collect all checked checkboxes
+              const checkboxes = document.querySelectorAll('.report__checkbox:checked');
+              const id = document.querySelector('.HiddenId').value;
+              
+              // Initialize an empty array to hold the values of the checked checkboxes
+              let reportData = [];
+              
+              // Loop through each checked checkbox and push its value to the array
+              checkboxes.forEach(checkbox => {
+                  reportData.push(checkbox.value);
+                  console.log(checkbox.value)
+              });
+
+              reportData.push(id);
+              
+              // Convert the array to a string format suitable for URL parameters
+              const reportString = reportData.join('&');
+              
+              // Define the URL where you want to send the data
+              const url = '/report'; // Replace with your actual endpoint
+              
+              // Send the data using Fetch API
+              fetch(url, {
+                  method: 'POST', // or 'GET'
+                  headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  body: reportString, 
+              })
+              
+              // Prevent the default form submission behavior if needed
+
+          }
+          
+          // Attach the sendData function to the button click event
+          document.querySelector('.report__btn-send').addEventListener('click', sendData);
+      });
+      </script>
+
     <div class="container__report" id="report">
       <div class="section__report">
-        <div class="section__report-body">
-          <h4 class="report__body-title">Bạn gặp sự cố gì?</h4>
-          <div class="report__body-content">
-            <div class="report__content-list">
-              <!-- item -->
-              <div class="report__content-item">
-                <input type="checkbox" class = "report__checkbox" id = "checkbox__report-1">
-                  <span>Có chi tiết không phù hợp với phân loại độ tuổi của nội dung.</span>
+
+
+          <div class="section__report-body">
+            <h4 class="report__body-title">Bạn gặp sự cố gì?</h4>
+            <div class="report__body-content">
+              <div class="report__content-list">
+                <!-- item -->
+                  <div class="report__content-item">
+                    <input type="checkbox" class = "report__checkbox" id = "checkbox__report-1" value="Ko phù hợp">
+                      <span>Có chi tiết không phù hợp với phân loại độ tuổi của nội dung.</span>
+                  </div>
+
+                  <!-- item -->
+                  <div class="report__content-item">
+                    <input type="checkbox" class = "report__checkbox" id = "checkbox__report-2" name="data" value="Lỗi âm thanh">
+                      <span>Không có âm thanh, tiếng quá bé, quá ồn hoặc tiếng không khớp với hình.</span>
+                  </div>
+
+                  <!-- item -->
+                  <div class="report__content-item">
+                    <input type="checkbox" class = "report__checkbox" id = "checkbox__report-3" name="data" value="Lỗi hình ảnh">
+                    <span>Hình ảnh bị mờ, bị vỡ hoặc trông khác thường.</span>
+
+                  </div>
+
+                  <!-- item -->
+                  <div class="report__content-item item__other">
+                    <input type="checkbox" class = "report__checkbox" id = "checkbox__report-4" name="data" value="Lỗi phụ đề">
+                    <span>Phụ đề hoặc chú thích chưa chính xác.</span>
+                  </div>
+
+                  <!-- item -->
+                  <div class="report__content-item item__other">
+                    <input type="checkbox" class = "report__checkbox" id = "checkbox__report-5" name="data" value="Ko load đc">
+                      <span>Xem gián đoạn hoặc không tải được.</span>
+                  </div>
+
+                  <div>
+                    <input type ="hidden" class="HiddenId" value="<%= movie._id %>">
+                  </div>
+              
               </div>
-
-               <!-- item -->
-               <div class="report__content-item">
-                <input type="checkbox" class = "report__checkbox" id = "checkbox__report-2">
-                  <span>Không có âm thanh, tiếng quá bé, quá ồn hoặc tiếng không khớp với hình.</span>
-              </div>
-
-               <!-- item -->
-               <div class="report__content-item">
-                <input type="checkbox" class = "report__checkbox" id = "checkbox__report-3">
-                <span>Hình ảnh bị mờ, bị vỡ hoặc trông khác thường.</span>
-
-              </div>
-
-               <!-- item -->
-               <div class="report__content-item item__other">
-                <input type="checkbox" class = "report__checkbox" id = "checkbox__report-4">
-                <span>Phụ đề hoặc chú thích chưa chính xác.</span>
-              </div>
-
-               <!-- item -->
-               <div class="report__content-item item__other">
-                <input type="checkbox" class = "report__checkbox" id = "checkbox__report-5">
-                  <span>Xem gián đoạn hoặc không tải được.</span>
-              </div>
-
-             
+            </div>
+            <div class="report__content-btn">
+              <button type="button" class="report__btn__cancel">
+                Hủy
+              </button>  
+              <button type="submit" class="report__btn-send">
+                Gửi
+              </button>
             </div>
           </div>
-          <div class="report__content-btn">
-            <button type="button" class="report__btn__cancel">
-              Hủy
-            </button> 
-            <button type="button" class="report__btn-send">
-              Gửi
-            </button>
-          </div>
-        </div>
+
        
   
       </div>
@@ -1111,7 +1312,7 @@
         <!-- container video -->
         <div class="container__video" id="container">
           <video class="state__video" autoplay>
-            <source src="/Video/Minions.mp4" type="video/mp4">
+            <source src="<%= movie.path + "vid.mp4" %>" type="video/mp4">
           </video>
           <img src="/img/Logo-removebg-preview.jpg" alt="logo LazyFilms" class="overlay__video-logo">
           <div class="video__loading">
@@ -1239,36 +1440,36 @@
           <!-- Left desc -->
           <div class="video__desc-left">
             <div class="desc__left-heading">
-              <h2>Bleach: Huyết Chiến Ngàn Năm - Chia Biệt</h2>
-              <h4>Bleach: Thousand-Year Blood War - The Separation</h4>
+              <h2><%= movie.name_vn  %></h2>
+              <h4><%= movie.name_en %></h4>
             </div>
             <div class="desc__left-info">
               <ul class="desc__info-list">
                 <li class="desc__info-item">
                   <span class="desc__item-rating">
                     <i class="fa-solid fa-star"></i>
-                    8.7
+                    <%= movie.rating %>
                   </span>
                 </li>
   
                 <li class="desc__info-item">
                   <span class="desc__item-year">
                     <i class="fa-thin fa-calendar-days"></i>
-                    2023
+                    <%= movie.year  %>
                   </span>
                 </li>
   
                 <li class="desc__info-item">
                   <span class="desc__item-time">
                     <i class="fa-regular fa-clock"></i>
-                    25/1p
+                    <%= movie.duration + " Phút"%>
                   </span>
   
                 </li>
                 <li class="desc__info-item">
                   <span class="desc__item-country">
                     <i class="fa-thin fa-globe"></i>
-                    Nhật Bản
+                    <%= movie.nation  %>
                   </span>
                 </li>
               </ul>
@@ -1280,14 +1481,7 @@
   
             <!-- detail -->
             <div class="desc__info-detail">
-              <p class="desc__detail-para">Bleach: Huyết Chiến Ngàn Năm - Chia Biệt sẽ tập trung vào
-                các tình tiết liên quan đến cha mẹ của Ichigo, Isshin và Masaki.
-                Mùa 2 cũng vạch rõ sự phản bội của Uryu, sau khi hắn gia nhập
-                Wandenreich và được chọn làm người kế vị, khiến cho các Sternritters
-                khác cảm thấy cực kỳ khó chịu. Phần mới của anime đặc biệt hé mở cuộc
-                đối đầu kịch tính giữa Ichigo và Uryu, đồng thời tiết lộ giai đoạn tiếp
-                theo của tất cả các trận chiến giữa Shinigami và lực lượng Sternritter
-                của Quincy.
+              <p class="desc__detail-para"><%= movie.discription %>
               </p>
               <div>
                 <div class="desc__info-readMore">
@@ -1302,10 +1496,15 @@
           <!-- right desc -->
           <div class="video__desc-right">
             <div class="desc__right-heading">
-              <button class="right__heading-follow">
+              <button class="right__heading-follow" value="<%= movie._id %>" id="favorite">
                 <span class="btn__heading-text">
-                  <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png">
-                  <img id="followHeart" class="icon__followed-Heart" src="/img/icons8-heart-50.png">
+                  <% if (isFavorite) { %>
+                    <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png" style="display: none;">
+                    <img id="followHeart" class="icon__followed-Heart active__btn-follow" src="/img/icons8-heart-50.png" style="display: inline;">
+                  <% } else { %>
+                    <img id="unfollowHeart" class="icon__followed-Heart" src="/img/icon-heart-unfollowed.png" style="display: inline;">
+                    <img id="followHeart" class="icon__followed-Heart" src="/img/icons8-heart-50.png" style="display: none;">
+                  <% } %>
                   Theo dõi
                 </span>
               </button>
@@ -1322,18 +1521,16 @@
             <div class="desc__right-info">
               <div class="right__info-property">Diễn viên</div>
               <div class="right__info-value">
-                Masakazu Morita, Kentarou Itou, Shunsuke Takeuchi, Yuuki Ono,
-                Masaya Onosaka, Yuki Matsuoka, Noriaki Sugiyama,
-                Yuuichirou Umehara
+                <%= movie.actor_name  %>
               </div>
   
               <div class="right__info-property">Đạo diễn</div>
               <div class="right__info-value">
-                Tomohisa Taguchi
+                <%= movie.director_name %>
               </div>
               <div class="right__info-property">Thể loại</div>
               <div class="right__info-value">
-                Hoạt hình, Hành động, Phiêu lưu
+                <%= movie.category  %>
               </div>
             </div>
   
@@ -1349,9 +1546,9 @@
   
               <li class="episodes__list-item">
                 <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
+                  <a href="/Movie/Watch/<%= movie._id %>" class="episodes__item-link">
                     <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t1.jpg"
+                      <img src="<%= movie.path + "ngang.jpg" %>"
                         alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
                     </div>
   
@@ -1361,193 +1558,13 @@
                   </a>
   
                   <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 1</span>
+                    <span class="item__chapter-text">Movie</span>
                   </div>
-                  <div class="episodes__item-timeline">24 phút</div>
+                  <div class="episodes__item-timeline"><%= movie.duration %> Phút</div>
   
                 </div>
               </li>
   
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t2.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 2</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t3.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 3</span>
-                  </div>
-  
-                  <div class="episodes__item-timeline">24 phút</div>
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t4.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 4</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam-ChiaBiet-t5.jpg"
-                        alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text">Tập 5</span>
-                  </div>
-                  <div class="episodes__item-timeline">24 phút</div>
-  
-                </div>
-              </li>
   
             </ul>
   
@@ -1564,57 +1581,11 @@
         </div>
   
         <!-- Season -->
-        <div class="container__season">
-          <h2 class="container__season-heading">Các Season</h2>
-          <div class="episodes__tabs">
-            <ul class="episodes__list">
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam.jpg" alt="Bleach_HuyetChienNganNam">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Huyết Chiến Ngàn Năm</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_XuGiaThanChet.jpg" alt="Bleach_XuGiaThanChet">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Xứ Giả Thần Chết</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-  
-            </ul>
-          </div>
-        </div>
+
   
         <!-- Trailer -->
-        <div class="container__trailer">
-          <h2 class="container__trailer-heading">Trailer - Clip Hậu Trường</h2>
+        <!-- <div class="container__trailer">
+          <h2 class="container__trailer-heading">Trailer</h2>
           <div class="episodes__tabs">
             <ul class="episodes__list">
   
@@ -1638,211 +1609,40 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
   
         <!-- Nội dung liên quan -->
         <div class="container__connection ">
           <h2 class="container__connection-heading">Nội dung liên quan</h2>
           <div class="episodes__tabs">
             <ul class="episodes__list">
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_XuGiaThanChet.jpg" alt="Bleach_XuGiaThanChet">
+              
+              <% related.forEach(related => { %>
+                <li class="episodes__list-item">
+                  <div class="episodes__item">
+                    <a href="/Movie/Watch/<%= related._id %>" class="episodes__item-link">
+                      <div class="episodes__item-frames">
+                        <img src="<%= related.path + "ngang.jpg" %>" alt="Bleach_XuGiaThanChet">
+                      </div>
+                      <div class="modal__frame">
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+    
+                    </a>
+    
+                    <div class="episodes__item-chapter">
+                      <span class="item__chapter-text item__name-season"><%= related.name_vn %></span>
                     </div>
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-  
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Xứ Giả Thần Chết</span>
+    
                   </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam.jpg" alt="Bleach_HuyetChienNganNam">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Huyết Chiến Ngàn Năm</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/chu-thuat-hoi-chien-phan-2-fpt-play-1693551746015_Landscape.jpg"
-                        alt="ChuThuatHoiChien_P2">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Chú thuật hồi chiến (P2)</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/thanh-guom-diet-quy-phan-lang-tho-ren.jpg"
-                        alt="ThanhGuomDietQuyLangThoRen">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Thanh Gươm Duyệt Quỷ Làng Thợ Rèn</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/ThietGiapChiThanh.jpg" alt="ThietGiapChiThanh">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Thiết Giáp Chi Thành</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_XuGiaThanChet.jpg" alt="Bleach_XuGiaThanChet">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Xứ Giả Thần Chết</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/Bleach_HuyetChienNganNam.jpg" alt="Bleach_HuyetChienNganNam">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Bleach: Huyết Chiến Ngàn Năm</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/chu-thuat-hoi-chien-phan-2-fpt-play-1693551746015_Landscape.jpg"
-                        alt="ChuThuatHoiChien_P2">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Chú thuật hồi chiến (P2)</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/thanh-guom-diet-quy-phan-lang-tho-ren.jpg"
-                        alt="ThanhGuomDietQuyLangThoRen">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Thanh Gươm Duyệt Quỷ Làng Thợ Rèn</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="episodes__list-item">
-                <div class="episodes__item">
-                  <a href="" class="episodes__item-link">
-                    <div class="episodes__item-frames">
-                      <img src="/img/ThietGiapChiThanh.jpg" alt="ThietGiapChiThanh">
-                    </div>
-  
-                    <div class="modal__frame">
-                      <i class="fa-solid fa-play"></i>
-                    </div>
-                  </a>
-  
-                  <div class="episodes__item-chapter">
-                    <span class="item__chapter-text item__name-season">Thiết Giáp Chi Thành</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-  
-  
+                </li>
+              <% }) %>
             </ul>
+            
+
+
+
+
             <!-- btn -->
             <div class="carousel__button-prev" type="Nextbutton">
               <i class="fa-light fa-angle-left"></i>
@@ -1860,137 +1660,24 @@
           <div class="actor__tabs">
             <ul class="actor__list">
   
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__Masakazu Morita.jpg" alt="Masakazu Morita">
+              <% for (let i = 0; i < movie.actor_name.length; i++) { %>
+                <li class="actor__list-item">
+                  <div class="actor__item">
+                    <a href="" class="actor__item-link">
+                      <div class="actor__item-frames">
+                        <img src="<%= movie.path + movie.actor_name[i] + ".jpg"%>" alt="Masakazu Morita">
+                      </div>
+    
+                    </a>
+    
+                    <div class="actor__item-name">
+                      <span class="item__name-season item__name-text"><%= movie.actor_name[i] %></span>
                     </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Masakazu Morita</span>
+    
                   </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor_KentarouItou.jpg" alt="KentarouItou">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Kentarou Itou</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__ShunsukeTakeuchi.jpg" alt="ShunsukeTakeuchi">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Shunsuke Takeuchi</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__YuukiOno.jpg" alt="YuukiOno">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Yuuki Ono</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__MasayaOnosaka.jpg" alt="MasayaOnosaka">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Masaya Onosaka</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__YukiMatsuoka.jpg" alt="YukiMatsuoka">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Yuki Matsuoka</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__MasayaOnosaka.jpg" alt="MasayaOnosaka">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Masaya Onosaka</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-              <li class="actor__list-item">
-                <div class="actor__item">
-                  <a href="" class="actor__item-link">
-                    <div class="actor__item-frames">
-                      <img src="/img/Actor__YukiMatsuoka.jpg" alt="YukiMatsuoka">
-                    </div>
-  
-                  </a>
-  
-                  <div class="actor__item-name">
-                    <span class="item__name-season item__name-text">Yuki Matsuoka</span>
-                  </div>
-  
-                </div>
-              </li>
-  
-  
-  
-  
+                </li>
+              <% } %>
+
             </ul>
             <!-- btn -->
             <div class="carousel__button-prev" type="Nextbutton">
@@ -2010,7 +1697,7 @@
             <!-- Heading -->
             <div class="comment__heading">
               <div class="comment__heading-title">Bình luận
-                <span class="comment__title-count">(15)</span>
+                <span class="comment__title-count">(<%= Object.keys(movie.comments).length; %>)</span>
               </div>
   
               <div class="commment__heading-filter">
@@ -2045,58 +1732,63 @@
   
             <!-- Yêu cầu đăng nhập để sự dụng cmt -->
             <% if (!loggedIn) { %>
-            <div class="required__login not__logged">
+            <div class="required__login active">
               Vui lòng <strong class="text__login">Đăng nhập</strong> vào tài khoản LazyFilms để sử dụng bình luận
             </div>
             <% } %>
   
             <!-- Input comment from users -->
-            <div class="comment__input logged">
-              <div class="comment__input-avata">
-                <img src="/img/img_user.jpg" alt="user">
-              </div>
-              <form class="comment-form" action="/submit-comment" method="post" style="width: 100%;">
-                <div class="comment__list-item">
-                  <!-- Start of the form -->
-                  <textarea name="cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
-                  <button class="send__cmt">
-                    <i class="fa-solid fa-paper-plane"></i>
-                  </button>
-                  <!-- End of the form -->
+            <% if (loggedIn) { %>
+              <div class="comment__input flex">
+                <div class="comment__input-avata">
+                  <img src="/img/img_user.jpg" alt="user">
                 </div>
-              </form>
-            </div>
+                  <div class="comment__list-item">
+                    <!-- Start of the form -->
+                    <textarea name="cmt" id="cmt" wrap="soft" rows="2" placeholder="Viết bình luận..."></textarea>
+                    <input type="hidden" id="HiddenId" value="<%= movie._id %>">
+                    <input type="hidden" id="Hidden_username" value="<%= user.name %>">
+                    <button class="send__cmt" id="submit-comment">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <!-- End of the form -->
+                  </div>
+              </div>
+            <% } %>
+
+          
 
             <!-- List comment -->
             <div class="comment__list">
-              <!-- item cmt-->
-              <div class="comment__item">
-                <div class="comment__item-avata">
-                  <img src="/img/test_avt_admin.jpg" alt="">
-                </div>
-                <!-- main comment -->
-                <div class="comment__item-detail">
-                  <div class="comment__detail-area">
-                    <div class="detail__area-main">
-                      <!-- heading -->
-                      <div class="area__main-title">
-                        <span class="area__title-name">LazyFilms</span>
-                        <div class="area__dot"></div>
-                        <span class="area__tilte-time">3 tháng</span>
+
+              <% const reveesed_cmt = movie.comments.reverse() %>
+              <% reveesed_cmt.forEach(comment => { %>
+                <!-- item cmt-->
+                <div class="comment__item">
+                  <div class="comment__item-avata">
+                    <img src="/img/test_avata.jpg" alt="">
+                  </div>
+                  <!-- main comment -->
+                  <div class="comment__item-detail">
+                    <div class="comment__detail-area">
+                      <div class="detail__area-main">
+                        <!-- heading -->
+                        <div class="area__main-title">
+                          <span class="area__title-name"><%= comment.name %></span>
+                          <div class="area__dot"></div>
+                        </div>
+                        <!-- Detail comment -->
+                        <div class="area__main-detail">
+                          <span><%= comment.commentText %></span>
+                        </div>
                       </div>
-                      <!-- Detail comment -->
-                      <div class="area__main-detail">
-                        <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần lúc
-                          18h30.</span>
-                      </div>
-                    </div>
-  
-                    <!-- Like , reply comment -->
+    
+                      <!-- Like , reply comment -->
                     <div class="comment__item-reply">
                       <div class="item__reply-like">
                         <span>
                           <i class="fa-solid fa-thumbs-up liked"></i>
-                          <i class="fa-regular fa-thumbs-up unlike"></i>
+                          <i class="fa-regular fa-thumbs-up unlike active"></i>
                           <span class="count__like">19</span>
                         </span>
                       </div>
@@ -2109,519 +1801,20 @@
                       </div>
   
                     </div>
-  
-                    <!-- Phản hồi khác nếu có , giới hạn < 4, khi đó click thêm -> show thêm-->
-                    <div class="comment__item-replyOther">
-                      <span class="item__replyOther-title">Xem thêm
-                        <span class="count__replyOther">7</span>
-                        phản hồi
-                        <i class="fa-solid fa-angle-down"></i>
-                      </span>
-                      <span class="item__replyOther-title hidden__reply">
-                        Ẩn phản hồi
-                        <i class="fa-solid fa-angle-up"></i>
-                      </span>
-  
-                      <!-- Show - Active -->
-                      <div class="comment__item-showOther active">
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-  
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-  
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-                      </div>
+                      <!-- Thêm other ở đây -->
                     </div>
-  
-                    <!-- Phản hồi khác nếu có , giới hạn < 4, khi đó click thêm -> show thêm-->
-                    <div class="comment__item-replyOther active">
-                      <span class="item__replyOther-title">Xem thêm
-                        <span class="count__replyOther">4</span>
-                        phản hồi
-                        <i class="fa-solid fa-angle-down"></i>
-                      </span>
-                      <span class="item__replyOther-title hidden__reply">
-                        Ẩn phản hồi
-                        <i class="fa-solid fa-angle-up"></i>
-                      </span>
-  
-                      <!-- Show - Active -->
-                      <div class="comment__item-showOther active">
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-  
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-  
-                        <!-- item -->
-                        <div class="comment_showOther_item ">
-                          <!-- avata -->
-                          <div class="comment__item-avata">
-                            <img src="/img/test_avata.jpg" alt="">
-                          </div>
-                          <!-- main comment -->
-                          <div class="comment__item-detail">
-                            <div class="detail__area-main">
-                              <!-- heading -->
-                              <div class="area__main-title">
-                                <span class="area__title-name">LazyFilms</span>
-                                <div class="area__dot"></div>
-                                <span class="area__tilte-time">3 tháng</span>
-                              </div>
-                              <!-- Detail comment -->
-                              <div class="area__main-detail">
-                                <span>Có bạn nào muốn luyện lại bộ này với Ad không? Cập nhật thêm tập vào thứ 3 hàng tuần
-                                  lúc 18h30.</span>
-                              </div>
-                            </div>
-  
-                            <!-- Like , reply comment -->
-                            <div class="comment__item-reply">
-                              <div class="item__reply-like">
-                                <span>
-                                  <i class="fa-solid fa-thumbs-up liked"></i>
-                                  <i class="fa-regular fa-thumbs-up unlike"></i>
-                                  <span class="count__like">19</span>
-                                </span>
-                              </div>
-  
-                              <div class="item__reply-message">
-                                <span>
-                                  <i class="fa-light fa-message-dots"></i>
-                                  <span class="count__cmt">7</span>
-                                </span>
-                              </div>
-  
-                            </div>
-                          </div>
-  
-                        </div>
-                      </div>
-                    </div>
-  
-  
-                    <!-- Reply user to user -->
-                    <div class="user__reply">
-                      <div class="comment__list-item">
-                        <textarea name="cmt" id="cmt" wrap="soft" rows="2"
-                          placeholder="Viết bình luận...">@LazyFilms: </textarea>
-                        <div class="send__cmt">
-                          <i class="fa-solid fa-paper-plane"></i>
-                        </div>
-                      </div>
-                    </div>
+    
                   </div>
-  
+    
+                  <!-- btn tải thêm bình luận -->
+    
                 </div>
-              </div>
-  
-              <!-- item cmt-->
-              <div class="comment__item">
-                <div class="comment__item-avata">
-                  <img src="/img/test_avata.jpg" alt="">
-                </div>
-                <!-- main comment -->
-                <div class="comment__item-detail">
-                  <div class="comment__detail-area">
-                    <div class="detail__area-main">
-                      <!-- heading -->
-                      <div class="area__main-title">
-                        <span class="area__title-name">Phi Long</span>
-                        <div class="area__dot"></div>
-                        <span class="area__tilte-time">16 ngày</span>
-                      </div>
-                      <!-- Detail comment -->
-                      <div class="area__main-detail">
-                        <span>main được buff bẩn thế :)</span>
-                      </div>
-                    </div>
-  
-                    <!-- Like , reply comment -->
-                    <div class="comment__item-reply">
-                      <div class="item__reply-like">
-                        <span>
-                          <i class="fa-solid fa-thumbs-up liked"></i>
-                          <i class="fa-regular fa-thumbs-up unlike"></i>
-                          <span class="count__like">17</span>
-                        </span>
-                      </div>
-  
-                      <div class="item__reply-message">
-                        <span>
-                          <i class="fa-light fa-message-dots"></i>
-                          <span class="count__cmt">2</span>
-                        </span>
-                      </div>
-  
-                    </div>
-                    <!-- Thêm other ở đây -->
-                  </div>
-  
-                </div>
-  
-                <!-- btn tải thêm bình luận -->
-  
-              </div>
-  
-              <!-- item cmt-->
-              <div class="comment__item">
-                <div class="comment__item-avata">
-                  <img src="/img/img_user.jpg" alt="">
-                </div>
-                <!-- main comment -->
-                <div class="comment__item-detail">
-                  <div class="comment__detail-area">
-                    <div class="detail__area-main">
-                      <!-- heading -->
-                      <div class="area__main-title">
-                        <span class="area__title-name">Cao Tuấn</span>
-                        <div class="area__dot"></div>
-                        <span class="area__tilte-time">2 ngày</span>
-                      </div>
-                      <!-- Detail comment -->
-                      <div class="area__main-detail">
-                        <span>Khứa có râu dame bịp vãi</span>
-                      </div>
-                    </div>
-  
-                    <!-- Like , reply comment -->
-                    <div class="comment__item-reply">
-                      <div class="item__reply-like">
-                        <span>
-                          <i class="fa-solid fa-thumbs-up liked"></i>
-                          <i class="fa-regular fa-thumbs-up unlike"></i>
-                          <span class="count__like">12</span>
-                        </span>
-                      </div>
-  
-                      <div class="item__reply-message">
-                        <span>
-                          <i class="fa-light fa-message-dots"></i>
-                          <span class="count__cmt">2</span>
-                        </span>
-                      </div>
-  
-                    </div>
-  
-                    <!-- Thêm item other ở đây -->
-                  </div>
-  
-                </div>
-  
-                <!-- btn tải thêm bình luận -->
-  
-              </div>
-  
-              <!-- item cmt-->
-              <div class="comment__item">
-                <div class="comment__item-avata">
-                  <img src="/img/img_user_1.jpg" alt="">
-                </div>
-                <!-- main comment -->
-                <div class="comment__item-detail">
-                  <div class="comment__detail-area">
-                    <div class="detail__area-main">
-                      <!-- heading -->
-                      <div class="area__main-title">
-                        <span class="area__title-name">Waifu</span>
-                        <div class="area__dot"></div>
-                        <span class="area__tilte-time">2 ngày</span>
-                      </div>
-                      <!-- Detail comment -->
-                      <div class="area__main-detail">
-                        <span>@@</span>
-                      </div>
-                    </div>
-  
-                    <!-- Like , reply comment -->
-                    <div class="comment__item-reply">
-                      <div class="item__reply-like">
-                        <span>
-                          <i class="fa-solid fa-thumbs-up liked"></i>
-                          <i class="fa-regular fa-thumbs-up unlike"></i>
-                          <span class="count__like">10</span>
-                        </span>
-                      </div>
-  
-                      <div class="item__reply-message">
-                        <span>
-                          <i class="fa-light fa-message-dots"></i>
-                          <span class="count__cmt">4</span>
-                        </span>
-                      </div>
-  
-                    </div>
-  
-                    <!-- Thêm item other ở đây -->
-                  </div>
-  
-                </div>
-  
-                <!-- btn tải thêm bình luận -->
-  
-              </div>
-  
-              <!-- item cmt-->
-              <div class="comment__item">
-                <div class="comment__item-avata">
-                  <img src="/img/img_user.jpg" alt="">
-                </div>
-                <!-- main comment -->
-                <div class="comment__item-detail">
-                  <div class="comment__detail-area">
-                    <div class="detail__area-main">
-                      <!-- heading -->
-                      <div class="area__main-title">
-                        <span class="area__title-name">Thiện Khang</span>
-                        <div class="area__dot"></div>
-                        <span class="area__tilte-time">10 ngày</span>
-                      </div>
-                      <!-- Detail comment -->
-                      <div class="area__main-detail">
-                        <span>Chắc edit cực lắm, đánh nhau bùng chèo</span>
-                      </div>
-                    </div>
-  
-                    <!-- Like , reply comment -->
-                    <div class="comment__item-reply">
-                      <div class="item__reply-like">
-                        <span>
-                          <i class="fa-solid fa-thumbs-up liked"></i>
-                          <i class="fa-regular fa-thumbs-up unlike"></i>
-                          <span class="count__like">7</span>
-                        </span>
-                      </div>
-  
-                      <div class="item__reply-message">
-                        <span>
-                          <i class="fa-light fa-message-dots"></i>
-                          <span class="count__cmt">4</span>
-                        </span>
-                      </div>
-  
-                    </div>
-  
-                    <!-- Thêm item other ở đây -->
-                  </div>
-  
-                </div>
-  
-                <!-- btn tải thêm bình luận -->
-  
-              </div>
-  
-  
+              <% }) %>
+
             </div>
   
             <!-- Button Tải thêm cmt -->
-            <div class="comment__moreLoad">Tải thêm bình luận</div>
+            <!-- <div class="comment__moreLoad">Tải thêm bình luận</div> -->
           </div>
         </div>
 

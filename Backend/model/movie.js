@@ -2,9 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
+    name: {
+        type: String,
         required: true
     },
     commentText: {
@@ -41,6 +40,14 @@ const movieSchema = new Schema({
     director_name: {
         type: String,
         required: false
+    },
+    rating: {
+        type: String,
+       required: false
+    },
+    duration: {
+        type: Number,
+       required: false
     },
     discription: {
         type: String,

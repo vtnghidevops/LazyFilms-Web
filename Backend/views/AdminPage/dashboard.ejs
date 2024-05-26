@@ -30,28 +30,23 @@
             <div class="slidebar_menu">
                 <ul class="slidebar_menu-list" id="admin_sidebar">
                     <li class="slidebar_menu-items" id="current">
-                        <a href="./dashboard.html">
+                        <a href="/Admin/Home" >
                             Dashboard
-                        </a> 
-                    </li>
-                    <li class="slidebar_menu-items">
-                        <a href="./Users.html">
-                            Users
-                        </a>
-                    </li>
-                    <li class="slidebar_menu-items">
-                        <a href="./Films.html">
-                            Phim
                         </a>
                     </li>
                     <li class="slidebar_menu-items" >
-                        <a href="./Report.html">
-                            Báo Lỗi
+                        <a href="/Admin/Users">
+                            Users
+                        </a>
+                    </li>
+                    <li class="slidebar_menu-items" >
+                        <a href="/Admin/Films">
+                            Phim
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
-                        <a href="./Require.html">
-                            Yêu Cầu Phim
+                        <a href="/Admin/Report">
+                            Báo Lỗi
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
@@ -73,13 +68,11 @@
                 <th width="25%"><a href="">Số lượng phim</a></th>
                 <th width="25%"><a href="">Số lượng Users</a></th>
                 <th width="25%"><a href="">Số lượng báo lỗi</a></th>
-                <th width="25%"><a href="">Số lượng yêu cầu phim</a></th>
             </tr>
             <tr>
                 <td class="NumberOfFilms"><%= movies_num %></td>
                 <td class="NumberOfUsers"><%= users_num %></td>
-                <td class="NumberOfReport">100</td>
-                <td class="NumberOfRequire">100</td>
+                <td class="NumberOfReport"><%= report_num %></td>
             </tr>
            </table>
         </div>

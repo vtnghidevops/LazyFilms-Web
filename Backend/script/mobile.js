@@ -53,4 +53,55 @@ $clickLoginMobile.click(() => {
 });
 
 
+// Video
+var $episodeList = $('.episodes__tabs .episodes__list');
+var hammertime0 = new Hammer($episodeList[0]);
+var hammertime1 = new Hammer($episodeList[1]);
+var hammertime2 = new Hammer($episodeList[2]);
+var hammertime3 = new Hammer($episodeList[3]);
+
+hammertime0.on('swipeleft', function () {
+    handleSwipe('left');
+});
+
+hammertime0.on('swiperight', function () {
+    handleSwipe('right');
+});
+hammertime1.on('swipeleft', function () {
+    handleSwipe('left');
+});
+
+hammertime1.on('swiperight', function () {
+    handleSwipe('right');
+});
+hammertime2.on('swipeleft', function () {
+    handleSwipe('left');
+});
+
+hammertime2.on('swiperight', function () {
+    handleSwipe('right');
+});
+hammertime3.on('swipeleft', function () {
+    handleSwipe('left');
+});
+
+hammertime3.on('swiperight', function () {
+    handleSwipe('right');
+});
+
+
+function handleSwipe(direction) {
+    var currentScrollPosition = $episodeList.scrollLeft();
+    var scrollAmount = $episodeList.width(); // Adjust the scroll amount based on your needs
+
+    if (direction === 'left') {
+        $episodeList.animate({
+            scrollLeft: currentScrollPosition + scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+    } else if (direction === 'right') {
+        $episodeList.animate({
+            scrollLeft: currentScrollPosition - scrollAmount
+        }, 600); // Adjust the duration for smooth scroll
+    }
+}
 

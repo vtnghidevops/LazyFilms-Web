@@ -482,6 +482,7 @@
   .container__search-topSearch {
     position: relative !important;
     width: 100% !important;
+    margin-top: 2rem;
   }
 
   .search__wrap--info {
@@ -489,7 +490,7 @@
   }
 
   .search__item--film .search__film--img {
-    width: 35%;
+    width: 40%;
   }
 
   /* respond search */
@@ -645,6 +646,9 @@
     height: max-content !important;
   }
 
+  .romantic__movie-listFilms li:nth-child(6) {
+    display: block;
+  }
   .romantic__movie .romantic__movie-item {
     width: 47.3% !important;
     margin-right: 1rem;
@@ -813,7 +817,9 @@
     display: contents;
 
   }
-
+  .container__video .overlay__video-logo {
+    margin: 1rem 1rem 0 0;
+  }
   .video__desc-left {
     width: auto;
     position: relative;
@@ -859,7 +865,39 @@
     padding-top: 1rem;
   }
 
-  /* .actor__item{
-width: 10rem;
-} */
+  .video__loading {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
+  .video__loading i {
+    font-size: 3rem;
+  }
+  .container__video .overlay__video-logo {
+    max-width: 10rem;
+  }
+
+  .history__btn-change .btn__cancel {
+    margin-right: 6rem;
+  }
+    .btn__select-all .mask__check {
+      right: 22%;
+      top: -12px;
+    }
+
+  .section__required {
+    width: 95vw;
+  }
+
+  .modal__medium {
+    height: 14.5rem;
+  }
+
+  .common__modal-ox {
+    height: 23.5rem;
+  }
+
+  .share__section {
+    width: 95vw;
+  }
 }

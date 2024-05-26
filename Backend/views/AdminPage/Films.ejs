@@ -33,28 +33,23 @@
             <div class="slidebar_menu">
                 <ul class="slidebar_menu-list" id="admin_sidebar">
                     <li class="slidebar_menu-items">
-                        <a href="./dashboard.html"> 
+                        <a href="/Admin/Home">
                             Dashboard
-                        </a> 
+                        </a>
                     </li>
-                    <li class="slidebar_menu-items">
-                        <a href="./Users.html">
+                    <li class="slidebar_menu-items" >
+                        <a href="/Admin/Users">
                             Users
                         </a>
                     </li>
-                    <li class="slidebar_menu-items" id="current" >
-                        <a href="./Films.html">
+                    <li class="slidebar_menu-items" id="current">
+                        <a href="/Admin/Films">
                             Phim
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
-                        <a href="./Report.html">
+                        <a href="/Admin/Report">
                             Báo Lỗi
-                        </a>
-                    </li>
-                    <li class="slidebar_menu-items">
-                        <a href="">
-                            Yêu Cầu Phim
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
@@ -94,10 +89,12 @@
                                  <th width="21%">Delete Movie</th>
                              </tr>
                              
+                             <% var count = 0 %>
                              <% if(movie !== "") { %>
                                 <% movie.forEach(movie => { %>
                                     <tr>
-                                        <td></td>
+                                        <% count++ %>
+                                        <td><%= count %></td>
                                         <td><%= movie.name_vn %></td>
                                         <td><%= movie.year  %></td>
                                         <td><%= movie.nation %></td>
@@ -157,7 +154,7 @@
                             <label>Tình cảm</label>
                             <input type="checkbox" name="Category" value="Hành động"/>
                             <label>Hành động</label>
-                            <input type="checkbox" name="Category" value="Gây cấn"/>
+                            <input type="checkbox" name="Category" value="Gay cấn"/>
                             <label>Gây cấn</label>
                             <input type="checkbox" name="Category" value="Bí ẩn"/>
                             <label>Bí ẩn</label>
@@ -171,14 +168,22 @@
                             <label>Cổ trang</label>
                             <input type="checkbox" name="Category" value="Gia đình"/>
                             <label>Gia đình</label>
-                            <input type="checkbox" name="Category" value="Alime"/>
+                            <input type="checkbox" name="Category" value="Anime"/>
                             <label>Anime</label>
                             <input type="checkbox" name="Category" value="Khoa học viễn tưởng"/>
                             <label>Khoa học</label>
                             <input type="checkbox" name="Category" value="Hoạt hình"/>
                             <label>Hoạt hình</label>
-                            <input type="checkbox" name="Category" value="Gia đình"/>
-                            <label>Gia đình</label>
+                            <input type="checkbox" name="Category" value="Hài hước"/>
+                            <label>Hài hước</label>
+                            <input type="checkbox" name="Category" value="Kinh dị"/>
+                            <label>Kinh dị</label>
+                            <input type="checkbox" name="Category" value="Tâm lý"/>
+                            <label>Tâm lý</label>
+                            <input type="checkbox" name="Category" value="Phiêu lưu"/>
+                            <label>Phiêu lưu</label>
+                            <input type="checkbox" name="Category" value="Chiếu rạp"/>
+                            <label>Chiếu rạp</label>
                         </div>
                         <div>
                             <h3>Vip?</h3>

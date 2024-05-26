@@ -30,28 +30,23 @@
             <div class="slidebar_menu">
                 <ul class="slidebar_menu-list" id="admin_sidebar">
                     <li class="slidebar_menu-items">
-                        <a href="./dashboard.html">
+                        <a href="/Admin/Home">
                             Dashboard
-                        </a> 
+                        </a>
                     </li>
-                    <li class="slidebar_menu-items">
-                        <a href="./Users.html">
+                    <li class="slidebar_menu-items" >
+                        <a href="/Admin/Users">
                             Users
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
-                        <a href="./Films.html">
+                        <a href="/Admin/Films">
                             Phim
                         </a>
                     </li>
-                    <li class="slidebar_menu-items" id="current" >
-                        <a href="./Report.html">
+                    <li class="slidebar_menu-items" id="current">
+                        <a href="/Admin/Report">
                             Báo Lỗi
-                        </a>
-                    </li>
-                    <li class="slidebar_menu-items">
-                        <a href="./Require.html">
-                            Yêu Cầu Phim
                         </a>
                     </li>
                     <li class="slidebar_menu-items">
@@ -71,16 +66,30 @@
             <table class="report__list" width="80%">
                 <tr>
                     <th width="15%">UserName</th>
-                    <th width="20%">link lỗi</th>
+                    <th width="20%">Phim lỗi</th>
                     <th width="45%%">Mô tả</th>
-                    <th width="20%">Tình trạng</th>
+                    <th width="20%">    </th>
                 </tr>
-                <tr>
-                    <td class="UserName">nguyenvana</td>
-                    <td class="ReportedLink">#</td>
-                    <td class="ReportDesc"></td>
-                    <td class="ReportStatus"><a href="">Chưa giải quyết</a></td>
-                </tr>
+
+                <% report.forEach(report => { %>
+                    <tr>
+                        <td class="UserName"><%= report.username %></td>
+                        <td class="ReportedLink" href="/Movie/Watch/<%= report.movieId %>">
+                            <a href="/Movie/Watch/<%= report.movieId %>" style="color:#4905f5;">
+                                <%= report.movieId %>
+                            </a>
+                        </td>
+                        <td class="ReportDesc"><%= report.reports %></td>
+                        <td class="ReportStatus">
+                            <div class="user-authorization">
+                                <form class="delete-userForm" action="/update" method="post">
+                                    <input type="hidden" name="reportId" value="<%= report._id %>">
+                                    <button type="submit" class="btn_deleteUser">Delete</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% }) %>
             </table>
         </div>
     </div>

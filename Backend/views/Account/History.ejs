@@ -12,57 +12,205 @@
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="icon" href="/img/SubLogo.jpg" type="image/x-icon" />
-
+  <link rel="stylesheet" href="/css/responsive.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-
   <!-- defer : chắn chắc dom đã load -->
-  <script src="/script/main.js" defer></script>
-  <script src="/script/lich-su-xem.js" defer></script>
-  <script src="/script/thong-tin-ca-nhan.js" defer></script>
+  <script src="../../script/main.js" defer></script>
+  <script src="../../script/lich-su-xem.js" defer></script>
+  <script src="../../script/thong-tin-ca-nhan.js" defer></script>
+  <script src = "../../script/mobile.js" defer></script>
 
 </head>
 
+<script>
+
+</script>
+
 <body>
   <div class="wrap">
-     <!--Header-->
-     <header id="header">
+    <!--Header-->
+    <header id="header">
       <nav class="nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="/index.html">
+           <!-- li cho mobile -->
+           <li class="header__nav-item bars__mobile">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+
+          <div class="sidebar__mobile">
+            <div class="sidebar__body">
+              <ul class="sidebar__nav-list ">
+                <li class="siderbar__nav-item header__nav-login">
+                  <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
+                  <div class="show__login">
+                    <button class="wrap__profile" href="/Account/Profile">
+                      <div class="profile__dropdown">
+                        <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                      </div>
+                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                    </button>
+  
+                    <div class="profile__menu">
+                      <ul class="profile__menu-list">
+                        <a href="/Account/Favorite" class="profile__menu-item">
+                          <span class="loved__films">
+                            <i class="fa-regular fa-heart"></i>
+                            Phim yêu thích
+                          </span>
+                        </a>
+                        <a href="/Account/History" class="profile__menu-item">
+                          <span class="history__films">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            Lịch sử xem
+                          </span>
+                        </a>
+                        <a href="/Account/Profile" class="profile__menu-item">
+                          <span class="setting__personal">
+                            <i class="fa-regular fa-user"></i>
+                            Cài đặt cá nhân
+                          </span>
+                        </a>
+        
+                        <a href="/" class="profile__menu-item">
+                          <span class="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Đăng xuất
+                          </span>
+                        </a>
+        
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                
+
+                <li class="siderbar__nav-item">
+                  <a href="/" class="nav__item-link active__page">Trang chủ</a>
+                </li>
+
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link movie__genre">Thể loại</a>
+                </li>
+
+                <!-- Sub menu -->
+                <div class="submenu__type">
+                  <ul class="header__subMenu-list ">
+                    <li class="header__subMenu-item">
+                      <a href="/Category/Tinh cam">Tình Cảm</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Chiến Tranh</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gia Đình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hành Động</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Tâm lý</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Anime</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gây Cấn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hình Sự</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Bí Ẩn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Cổ Trang</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hoạt Hình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kiếm Hiệp</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kinh Dị</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">TV-Show</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Thần Thoại</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Phiêu Lưu</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Viễn Tưởng</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+      
+                  </ul>
+                </div>
+
+
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim bộ</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim lẻ</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Top phim</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link">Phim chiếu rạp</a>
+                </li>
+              </ul>
+            </div>
+            <div class="modal__sidebar-mobile"></div>
+          </div>
+
+
+          <!-- End mobile -->
+          <li class="header__nav-item logo__header">
+            <a href="/">
               <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
           </li>
   
           <li class="header__nav-item header__mainPage">
-            <a href="/index.html">TRANG CHỦ</a>
+            <a href="/">TRANG CHỦ</a>
             <div class="header__mainPage-active"></div>
           </li>
   
           <li class="header__nav-item header__nav-subMenu">
-            <a href="#">THỂ LOẠI
+            <a href="/">THỂ LOẠI
               <i class="fa-solid fa-angle-down"></i>
             </a>
             <!-- SubMenu -->
             <div class="header__subMenu">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="../Pages/TheLoaiPhim/TinhCam.html">Tình Cảm</a>
+                  <a href="/Category/Tinh cam">Tình Cảm</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Chiến Tranh</a>
+                  <a href="/Category/Kinh di">Kinh dị</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Gia Đình</a>
+                  <a href="/Category/Gia dinh">Gia Đình</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hành Động</a>
+                  <a href="/Category/Hanh dong">Hành Động</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Học Đường</a>
+                  <a href="/Category/Tam ly">Tâm lý</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Anime</a>
+                  <a href="/Category/Anime">Anime</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Gây Cấn</a>
@@ -71,10 +219,10 @@
                   <a href="#">Hình Sự</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Khoa Học</a>
+                  <a href="/Category/Khoa hoc">Khoa Học</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Bí Ẩn</a>
+                  <a href="/Category/Bi an">Bí Ẩn</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Cổ Trang</a>
@@ -109,33 +257,30 @@
   
           </li>
   
-          <li class="header__nav-item header__nav-subMenu">
-            <a href="#">QUỐC GIA
+          <li class="header__nav-item header__nav-subMenu item__country" >
+            <a href="/">QUỐC GIA
               <i class="fa-solid fa-angle-down"></i>
             </a>
             <!-- SubMenu -->
-            <div class="header__subMenu">
+            <div class="header__subMenu ">
               <ul class="header__subMenu-list">
                 <li class="header__subMenu-item">
-                  <a href="#">Ấn Độ</a>
+                  <a href="/Nation/Nhat Ban">Nhật Bản</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Âu-Mỹ</a>
+                  <a href="/Nation/Au My">Âu-Mỹ</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Việt Nam</a>
+                  <a href="/Nation/Viet Nam">Việt Nam</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="#">Hàn Quốc</a>
+                  <a href="/Nation/Han Quoc">Hàn Quốc</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Hồng Kông</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Thái Lan</a>
-                </li>
-                <li class="header__subMenu-item">
-                  <a href="#">Hàn Quốc</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="#">Indonesia</a>
@@ -148,16 +293,16 @@
           </li>
   
           <li class="header__nav-item">
-            <a href="../Pages/TheLoaiPhim/TopPhim.html">TOP PHIM</a>
+            <a href="/TopPhim">TOP PHIM</a>
           </li>
   
           <li class="header__nav-item">
-            <a href="../Pages/TheLoaiPhim/PhimChieuRap.html">PHIM CHIẾU RẠP</a>
+            <a href="/ChieuRap">PHIM CHIẾU RẠP</a>
           </li>
   
-          <li class="header__nav-item ">
+          <li class="header__nav-item search__header">
             <div class="header__nav-form">
-              <a href="../Pages/Search/search.html" class="header__nav-search">
+              <a href="/Movie/Search" class="header__nav-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
 
@@ -502,48 +647,55 @@
           </li>
   
           <li class="header__nav-item header__nav-login">
-            <!-- Chưa login -->
-            <a class="btn__login not__logged active " href="#">ĐĂNG NHẬP</a>
-            <!-- Khi login -->
-            <div class="show__login logged">
-              <button class="wrap__profile" href="../Pages/Account/thong-tin-ca-nhan.html">
-                <div class="profile__dropdown">
-                  <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
-                </div>
-                <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-              </button>
-  
-              <div class="profile__menu">
-                <ul class="profile__menu-list">
-                  <a href="./Pages/Account/phim-yeu-thich.html" class="profile__menu-item">
-                    <span class="loved__films">
-                      <i class="fa-regular fa-heart"></i>
-                      Phim yêu thích
-                    </span>
-                  </a>
-                  <a href="./Pages/Account/lich-su-xem.html" class="profile__menu-item">
-                    <span class="history__films">
-                      <i class="fa-solid fa-clock-rotate-left"></i>
-                      Lịch sử xem
-                    </span>
-                  </a>
-                  <a href="./Pages/Account/thong-tin-ca-nhan.html" class="profile__menu-item">
-                    <span class="setting__personal">
-                      <i class="fa-regular fa-user"></i>
-                      Cài đặt cá nhân
-                    </span>
-                  </a>
-  
-                  <a href="/index.html" class="profile__menu-item">
-                    <span class="logout">
-                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                      Đăng xuất
-                    </span>
-                  </a>
-  
-                </ul>
+            
+            <% if (loggedIn) { %>
+              <!-- Khi login -->
+              <div class="show__login logged active">
+                  <button class="wrap__profile" href="/Account/Profile">
+                      <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                      </div>
+                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                  </button>
+          
+                  <div class="profile__menu">
+                      <ul class="profile__menu-list">
+                          <a href="/Account/Favorite" class="profile__menu-item">
+                              <span class="loved__films">
+                                  <i class="fa-regular fa-heart"></i>
+                                  Phim yêu thích
+                              </span>
+                          </a>
+                          <a href="/Account/History" class="profile__menu-item">
+                              <span class="history__films">
+                                  <i class="fa-solid fa-clock-rotate-left"></i>
+                                  Lịch sử xem
+                              </span>
+                          </a>
+                          <a href="/Account/Profile" class="profile__menu-item">
+                              <span class="setting__personal">
+                                  <i class="fa-regular fa-user"></i>
+                                  Cài đặt cá nhân
+                              </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+                        
+          
+                      </ul>
+                  </div>
               </div>
-            </div>
+          <% } else { %>
+              <!-- Chưa login -->
+              <a class="btn__login not__logged active" href="#">ĐĂNG NHẬP</a>
+          <% } %>
   
   
           </li>
@@ -954,25 +1106,37 @@
             <h4 class="siderbar__title">Tài khoản và dịch vụ</h4>
             <ul class="sidebar__nav-list">
               <li class="siderbar__nav-item">
-                <a href="../Account/thong-tin-ca-nhan.html" class="slider__item-link" target="__self">
+                <a href="/Account/Profile" class="slider__item-link" target="__self">
                   <span class="item__link-title">Thông tin cá nhân</span>
                 </a>
               </li>
+              <% if(isHistory) {%>
+                <li class="siderbar__nav-item active_item">
+                  <a href="/Account/History" class="slider__item-link" target="__self">
+                    <span class="item__link-title ">Lịch sử xem</span>
+                  </a>
+                </li>
+              <% } else {%>
+                <li class="siderbar__nav-item">
+                  <a href="/Account/History" class="slider__item-link" target="__self">
+                    <span class="item__link-title ">Lịch sử xem</span>
+                  </a>
+                </li>
+              <% } %>
+
+              <% if(!isHistory) {%>
               <li class="siderbar__nav-item active_item">
-                <a href="#" class="slider__item-link" target="__self">
-                  <span class="item__link-title ">Lịch sử xem</span>
-                </a>
-              </li>
-              <li class="siderbar__nav-item">
-                <a href="../Account/phim-yeu-thich.html" class="slider__item-link" target="__self">
+                <a href="/Account/Favorite" class="slider__item-link " target="__self">
                   <span class="item__link-title">Phim Yêu Thích</span>
                 </a>
               </li>
-              <li class="siderbar__nav-item">
-                <a href="../Account/lich-su-giao-dich.html" class="slider__item-link" target="__self">
-                  <span class="item__link-title">Lịch sử giao dịch</span>
-                </a>
-              </li>
+              <% } else {%>
+                <li class="siderbar__nav-item">
+                  <a href="/Account/Favorite" class="slider__item-link" target="__self">
+                    <span class="item__link-title">Phim Yêu Thích</span>
+                  </a>
+                </li>
+              <% } %>
               <div class="line"></div>
               <li class="siderbar__nav-item logout__profile">
                 <a href="#" class="slider__item-link" target="__self">
@@ -984,7 +1148,13 @@
         </div>
 
         <div class="main__content content__history">
-          <h2 class="history__title ">Lịch sử xem</h2>
+          <% if(isHistory) {%>
+            <h2 class="history__title ">Lịch sử xem</h2>
+          <% } %>
+
+          <% if(!isHistory) {%>
+            <h2 class="history__title ">Phim yêu thích</h2>
+          <% } %>
           <div class="history__btn-change active">
             <div class="button__change btn__cancel" role="button">Hủy bỏ</div>
             <!-- active__btn-change -->
@@ -992,6 +1162,8 @@
             <!-- nonActive__btn-del -->
             <div class="button__change btn__del nonActive__btn-del" role="button">Xóa bỏ</div>
           </div>
+
+          
 
           <div class="line"></div>
           <div class="btn__select-all">
@@ -1003,85 +1175,62 @@
           </div>
           <div class="history__area">
             <!-- Khi chưa có xem -->
-            <div class="history__empty active">
-              <img src="/img/empty_history.jpg" alt="Không có hồ sơ xem">
-              <p class="history__empty-title">Không có hồ sơ xem</p>
-              <p class="history__empty-desc">Bạn không có lịch sử xem, hãy nhanh chóng xem video thôi!</p>
-              <a class="history__btn-back" href="/index.html">Theo dõi phim ngay bây giờ</a>
-            </div>
+            <% if(num == 0) {%>
+              <div class="history__empty active">
+                <img src="/img/empty_history.jpg" alt="Không có hồ sơ xem">
+                <p class="history__empty-title">Không có hồ sơ xem</p>
+                <p class="history__empty-desc">Bạn không có lịch sử xem, hãy nhanh chóng xem video thôi!</p>
+                <a class="history__btn-back" href="/">Theo dõi phim ngay bây giờ</a>
+              </div>
+            <% } %>
+
             <!-- Khi có xem -->
-            <div class="history__list">
-              <!-- item -->
-              <div class="history__item">
-                <a href="/Pages/WatchVideo/index.html" class="history__item-target">
-                  <div class="history__item-img">
-                    <div class="item__img">
-                      <img src="/img/7-vien-ngoc-rong-sieu-cap.jpg" alt="khotim">
-                    </div>
-                    <!-- Phim bộ thì tập , khác thì tới.. -->
-                    <div class="item__update">
-                      <div class="item__update-text">Xem đến tập 123</div>
-                    </div>
-                    <div class="item__bar">
-                      <p class="item__bar-percent"></p>
-                    </div>
-                    <!-- Active remove/cancel/selected all -->
-                    <div class="modal__item">
-                      <div class="select__mask"></div>
-                      <!-- mask__check-selected -->
-                      <div class="mask__check">
-                        <i class="fa-solid fa-check"></i>
+            <% if(num > 0) {%>
+              <div class="history__list">
+                <!-- item -->
+
+                <% movie_list.forEach(movie => { %>
+                  <div class="history__item">
+                    <a href="<%= "/Movie/Watch/" + movie._id %>" class="history__item-target">
+                      <div class="history__item-img">
+                        <div class="item__img">
+                          <img src="<%= movie.path + "ngang.jpg" %>" alt="khotim">
+                        </div>
+                        <!-- Phim bộ thì tập , khác thì tới.. -->
+                        <div class="item__update">
+                          <div class="item__update-text"></div>
+                        </div>
+                        <div class="item__bar">
+                          <p class="item__bar-percent"></p>
+                        </div>
+                        <!-- Active remove/cancel/selected all -->
+                        <div class="modal__item">
+                          <div class="select__mask"></div>
+                          <!-- mask__check-selected -->
+                          <div class="mask__check">
+                            <input type="hidden" class="HiddenId" value="<%= movie._id %>">
+                            <input type="hidden" class="isHistory" value="<%= isHistory %>">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </div>
+
                       </div>
-                    </div>
+                      <div class="history__item-desc">
+                        <div class="item__desc-title"><%= movie.name_vn %></div>
 
+                      </div>
+                      <div class="btn__play-history">
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+                    </a>
                   </div>
-                  <div class="history__item-desc">
-                    <div class="item__desc-title">7 viên ngọc rồng siêu cấp</div>
-
-                  </div>
-                  <div class="btn__play-history">
-                    <i class="fa-solid fa-play"></i>
-                  </div>
-                </a>
+                <% }) %>
 
               </div>
-              <!-- item -->
-              <div class="history__item">
-                <a href="/Pages/WatchVideo/index.html" class="history__item-target">
-                  <div class="history__item-img">
-                    <div class="item__img">
-                      <img src="/img/kho-tim.jpg" alt="khotim">
-                    </div>
-                    <!-- Phim bộ thì tập , khác thì tới.. -->
-                    <div class="item__update">
-                      <div class="item__update-text">Xem đến tập 1</div>
-                    </div>
-                    <div class="item__bar">
-                      <p class="item__bar-percent"></p>
-                    </div>
-                    <!-- Active remove/cancel/selected all -->
-                    <div class="modal__item">
-                      <div class="select__mask"></div>
-                      <!-- mask__check-selected -->
-                      <div class="mask__check ">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="history__item-desc">
-                    <div class="item__desc-title">Khó tìm (Nan Tầm)</div>
-                    <p class="watch__present"> Đã xem 54%</p>
-                  </div>
-                  <div class="btn__play-history">
-                    <i class="fa-solid fa-play"></i>
-                  </div>
-                </a>
-
-              </div>
-            </div>
+            <% } %>
           </div>
-          <div class="no__more">Không có nhiều thêm nữa</div>
+          
+          <div class="no__more"></div>
 
         </div>
       </div>
