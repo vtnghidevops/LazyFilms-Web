@@ -381,7 +381,7 @@
 
   .carousel__watching-item {
     min-width: 10rem;
-    max-width: 15rem;
+    max-width: 19.2rem;
     height: 100%;
     margin-right: 1rem;
   }
@@ -885,9 +885,12 @@
       top: -12px;
     }
 
+  .share__section,
   .section__required {
     width: 95vw;
   }
+
+
 
   .modal__medium {
     height: 14.5rem;
@@ -897,7 +900,14 @@
     height: 23.5rem;
   }
 
-  .share__section {
-    width: 95vw;
+  #required__login .required__login{
+    font-size: 1.3rem;
+  }
+
+  .container__comment {
+    width: 100%;
+  }
+  .comment {
+    width: 100%;
   }
 }

@@ -24,9 +24,6 @@
 <body>
   <div class="wrap">
     <!--Header-->
- <!--Header-->
- <!--Header-->
-    <!--Header-->
     <header id="header">
       <nav class="nav">
         <ul class="header__nav-list">
@@ -39,46 +36,55 @@
             <div class="sidebar__body">
               <ul class="sidebar__nav-list ">
                 <li class="siderbar__nav-item header__nav-login">
-                  <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
-                  <div class="show__login">
-                    <button class="wrap__profile" href="/Account/Profile">
-                      <div class="profile__dropdown">
-                        <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                  
+                  <% if (!loggedIn) { %>
+                    <!-- Chưa login -->
+                    <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
+                  <% } else { %>
+                    <div class="show__login active">
+                      <button class="wrap__profile" href="/Account/Profile">
+                        <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                        </div>
+                        <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                      </button>
+    
+                      <div class="profile__menu">
+                        <ul class="profile__menu-list">
+                          <a href="/Account/Favorite" class="profile__menu-item">
+                            <span class="loved__films">
+                              <i class="fa-regular fa-heart"></i>
+                              Phim yêu thích
+                            </span>
+                          </a>
+                          <a href="/Account/History" class="profile__menu-item">
+                            <span class="history__films">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
+                              Lịch sử xem
+                            </span>
+                          </a>
+                          <a href="/Account/Profile" class="profile__menu-item">
+                            <span class="setting__personal">
+                              <i class="fa-regular fa-user"></i>
+                              Cài đặt cá nhân
+                            </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+          
+                        </ul>
                       </div>
-                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-                    </button>
-  
-                    <div class="profile__menu">
-                      <ul class="profile__menu-list">
-                        <a href="/Account/Favorite" class="profile__menu-item">
-                          <span class="loved__films">
-                            <i class="fa-regular fa-heart"></i>
-                            Phim yêu thích
-                          </span>
-                        </a>
-                        <a href="/Account/History" class="profile__menu-item">
-                          <span class="history__films">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
-                            Lịch sử xem
-                          </span>
-                        </a>
-                        <a href="/Account/Profile" class="profile__menu-item">
-                          <span class="setting__personal">
-                            <i class="fa-regular fa-user"></i>
-                            Cài đặt cá nhân
-                          </span>
-                        </a>
-        
-                        <a href="/" class="profile__menu-item">
-                          <span class="logout">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            Đăng xuất
-                          </span>
-                        </a>
-        
-                      </ul>
                     </div>
-                  </div>
+                  <% } %>
+                    
+
                 </li>
                 
 
@@ -155,17 +161,12 @@
                 </div>
 
 
+               
                 <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim bộ</a>
+                  <a href="/TopPhim" class="nav__item-link">Top phim</a>
                 </li>
                 <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim lẻ</a>
-                </li>
-                <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Top phim</a>
-                </li>
-                <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim chiếu rạp</a>
+                  <a href="/ChieuRap" class="nav__item-link">Phim chiếu rạp</a>
                 </li>
               </ul>
             </div>
@@ -217,7 +218,7 @@
                   <a href="#">Hình Sự</a>
                 </li>
                 <li class="header__subMenu-item">
-                  <a href="/Category/Khoa hoc vien tuong">Khoa Học</a>
+                  <a href="/Category/Khoa hoc">Khoa Học</a>
                 </li>
                 <li class="header__subMenu-item">
                   <a href="/Category/Bi an">Bí Ẩn</a>
@@ -1312,7 +1313,7 @@
         <!-- container video -->
         <div class="container__video" id="container">
           <video class="state__video" autoplay>
-            <source src="<%= movie.path + "vid.mp4" %>" type="video/mp4">
+            <source src="<%= "/Video/test.mp4" %>" type="video/mp4">
           </video>
           <img src="/img/Logo-removebg-preview.jpg" alt="logo LazyFilms" class="overlay__video-logo">
           <div class="video__loading">
@@ -1546,7 +1547,7 @@
   
               <li class="episodes__list-item">
                 <div class="episodes__item">
-                  <a href="/Movie/Watch/<%= movie._id %>" class="episodes__item-link">
+                  <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="episodes__item-link">
                     <div class="episodes__item-frames">
                       <img src="<%= movie.path + "ngang.jpg" %>"
                         alt="Bleach_HuyetChienNganNam-ChiaBiet_Tap1">
@@ -1766,7 +1767,7 @@
                 <!-- item cmt-->
                 <div class="comment__item">
                   <div class="comment__item-avata">
-                    <img src="/img/test_avata.jpg" alt="">
+                    <img src="/img/img_user.jpg" alt="">
                   </div>
                   <!-- main comment -->
                   <div class="comment__item-detail">
@@ -1789,14 +1790,14 @@
                         <span>
                           <i class="fa-solid fa-thumbs-up liked"></i>
                           <i class="fa-regular fa-thumbs-up unlike active"></i>
-                          <span class="count__like">19</span>
+                          <span class="count__like">0</span>
                         </span>
                       </div>
   
                       <div class="item__reply-message">
                         <span>
                           <i class="fa-light fa-message-dots"></i>
-                          <span class="count__cmt">7</span>
+                          <span class="count__cmt">0</span>
                         </span>
                       </div>
   

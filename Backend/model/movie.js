@@ -49,6 +49,10 @@ const movieSchema = new Schema({
         type: Number,
        required: false
     },
+    views: {
+        type: Number,
+       required: false
+    },
     discription: {
         type: String,
        required: false

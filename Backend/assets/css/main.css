@@ -7,6 +7,7 @@ body {
   background-color: var(--background-color);
   height: max-content;
   position: relative;
+  min-height: 73rem;
   /* transition: 1s ease-in; */
 }
 
@@ -906,11 +907,13 @@ body {
   color: var(--text-color);
 }
 
+.update__info-item,
 .login__modal--group {
   position: relative;
   text-align: center;
 }
 
+.update__info-item i,
 .login__modal--group i {
   position: absolute;
   color: var(--placeholder-text);
@@ -2127,7 +2130,7 @@ body::-webkit-scrollbar-track {
 
 /* Lớp phủ */
 .item__background-opacity {
-  background-image: url(../img/Background-Opacity.a5660cf.jpg);
+  background-image: url(/img/Background-Opacity.a5660cf.jpg);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4330,7 +4333,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   padding: 0 1rem;
   max-width: 65rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .comment__item-avata {
@@ -4639,26 +4642,26 @@ body::-webkit-scrollbar-track {
 }
 
 .swiper__item .swiper__item-fb {
-  background-image: url(../img/Facebook.jpg);
+  background-image: url(/img/Facebook.jpg);
 }
 
 .swiper__item .swiper__item-mess {
-  background-image: url(../img/messenge.jpg);
+  background-image: url(/img/messenge.jpg);
 
 }
 
 .swiper__item .swiper__item-twitter {
-  background-image: url(../img/Twitter.jpg);
+  background-image: url(/img/Twitter.jpg);
 
 }
 
 .swiper__item .swiper__item-insta {
-  background-image: url(../img/Instagram.jpg);
+  background-image: url(/img/Instagram.jpg);
 
 }
 
 .swiper__item .swiper__item-blog {
-  background-image: url(../img/Blogger.jpg);
+  background-image: url(/img/Blogger.jpg);
 
 }
 
@@ -4753,7 +4756,7 @@ body::-webkit-scrollbar-track {
   color: var(--placeholder-text);
   font-size: 1.5rem;
   font-weight: 100;
-  font-family: "SFProDisplay", Arial, sans-serif;
+  /* font-family: "SFProDisplay", Arial, sans-serif; */
 }
 
 .siderbar__nav-item:hover span {
@@ -4826,7 +4829,7 @@ body::-webkit-scrollbar-track {
   font-style: normal;
   font-weight: 600;
   font-size: 2rem;
-  line-height: 2.4remx;
+  line-height: 2.4rem;
   color: var(--text-color);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -5403,7 +5406,7 @@ body::-webkit-scrollbar-track {
 }
 
 .update__avata {
-  background-image: url(../img/user_avata_male.jpg);
+  background-image: url(/img/user_avata_male.jpg);
   cursor: pointer;
   position: relative;
   width: 80px;
@@ -5453,6 +5456,9 @@ body::-webkit-scrollbar-track {
   font-size: 14px;
   line-height: 17px;
   color: #b1b1b1;
+  width: 100%;
+  display: block;
+  text-align: left;
 }
 
 .update__info-item input {
@@ -5495,7 +5501,7 @@ body::-webkit-scrollbar-track {
 }
 
 .select__sex .select__down {
-  background-image: url(../img/down.jpg);
+  background-image: url(/img/down.jpg);
   position: absolute;
   height: 2rem;
   width: 2rem;

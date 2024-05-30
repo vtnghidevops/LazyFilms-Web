@@ -21,680 +21,684 @@
 
 <body>
   <div class="wrap">
-   <!--Header-->
-   <header id="header">
-    <nav class="nav">
-      <ul class="header__nav-list">
-         <!-- li cho mobile -->
-         <li class="header__nav-item bars__mobile">
-          <i class="fa-solid fa-bars"></i>
-        </li>
+    <!--Header-->
+    <header id="header">
+      <nav class="nav">
+        <ul class="header__nav-list">
+           <!-- li cho mobile -->
+           <li class="header__nav-item bars__mobile">
+            <i class="fa-solid fa-bars"></i>
+          </li>
 
-        <div class="sidebar__mobile">
-          <div class="sidebar__body">
-            <ul class="sidebar__nav-list ">
-              <li class="siderbar__nav-item header__nav-login">
-                <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
-                <div class="show__login">
-                  <button class="wrap__profile" href="/Account/Profile">
-                    <div class="profile__dropdown">
-                      <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
-                    </div>
-                    <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-                  </button>
-
-                  <div class="profile__menu">
-                    <ul class="profile__menu-list">
-                      <a href="/Account/Favorite" class="profile__menu-item">
-                        <span class="loved__films">
-                          <i class="fa-regular fa-heart"></i>
-                          Phim yêu thích
-                        </span>
-                      </a>
-                      <a href="/Account/History" class="profile__menu-item">
-                        <span class="history__films">
-                          <i class="fa-solid fa-clock-rotate-left"></i>
-                          Lịch sử xem
-                        </span>
-                      </a>
-                      <a href="/Account/Profile" class="profile__menu-item">
-                        <span class="setting__personal">
-                          <i class="fa-regular fa-user"></i>
-                          Cài đặt cá nhân
-                        </span>
-                      </a>
-      
-                      <a href="/" class="profile__menu-item">
-                        <span class="logout">
-                          <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                          Đăng xuất
-                        </span>
-                      </a>
-      
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              
-
-              <li class="siderbar__nav-item">
-                <a href="/" class="nav__item-link active__page">Trang chủ</a>
-              </li>
-
-              <li class="siderbar__nav-item">
-                <a href="#" class="nav__item-link movie__genre">Thể loại</a>
-              </li>
-
-              <!-- Sub menu -->
-              <div class="submenu__type">
-                <ul class="header__subMenu-list ">
-                  <li class="header__subMenu-item">
-                    <a href="/Category/Tinh cam">Tình Cảm</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Chiến Tranh</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Gia Đình</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Hành Động</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Tâm lý</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Anime</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Gây Cấn</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Hình Sự</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Khoa Học</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Bí Ẩn</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Cổ Trang</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Hoạt Hình</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Kiếm Hiệp</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Kinh Dị</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">TV-Show</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Thần Thoại</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Phiêu Lưu</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Viễn Tưởng</a>
-                  </li>
-                  <li class="header__subMenu-item">
-                    <a href="#">Khoa Học</a>
-                  </li>
+          <div class="sidebar__mobile">
+            <div class="sidebar__body">
+              <ul class="sidebar__nav-list ">
+                <li class="siderbar__nav-item header__nav-login">
+                  
+                  <% if (!loggedIn) { %>
+                    <!-- Chưa login -->
+                    <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
+                  <% } else { %>
+                    <div class="show__login active">
+                      <button class="wrap__profile" href="/Account/Profile">
+                        <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                        </div>
+                        <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                      </button>
     
-                </ul>
-              </div>
+                      <div class="profile__menu">
+                        <ul class="profile__menu-list">
+                          <a href="/Account/Favorite" class="profile__menu-item">
+                            <span class="loved__films">
+                              <i class="fa-regular fa-heart"></i>
+                              Phim yêu thích
+                            </span>
+                          </a>
+                          <a href="/Account/History" class="profile__menu-item">
+                            <span class="history__films">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
+                              Lịch sử xem
+                            </span>
+                          </a>
+                          <a href="/Account/Profile" class="profile__menu-item">
+                            <span class="setting__personal">
+                              <i class="fa-regular fa-user"></i>
+                              Cài đặt cá nhân
+                            </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+          
+                        </ul>
+                      </div>
+                    </div>
+                  <% } %>
+                    
+
+                </li>
+                
+
+                <li class="siderbar__nav-item">
+                  <a href="/" class="nav__item-link active__page">Trang chủ</a>
+                </li>
+
+                <li class="siderbar__nav-item">
+                  <a href="#" class="nav__item-link movie__genre">Thể loại</a>
+                </li>
+
+                <!-- Sub menu -->
+                <div class="submenu__type">
+                  <ul class="header__subMenu-list ">
+                    <li class="header__subMenu-item">
+                      <a href="/Category/Tinh cam">Tình Cảm</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Chiến Tranh</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gia Đình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hành Động</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Tâm lý</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Anime</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Gây Cấn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hình Sự</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Bí Ẩn</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Cổ Trang</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Hoạt Hình</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kiếm Hiệp</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Kinh Dị</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">TV-Show</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Thần Thoại</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Phiêu Lưu</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Viễn Tưởng</a>
+                    </li>
+                    <li class="header__subMenu-item">
+                      <a href="#">Khoa Học</a>
+                    </li>
+      
+                  </ul>
+                </div>
 
 
-              <li class="siderbar__nav-item">
-                <a href="#" class="nav__item-link">Phim bộ</a>
-              </li>
-              <li class="siderbar__nav-item">
-                <a href="#" class="nav__item-link">Phim lẻ</a>
-              </li>
-              <li class="siderbar__nav-item">
-                <a href="#" class="nav__item-link">Top phim</a>
-              </li>
-              <li class="siderbar__nav-item">
-                <a href="#" class="nav__item-link">Phim chiếu rạp</a>
-              </li>
-            </ul>
+               
+                <li class="siderbar__nav-item">
+                  <a href="/TopPhim" class="nav__item-link">Top phim</a>
+                </li>
+                <li class="siderbar__nav-item">
+                  <a href="/ChieuRap" class="nav__item-link">Phim chiếu rạp</a>
+                </li>
+              </ul>
+            </div>
+            <div class="modal__sidebar-mobile"></div>
           </div>
-          <div class="modal__sidebar-mobile"></div>
-        </div>
 
 
-        <!-- End mobile -->
-        <li class="header__nav-item logo__header">
-          <a href="/">
-            <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
-          </a>
-        </li>
-
-        <li class="header__nav-item header__mainPage">
-          <a href="/">TRANG CHỦ</a>
-          <div class="header__mainPage-active"></div>
-        </li>
-
-        <li class="header__nav-item header__nav-subMenu">
-          <a href="/">THỂ LOẠI
-            <i class="fa-solid fa-angle-down"></i>
-          </a>
-          <!-- SubMenu -->
-          <div class="header__subMenu">
-            <ul class="header__subMenu-list">
-              <li class="header__subMenu-item">
-                <a href="/Category/Tinh cam">Tình Cảm</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Kinh di">Kinh dị</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Gia dinh">Gia Đình</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Hanh dong">Hành Động</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Tam ly">Tâm lý</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Anime">Anime</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Gây Cấn</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Hình Sự</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Khoa hoc">Khoa Học</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Category/Bi an">Bí Ẩn</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Cổ Trang</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Hoạt Hình</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Kiếm Hiệp</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Kinh Dị</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">TV-Show</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Thần Thoại</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Phiêu Lưu</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Viễn Tưởng</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Khoa Học</a>
-              </li>
-
-            </ul>
-          </div>
-
-        </li>
-
-        <li class="header__nav-item header__nav-subMenu item__country" >
-          <a href="/">QUỐC GIA
-            <i class="fa-solid fa-angle-down"></i>
-          </a>
-          <!-- SubMenu -->
-          <div class="header__subMenu ">
-            <ul class="header__subMenu-list">
-              <li class="header__subMenu-item">
-                <a href="/Nation/Nhat Ban">Nhật Bản</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Nation/Au My">Âu-Mỹ</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Nation/Viet Nam">Việt Nam</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="/Nation/Han Quoc">Hàn Quốc</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Hồng Kông</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Thái Lan</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Indonesia</a>
-              </li>
-              <li class="header__subMenu-item">
-                <a href="#">Đài Loan</a>
-              </li>
-
-            </ul>
-        </li>
-
-        <li class="header__nav-item">
-          <a href="/TopPhim">TOP PHIM</a>
-        </li>
-
-        <li class="header__nav-item">
-          <a href="/ChieuRap">PHIM CHIẾU RẠP</a>
-        </li>
-
-        <li class="header__nav-item search__header">
-          <div class="header__nav-form">
-            <a href="/Movie/Search" class="header__nav-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+          <!-- End mobile -->
+          <li class="header__nav-item logo__header">
+            <a href="/">
+              <img src="/img/Logo.jpg" alt="LogoLazyFilms" class="header__nav-logo">
             </a>
+          </li>
+  
+          <li class="header__nav-item header__mainPage">
+            <a href="/">TRANG CHỦ</a>
+            <div class="header__mainPage-active"></div>
+          </li>
+  
+          <li class="header__nav-item header__nav-subMenu">
+            <a href="/">THỂ LOẠI
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="/Category/Tinh cam">Tình Cảm</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Kinh di">Kinh dị</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Gia dinh">Gia Đình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Hanh dong">Hành Động</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Tam ly">Tâm lý</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Anime">Anime</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Gây Cấn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hình Sự</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Khoa hoc">Khoa Học</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Category/Bi an">Bí Ẩn</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Cổ Trang</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hoạt Hình</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kiếm Hiệp</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Kinh Dị</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">TV-Show</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thần Thoại</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Phiêu Lưu</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Viễn Tưởng</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Khoa Học</a>
+                </li>
+  
+              </ul>
+            </div>
+  
+          </li>
+  
+          <li class="header__nav-item header__nav-subMenu item__country" >
+            <a href="/">QUỐC GIA
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!-- SubMenu -->
+            <div class="header__subMenu ">
+              <ul class="header__subMenu-list">
+                <li class="header__subMenu-item">
+                  <a href="/Nation/Nhat Ban">Nhật Bản</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Nation/Au My">Âu-Mỹ</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Nation/Viet Nam">Việt Nam</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="/Nation/Han Quoc">Hàn Quốc</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Hồng Kông</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Thái Lan</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Indonesia</a>
+                </li>
+                <li class="header__subMenu-item">
+                  <a href="#">Đài Loan</a>
+                </li>
+  
+              </ul>
+          </li>
+  
+          <li class="header__nav-item">
+            <a href="/TopPhim">TOP PHIM</a>
+          </li>
+  
+          <li class="header__nav-item">
+            <a href="/ChieuRap">PHIM CHIẾU RẠP</a>
+          </li>
+  
+          <li class="header__nav-item search__header">
+            <div class="header__nav-form">
+              <a href="/Movie/Search" class="header__nav-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
 
-            <div class="header__nav-notification">
-              <img src="/img/icon-alarm-active.jpg" alt="" class="non__active-noti active">
-              <img src="/img/icon-alarm-active-fill.jpg" alt="" class="active__noti">
-              <div class="header__noti--modal">
-                <div class="header__modal-title">
-                  <h3>Thông báo</h3>
-                </div>
+              <div class="header__nav-notification">
+                <img src="/img/icon-alarm-active.jpg" alt="" class="non__active-noti active">
+                <img src="/img/icon-alarm-active-fill.jpg" alt="" class="active__noti">
+                <div class="header__noti--modal">
+                  <div class="header__modal-title">
+                    <h3>Thông báo</h3>
+                  </div>
 
-                <!-- Chưa Login -->
-                <div class="header__modal--info not__logged">
-                  <h5>Vui lòng
-                    <strong>Đăng nhập</strong>
-                    để nhận những thông báo mới nhất từ LazyFilms
-                  </h5>
-                </div>
+                  <!-- Chưa Login -->
+                  <div class="header__modal--info not__logged">
+                    <h5>Vui lòng
+                      <strong>Đăng nhập</strong>
+                      để nhận những thông báo mới nhất từ LazyFilms
+                    </h5>
+                  </div>
 
-                <!-- Đã Login -->
-                <div class="header__modal-info logged">
-                  <div class="header__info-list">
-                    <!-- item <-> 1 ngày -->
-                    <div class="header__info-item">
-                      <div class="info__item-day">
-                        <span>Hôm nay</span>
+                  <!-- Đã Login -->
+                  <div class="header__modal-info logged">
+                    <div class="header__info-list">
+                      <!-- item <-> 1 ngày -->
+                      <div class="header__info-item">
+                        <div class="info__item-day">
+                          <span>Hôm nay</span>
+                        </div>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <!-- read and unread -->
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <!-- read and unread -->
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                      <!-- item <-> 2 ngày -->
+                      <div class="header__info-item">
+                        <div class="info__item-day">
+                          <span>Hôm qua</span>
+                        </div>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- item <-> 2 ngày -->
-                    <div class="header__info-item">
-                      <div class="info__item-day">
-                        <span>Hôm qua</span>
+                          </li>
+                        </ul>
                       </div>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                      <!-- item <-> trước hiện tại 2 days -->
+                      <div class="header__info-item">
+                        <div class="info__item-day">
+                          <span>Thứ 3 30/4</span>
+                        </div>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          </li>
+                        </ul>
+                        <!-- item -->
+                        <ul class="item__day-main">
+                          <li class="read unread">
+                            <div class="table">
+                              <div class="table__cell">
+                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
+                                <div class="table__right-text">
+                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
+                                  <div class="right__text-body">
+                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                                  </div>
+                                  <div class="right__text-time">4 giờ trước</div>
                                 </div>
-                                <div class="right__text-time">4 giờ trước</div>
+  
                               </div>
-
+  
                             </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- item <-> trước hiện tại 2 days -->
-                    <div class="header__info-item">
-                      <div class="info__item-day">
-                        <span>Thứ 3 30/4</span>
+                          </li>
+                        </ul>
                       </div>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                </div>
-                                <div class="right__text-time">4 giờ trước</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                </div>
-                                <div class="right__text-time">4 giờ trước</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                </div>
-                                <div class="right__text-time">4 giờ trước</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                </div>
-                                <div class="right__text-time">4 giờ trước</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- item -->
-                      <ul class="item__day-main">
-                        <li class="read unread">
-                          <div class="table">
-                            <div class="table__cell">
-                              <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                              <div class="table__right-text">
-                                <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                <div class="right__text-body">
-                                  Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                </div>
-                                <div class="right__text-time">4 giờ trước</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </li>
-                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
+  
+             
             </div>
-
-           
-          </div>
+            
+  
+          </li>
+  
+          <li class="header__nav-item header__nav-premium ">
+            <a href="#" class="header__premium">
+              <img src="/img/img_VIP.jpg" alt="VIP" class="header__premium-img">
+            </a>
+          </li>
+  
+          <li class="header__nav-item header__nav-login">
+            
+            <% if (loggedIn) { %>
+              <!-- Khi login -->
+              <div class="show__login logged active">
+                  <button class="wrap__profile" href="/Account/Profile">
+                      <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                      </div>
+                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                  </button>
           
-
-        </li>
-
-        <li class="header__nav-item header__nav-premium ">
-          <a href="#" class="header__premium">
-            <img src="/img/img_VIP.jpg" alt="VIP" class="header__premium-img">
-          </a>
-        </li>
-
-        <li class="header__nav-item header__nav-login">
-          
-          <% if (loggedIn) { %>
-            <!-- Khi login -->
-            <div class="show__login logged active">
-                <button class="wrap__profile" href="/Account/Profile">
-                    <div class="profile__dropdown">
-                        <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
-                    </div>
-                    <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-                </button>
-        
-                <div class="profile__menu">
-                    <ul class="profile__menu-list">
-                        <a href="/Account/Favorite" class="profile__menu-item">
-                            <span class="loved__films">
-                                <i class="fa-regular fa-heart"></i>
-                                Phim yêu thích
-                            </span>
-                        </a>
-                        <a href="/Account/History" class="profile__menu-item">
-                            <span class="history__films">
-                                <i class="fa-solid fa-clock-rotate-left"></i>
-                                Lịch sử xem
-                            </span>
-                        </a>
-                        <a href="/Account/Profile" class="profile__menu-item">
-                            <span class="setting__personal">
-                                <i class="fa-regular fa-user"></i>
-                                Cài đặt cá nhân
-                            </span>
-                        </a>
-        
-                        <form class="profile__menu-item" action="/logout" method="post">
-                          <button type="submit" class="logout-btn">
-                              <span class="logout">
-                                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                  Đăng xuất
+                  <div class="profile__menu">
+                      <ul class="profile__menu-list">
+                          <a href="/Account/Favorite" class="profile__menu-item">
+                              <span class="loved__films">
+                                  <i class="fa-regular fa-heart"></i>
+                                  Phim yêu thích
                               </span>
-                          </button>
-                      </form>
-                      
-        
-                    </ul>
-                </div>
-            </div>
-        <% } else { %>
-            <!-- Chưa login -->
-            <a class="btn__login not__logged active" href="#">ĐĂNG NHẬP</a>
-        <% } %>
-
-
-        </li>
-      </ul>
-    </nav>
-  </header>
+                          </a>
+                          <a href="/Account/History" class="profile__menu-item">
+                              <span class="history__films">
+                                  <i class="fa-solid fa-clock-rotate-left"></i>
+                                  Lịch sử xem
+                              </span>
+                          </a>
+                          <a href="/Account/Profile" class="profile__menu-item">
+                              <span class="setting__personal">
+                                  <i class="fa-regular fa-user"></i>
+                                  Cài đặt cá nhân
+                              </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+                        
+          
+                      </ul>
+                  </div>
+              </div>
+          <% } else { %>
+              <!-- Chưa login -->
+              <a class="btn__login not__logged active" href="#">ĐĂNG NHẬP</a>
+          <% } %>
+  
+  
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Section Login -->
     <div class="container__login" id="login">
@@ -1707,7 +1711,7 @@
                 <% var item = movie.splice(0,5) %>
                 <% item.forEach(movie => { %>
               <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
-                <a href="<%= "/Movie/Watch/" + movie._id %>" class="carousel__item-infomation">
+                <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation">
                   <div class="carousel__listFilms-img">
                     <figure class="carousel__img-fixed">
                       <img
@@ -1717,8 +1721,8 @@
                         <i class="fa-solid fa-star judge__listFilms-star"></i>
                         <%= movie.rating %>
                       </span>
-                      <div class="common-listFilms-buttonPlay modal__small" href="<% "/Movie/Watch/" + movie._id %>">
-                        <div href="<% "/Movie/Watch/" + movie._id %>" class="clickFilms">
+                      <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                        <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
                           <i class="fa-solid fa-play"></i>
                         </div>
                       </div>
@@ -1776,7 +1780,7 @@
                 <% var item = movie.splice(0,5) %>
                 <% item.forEach(movie => { %>
                   <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
-                    <a href="<%= "/Movie/Watch/" + movie._id %>" class="carousel__item-infomation">
+                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation">
                       <div class="carousel__listFilms-img">
                         <figure class="carousel__img-fixed">
                           <img
@@ -1786,8 +1790,8 @@
                             <i class="fa-solid fa-star judge__listFilms-star"></i>
                             <%= movie.rating %>
                           </span>
-                          <div class="common-listFilms-buttonPlay modal__small" href="<% "/Movie/Watch/" + movie._id %>">
-                            <div href="<% "/Movie/Watch/" + movie._id %>" class="clickFilms">
+                          <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                            <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
                               <i class="fa-solid fa-play"></i>
                             </div>
                           </div>
@@ -1846,7 +1850,7 @@
                 <% var item = movie.splice(0,5) %>
                 <% item.forEach(movie => { %>
                   <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
-                    <a href="<%= "/Movie/Watch/" + movie._id %>" class="carousel__item-infomation">
+                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation">
                       <div class="carousel__listFilms-img">
                         <figure class="carousel__img-fixed">
                           <img
@@ -1856,8 +1860,8 @@
                             <i class="fa-solid fa-star judge__listFilms-star"></i>
                             <%= movie.rating %>
                           </span>
-                          <div class="common-listFilms-buttonPlay modal__small" href="<% "/Movie/Watch/" + movie._id %>">
-                            <div href="<% "/Movie/Watch/" + movie._id %>" class="clickFilms">
+                          <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                            <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
                               <i class="fa-solid fa-play"></i>
                             </div>
                           </div>
@@ -1916,7 +1920,7 @@
                 <% var item = movie.splice(0,5) %>
                 <% item.forEach(movie => { %>
                   <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
-                    <a href="<%= "/Movie/Watch/" + movie._id %>" class="carousel__item-infomation">
+                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation">
                       <div class="carousel__listFilms-img">
                         <figure class="carousel__img-fixed">
                           <img
@@ -1926,8 +1930,8 @@
                             <i class="fa-solid fa-star judge__listFilms-star"></i>
                             <%= movie.rating %>
                           </span>
-                          <div class="common-listFilms-buttonPlay modal__small" href="<% "/Movie/Watch/" + movie._id %>">
-                            <div href="<% "/Movie/Watch/" + movie._id %>" class="clickFilms">
+                          <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                            <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
                               <i class="fa-solid fa-play"></i>
                             </div>
                           </div>
@@ -1985,7 +1989,7 @@
                 <% var item = movie.splice(0,5) %>
                 <% item.forEach(movie => { %>
                   <li class="carousel__listFilms-item carousel__list-subMenu  carousel__watching-item romantic__movie-item">
-                    <a href="<% "/Movie/Watch/" + movie._id %>" class="carousel__item-infomation">
+                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation">
                       <div class="carousel__listFilms-img">
                         <figure class="carousel__img-fixed">
                           <img
@@ -1995,8 +1999,8 @@
                             <i class="fa-solid fa-star judge__listFilms-star"></i>
                             <%= movie.rating %>
                           </span>
-                          <div class="common-listFilms-buttonPlay modal__small" href="<% "/Movie/Watch/" + movie._id %>">
-                            <div href="<% "/Movie/Watch/" + movie._id %>" class="clickFilms">
+                          <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                            <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
                               <i class="fa-solid fa-play"></i>
                             </div>
                           </div>

@@ -10,10 +10,12 @@
   <link rel="stylesheet" href="/fonts/Alata/Alata-Regular.ttf">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/responsive.css">
   <link rel="icon" href="/img/SubLogo.jpg" type="image/x-icon" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
   <script src="/script/main.js" defer> </script>
   <script src="/script/thong-tin-ca-nhan.js" defer></script>
+  <script src="/script/mobile.js" defer></script>
 </head>
 
 <body>
@@ -31,46 +33,55 @@
             <div class="sidebar__body">
               <ul class="sidebar__nav-list ">
                 <li class="siderbar__nav-item header__nav-login">
-                  <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
-                  <div class="show__login">
-                    <button class="wrap__profile" href="/Account/Profile">
-                      <div class="profile__dropdown">
-                        <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                  
+                  <% if (!loggedIn) { %>
+                    <!-- Chưa login -->
+                    <a href="#" class="nav__item-link active btn__login">Đăng nhập/Đăng ký</a>
+                  <% } else { %>
+                    <div class="show__login active">
+                      <button class="wrap__profile" href="/Account/Profile">
+                        <div class="profile__dropdown">
+                          <img src="/img/user_avata_male.jpg" alt="avata_user" class="profile__dropdown-avata">
+                        </div>
+                        <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
+                      </button>
+    
+                      <div class="profile__menu">
+                        <ul class="profile__menu-list">
+                          <a href="/Account/Favorite" class="profile__menu-item">
+                            <span class="loved__films">
+                              <i class="fa-regular fa-heart"></i>
+                              Phim yêu thích
+                            </span>
+                          </a>
+                          <a href="/Account/History" class="profile__menu-item">
+                            <span class="history__films">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
+                              Lịch sử xem
+                            </span>
+                          </a>
+                          <a href="/Account/Profile" class="profile__menu-item">
+                            <span class="setting__personal">
+                              <i class="fa-regular fa-user"></i>
+                              Cài đặt cá nhân
+                            </span>
+                          </a>
+          
+                          <form class="profile__menu-item" action="/logout" method="post">
+                            <button type="submit" class="logout-btn">
+                                <span class="logout">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Đăng xuất
+                                </span>
+                            </button>
+                        </form>
+          
+                        </ul>
                       </div>
-                      <img src="/img/down.jpg" alt="dropdown" class="profile__dropdown-toggle">
-                    </button>
-  
-                    <div class="profile__menu">
-                      <ul class="profile__menu-list">
-                        <a href="/Account/Favorite" class="profile__menu-item">
-                          <span class="loved__films">
-                            <i class="fa-regular fa-heart"></i>
-                            Phim yêu thích
-                          </span>
-                        </a>
-                        <a href="/Account/History" class="profile__menu-item">
-                          <span class="history__films">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
-                            Lịch sử xem
-                          </span>
-                        </a>
-                        <a href="/Account/Profile" class="profile__menu-item">
-                          <span class="setting__personal">
-                            <i class="fa-regular fa-user"></i>
-                            Cài đặt cá nhân
-                          </span>
-                        </a>
-        
-                        <a href="/" class="profile__menu-item">
-                          <span class="logout">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            Đăng xuất
-                          </span>
-                        </a>
-        
-                      </ul>
                     </div>
-                  </div>
+                  <% } %>
+                    
+
                 </li>
                 
 
@@ -147,17 +158,12 @@
                 </div>
 
 
+               
                 <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim bộ</a>
+                  <a href="/TopPhim" class="nav__item-link">Top phim</a>
                 </li>
                 <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim lẻ</a>
-                </li>
-                <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Top phim</a>
-                </li>
-                <li class="siderbar__nav-item">
-                  <a href="#" class="nav__item-link">Phim chiếu rạp</a>
+                  <a href="/ChieuRap" class="nav__item-link">Phim chiếu rạp</a>
                 </li>
               </ul>
             </div>
@@ -1279,7 +1285,7 @@
             </div>
             <div class="edit__profile-submit submit__OTP">
               <!-- edit__profile-submit -->
-              <button class="" type="button" id = "confirmOTPButton">Xác nhận</button>
+              <button class="active__btn" type="button" id = "confirmOTPButton">Xác nhận</button>
               <div class="send__again">
                 <p>Chưa nhận được mã ?
                   <span class="resend__password">Gửi lại</span>
@@ -1295,7 +1301,7 @@
     </div>
     
     <!-- Change Password -->
-    <div class="container__change-password" id="change__password">
+    <div class="container__change-password" id="change__password" >
         <div class="section__edit-profile section__change-password">
           <a class="forgot__section-close">
             <i class="fa-solid fa-circle-xmark"></i>
@@ -1308,23 +1314,29 @@
               <div class="update__info-item">
                 <span>Mật khẩu cũ</span>
                 <input type="password" name="oldPassword" class="info__item-enterPass" placeholder="Nhập mật khẩu">
+                <i class="fa-regular fa-eye-slash"></i>
+                <i class="fa-regular fa-eye"></i>
               </div>
 
               <div class="update__info-item">
                 <span>Mật khẩu mới</span>
                 <input type="password" name="newPassword" class="info__item-passAgain" placeholder="Nhập mật khẩu mới">
+                <i class="fa-regular fa-eye-slash"></i>
+                <i class="fa-regular fa-eye"></i>
               </div>
 
               <div class="update__info-item">
                 <span>Xác nhận mật khẩu</span>
                 <input type="password" name="confirmNewPassword" class="info__item-newPass" placeholder="Nhập mật khẩu mới">
+                <i class="fa-regular fa-eye-slash"></i>
+                <i class="fa-regular fa-eye"></i>
               </div>
       
             </div>
           </div>
 
         <div class="edit__profile-submit">
-          <button class ="">Xác nhận</button>
+          <button class ="active__btn">Xác nhận</button>
         </div>
 
       </div>

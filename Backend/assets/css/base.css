@@ -124,4 +124,6 @@ img {
 button {
   border: none;
   background: none;
+  font-family: 'Alata';
+  cursor: pointer;
 }

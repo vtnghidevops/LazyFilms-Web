@@ -1,14 +1,12 @@
-flagStatusLogin = setInterval(()=> {
-    return $show__login.is(":visible")
-},1000)
+// flagStatusLogin = setInterval(()=> {
+//     return $show__login.is(":visible")
+// },1000)
 function checkLoginWhenClickVideo() {
-    if(!flagStatusLogin) {
-        showModalOneTab($('#required__login'))
-    }
+    showModalOneTab($('#required__login'))
 }
-setTimeout(() => {
-    checkLoginWhenClickVideo()
-}, 1100);
+// setTimeout(() => {
+//     checkLoginWhenClickVideo()
+// }, 1100);
 
 // report video
 let $btnReport = $('.video__control-report');
@@ -26,7 +24,7 @@ function closeModalOneTab($modalToHide) {
     $modalToHide.fadeOut(300)
 }
 $btnReport.click(function () {
-    if(!flagStatusLogin) {
+    if(!$('.show__login').hasClass('active')) {
         checkLoginWhenClickVideo()
     }else {
         showModalOneTab($blcReport)
@@ -96,7 +94,7 @@ let btnCloseShare = $(".share__section-close")
 //Click follow 
 
 $(btnFollow).click(function () {
-    if(!flagStatusLogin) {
+    if(!$('.show__login').hasClass('active')) {
         checkLoginWhenClickVideo()
     }else {
         $("#followHeart").toggleClass("active__btn-follow");
@@ -296,6 +294,7 @@ let loginInUser = $('.text__login')
 
 loginInUser.click(function () {
     showModalOneTab($login)
+    closeModalOneTab($('#required__login'))
 })
 
 moreCmt.click(function () {
@@ -385,9 +384,9 @@ $('.send__cmt').on('click', function(e){
           <div class="detail__area-main">
             <!-- heading -->
             <div class="area__main-title">
-              <span class="area__title-name">New user</span>
+              <span class="area__title-name">${username}</span>
               <div class="area__dot"></div>
-              <span class="area__tilte-time">Vửa xong</span>
+              <span class="area__tilte-time">Vừa xong</span>
             </div>
             <!-- Detail comment -->
             <div class="area__main-detail">

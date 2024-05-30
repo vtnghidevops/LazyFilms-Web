@@ -686,11 +686,11 @@ $('#forgotPass .info__email-forgot').on('change',function(){
   var $eyeSlash = $('.fa-regular.fa-eye-slash');
   var $eye = $('.fa-regular.fa-eye');
   var $passwordInput = $('.login__modal--group input[type=password]');
-console.log($passwordInput)
+
   // Gán sự kiện click cho biểu tượng eye-slash
   $eyeSlash.on('click', function() {
       // Ẩn eye-slash và hiển thị eye
-      $eyeSlash.hide();
+      $(this).hide();
       $eye.show();
 
       // Chuyển đổi kiểu nhập liệu của trường mật khẩu thành text
@@ -700,12 +700,13 @@ console.log($passwordInput)
   // Gán sự kiện click cho biểu tượng eye
   $eye.on('click', function() {
       // Ẩn eye và hiển thị eye-slash
-      $eye.hide();
+      $(this).hide();
       $eyeSlash.show();
 
       // Chuyển đổi kiểu nhập liệu của trường mật khẩu trở lại password
       $passwordInput.attr('type', 'password');
   });
+
 
   //Luot danh sach 
   $('.carousel__listFilms').each(function() {

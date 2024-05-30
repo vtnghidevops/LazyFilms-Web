@@ -191,7 +191,7 @@ $logoutCancel.click(() => {
 })
 
 $logoutAccept.click(() => {
-  window.location.href = '../../index.html';
+  window.location.href = '/';
 })
 
 // Tùy biến OTP ( gmail )
@@ -313,3 +313,55 @@ $('.submit__back').click(function(){
 })
 
 
+    // Biểu tượng eye-slash và eye cho mật khẩu cũ
+    var $oldPasswordEyeSlash = $('.info__item-enterPass').siblings('.fa-eye-slash');
+    var $oldPasswordEye = $('.info__item-enterPass').siblings('.fa-eye');
+    var $oldPasswordInput = $('.info__item-enterPass');
+
+    // Biểu tượng eye-slash và eye cho mật khẩu mới
+    var $newPasswordEyeSlash = $('.info__item-passAgain').siblings('.fa-eye-slash');
+    var $newPasswordEye = $('.info__item-passAgain').siblings('.fa-eye');
+    var $newPasswordInput = $('.info__item-passAgain');
+
+    // Biểu tượng eye-slash và eye cho xác nhận mật khẩu
+    var $confirmPasswordEyeSlash = $('.info__item-newPass').siblings('.fa-eye-slash');
+    var $confirmPasswordEye = $('.info__item-newPass').siblings('.fa-eye');
+    var $confirmPasswordInput = $('.info__item-newPass');
+
+    // Sự kiện click cho eye-slash của mật khẩu cũ
+    $oldPasswordEyeSlash.on('click', function() {
+        togglePasswordVisibility($oldPasswordInput);
+    });
+
+    // Sự kiện click cho eye của mật khẩu cũ
+    $oldPasswordEye.on('click', function() {
+        togglePasswordVisibility($oldPasswordInput);
+    });
+
+    // Sự kiện click cho eye-slash của mật khẩu mới
+    $newPasswordEyeSlash.on('click', function() {
+        togglePasswordVisibility($newPasswordInput);
+    });
+
+    // Sự kiện click cho eye của mật khẩu mới
+    $newPasswordEye.on('click', function() {
+        togglePasswordVisibility($newPasswordInput);
+    });
+
+    // Sự kiện click cho eye-slash của xác nhận mật khẩu
+    $confirmPasswordEyeSlash.on('click', function() {
+        togglePasswordVisibility($confirmPasswordInput);
+    });
+
+    // Sự kiện click cho eye của xác nhận mật khẩu
+    $confirmPasswordEye.on('click', function() {
+        togglePasswordVisibility($confirmPasswordInput);
+    });
+
+    // Hàm để ẩn hiện mật khẩu
+    function togglePasswordVisibility(input) {
+        var isPasswordVisible = input.attr('type') === 'text';
+        input.attr('type', isPasswordVisible? 'password' : 'text');
+        input.siblings('.fa-eye').toggle(!isPasswordVisible); // Hiển thị eye nếu mật khẩu đang ẩn, ngược lại
+        input.siblings('.fa-eye-slash').toggle(isPasswordVisible); // Hiển thị eye-slash nếu mật khẩu đang hiển thị, ngược lại
+    }

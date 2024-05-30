@@ -11,7 +11,7 @@ const Reports = require('./model/report');
 const multer = require('multer');
 const fs = require('fs-extra');
 const notifier = require('node-notifier');
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 const path = require('path');
@@ -46,16 +46,39 @@ const file_field = [
     {name: "pic_doc", maxCount: 1},
     {name: "trailer", maxCount: 1},
     {name: "vid", maxCount: 1},
-    {name: "actor_pic", maxCount: 3},
+    {name: "actor_pic", maxCount: 10},
 ]
 
 // Connect to mongodb
 // Only after connected to db, the server listen to requests
-const dbUrl = "mongodb://localhost:27017/Website";
+const dbUrl = "mongodb+srv://22520820:Taomatkhau4!@cluster0.skgxy9y.mongodb.net/Website?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(dbUrl)
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Failed to connect to MongoDB', err));
 
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://22520820:Taomatkhau4!@cluster0.skgxy9y.mongodb.net/Website?retryWrites=true&w=majority&appName=Cluster0";
+// // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
 
 app.set('view engine', 'ejs');
 // Web assets
@@ -163,18 +186,19 @@ app.post('/login', async (req, res) => {
 app.post('/logout', (req, res) => {
     res.clearCookie('loggedIn');
     res.clearCookie('userId');
-    res.redirect('back');
+    res.redirect('/');
 });
 
 // Routes
 app.get('/', async (req, res) => {
     const loggedIn = !!req.cookies.userId; // Default to false if loggedIn cookie is not set
 
-    const movie_list = ["6645bc9d30ee1fb3747c5ab4", "6646f4b92dc5cae6278d44ed", "6646f92021e951272e4b78b5", "6647c46992e9cf01d41cda4b", "6647c51392e9cf01d41cda4d", "6648647ffdee03fa7d475465", "66486649fdee03fa7d475469", "66486796fdee03fa7d47546b"]
+    const movie_list = ["6645bc9d30ee1fb3747c5ab4", "6646f92021e951272e4b78b5", "6647c46992e9cf01d41cda4b", "6647c51392e9cf01d41cda4d", "6648647ffdee03fa7d475465", "66486649fdee03fa7d475469", "66486796fdee03fa7d47546b"]
     const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
     const chieurap = await Movies.find({ category: { $in: ["Chiếu rạp"] } }).sort({createdAt: -1}).limit(10)
     const anime = await Movies.find({ category: { $in: ["Anime"] } }).sort({createdAt: -1}).limit(10)
-    const hight_rating = await Movies.find().sort({rating: -1}).limit(10)
+    const high_rating = await Movies.find().sort({rating: -1}).limit(10)
+    const most_view = await Movies.find().sort({views: -1}).limit(10)
     const vip = await Movies.find({vip: true})
     const movie_slider = await Movies.find({ _id: { $in: movie_list }})
     const phimViet = await Movies.find({ nation: { $in: "Việt Nam" }})
@@ -182,13 +206,14 @@ app.get('/', async (req, res) => {
 
 
     // console.log(movie_slider)
-    res.render('index', { loggedIn: loggedIn, new_movie, chieurap, anime, hight_rating, vip, movie_slider, user, phimViet });
+    res.render('index', { loggedIn: loggedIn, new_movie, chieurap, anime, high_rating, vip, movie_slider, user, phimViet, most_view});
 });
 
 app.get('/Movie/Watch/:id', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
-    const movie_id = req.params.id
+    const movie_id = req.params.id.split(" ").slice(-1)
     const movie = await Movies.findById(movie_id)
+
     const user = await Users.findById(req.cookies.userId)
 
     if(user !== null) {
@@ -197,17 +222,18 @@ app.get('/Movie/Watch/:id', async (req, res) => {
         user.save()
     }
 
-    const related = await Movies.find({ category: { $in: movie.category } }).limit(7);
+    if(typeof(movie.views) == "undefined") {
+        movie.views = 0
+        movie.save()
+    } else {
+        movie.views += 1
+        movie.save()
+    }
+
+    const related = await Movies.find({ category: { $in: movie.category } }).limit(10);
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
     res.render('./WatchVideo/Watch', { loggedIn: loggedIn, isFavorite, movie, fullUrl, related, user });
-});
-
-//Logout
-app.post('/logout', (req, res) => {
-    res.clearCookie('loggedIn');
-    res.clearCookie('userId');
-    res.redirect('/');
 });
 
 // Cấu hình Gmail
@@ -644,18 +670,16 @@ app.get('/Admin/*', async (req, res, next) => {
     const loggedIn = !!req.cookies.userId;
     const id = req.cookies.userId;
     user_data = await Users.findById(id)
-    if (loggedIn == false || user_data.role !== "ADMIN")
-        res.render("403")
-    next();
+    if (loggedIn == false || user_data.role !== "ADMIN") res.render("403")
+    else next();
 })
 
 app.get('/Account/*', async (req, res, next) => {
     const loggedIn = !!req.cookies.userId;
     const id = req.cookies.userId;
     user_data = await Users.findById(id)
-    if (loggedIn == false)
-        res.render("403")
-    next();
+    if (loggedIn == false) res.render("403")
+    else next();
 })
 
 app.get('/Account/Profile', (req, res) => {
