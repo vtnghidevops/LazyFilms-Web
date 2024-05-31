@@ -821,13 +821,13 @@
     margin: 1rem 1rem 0 0;
   }
   .video__desc-left {
-    width: auto;
+    width: 100%;
     position: relative;
 
   }
 
   .video__desc-right {
-    width: auto;
+    width: 100%;
     position: relative;
 
   }

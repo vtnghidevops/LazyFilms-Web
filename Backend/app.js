@@ -213,6 +213,7 @@ app.get('/Movie/Watch/:id', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
     const movie_id = req.params.id.split(" ").slice(-1)
     const movie = await Movies.findById(movie_id)
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
 
     const user = await Users.findById(req.cookies.userId)
 
@@ -233,7 +234,7 @@ app.get('/Movie/Watch/:id', async (req, res) => {
     const related = await Movies.find({ category: { $in: movie.category } }).limit(10);
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
-    res.render('./WatchVideo/Watch', { loggedIn: loggedIn, isFavorite, movie, fullUrl, related, user });
+    res.render('./WatchVideo/Watch', { loggedIn: loggedIn, isFavorite, movie, fullUrl, related, user, new_movie });
 });
 
 // Cấu hình Gmail
@@ -539,6 +540,8 @@ app.post('/get',(req, res) => {
 app.get('/Movie/Search', async (req, res) => {
     let Url = req.originalUrl;
     const loggedIn = !!req.cookies.userId
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     let temp = Url.split("=").slice(1).toString()
     var movie_name = temp.split("+").join(" ")
 
@@ -547,7 +550,7 @@ app.get('/Movie/Search', async (req, res) => {
     if(movie_name == "") {
         Movies.find().sort({rating: -1}).limit(8)
             .then(result => {
-                res.render("./Search/search", {movie: result, find, loggedIn})
+                res.render("./Search/search", {movie: result, find, loggedIn, new_movie})
             })
     }
     else {
@@ -555,13 +558,13 @@ app.get('/Movie/Search', async (req, res) => {
             Movies.find({ 'name_vn': { '$regex': movie_name}}).sort({year: -1})
                 .then(result => {
                     // console.log(result)
-                    res.render("./Search/search", {movie: result,find, loggedIn})
+                    res.render("./Search/search", {movie: result,find, loggedIn, new_movie})
                 })
         } else {
             Movies.find( { $text: { $search: movie_name } } ).sort({year: -1})
                 .then(result => {
                     // console.log(result)
-                    res.render("./Search/search", {movie: result, find, loggedIn})
+                    res.render("./Search/search", {movie: result, find, loggedIn, new_movie})
                 })
         }
     }
@@ -682,24 +685,28 @@ app.get('/Account/*', async (req, res, next) => {
     else next();
 })
 
-app.get('/Account/Profile', (req, res) => {
+app.get('/Account/Profile', async (req, res) => {
     const userid = req.cookies.userId
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     Users.findById(userid)
         .then(result => {
-            res.render("./Account/profile", {user: result, userid, loggedIn}) 
+            res.render("./Account/profile", {user: result, userid, loggedIn, new_movie}) 
         })
 })
 
 app.get('/Account/Favorite', async (req, res) => {
     const userid = req.cookies.userId
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     const user = await Users.findById(userid)
     const movie_list = await Movies.find({ _id: { $in: user.favorites }})
     const num = movie_list.length
     const isHistory = false
 
-    res.render("./Account/History", {movie_list, num, isHistory, loggedIn})
+    res.render("./Account/History", {movie_list, num, isHistory, loggedIn, new_movie})
 })
 
 // POST /favorite route
@@ -723,12 +730,14 @@ app.post('/favorite', async (req, res) => {
 app.get('/Account/History', async (req, res) => {
     const userid = req.cookies.userId
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     const user = await Users.findById(userid)
     const movie_list = await Movies.find({ _id: { $in: user.history }})
     const num = movie_list.length
     const isHistory = true
 
-    res.render("./Account/History", {movie_list, num, isHistory, loggedIn})
+    res.render("./Account/History", {movie_list, num, isHistory, loggedIn, new_movie})
 })
 
 app.post('/history', async (req,res) => {
@@ -825,6 +834,8 @@ app.get('/Admin/Users', (req, res) => {
 
 app.get('/Category/*', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     var Url = req.protocol + '://' + req.get('host') + req.originalUrl;
     var temp = req.originalUrl.split("/")
     var gerne = temp[2].split("%20").join(" ")
@@ -840,27 +851,32 @@ app.get('/Category/*', async (req, res) => {
 
     var movie = await Movies.find({ category: { $in: [gerne] } });  
     // console.log(movie.length)
-    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn})
+    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn, new_movie})
 })
 
 app.get('/TopPhim', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
     var movie = await Movies.find().sort({rating: -1});  
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+    
     const gerne = "Top Phim"
     
-    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn})
+    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn, new_movie})
 })
 
 app.get('/ChieuRap', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
     var movie = await Movies.find({ category: { $in: "Chiếu rạp" } });  
     const gerne = "Chiếu rạp"
     
-    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn})
+    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn, new_movie})
 })
 
 app.get('/Nation/*', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
+    const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
+
     var Url = req.protocol + '://' + req.get('host') + req.originalUrl;
     var temp = req.originalUrl.split("/")
     var gerne = temp[2].split("%20").join(" ")
@@ -871,7 +887,7 @@ app.get('/Nation/*', async (req, res) => {
 
     var movie = await Movies.find({ nation: { $in: [gerne] } });  
     // console.log(movie.length)
-    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn})
+    res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn, new_movie})
 })
 
 const PORT = process.env.PORT || 3000;

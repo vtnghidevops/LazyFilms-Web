@@ -810,8 +810,8 @@ $('.actor__list').each(function() {
         lightText.text("Turn on light");
         offMode.removeClass('active');
         overlay.removeClass('active');
-        $('.container__video').css('z-index',"1");
-        $this.css('z-index','1');
+        $('.container__video').css('z-index',"0");
+        $this.css('z-index','0');
 
     }
 });
