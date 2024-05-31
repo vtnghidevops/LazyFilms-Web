@@ -692,7 +692,7 @@ app.get('/Account/Profile', async (req, res) => {
 
     Users.findById(userid)
         .then(result => {
-            res.render("./Account/profile", {user: result, userid, loggedIn, new_movie}) 
+            res.render("./Account/Profile", {user: result, userid, loggedIn, new_movie}) 
         })
 })
 
@@ -858,7 +858,7 @@ app.get('/TopPhim', async (req, res) => {
     const loggedIn = !!req.cookies.userId;
     var movie = await Movies.find().sort({rating: -1});  
     const new_movie = await Movies.find().sort({createdAt: -1}).limit(10)
-    
+
     const gerne = "Top Phim"
     
     res.render("./TheLoaiPhim/Category", {movie, gerne, loggedIn, new_movie})
