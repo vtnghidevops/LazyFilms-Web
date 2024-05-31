@@ -710,7 +710,7 @@ app.post('/favorite', async (req, res) => {
     const isFavorite = user.favorites.includes(movieId)
     
     if(!isFavorite) {
-        user.favorites.push(movieId[0])
+        user.favorites.push(movieId)
         user.save()
     } else {
         const deleted = user.favorites.filter(item => item!== movieId);
@@ -739,12 +739,12 @@ app.post('/history', async (req,res) => {
     console.log(movieId)
 
     if(isHistory == "true") {
-        const toRemove = new Set(movieId)
-        const difference = user.history.filter( x => !toRemove.has(x) );
-        // const delete_item = user.history.filter(item => !movieId.includes(item));
-        console.log(user.history)
-        // user.history = delete_item
-        // user.save()
+        // const toRemove = new Set(movieId)
+        // const difference = user.history.filter( x => !toRemove.has(x) );
+        const delete_item = user.history.filter(item => !movieId.includes(item));
+        console.log(delete_item)
+        user.history = delete_item
+        user.save()
     } 
 
     if(isHistory == "false") {
