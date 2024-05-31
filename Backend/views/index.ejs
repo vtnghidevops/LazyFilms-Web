@@ -332,306 +332,32 @@
                       <!-- item <-> 1 ngày -->
                       <div class="header__info-item">
                         <div class="info__item-day">
-                          <span>Hôm nay</span>
+                          <span></span>
                         </div>
+
+                        <% new_movie.forEach(movie =>{ %>
                         <!-- item -->
-                        <ul class="item__day-main">
-                          <!-- read and unread -->
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
+                          <ul class="item__day-main">
+                            <li class="unread">
+                              <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="">
+                                <div class="table">
+                                  <div class="table__cell">
+                                    <img src="<%= movie.path + "ngang.jpg" %>" alt="">
+                                    <div class="table__right-text">
+                                      <div class="right__text-tilte"><%= movie.name_vn %></div>
+                                      <div class="right__text-body">
+                                        <%= movie.discription %>
+                                      </div>
+                                      <div class="right__text-time"></div>
+                                    </div>
+      
                                   </div>
-                                  <div class="right__text-time">4 giờ trước</div>
+      
                                 </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- item <-> 2 ngày -->
-                      <div class="header__info-item">
-                        <div class="info__item-day">
-                          <span>Hôm qua</span>
-                        </div>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- item <-> trước hiện tại 2 days -->
-                      <div class="header__info-item">
-                        <div class="info__item-day">
-                          <span>Thứ 3 30/4</span>
-                        </div>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
-                        <!-- item -->
-                        <ul class="item__day-main">
-                          <li class="read unread">
-                            <div class="table">
-                              <div class="table__cell">
-                                <img src="/img/monster-81712651434106_Landscape.jpg" alt="">
-                                <div class="table__right-text">
-                                  <div class="right__text-tilte">Monster #3 - Phần mới nhất</div>
-                                  <div class="right__text-body">
-                                    Một trong những bộ phim anime hay nhất mọi thời đại, xem ngay
-                                  </div>
-                                  <div class="right__text-time">4 giờ trước</div>
-                                </div>
-  
-                              </div>
-  
-                            </div>
-                          </li>
-                        </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        <% }) %>
                       </div>
                     </div>
                   </div>

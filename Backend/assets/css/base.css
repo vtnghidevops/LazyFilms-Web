@@ -127,3 +127,13 @@ button {
   font-family: 'Alata';
   cursor: pointer;
 }
+.overlay__mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Màu nền đen với độ trong suốt 70% */
+  z-index: 9999; /* Đặt z-index cao để lớp phủ nằm trên tất cả các phần tử khác */
+  display: none; /* Ban đầu, lớp phủ sẽ không hiển thị */
+}

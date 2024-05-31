@@ -6360,3 +6360,21 @@ body::-webkit-scrollbar-track {
 .romantic__movie-listFilms li:nth-child(6) {
   display: none;
 }
+
+
+.turn_mode {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  color : #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+  justify-content: flex-end;
+  height: 5rem;
+}
+
+.turn_mode i {
+  display: none;
+}

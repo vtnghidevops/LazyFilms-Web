@@ -791,3 +791,14 @@ $('.actor__list').each(function() {
 
 
 
+  $('.turn_mode').click(function() {
+    var $this = $(this);
+    if ($this.find('.fa-lightbulb.active').length > 0) { // Kiểm tra xem icon 'fa-lightbulb' có class 'active' hay không
+        $('body').append('<div class="overlay__mode"></div>'); // Thêm lớp phủ
+        $('.overlay').fadeIn(); // Hiển thị lớp phủ
+    } else {
+        $('.overlay').fadeOut(function() { // Ẩn lớp phủ
+            $(this).remove(); // Xóa lớp phủ khỏi DOM
+        });
+    }
+});
