@@ -803,11 +803,15 @@ $('.actor__list').each(function() {
         lightText.text("Turn off light");
         onMode.removeClass('active');
         overlay.addClass('active');
+        $('.container__video').css('z-index',"9999");
+        $this.css('z-index','9999');
     } else {
         onMode.addClass('active');
         lightText.text("Turn on light");
         offMode.removeClass('active');
         overlay.removeClass('active');
+        $('.container__video').css('z-index',"1");
+        $this.css('z-index','1');
 
     }
 });
