@@ -791,14 +791,23 @@ $('.actor__list').each(function() {
 
 
 
-  $('.turn_mode').click(function() {
+  $('#toggleDiv').click(function(){
     var $this = $(this);
-    if ($this.find('.fa-lightbulb.active').length > 0) { // Kiểm tra xem icon 'fa-lightbulb' có class 'active' hay không
-        $('body').append('<div class="overlay__mode"></div>'); // Thêm lớp phủ
-        $('.overlay').fadeIn(); // Hiển thị lớp phủ
+    var onMode = $this.find('.turn__on-mode');
+    var offMode = $this.find('.turn__off-mode');
+    var lightText = $this.find('#lightText');
+    var overlay = $('.overlay__mode');
+
+    if (onMode.hasClass('active')) {
+        offMode.addClass('active');
+        lightText.text("Turn off light");
+        onMode.removeClass('active');
+        overlay.addClass('active');
     } else {
-        $('.overlay').fadeOut(function() { // Ẩn lớp phủ
-            $(this).remove(); // Xóa lớp phủ khỏi DOM
-        });
+        onMode.addClass('active');
+        lightText.text("Turn on light");
+        offMode.removeClass('active');
+        overlay.removeClass('active');
+
     }
 });

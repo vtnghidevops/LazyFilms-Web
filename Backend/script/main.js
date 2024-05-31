@@ -590,7 +590,7 @@ function shareVideo(e,link) {
    let currentListBannerLink = currentShareBanner.closest(link); // Tìm kiếm listBannerLink chứa shareBanner
    let hrefValue = currentListBannerLink.attr('href'); 
    let cleanedHrefValue = hrefValue.replace('./', '');
-  copyShare.val(`http://localhost:3000${cleanedHrefValue}`); 
+  copyShare.val(`http://lazyfilms-web.onrender.com${cleanedHrefValue}`); 
 }
 
 
@@ -613,7 +613,7 @@ shareBanner.click(function(e){
    let currentListBannerLink = currentShareBanner.closest('.slider__list-item'); // Tìm kiếm listBannerLink chứa shareBanner
    let hrefValue = currentListBannerLink.attr('href'); 
    let cleanedHrefValue = hrefValue.replace('./', '');
-  copyShare.val(`http://localhost:3000${cleanedHrefValue}`); 
+  copyShare.val(`http://lazyfilms-web.onrender.com${cleanedHrefValue}`); 
 })
 
 closeShare.click(function() {
