@@ -1534,7 +1534,62 @@
             </div>
           </div>
   
-          <!-- Phim Bộ -->
+          <!-- Top Xu Hướng -->
+          <div class="carousel__films-trending">
+            <div class="carousel__tvHome-heading carousel__films-heading">
+              <h2>TOP 10 PHIM CÓ ĐIỂM CAO NHẤT
+                <i class="fa-light fa-angle-right"></i>
+              </h2>
+            </div>
+          
+            <!-- List Top Xu Hướng-->
+            <div class="carousel__tvHome-listFilms  carousel__tvHome-watching carousel__tvHome-trending">
+              <ul class="carousel__listFilms carousel__trending-list">
+                <!-- unit film -->
+                <!-- item -->
+
+                <% var count = 0 %>
+                <% var num = "" %>
+                <% high_rating.forEach(movie => { %>
+                  <% count++ %>
+                  <% if(count == 1) {num = "one"} %>
+                  <% if(count == 2) {num = "two"} %>
+                  <% if(count == 3) {num = "three"} %>
+                  <% if(count == 4) {num = "four"} %>
+                  <% if(count == 5) {num = "five"} %>
+                  <% if(count == 6) {num = "six"} %>
+                  <% if(count == 7) {num = "seven"} %>
+                  <% if(count == 8) {num = "eight"} %>
+                  <% if(count == 9) {num = "nine"} %>
+                  <% if(count == 10) {num = "ten"} %>
+                  <li class="carousel__listFilms-item carousel__list-subMenu carousel__trending-item">
+                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation" aria-label="<%= movie.name_vn %>">
+                      <div class="frames__background-numeric <%= num %>">
+                      </div>
+                      <div class="frames__background-img">
+                        <img src="<%= movie.path + "doc.jpg" %>" class="img__portrait" alt="<%= movie.name_vn %>">
+                      </div>
+                      <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
+                        <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
+                          <i class="fa-solid fa-play"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                <% }) %>
+          
+          
+              </ul>
+            </div>
+            <!-- btn -->
+            <div class="carousel__button-prev" type="Nextbutton">
+              <i class="fa-light fa-angle-left"></i>
+            </div>
+          
+            <div class="carousel__button-next" type="Prebutton">
+              <i class="fa-light fa-angle-right"></i>
+            </div>
+          </div>
 
   
           <!-- Phim Chiếu Rạp - SVIP-->
@@ -1691,62 +1746,7 @@
             </div>
           </div>
           
-          <!-- Top Xu Hướng -->
-          <div class="carousel__films-trending">
-            <div class="carousel__tvHome-heading carousel__films-heading">
-              <h2>TOP 10 PHIM CÓ ĐIỂM CAO NHẤT
-                <i class="fa-light fa-angle-right"></i>
-              </h2>
-            </div>
-          
-            <!-- List Top Xu Hướng-->
-            <div class="carousel__tvHome-listFilms  carousel__tvHome-watching carousel__tvHome-trending">
-              <ul class="carousel__listFilms carousel__trending-list">
-                <!-- unit film -->
-                <!-- item -->
 
-                <% var count = 0 %>
-                <% var num = "" %>
-                <% high_rating.forEach(movie => { %>
-                  <% count++ %>
-                  <% if(count == 1) {num = "one"} %>
-                  <% if(count == 2) {num = "two"} %>
-                  <% if(count == 3) {num = "three"} %>
-                  <% if(count == 4) {num = "four"} %>
-                  <% if(count == 5) {num = "five"} %>
-                  <% if(count == 6) {num = "six"} %>
-                  <% if(count == 7) {num = "seven"} %>
-                  <% if(count == 8) {num = "eight"} %>
-                  <% if(count == 9) {num = "nine"} %>
-                  <% if(count == 10) {num = "ten"} %>
-                  <li class="carousel__listFilms-item carousel__list-subMenu carousel__trending-item">
-                    <a href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="carousel__item-infomation" aria-label="<%= movie.name_vn %>">
-                      <div class="frames__background-numeric <%= num %>">
-                      </div>
-                      <div class="frames__background-img">
-                        <img src="<%= movie.path + "doc.jpg" %>" class="img__portrait" alt="<%= movie.name_vn %>">
-                      </div>
-                      <div class="common-listFilms-buttonPlay modal__small" href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>">
-                        <div href="/Movie/Watch/<%= movie.name_vn + " "+movie._id %>" class="clickFilms">
-                          <i class="fa-solid fa-play"></i>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                <% }) %>
-          
-          
-              </ul>
-            </div>
-            <!-- btn -->
-            <div class="carousel__button-prev" type="Nextbutton">
-              <i class="fa-light fa-angle-left"></i>
-            </div>
-          
-            <div class="carousel__button-next" type="Prebutton">
-              <i class="fa-light fa-angle-right"></i>
-            </div>
-          </div>
           
           <!-- Top Lượt Xem -->
           <div class="carousel__films-trending">

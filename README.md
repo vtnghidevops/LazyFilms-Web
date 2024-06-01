@@ -1,78 +1,85 @@
-# LAZYFILMS 
-## Hình ảnh thiết kế web
-:point_right:[Github Pages](https://vtnghidevops.github.io/LazyFilms-Web/)
-### **Header**
-![](./assets/img/Header.jpg)
-### **Slider**
-![](./assets/img/slider.jpg)
-### **Content**
-![](./assets/img/content.jpg)
-### **Footer**
-![](./assets/img/Footer.jpg)
+### **Hướng dẫn cài đặt môi trường**
 
 
+**1. Cài đặt Node.js**
+Tải `Node.js` từ trang web chính thức <a> [node.js](https://nodejs.org/en/download/package-manager)
+Cài đặt `Node.js` theo hướng dẫn trên trang web.
+**2. Clone project**
+Tạo **thư mục** để chứa toàn bộ source code , mở`git bash` nay tại thư mục vừa tạo , sau đó clone project bằng lệnh:
+```
+git clone https://github.com/vtnghidevops/LazyFilms-Web.git
+```
+**3. Cài đặt package**
 
-# Detail
+Mở thư mục `Backend` bằng công cụ code editor (Visual Studio Code).
+Vào `terminal` và gõ lệnh:
+```
+npm install
+```
+**4. Khởi động server**
 
-## I.Header
+Vào `terminal` và gõ lệnh:
+```
+node app.js
+```
+<span style="color:blue;font-weight: 600">Note:</span> Nếu ta thấy 2 dòng **“Server is running on port 3000”** và **“Connected to MongoDB”** là thành công</p>
 
-### 1 Navigation
 
-#### 1.1 Thể loại
-- Các thể loại phim tương ứng với 1 tab phim theo thể loại tương ứng.
+**5. Truy cập website**
 
-#### 1.2 Quốc gia
-- Phim theo quốc gia.
+Mở trình duyệt web và truy cập địa chỉ: **“localhost:3000”** để tới website local
 
-#### 1.3 Top Phim
-- Các phim đứng **top theo tuần.**
+### Các Tính năng Website
+**Website hỗ trợ các tính năng :**
+- Login/Logout
+- Xem phim trực tuyến
+- Tìm kiếm phim theo tên, thể loại, quốc gia
+- Bình luận phim
+- Thay đổi thông tin cá nhân/ Password,..
+- Nhận thông báo phim mới
+- Chia sẻ phim
+- Đánh dấu phim yêu thích
+- Xem lịch sử xem phim
+- Tắt đèn khi xem phim
+- Báo cáo phim khi có lỗi
+## Danh sách thành viên nhóm
 
-#### 1.4 Phim Chiếu rạp
-- Tab phim được chiếu rạp (bao gồm **phim mới có trailer + phim đã chiếu**).
+| Tên | Chức vụ | MSSV |
+|:-------- |:--------:| --------:|
+| Vương Tấn Nghị     |  Nhóm trưởng   | 22520942 |
+| Đỗ Thiện Khang     |   Thành viên   | 22520608 |
+| Nguyễn Vũ Phi Long     |   Thành viên   | 22520820 |
+| Trần Thiện Mạnh    |   Thành viên   | 22520853 |
+| Trang Thành Lợi      |   Thành viên   | 22520802 |
 
-- **Với mỗi tab phim gồm *"filter"* tìm kiếm theo:**
-  - **Thời gian:** Mới, Cũ.
-  - **Danh mục:** Phim lẻ, bộ.
-  - **Thể loại:** Nhiều loại thể loại (Hài, gây cấn, hành động, kinh dị, ...).
-  - **Quốc gia:** Ấn, Âu Mĩ,..
-  - **Năm phát hành:** Theo năm ra phim.
+## Domain Deploy
+Truy cập vào đường dẫn này để đến ***website đã deploy*** <a> : [LazyFilms](https://lazyfilms-web.onrender.com/)
 
-#### 1.5 Khung tìm kiếm
-- Tìm kiếm theo **keyword** phim.
+## Các tiêu chí cộng điểm
+**1. Video seminar giữa kỳ đạt 1k view + 100 like**
+![alt text](./Backend/assets/img/videoSeminar.png)
+**2.Deploy website**
+![alt text](./Backend/assets/img/Deploy.png)
+**Google page speed (> 90)**
+***PC:***
+![alt text](./Backend/assets/img/PC_PageSpeed.png)
+***Mobile:***
+![alt text](./Backend/assets/img/Mobile_PageSpeed.png)
+**UI/UX**
 
-#### 1.6 Login
-- **Với Guest:**
-  - Xem phim thông thường + Có quảng cáo khi xem.
-- **Với chế độ VIP:**
-  - Xem phim không quảng cáo, có lưu lịch sử xem, đánh dấu phim yêu thích, Thông báo về account về phim mới.
+**PC**
+<div style="display: flex; margin-bottom: 20px; flex-wrap: wrap">
+    <img src="./Backend/assets/img/PC.png" alt="UIPC" style ="margin-bottom: 10px;">
+    <img src="./Backend/assets/img/UIPC1.png" alt="UIPC" style ="width:100%">
+   
+</div>
 
-## II. Slider 
-- Có **trailer phim** + Đoạn **mô tả ngắn** về phim (Ngẫu nhiên), Với các phim mới , view cao 
 
-## III. Content
-### 1. Carousel
-**Các list phim bao gồm:**
-- **Phim mới cập nhật.**
-- **Phim Bộ.**
-- **Anime.**
-- **Sắp chiếu.**
+**Mobile**
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="./Backend/assets/img/UIMobile1.png" alt="image 4" style="flex: 1; max-width: 32%; margin-right: 10px">
+    <img src="./Backend/assets/img/UIMobile2.png" alt="image 5" style="flex: 1; max-width: 32%; margin-right: 10px">
+    <img src="./Backend/assets/img/UIMobile3.png" alt="image 6" style="flex: 1; max-width: 32%;">
+</div>
 
-**Trong từng phim:**
-- Có các khu vực **bình luận** tăng tính tương tác giữa các người dùng với nhau.
-- Các mô tả **chi tiết về phim, đánh giá phim.**
-- Phim liên quan.
 
-### 2. Aside
-- Các list phim nổi bật **theo tuần, rating cao + view.**
-- Phim **sắp** được chiếu trên web.
-
-## IV. Footer
-
-### 1. Navigation
-- **Báo lỗi:** Giúp người xem *báo lỗi* các phim đến ad để **fix lỗi.**
-- **Yêu cầu phim** (Tính năng dành cho **VIP**): Yêu cầu các phim.
-- **Group thảo luận phim.**
-
-### 2. Phần còn lại
-- Các **mô tả cơ bản** về trang web cơ bản: chính sách, giới thiệu, hỗ trợ quảng cáo.
-- Link các trang xã hội của web.
