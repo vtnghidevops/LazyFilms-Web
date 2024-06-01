@@ -2,10 +2,14 @@
 
 
 **1. Cài đặt Node.js**
+
 Tải `Node.js` từ trang web chính thức <a> [node.js](https://nodejs.org/en/download/package-manager)
+
 Cài đặt `Node.js` theo hướng dẫn trên trang web.
+
 **2. Clone project**
-Tạo **thư mục** để chứa toàn bộ source code , mở`git bash` nay tại thư mục vừa tạo , sau đó clone project bằng lệnh:
+
+Tạo **thư mục** để chứa toàn bộ source code , mở `git bash` nay tại thư mục vừa tạo , sau đó clone project bằng lệnh:
 ```
 git clone https://github.com/vtnghidevops/LazyFilms-Web.git
 ```
@@ -57,13 +61,17 @@ Truy cập vào đường dẫn này để đến ***website đã deploy*** <a> 
 
 ## Các tiêu chí cộng điểm
 **1. Video seminar giữa kỳ đạt 1k view + 100 like**
-![alt text](./Backend/assets/img/videoSeminar.png)
+
+![alt text](./Backend/assets/img/VideoSeminar.png)
 **2.Deploy website**
+
 ![alt text](./Backend/assets/img/Deploy.png)
 **Google page speed (> 90)**
 ***PC:***
+
 ![alt text](./Backend/assets/img/PC_PageSpeed.png)
 ***Mobile:***
+
 ![alt text](./Backend/assets/img/Mobile_PageSpeed.png)
 **UI/UX**
 
